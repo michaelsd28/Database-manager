@@ -6,11 +6,53 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
 
-    <StackPanel>
-        <TextBox/>
-        <Button>Click here</Button>
+    
 
-    </StackPanel>
+    RequestedTheme="Dark" 
+    >
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="95*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" >
+            <TextBlock VerticalAlignment="Center" FontSize="30"  HorizontalAlignment="Center">Database Manager</TextBlock>
+            <Button HorizontalAlignment="Right" Margin="0,25,8,0" VerticalAlignment="Top" Width="105">Settings</Button>
+        </Grid>
+
+
+
+
+
+        <StackPanel  Grid.Row="1"     HorizontalAlignment="Center" Orientation="Horizontal" Width="494">
+            <Button Margin="10,10,10,10" x:Name="BCreateDB" RelativePanel.LeftOf="BConnectDB" Width="74">Create</Button>
+            <Button  x:Name="BConnectDB" RelativePanel.LeftOf="TSearchDB">Connect</Button>
+            <TextBox Width="210" Margin="25,0,0,0"   x:Name="TSearchDB" PlaceholderText="Search database" RelativePanel.AlignHorizontalCenterWithPanel="True" VerticalAlignment="Center"/>
+
+            <Button Margin="15,0,5,0" x:Name="BRefreshDB" RelativePanel.RightOf="TSearchDB">Refresh</Button>
+
+        </StackPanel>
+
+
+
+
+        <Grid Grid.Row="4" Background="#292929" Height="25" VerticalAlignment="Bottom"   >
+
+            <TextBlock HorizontalAlignment="Center">Database manager</TextBlock>
+        </Grid>
+
+
+    </Grid>
 </Page>
