@@ -12,15 +12,18 @@
     >
 
     <StackPanel 
+        
         Background="#FF272A2F" 
         CornerRadius="10"  
-        Padding="20" 
-        HorizontalAlignment="Center" 
+    
+     
+        Margin="20"
+        Padding="20"
                 Canvas.ZIndex="100">
-        <components:IconButton ImageIcon="/Assets\database app logo.png" ButtonText="MongoDB"/>
-
-        <components:IconButton ImageIcon="/Assets\database app logo.png" ButtonText="MongoDB"/>
-        <components:IconButton ImageIcon="/Assets\database app logo.png" ButtonText="MongoDB"/>
+        <TextBlock Text="Choose database server" FontSize="20" Margin="20" HorizontalAlignment="Center"/>
+        <components:IconButton ImageIcon="/Assets/Mainpage/MongoDB Badge.png" ButtonText="MongoDB" Margin="10"/>
+        <components:IconButton ImageIcon="/Assets/Mainpage/redis logo badge.png" ButtonText="Redis"  Margin="10"/>
+        <components:IconButton ImageIcon="/Assets/Mainpage/sql logo badge.png" ButtonText="SQL Server"  Margin="10"/>
 
 
 
