@@ -13,7 +13,7 @@
 
 
 
-    <GridView Background="#373737"
+    <GridView Background="#181818"
     x:Name="StyledGrid"
               CornerRadius="10" 
             

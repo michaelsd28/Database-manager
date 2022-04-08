@@ -132,6 +132,18 @@
     <Compile Include="Views\Database stack.xaml.cs">
       <DependentUpon>Database stack.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Dialogs\Connect wURI.xaml.cs">
+      <DependentUpon>Connect wURI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialogs\Database create server.xaml.cs">
+      <DependentUpon>Database create server.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialogs\Database type to create.xaml.cs">
+      <DependentUpon>Database type to create.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings page.xaml.cs">
+      <DependentUpon>Settings page.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -225,6 +237,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Dialogs\Connect wURI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dialogs\Database create server.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dialogs\Database type to create.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Settings page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
@@ -237,7 +265,6 @@
   <ItemGroup>
     <Folder Include="Model\" />
     <Folder Include="Services\" />
-    <Folder Include="Views\Dialogs\" />
     <Folder Include="Views\Managers\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
