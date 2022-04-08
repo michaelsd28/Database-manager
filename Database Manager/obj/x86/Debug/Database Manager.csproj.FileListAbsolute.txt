@@ -49,13 +49,33 @@ C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Vie
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Database stack.xaml
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Database stack.xbf
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Database stack.xbf
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Resource dictionaries\Main page\Database Card.g.i.cs
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Resource dictionaries\Main page\Database Card.g.cs
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Mainpage\MongoDB Card.g.i.cs
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Mainpage\MongoDB Card.g.cs
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Resource dictionaries\Main page\Database Card.xaml
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Mainpage\MongoDB Card.xaml
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Resource dictionaries\Main page\Database Card.xbf
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Mainpage\MongoDB Card.xbf
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Resource dictionaries\Main page\Database Card.xbf
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\Mainpage\MongoDB Card.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\Mainpage\Database Card.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Dialogs\Connect wURI.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Dialogs\Database create server.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Dialogs\Database type to create.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Settings page.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Mainpage\Database Card.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Mainpage\Database Card.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Dialogs\Connect wURI.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Dialogs\Connect wURI.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Dialogs\Database create server.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Dialogs\Database create server.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Dialogs\Database type to create.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Dialogs\Database type to create.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Settings page.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Settings page.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Mainpage\Database Card.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Dialogs\Connect wURI.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Dialogs\Database create server.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Dialogs\Database type to create.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Settings page.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Mainpage\Database Card.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Dialogs\Connect wURI.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Dialogs\Database create server.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Dialogs\Database type to create.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Settings page.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\IconButton.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\IconButton.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\IconButton.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\IconButton.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\IconButton.xbf

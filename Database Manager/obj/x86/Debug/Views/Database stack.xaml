@@ -1,0 +1,182 @@
+﻿<UserControl
+    x:Class="Database_Manager.Views.Database_stack"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Database_Manager.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:components="using:Database_Manager.Resource_dictionaries.Main_page"
+    mc:Ignorable="d"
+
+    
+    >
+
+
+
+
+    <GridView x:ConnectionId='2' Background="#181818"
+    x:Name="StyledGrid"
+              CornerRadius="10" 
+            
+          
+              MaxWidth="900"
+              ScrollViewer.BringIntoViewOnFocusChange="True"
+              ScrollViewer.HorizontalScrollBarVisibility="Visible"
+              ScrollViewer.VerticalScrollBarVisibility="Visible"
+             SelectionMode="Single"
+              HorizontalAlignment="Center"
+   >
+        <StackPanel Margin="15">
+            <components:Database_Card
+                         ImageBadgeSRC="/Assets/Mainpage/redis logo badge.png"
+                  CTitleBackgroundColor="#641F1A"
+                                      TTitle="Database Redis rdgdfgdf dfgdf gd"
+                                      TSize="Storage size: 500 Megabytes" 
+                                      TDocument="Documents: 5470 Docs"
+                                      TAverageSize="Average size: 36.9KB"
+                                      TLastUpdated="Last updated: 5 min  ago"
+                                      />
+        </StackPanel>
+        <StackPanel Margin="15">
+            <components:Database_Card 
+                ImageBadgeSRC="/Assets/Mainpage/redis logo badge.png"
+                  CTitleBackgroundColor="#641F1A"
+                                      TTitle="Database Redis"
+                                      TSize="Storage size: 500 Megabytes" 
+                                      TDocument="Documents: 5470 Docs"
+                                      TAverageSize="Average size: 36.9KB"
+                                      TLastUpdated="Last updated: 5 min  ago"
+                                      />
+        </StackPanel>
+        <StackPanel Margin="15">
+            <components:Database_Card 
+                ImageBadgeSRC="/Assets/Mainpage/MongoDB Badge.png"
+                  CTitleBackgroundColor="#285F1A"
+                                      TTitle="Database"
+                                      TSize="Storage size: 500 Megabytes" 
+                                      TDocument="Documents: 5470 Docs"
+                                      TAverageSize="Average size: 36.9KB"
+                                      TLastUpdated="Last updated: 5 min  ago"
+                                      />
+        </StackPanel>
+        <StackPanel Margin="15">
+            <components:Database_Card 
+                ImageBadgeSRC="/Assets/Mainpage/sql logo badge.png"
+                  CTitleBackgroundColor="#654F00"
+                                      TTitle="Database"
+                                      TSize="Storage size: 500 Megabytes" 
+                                      TDocument="Documents: 5470 Docs"
+                                      TAverageSize="Average size: 36.9KB"
+                                      TLastUpdated="Last updated: 5 min  ago"
+                                      />
+        </StackPanel>
+        <StackPanel Margin="15">
+            <components:Database_Card 
+                ImageBadgeSRC="/Assets/Mainpage/MongoDB Badge.png"
+                  CTitleBackgroundColor="#285F1A"
+                                      TTitle="Database"
+                                      TSize="Storage size: 500 Megabytes" 
+                                      TDocument="Documents: 5470 Docs"
+                                      TAverageSize="Average size: 36.9KB"
+                                      TLastUpdated="Last updated: 5 min  ago"
+                                      />
+        </StackPanel>
+        <StackPanel Margin="15">
+            <components:Database_Card 
+                ImageBadgeSRC="/Assets/Mainpage/redis logo badge.png"
+                  CTitleBackgroundColor="#641F1A"
+                                      TTitle="Database Redis"
+                                      TSize="Storage size: 500 Megabytes" 
+                                      TDocument="Documents: 5470 Docs"
+                                      TAverageSize="Average size: 36.9KB"
+                                      TLastUpdated="Last updated: 5 min  ago"
+                                      />
+        </StackPanel>
+        <StackPanel Margin="15">
+            <components:Database_Card 
+                ImageBadgeSRC="/Assets/Mainpage/MongoDB Badge.png"
+                  CTitleBackgroundColor="#285F1A"
+                                      TTitle="Database"
+                                      TSize="Storage size: 500 Megabytes" 
+                                      TDocument="Documents: 5470 Docs"
+                                      TAverageSize="Average size: 36.9KB"
+                                      TLastUpdated="Last updated: 5 min  ago"
+                                      />
+        </StackPanel>
+        <StackPanel Margin="15">
+            <components:Database_Card 
+                ImageBadgeSRC="/Assets/Mainpage/MongoDB Badge.png"
+                  CTitleBackgroundColor="#285F1A"
+                                      TTitle="Database"
+                                      TSize="Storage size: 500 Megabytes" 
+                                      TDocument="Documents: 5470 Docs"
+                                      TAverageSize="Average size: 36.9KB"
+                                      TLastUpdated="Last updated: 5 min  ago"
+                                      />
+        </StackPanel>
+        <StackPanel Margin="15">
+            <components:Database_Card 
+                ImageBadgeSRC="/Assets/Mainpage/MongoDB Badge.png"
+                  CTitleBackgroundColor="#285F1A"
+                                      TTitle="Database"
+                                      TSize="Storage size: 500 Megabytes" 
+                                      TDocument="Documents: 5470 Docs"
+                                      TAverageSize="Average size: 36.9KB"
+                                      TLastUpdated="Last updated: 5 min  ago"
+                                      />
+        </StackPanel>
+        <StackPanel Margin="15">
+            <components:Database_Card 
+                ImageBadgeSRC="/Assets/Mainpage/MongoDB Badge.png"
+                  CTitleBackgroundColor="#285F1A"
+                                      TTitle="Database"
+                                      TSize="Storage size: 500 Megabytes" 
+                                      TDocument="Documents: 5470 Docs"
+                                      TAverageSize="Average size: 36.9KB"
+                                      TLastUpdated="Last updated: 5 min  ago"
+                                      />
+        </StackPanel>
+
+
+        <StackPanel Margin="15">
+            <components:Database_Card 
+                ImageBadgeSRC="/Assets/Mainpage/MongoDB Badge.png"
+                  CTitleBackgroundColor="#285F1A"
+                                      TTitle="Database"
+                                      TSize="Storage size: 500 Megabytes" 
+                                      TDocument="Documents: 5470 Docs"
+                                      TAverageSize="Average size: 36.9KB"
+                                      TLastUpdated="Last updated: 5 min  ago"
+                                      />
+        </StackPanel>
+
+
+
+
+
+
+        <GridView.ItemContainerStyle>
+            <Style TargetType="GridViewItem">
+                <Setter Property="Margin" Value="5, 5, 5, 5"/>
+            </Style>
+        </GridView.ItemContainerStyle>
+
+        <!-- An extra property also needs to be added to the GridView's ItemsWrapGrid.
+    The following sets the maximum # of items to show before wrapping.-->
+        <GridView.ItemsPanel>
+            <ItemsPanelTemplate>
+                <ItemsWrapGrid x:Name="MaxItemsWrapGrid"
+                           MaximumRowsOrColumns="3"
+                           Orientation="Horizontal"/>
+            </ItemsPanelTemplate>
+        </GridView.ItemsPanel>
+    </GridView>
+
+
+
+
+
+
+
+
+</UserControl>
+

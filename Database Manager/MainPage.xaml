@@ -7,6 +7,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     xmlns:views ="using:Database_Manager.Views"
+    xmlns:dialog ="using:Database_Manager.Views.Dialogs"
     RequestedTheme="Dark" 
     
     
@@ -48,7 +49,9 @@
 
 
         <StackPanel  Grid.Row="1"     HorizontalAlignment="Center" Orientation="Horizontal" Width="494">
-            <Button  Background="#3C3C3C" Margin="10,10,10,10" x:Name="BCreateDB" RelativePanel.LeftOf="BConnectDB" Width="74">Create</Button>
+
+
+            <Button Click="BCreateDB_Click"  Background="#3C3C3C" Margin="10,10,10,10" x:Name="BCreateDB" RelativePanel.LeftOf="BConnectDB" Width="74">Create</Button>
             <Button  Background="#3C3C3C" x:Name="BConnectDB" RelativePanel.LeftOf="TSearchDB">Connect</Button>
             <TextBox  Background="#3C3C3C" Width="210" Margin="25,0,0,0"   x:Name="TSearchDB" PlaceholderText="Search database" RelativePanel.AlignHorizontalCenterWithPanel="True" VerticalAlignment="Center"/>
 
@@ -62,8 +65,22 @@
 
         </StackPanel>
 
-       
+        <Popup 
+            x:Name="Popup_Create" 
+                IsOpen="False" 
+        IsLightDismissEnabled="True"
+        LightDismissOverlayMode="On"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            
+            >
+            <dialog:Database_type_to_create/>
+            </Popup>
+
+
+
         <Grid Grid.Row="2" Canvas.ZIndex="9">
+          
 
             <views:Database_stack/>
 
@@ -71,6 +88,7 @@
         </Grid>
 
         <Grid Grid.Row="3" >
+          
             <Button VerticalAlignment="Center" Margin="30,0,0,0"  Background="#212121">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
                     <Image Source="/Assets/Mainpage/terminal icon 2.png" Height="23" Margin="0,0,5,0"></Image>

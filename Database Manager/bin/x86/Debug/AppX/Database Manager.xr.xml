@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="ButtonText" />
+    <RootPropertyPathName Name="ImageIcon" />
     <RootPropertyPathName Name="DetailFontSize" />
     <RootPropertyPathName Name="TLastUpdated" />
     <RootPropertyPathName Name="TAverageSize" />
@@ -54,6 +56,16 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Padding" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="CornerRadius" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Primitives.Popup">
+      <RootProperty Name="IsOpen" />
+      <RootProperty Name="IsLightDismissEnabled" />
+      <RootProperty Name="LightDismissOverlayMode" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Child" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
       <RootMethod Name="GetZIndex" />
@@ -64,9 +76,9 @@
       <RootProperty Name="Inlines" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="Text" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Text" />
       <RootProperty Name="Name" />
       <RootProperty Name="TextTrimming" />
       <RootProperty Name="FontFamily" />
@@ -79,6 +91,7 @@
       <RootProperty Name="Content" />
       <RootProperty Name="Width" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
@@ -87,6 +100,7 @@
       <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Database_Manager.Views.Database_stack" />
+    <RootType FullName="Database_Manager.Views.Dialogs.Database_type_to_create" />
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
       <RootProperty Name="Background" />
       <RootProperty Name="Children" />
@@ -118,6 +132,10 @@
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="ElementName" />
     </RootType>
+    <RootType FullName="Database_Manager.Views.Components.IconButton">
+      <RootProperty Name="ImageIcon" />
+      <RootProperty Name="ButtonText" />
+    </RootType>
     <RootType FullName="Database_Manager.Resource_dictionaries.Main_page.Database_Card">
       <RootProperty Name="ImageBadgeSRC" />
       <RootProperty Name="CTitleBackgroundColor" />
@@ -127,7 +145,6 @@
       <RootProperty Name="TAverageSize" />
       <RootProperty Name="TLastUpdated" />
     </RootType>
-    <RootType FullName="Database_Manager.Views.Components.Mainpage.MongoDB_Card" />
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="Background" />
       <RootProperty Name="CornerRadius" />
@@ -161,5 +178,8 @@
       <RootProperty Name="MaximumRowsOrColumns" />
       <RootProperty Name="Orientation" />
     </RootType>
+    <RootType FullName="Database_Manager.Views.Dialogs.Connect_wURI" />
+    <RootType FullName="Database_Manager.Views.Dialogs.Database_create_server" />
+    <RootType FullName="Database_Manager.Views.Settings_page" />
   </Roots.RootTypes>
 </Roots>

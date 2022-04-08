@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T01:13:57.237</Modified>
+      <Modified>2022-04-08T08:32:37.940</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Database Manager.exe">
       <PackagePath>entrypoint\Database Manager.exe</PackagePath>
-      <Modified>2022-04-08T01:13:56.479</Modified>
+      <Modified>2022-04-08T08:32:37.208</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -354,27 +354,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Database Manager.xr.xml">
       <PackagePath>Database Manager.xr.xml</PackagePath>
-      <Modified>2022-04-08T01:09:31.830</Modified>
+      <Modified>2022-04-08T08:30:13.521</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-04-08T01:13:56.428</Modified>
+      <Modified>2022-04-08T08:32:37.147</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-04-08T01:13:56.428</Modified>
+      <Modified>2022-04-08T08:32:37.147</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Resource dictionaries\Main page\Database Card.xbf">
-      <PackagePath>Resource dictionaries\Main page\Database Card.xbf</PackagePath>
-      <Modified>2022-04-08T01:13:56.428</Modified>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\IconButton.xbf">
+      <PackagePath>Views\Components\IconButton.xbf</PackagePath>
+      <Modified>2022-04-08T08:32:37.147</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\Mainpage\MongoDB Card.xbf">
-      <PackagePath>Views\Components\Mainpage\MongoDB Card.xbf</PackagePath>
-      <Modified>2022-04-08T01:13:56.428</Modified>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\Mainpage\Database Card.xbf">
+      <PackagePath>Views\Components\Mainpage\Database Card.xbf</PackagePath>
+      <Modified>2022-04-08T08:32:37.147</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Database stack.xbf">
       <PackagePath>Views\Database stack.xbf</PackagePath>
-      <Modified>2022-04-08T01:13:56.428</Modified>
+      <Modified>2022-04-08T08:32:37.147</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Dialogs\Connect wURI.xbf">
+      <PackagePath>Views\Dialogs\Connect wURI.xbf</PackagePath>
+      <Modified>2022-04-08T08:32:37.147</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Dialogs\Database create server.xbf">
+      <PackagePath>Views\Dialogs\Database create server.xbf</PackagePath>
+      <Modified>2022-04-08T08:32:37.147</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Dialogs\Database type to create.xbf">
+      <PackagePath>Views\Dialogs\Database type to create.xbf</PackagePath>
+      <Modified>2022-04-08T08:32:37.147</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Settings page.xbf">
+      <PackagePath>Views\Settings page.xbf</PackagePath>
+      <Modified>2022-04-08T08:32:37.147</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -390,11 +406,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-04-08T01:09:32.157</Modified>
+      <Modified>2022-04-08T08:18:36.261</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Core\Database Manager.exe">
       <PackagePath>Database Manager.exe</PackagePath>
-      <Modified>2022-04-08T01:13:57.234</Modified>
+      <Modified>2022-04-08T08:32:37.938</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

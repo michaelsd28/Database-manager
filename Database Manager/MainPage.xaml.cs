@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Database_Manager.Views;
+using Database_Manager.Views.Dialogs;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -36,6 +38,24 @@ namespace Database_Manager
 
 
             ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(500,500));
+        }
+
+        private void BCreateDB_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (Popup_Create.IsOpen)
+            {
+                Popup_Create.IsOpen = false;
+            }
+            else {
+                Popup_Create.IsOpen = true;
+            }
+         
+   
+            
+            
+
+
         }
     }
 }

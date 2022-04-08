@@ -123,11 +123,11 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resource dictionaries\Main page\Database Card.xaml.cs">
-      <DependentUpon>Database Card.xaml</DependentUpon>
+    <Compile Include="Views\Components\IconButton.xaml.cs">
+      <DependentUpon>IconButton.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Components\Mainpage\MongoDB Card.xaml.cs">
-      <DependentUpon>MongoDB Card.xaml</DependentUpon>
+    <Compile Include="Views\Components\Mainpage\Database Card.xaml.cs">
+      <DependentUpon>Database Card.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Database stack.xaml.cs">
       <DependentUpon>Database stack.xaml</DependentUpon>
@@ -225,11 +225,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Resource dictionaries\Main page\Database Card.xaml">
+    <Page Include="Views\Components\IconButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Components\Mainpage\MongoDB Card.xaml">
+    <Page Include="Views\Components\Mainpage\Database Card.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -264,6 +264,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
+    <Folder Include="Resource dictionaries\Main page\" />
     <Folder Include="Services\" />
     <Folder Include="Views\Managers\" />
   </ItemGroup>

@@ -64,8 +64,12 @@ Assets\Wide310x150Logo.scale-400.png
 App.xbf
 Database Manager.xr.xml
 MainPage.xbf
-Resource dictionaries\Main page\Database Card.xbf
-Views\Components\Mainpage\MongoDB Card.xbf
+Views\Components\IconButton.xbf
+Views\Components\Mainpage\Database Card.xbf
 Views\Database stack.xbf
+Views\Dialogs\Connect wURI.xbf
+Views\Dialogs\Database create server.xbf
+Views\Dialogs\Database type to create.xbf
+Views\Settings page.xbf
 Properties\Default.rd.xml
 WinMetadata\Windows.winmd
