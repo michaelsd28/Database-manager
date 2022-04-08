@@ -34,6 +34,8 @@ namespace Database_Manager
             titleBar.ButtonForegroundColor = Colors.White;
             titleBar.ButtonBackgroundColor = Colors.Black;
 
+
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(500,500));
         }
     }
 }
