@@ -79,3 +79,8 @@ C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Vie
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Dialogs\Server creation\MongoDB Server.xaml
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Dialogs\Server creation\MongoDB Server.xbf
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Dialogs\Server creation\MongoDB Server.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Managers\MongoDB Manager.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Managers\MongoDB Manager.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Managers\MongoDB Manager.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Managers\MongoDB Manager.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Managers\MongoDB Manager.xbf

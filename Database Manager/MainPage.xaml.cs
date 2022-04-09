@@ -1,5 +1,6 @@
 ﻿using Database_Manager.Views;
 using Database_Manager.Views.Dialogs;
+using Database_Manager.Views.Managers;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -41,6 +42,7 @@ namespace Database_Manager
 
 
             ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(500,500));
+         
         }
 
         private void BCreateDB_Click(object sender, RoutedEventArgs e)
@@ -85,6 +87,17 @@ namespace Database_Manager
             }
 
 
+
+        }
+
+        private void BRefreshDB_Click(object sender, RoutedEventArgs e)
+        {
+
+      
+
+
+
+            this.Frame.Navigate(typeof(MongoDB_Manager));
 
         }
     }

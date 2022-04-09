@@ -40,6 +40,8 @@
       <RootProperty Name="BorderThickness" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
       <RootProperty Name="ImageSource" />
@@ -95,6 +97,7 @@
       <RootProperty Name="Content" />
       <RootProperty Name="Width" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Padding" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
@@ -201,6 +204,8 @@
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Database_Manager.Views.Dialogs.Server_creation.MongoDB_Server" />
+    <RootType FullName="Windows.UI.Xaml.Documents.LineBreak" />
+    <RootType FullName="Database_Manager.Views.Managers.MongoDB_Manager" />
     <RootType FullName="Database_Manager.Views.Settings_page" />
   </Roots.RootTypes>
 </Roots>

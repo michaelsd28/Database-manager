@@ -84,6 +84,15 @@
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Mainpage\terminal icon.png">
       <PackagePath>Assets\Mainpage\terminal icon.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\export data.png">
+      <PackagePath>Assets\Managers\MongoDB\export data.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\import data.png">
+      <PackagePath>Assets\Managers\MongoDB\import data.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\mongodb background.png">
+      <PackagePath>Assets\Managers\MongoDB\mongodb background.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -267,6 +276,9 @@
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\add button.png">
+      <PackagePath>Assets\Managers\MongoDB\add button.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Mainpage\background mainpage 2.jpg">
       <PackagePath>Assets\Mainpage\background mainpage 2.jpg</PackagePath>
     </AppxPackagedFile>
@@ -302,6 +314,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Dialogs\Server creation\MongoDB Server.xbf">
       <PackagePath>Views\Dialogs\Server creation\MongoDB Server.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Managers\MongoDB Manager.xbf">
+      <PackagePath>Views\Managers\MongoDB Manager.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Settings page.xbf">
       <PackagePath>Views\Settings page.xbf</PackagePath>

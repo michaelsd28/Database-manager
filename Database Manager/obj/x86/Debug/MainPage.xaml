@@ -63,7 +63,7 @@
                 RelativePanel.LeftOf="TSearchDB">Connect</Button>
             <TextBox x:ConnectionId='6'  Background="#3C3C3C" Width="210" Margin="25,0,0,0"   x:Name="TSearchDB" PlaceholderText="Search database" RelativePanel.AlignHorizontalCenterWithPanel="True" VerticalAlignment="Center"/>
 
-            <Button x:ConnectionId='7' Margin="10,0,5,0" x:Name="BRefreshDB" RelativePanel.RightOf="TSearchDB" Background="#3C3C3C">
+            <Button x:ConnectionId='7'                          Margin="10,0,5,0" x:Name="BRefreshDB" RelativePanel.RightOf="TSearchDB" Background="#3C3C3C">
                 <StackPanel Orientation="Horizontal" Margin="-6,0,-5,0">
                     <Image Source="Assets\Mainpage\refresh icon.png" Height="20" Width="15" Margin="0,0,1,0"/>
                     <TextBlock>Refresh</TextBlock>

@@ -16,6 +16,10 @@ Assets\Mainpage\settings icon.png
 Assets\Mainpage\sql logo badge.png
 Assets\Mainpage\terminal icon 2.png
 Assets\Mainpage\terminal icon.png
+Assets\Managers\MongoDB\add button.png
+Assets\Managers\MongoDB\export data.png
+Assets\Managers\MongoDB\import data.png
+Assets\Managers\MongoDB\mongodb background.png
 Assets\SmallTile.scale-100.png
 Assets\SmallTile.scale-125.png
 Assets\SmallTile.scale-150.png
@@ -70,6 +74,7 @@ Views\Database stack.xbf
 Views\Dialogs\Connect wURI.xbf
 Views\Dialogs\Database type to create.xbf
 Views\Dialogs\Server creation\MongoDB Server.xbf
+Views\Managers\MongoDB Manager.xbf
 Views\Settings page.xbf
 Properties\Default.rd.xml
 WinMetadata\Windows.winmd
