@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -26,9 +27,11 @@ namespace Database_Manager
     /// </summary>
     public sealed partial class MainPage : Page
     {
+       public static  MainPage mainPageContext { get; set; }
         public MainPage()
         {
             this.InitializeComponent();
+            mainPageContext = this;
 
             var titleBar = ApplicationView.GetForCurrentView().TitleBar;
             titleBar.ForegroundColor = Colors.White;
@@ -43,17 +46,44 @@ namespace Database_Manager
         private void BCreateDB_Click(object sender, RoutedEventArgs e)
         {
 
+
+
+            Database_type_to_create._Type_To_CreateContext.Content = new Database_type_to_create();
+
             if (Popup_Create.IsOpen)
             {
+       
                 Popup_Create.IsOpen = false;
+                
             }
             else {
+            
                 Popup_Create.IsOpen = true;
             }
-         
-   
-            
-            
+
+           
+
+
+
+        }
+
+        private void BConnectDB_Click(object sender, RoutedEventArgs e)
+        {
+
+            Database_type_to_create._Type_To_CreateContext.Content = new Database_type_to_create();
+
+            if (Popup_ConnectURI.IsOpen)
+            {
+
+                Popup_ConnectURI.IsOpen = false;
+
+            }
+            else
+            {
+
+                Popup_ConnectURI.IsOpen = true;
+            }
+
 
 
         }

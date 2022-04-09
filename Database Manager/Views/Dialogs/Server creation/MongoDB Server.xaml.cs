@@ -15,18 +15,22 @@ using Windows.UI.Xaml.Navigation;
 
 // The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 
-namespace Database_Manager.Views.Dialogs
+namespace Database_Manager.Views.Dialogs.Server_creation
 {
-    public sealed partial class Connect_wURI : UserControl
+    public sealed partial class MongoDB_Server : UserControl
     {
-        public Connect_wURI()
+
+     
+        public MongoDB_Server()
         {
-            this.InitializeComponent();
+
+            InitializeComponent();
+        
         }
 
         private void CancelButton(object sender, RoutedEventArgs e)
         {
-           MainPage.mainPageContext.Popup_ConnectURI.IsOpen = false;    
+            MainPage.mainPageContext.Popup_Create.IsOpen = false;
         }
     }
 }

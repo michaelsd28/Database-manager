@@ -35,7 +35,9 @@
         <Grid Grid.Row="0" >
 
             <TextBlock VerticalAlignment="Center" FontSize="30"  HorizontalAlignment="Center">Database Manager</TextBlock>
-            <Button HorizontalAlignment="Right" Margin="0,25,8,0" VerticalAlignment="Top" Width="105" Background="#3C3C3C">
+            <Button 
+                HorizontalAlignment="Right" 
+                Margin="0,25,8,0" VerticalAlignment="Top" Width="105" Background="#3C3C3C">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="Assets\Mainpage\settings icon.png" Height="20" Margin="0,0,3,0"/>
                     <TextBlock>Settings</TextBlock>
@@ -51,8 +53,14 @@
         <StackPanel  Grid.Row="1"     HorizontalAlignment="Center" Orientation="Horizontal" Width="494">
 
 
-            <Button Click="BCreateDB_Click"  Background="#3C3C3C" Margin="10,10,10,10" x:Name="BCreateDB" RelativePanel.LeftOf="BConnectDB" Width="74">Create</Button>
-            <Button  Background="#3C3C3C" x:Name="BConnectDB" RelativePanel.LeftOf="TSearchDB">Connect</Button>
+            <Button 
+                Click="BCreateDB_Click"  
+                Background="#3C3C3C" Margin="10,10,10,10" x:Name="BCreateDB" 
+                RelativePanel.LeftOf="BConnectDB" Width="74">Create</Button>
+            <Button  
+                Click="BConnectDB_Click"
+                Background="#3C3C3C" x:Name="BConnectDB" 
+                RelativePanel.LeftOf="TSearchDB">Connect</Button>
             <TextBox  Background="#3C3C3C" Width="210" Margin="25,0,0,0"   x:Name="TSearchDB" PlaceholderText="Search database" RelativePanel.AlignHorizontalCenterWithPanel="True" VerticalAlignment="Center"/>
 
             <Button Margin="10,0,5,0" x:Name="BRefreshDB" RelativePanel.RightOf="TSearchDB" Background="#3C3C3C">
@@ -64,21 +72,38 @@
             </Button>
 
         </StackPanel>
+            
+        <Popup 
+         x:FieldModifier="Public"
+                x:Name="Popup_Create" 
+                IsOpen="False" 
+                IsLightDismissEnabled="True"
+                LightDismissOverlayMode="On"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="0,0,320,0"
+            >
+       
+            <dialog:Database_type_to_create/>
+            
+            </Popup>
 
         <Popup 
-            
-          
-            x:Name="Popup_Create" 
+                x:FieldModifier="Public"
+                x:Name="Popup_ConnectURI" 
                 IsOpen="False" 
-        IsLightDismissEnabled="True"
-        LightDismissOverlayMode="On"
+                IsLightDismissEnabled="True"
+                LightDismissOverlayMode="On"
+         
+                Margin="-390,60,0,0"
             HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Margin="0,0,320,0"
-            
+            VerticalAlignment="Center"            
             >
-            <dialog:Database_type_to_create/>
-            </Popup>
+
+            <dialog:Connect_wURI/>
+
+        </Popup>
+
 
 
 

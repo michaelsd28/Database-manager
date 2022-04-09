@@ -4,12 +4,46 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Database_Manager.Views.Dialogs"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
-    d:DesignHeight="300"
-    d:DesignWidth="400">
+RequestedTheme="Dark"
+    >
 
-    <Grid>
+    <StackPanel 
+        
+        Background="#FF272A2F" 
+        CornerRadius="10"  
+    
+     
 
-    </Grid>
+        Padding="20"
+                Canvas.ZIndex="100">
+        <TextBlock Text="Connect with uri/hostname" Margin="20" FontSize="25"/>
+        <TextBox Height="80" Margin="20" PlaceholderText="Enter uri"/>
+        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center">
+            <RadioButton Content="Redis" />
+            <RadioButton Content="MongoDB" />
+            <RadioButton Content="SQL Server"/>
+
+        </StackPanel >
+
+        <muxc:Expander x:Name="Expander2" Width="300" HorizontalAlignment="Center" Margin="10">
+            <muxc:Expander.Header>
+                <TextBlock Text="Advanced options"/>
+            </muxc:Expander.Header>
+            <muxc:Expander.Content>
+                <Grid>
+                    <Button Margin="15" Content="This is a Button in the content"/>
+                </Grid>
+            </muxc:Expander.Content>
+        </muxc:Expander>
+
+        <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center">
+            <Button Margin="10" Background="#051B2E" >Connect</Button>
+            <Button Margin="10" Background="#141414"  Click="CancelButton">Cancel</Button>
+        </StackPanel>
+        
+        
+
+    </StackPanel>
 </UserControl>

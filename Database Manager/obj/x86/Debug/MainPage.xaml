@@ -35,7 +35,9 @@
         <Grid Grid.Row="0" >
 
             <TextBlock VerticalAlignment="Center" FontSize="30"  HorizontalAlignment="Center">Database Manager</TextBlock>
-            <Button HorizontalAlignment="Right" Margin="0,25,8,0" VerticalAlignment="Top" Width="105" Background="#3C3C3C">
+            <Button 
+                HorizontalAlignment="Right" 
+                Margin="0,25,8,0" VerticalAlignment="Top" Width="105" Background="#3C3C3C">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="Assets\Mainpage\settings icon.png" Height="20" Margin="0,0,3,0"/>
                     <TextBlock>Settings</TextBlock>
@@ -51,11 +53,17 @@
         <StackPanel  Grid.Row="1"     HorizontalAlignment="Center" Orientation="Horizontal" Width="494">
 
 
-            <Button x:ConnectionId='3'                          Background="#3C3C3C" Margin="10,10,10,10" x:Name="BCreateDB" RelativePanel.LeftOf="BConnectDB" Width="74">Create</Button>
-            <Button x:ConnectionId='4'  Background="#3C3C3C" x:Name="BConnectDB" RelativePanel.LeftOf="TSearchDB">Connect</Button>
-            <TextBox x:ConnectionId='5'  Background="#3C3C3C" Width="210" Margin="25,0,0,0"   x:Name="TSearchDB" PlaceholderText="Search database" RelativePanel.AlignHorizontalCenterWithPanel="True" VerticalAlignment="Center"/>
+            <Button x:ConnectionId='4' 
+                                         
+                Background="#3C3C3C" Margin="10,10,10,10" x:Name="BCreateDB" 
+                RelativePanel.LeftOf="BConnectDB" Width="74">Create</Button>
+            <Button x:ConnectionId='5'  
+                                        
+                Background="#3C3C3C" x:Name="BConnectDB" 
+                RelativePanel.LeftOf="TSearchDB">Connect</Button>
+            <TextBox x:ConnectionId='6'  Background="#3C3C3C" Width="210" Margin="25,0,0,0"   x:Name="TSearchDB" PlaceholderText="Search database" RelativePanel.AlignHorizontalCenterWithPanel="True" VerticalAlignment="Center"/>
 
-            <Button x:ConnectionId='6' Margin="10,0,5,0" x:Name="BRefreshDB" RelativePanel.RightOf="TSearchDB" Background="#3C3C3C">
+            <Button x:ConnectionId='7' Margin="10,0,5,0" x:Name="BRefreshDB" RelativePanel.RightOf="TSearchDB" Background="#3C3C3C">
                 <StackPanel Orientation="Horizontal" Margin="-6,0,-5,0">
                     <Image Source="Assets\Mainpage\refresh icon.png" Height="20" Width="15" Margin="0,0,1,0"/>
                     <TextBlock>Refresh</TextBlock>
@@ -64,21 +72,38 @@
             </Button>
 
         </StackPanel>
-
+            
         <Popup x:ConnectionId='2' 
-            
-          
-            x:Name="Popup_Create" 
+         x:FieldModifier="Public"
+                x:Name="Popup_Create" 
                 IsOpen="False" 
-        IsLightDismissEnabled="True"
-        LightDismissOverlayMode="On"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Margin="0,0,320,0"
-            
+                IsLightDismissEnabled="True"
+                LightDismissOverlayMode="On"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="0,0,320,0"
             >
+       
             <dialog:Database_type_to_create/>
+            
             </Popup>
+
+        <Popup x:ConnectionId='3' 
+                x:FieldModifier="Public"
+                x:Name="Popup_ConnectURI" 
+                IsOpen="False" 
+                IsLightDismissEnabled="True"
+                LightDismissOverlayMode="On"
+         
+                Margin="-390,60,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"            
+            >
+
+            <dialog:Connect_wURI/>
+
+        </Popup>
+
 
 
 

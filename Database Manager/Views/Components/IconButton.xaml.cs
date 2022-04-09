@@ -22,6 +22,31 @@ namespace Database_Manager.Views.Components
 
 
 
+        public string ImageHeight
+        {
+            get { return (string)GetValue(ImageHeightProperty); }
+            set { SetValue(ImageHeightProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for ImageHeight.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ImageHeightProperty =
+            DependencyProperty.Register("ImageHeight", typeof(string), typeof(IconButton), new PropertyMetadata("20"));
+
+
+
+        public string ForegroundText
+        {
+            get { return (string)GetValue(ForegroundTextProperty); }
+            set { SetValue(ForegroundTextProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for ForegroundText.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ForegroundTextProperty =
+            DependencyProperty.Register("ForegroundText", typeof(string), typeof(IconButton), new PropertyMetadata(0));
+
+
+
+
         public string ImageIcon
         {
             get { return (string)GetValue(ImageIconProperty); }
@@ -32,6 +57,18 @@ namespace Database_Manager.Views.Components
         public static readonly DependencyProperty ImageIconProperty =
             DependencyProperty.Register("ImageIcon", typeof(string), typeof(IconButton), new PropertyMetadata(string.Empty));
 
+
+
+
+        public string BFontSize
+        {
+            get { return (string)GetValue(BFontSizeProperty); }
+            set { SetValue(BFontSizeProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for BFontSize.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty BFontSizeProperty =
+            DependencyProperty.Register("BFontSize", typeof(string), typeof(IconButton), new PropertyMetadata(string.Empty));
 
 
 

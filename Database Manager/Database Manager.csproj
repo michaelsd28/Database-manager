@@ -135,11 +135,14 @@
     <Compile Include="Views\Dialogs\Connect wURI.xaml.cs">
       <DependentUpon>Connect wURI.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Dialogs\Database create server.xaml.cs">
-      <DependentUpon>Database create server.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Dialogs\Database type to create.xaml.cs">
       <DependentUpon>Database type to create.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialogs\Server creation\MongoDB Server.xaml.cs">
+      <DependentUpon>MongoDB Server.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Managers\MongoDB Manager.xaml.cs">
+      <DependentUpon>MongoDB Manager.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Settings page.xaml.cs">
       <DependentUpon>Settings page.xaml</DependentUpon>
@@ -241,11 +244,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Dialogs\Database create server.xaml">
+    <Page Include="Views\Dialogs\Database type to create.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Dialogs\Database type to create.xaml">
+    <Page Include="Views\Dialogs\Server creation\MongoDB Server.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Managers\MongoDB Manager.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -266,7 +273,6 @@
     <Folder Include="Model\" />
     <Folder Include="Resource dictionaries\Main page\" />
     <Folder Include="Services\" />
-    <Folder Include="Views\Managers\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

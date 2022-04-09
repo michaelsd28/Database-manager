@@ -68,8 +68,8 @@ Views\Components\IconButton.xbf
 Views\Components\Mainpage\Database Card.xbf
 Views\Database stack.xbf
 Views\Dialogs\Connect wURI.xbf
-Views\Dialogs\Database create server.xbf
 Views\Dialogs\Database type to create.xbf
+Views\Dialogs\Server creation\MongoDB Server.xbf
 Views\Settings page.xbf
 Properties\Default.rd.xml
 WinMetadata\Windows.winmd
