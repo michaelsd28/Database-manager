@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Windows10version1903="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 8)" xmlns:muxc="using:Microsoft.UI.Xaml.Controls" xmlns:mongodb="using:Database_Manager.Views.Components.Managers.MongoDB" xmlns:components="using:Database_Manager.Views.Components"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+
     RequestedTheme="Dark" 
 
 
@@ -18,28 +18,28 @@
 
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="43*"/>
-            <RowDefinition Height="7*"/>
+            <RowDefinition MinHeight="150"  Height="75*"/>
+            <RowDefinition  Height="397*"/>
+            <RowDefinition Height="28*"/>
 
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="64*"/>
-            <ColumnDefinition Width="311*"/>
+            <ColumnDefinition MinWidth="250" Width="14*"/>
+            <ColumnDefinition Width="61*"/>
+
+
 
 
 
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="5" Canvas.ZIndex="2">
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="3" Canvas.ZIndex="2">
             <Grid.Background>
                 <ImageBrush ImageSource="/Assets\Managers\MongoDB\mongodb background.png" Opacity="0.05"/>
             </Grid.Background>
         </Grid>
 
-        <Grid  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="5" Canvas.ZIndex="3">
+        <Grid  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="3" Canvas.ZIndex="3">
             <Grid.Background>
                 <AcrylicBrush    
                               BackgroundSource="HostBackdrop"
@@ -54,7 +54,7 @@
 
 
         <Canvas Grid.Row="0" Grid.Column="0"
-                       Grid.RowSpan="4" Canvas.ZIndex="4">
+                       Grid.RowSpan="2" Canvas.ZIndex="4">
             <Line
                 Canvas.ZIndex="10"
     X1="250" Y1="1000"
@@ -71,7 +71,7 @@
      
         
                        Grid.Row="0" Grid.Column="0"
-                       Grid.RowSpan="4" Canvas.ZIndex="4" >
+                       Grid.RowSpan="2" Canvas.ZIndex="4" >
 
             <StackPanel  Name="HeadControls" Orientation="Vertical"   Margin="5,0,10,0"   >
 
@@ -102,7 +102,7 @@
             </StackPanel>
         </RelativePanel>
 
-        <Grid Padding="10,0,0,0" Canvas.ZIndex="3" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Background="#202020">
+        <Grid Padding="10,0,0,0" Canvas.ZIndex="3" Grid.Row="2"   Grid.Column="0"  Grid.ColumnSpan="2" Background="#202020">
             <components:IconButton ButtonText="Delete" 
                                    ImageIcon="/Assets\Managers\MongoDB\delete database.png"
                             
@@ -111,9 +111,25 @@
                                    />
         </Grid>
 
-        <!--*********       right panel         *********-->
+        <!--*********       right panel  controls       *********-->
 
-        <StackPanel Canvas.ZIndex="3" Orientation="Horizontal" Grid.Column="1" />
+        <StackPanel Grid.Row="0" Grid.Column="1" 
+                 Orientation="Horizontal"
+                    Canvas.ZIndex="4"
+                    Padding="0,0,0,80"
+              BorderThickness="10"
+      
+              >
+
+            <TextBox Height="20" PlaceholderText="Search in database"/>
+            <Image Source="/Assets\Managers\MongoDB\delete database.png" Height="30" Margin="10"/>
+            <TextBlock Text="Show as:"  VerticalAlignment="Center" />
+            <Image Source="/Assets\Managers\MongoDB\delete database.png" Height="30" Margin="10"/>
+            <Image Source="/Assets\Managers\MongoDB\delete database.png" Height="30" Margin="10"/>
+            <Button>refresh</Button>
+            <Button Margin="10">Insert</Button>
+        </StackPanel>
+
 
 
 
