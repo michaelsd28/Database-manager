@@ -4,49 +4,119 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Database_Manager.Views.Managers"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Windows10version1903="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 8)" xmlns:muxc="using:Microsoft.UI.Xaml.Controls" xmlns:mongodb="using:Database_Manager.Views.Components.Managers.MongoDB" xmlns:components="using:Database_Manager.Views.Components"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-    RequestedTheme="Dark"
+    RequestedTheme="Dark" 
+
+
     >
 
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/Assets\Managers\MongoDB\mongodb background.png" Opacity="0.05"/>
-        </Grid.Background>
+
+
+
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="0.2*"/>
-   
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="7*"/>
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="64*"/>
+            <ColumnDefinition Width="311*"/>
+
+
+
         </Grid.ColumnDefinitions>
 
-
-        <Grid Grid.Row="0" Grid.Column="0"  >
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBlock Margin="10"   FontSize="20" VerticalAlignment="Center">Database/<LineBreak/>Collection</TextBlock>
-                <Button Padding="2" Margin="5">
-                    <Image Source="/Assets\Managers\MongoDB\add button.png" Height="30" />
-                </Button>
-                <Button Padding="2" Margin="5">
-                    <Image Source="/Assets\Managers\MongoDB\import data.png" Height="30" />
-                </Button>
-
-                <Button Padding="2" Margin="5">
-                    <Image Source="/Assets\Managers\MongoDB\export data.png" Height="30" />
-                </Button>
-            </StackPanel>
-            
-
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="5" Canvas.ZIndex="2">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Assets\Managers\MongoDB\mongodb background.png" Opacity="0.05"/>
+            </Grid.Background>
         </Grid>
+
+        <Grid  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="5" Canvas.ZIndex="3">
+            <Grid.Background>
+                <AcrylicBrush    
+                              BackgroundSource="HostBackdrop"
+                              TintColor="#111111"
+                              TintOpacity="0.5"
+                              Windows10version1903:TintLuminosityOpacity="1"
+                              FallbackColor="#111111"
+                             />
+
+            </Grid.Background>
+        </Grid>
+
+
+        <Canvas Grid.Row="0" Grid.Column="0"
+                       Grid.RowSpan="4" Canvas.ZIndex="4">
+            <Line
+                Canvas.ZIndex="10"
+    X1="250" Y1="1000"
+    X2="250" Y2="1"
+    Stroke="#4B4B4B"
+    StrokeThickness="2" />
+
+        </Canvas>
+
+
+
+
+        <RelativePanel 
+     
+        
+                       Grid.Row="0" Grid.Column="0"
+                       Grid.RowSpan="4" Canvas.ZIndex="4" >
+
+            <StackPanel  Name="HeadControls" Orientation="Vertical"   Margin="5,0,10,0"   >
+
+                <TextBlock HorizontalAlignment="Center"  Margin="10"   FontSize="16" VerticalAlignment="Center">Database/<LineBreak/>Collection</TextBlock>
+                <StackPanel   Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Button Click="AddButton"  Margin="5" >
+                        <Image Source="/Assets\Managers\MongoDB\add button.png" Height="20" />
+                    </Button>
+                    <Button Click="ImportButton"  Margin="5" >
+                        <Image Source="/Assets\Managers\MongoDB\import data.png" Height="20" />
+                    </Button>
+
+                    <Button  Margin="5" >
+                        <Image Source="/Assets\Managers\MongoDB\export data.png" Height="20" />
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel>
+
+
+            </StackPanel>
+
+            <StackPanel
+            
+                 x:Name="TreeView_Data" RelativePanel.Below="HeadControls" Margin="0,50,0,0">
+                <mongodb:Database_Treeview/>
+                <mongodb:Database_Treeview />
+            </StackPanel>
+        </RelativePanel>
+
+        <Grid Padding="10,0,0,0" Canvas.ZIndex="3" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Background="#202020">
+            <components:IconButton ButtonText="Delete" 
+                                   ImageIcon="/Assets\Managers\MongoDB\delete database.png"
+                            
+                            ForegroundText="White"
+                                   ButtonBackground="#181818"
+                                   />
+        </Grid>
+
+        <!--*********       right panel         *********-->
+
+        <StackPanel Canvas.ZIndex="3" Orientation="Horizontal" Grid.Column="1" />
+
+
+
 
     </Grid>
 </Page>

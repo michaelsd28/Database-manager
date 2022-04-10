@@ -4,7 +4,6 @@ Assets\LargeTile.scale-125.png
 Assets\LargeTile.scale-150.png
 Assets\LargeTile.scale-200.png
 Assets\LargeTile.scale-400.png
-Assets\LockScreenLogo.scale-200.png
 Assets\Mainpage\background mainpage 2.jpg
 Assets\Mainpage\background page.jpg
 Assets\Mainpage\edit database button.png
@@ -17,9 +16,12 @@ Assets\Mainpage\sql logo badge.png
 Assets\Mainpage\terminal icon 2.png
 Assets\Mainpage\terminal icon.png
 Assets\Managers\MongoDB\add button.png
+Assets\Managers\MongoDB\database badge.png
+Assets\Managers\MongoDB\delete database.png
 Assets\Managers\MongoDB\export data.png
 Assets\Managers\MongoDB\import data.png
 Assets\Managers\MongoDB\mongodb background.png
+Assets\Managers\MongoDB\table badge.png
 Assets\SmallTile.scale-100.png
 Assets\SmallTile.scale-125.png
 Assets\SmallTile.scale-150.png
@@ -41,6 +43,7 @@ Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png
 Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png
 Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png
 Assets\Square44x44Logo.altform-unplated_targetsize-16.png
+Assets\Square44x44Logo.altform-unplated_targetsize-24.png
 Assets\Square44x44Logo.altform-unplated_targetsize-256.png
 Assets\Square44x44Logo.altform-unplated_targetsize-32.png
 Assets\Square44x44Logo.altform-unplated_targetsize-48.png
@@ -51,7 +54,6 @@ Assets\Square44x44Logo.scale-200.png
 Assets\Square44x44Logo.scale-400.png
 Assets\Square44x44Logo.targetsize-16.png
 Assets\Square44x44Logo.targetsize-24.png
-Assets\Square44x44Logo.targetsize-24_altform-unplated.png
 Assets\Square44x44Logo.targetsize-256.png
 Assets\Square44x44Logo.targetsize-32.png
 Assets\Square44x44Logo.targetsize-48.png
@@ -68,13 +70,17 @@ Assets\Wide310x150Logo.scale-400.png
 App.xbf
 Database Manager.xr.xml
 MainPage.xbf
+Views\Components\Expander Content.xbf
+Views\Components\Expander Header.xbf
 Views\Components\IconButton.xbf
 Views\Components\Mainpage\Database Card.xbf
+Views\Components\Managers\MongoDB\Database Treeview.xbf
 Views\Database stack.xbf
 Views\Dialogs\Connect wURI.xbf
 Views\Dialogs\Database type to create.xbf
 Views\Dialogs\Server creation\MongoDB Server.xbf
 Views\Managers\MongoDB Manager.xbf
+Views\Managers\TreeViewPage.xbf
 Views\Settings page.xbf
 Properties\Default.rd.xml
 WinMetadata\Windows.winmd

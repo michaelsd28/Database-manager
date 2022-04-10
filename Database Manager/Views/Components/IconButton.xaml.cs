@@ -84,6 +84,20 @@ namespace Database_Manager.Views.Components
 
 
 
+        public string ButtonBackground
+        {
+            get { return (string)GetValue(ButtonBackgroundProperty); }
+            set { SetValue(ButtonBackgroundProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for ButtonBackground.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ButtonBackgroundProperty =
+            DependencyProperty.Register("ButtonBackground", typeof(string), typeof(IconButton), new PropertyMetadata("#FF252525"));
+
+
+
+
+
         public IconButton()
         {
             this.InitializeComponent();

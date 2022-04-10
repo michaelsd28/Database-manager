@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>E:\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>E1B299BAAAE0390ACDBF0272EBDBE165FDEFD12452BA01FF86ECA9ED37934426</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>4B804362FC90C9FEA9F8CADB3DBF0EEFDEB71EA2614C45FB16241997A618CC33</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>9fefd2ae-3f2e-4458-8205-9b9310388045_1.0.0.0_x86__dw91achczhjew</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>9fefd2ae-3f2e-4458-8205-9b9310388045_dw91achczhjew!App</RegisteredUserModeAppID>
     <RegisteredPackageID>9fefd2ae-3f2e-4458-8205-9b9310388045</RegisteredPackageID>
@@ -30,21 +30,117 @@
     <AppXManifest Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-09T08:20:00.423</Modified>
+      <Modified>2022-04-10T08:08:58.128</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Database Manager.exe">
       <PackagePath>entrypoint\Database Manager.exe</PackagePath>
-      <Modified>2022-04-09T08:19:59.527</Modified>
+      <Modified>2022-04-10T08:08:57.385</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\colorcode.core\2.0.6\lib\netstandard1.4\ColorCode.Core.dll">
+      <PackagePath>ColorCode.Core.dll</PackagePath>
+      <Modified>2018-10-05T23:30:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\colorcode.uwp\2.0.6\lib\uap10.0\ColorCode.UWP.dll">
+      <PackagePath>ColorCode.UWP.dll</PackagePath>
+      <Modified>2018-10-05T23:30:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.bcl.asyncinterfaces\5.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll">
+      <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
+      <Modified>2020-10-19T18:40:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit\7.1.2\lib\netstandard2.0\Microsoft.Toolkit.dll">
+      <PackagePath>Microsoft.Toolkit.dll</PackagePath>
+      <Modified>2021-11-18T22:28:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.dll</PackagePath>
+      <Modified>2021-11-18T22:29:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.dll</PackagePath>
+      <Modified>2021-11-18T22:29:18.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.core\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Core.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Core.dll</PackagePath>
+      <Modified>2021-11-18T22:29:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll</PackagePath>
+      <Modified>2021-11-18T22:29:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.input\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Input.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Input.dll</PackagePath>
+      <Modified>2021-11-18T22:29:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.layout\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Layout.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Layout.dll</PackagePath>
+      <Modified>2021-11-18T22:29:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.markdown\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Markdown.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Markdown.dll</PackagePath>
+      <Modified>2021-11-18T22:29:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.media\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Media.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Media.dll</PackagePath>
+      <Modified>2021-11-18T22:29:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.primitives\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Primitives.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Primitives.dll</PackagePath>
+      <Modified>2021-11-18T22:29:46.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2021-10-10T10:49:52.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\system.runtime.compilerservices.unsafe\5.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+      <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
+      <Modified>2020-10-19T18:46:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\system.text.encodings.web\5.0.1\lib\netstandard2.0\System.Text.Encodings.Web.dll">
+      <PackagePath>System.Text.Encodings.Web.dll</PackagePath>
+      <Modified>2021-02-16T21:53:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\system.text.json\5.0.2\lib\netstandard2.0\System.Text.Json.dll">
+      <PackagePath>System.Text.Json.dll</PackagePath>
+      <Modified>2021-03-16T22:34:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\win2d.uwp\1.25.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
+      <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
+      <Modified>2020-04-02T19:44:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\win2d.uwp\1.25.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
+      <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
+      <Modified>2020-04-02T19:44:36.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T08:52:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.core\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Core\Microsoft.Toolkit.Uwp.UI.Controls.Core.xr.xml">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Core\Microsoft.Toolkit.Uwp.UI.Controls.Core.xr.xml</PackagePath>
+      <Modified>2021-11-18T22:01:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml</PackagePath>
+      <Modified>2021-11-18T21:54:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.input\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Input\Microsoft.Toolkit.Uwp.UI.Controls.Input.xr.xml">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Input\Microsoft.Toolkit.Uwp.UI.Controls.Input.xr.xml</PackagePath>
+      <Modified>2021-11-18T22:01:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.layout\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Layout\Microsoft.Toolkit.Uwp.UI.Controls.Layout.xr.xml">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Layout\Microsoft.Toolkit.Uwp.UI.Controls.Layout.xr.xml</PackagePath>
+      <Modified>2021-11-18T22:00:30.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.markdown\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Markdown\Microsoft.Toolkit.Uwp.UI.Controls.Markdown.xr.xml">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Markdown\Microsoft.Toolkit.Uwp.UI.Controls.Markdown.xr.xml</PackagePath>
+      <Modified>2021-11-18T22:01:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.media\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Media\Microsoft.Toolkit.Uwp.UI.Controls.Media.xr.xml">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Media\Microsoft.Toolkit.Uwp.UI.Controls.Media.xr.xml</PackagePath>
+      <Modified>2021-11-18T21:55:34.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\database app logo.png">
       <PackagePath>Assets\database app logo.png</PackagePath>
@@ -53,27 +149,27 @@
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:38.992</Modified>
+      <Modified>2022-04-10T06:58:25.182</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\LargeTile.scale-125.png">
       <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.014</Modified>
+      <Modified>2022-04-10T06:58:25.204</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\LargeTile.scale-150.png">
       <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.041</Modified>
+      <Modified>2022-04-10T06:58:25.233</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.083</Modified>
+      <Modified>2022-04-10T06:58:25.276</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.223</Modified>
+      <Modified>2022-04-10T06:58:25.418</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Mainpage\edit database button.png">
       <PackagePath>Assets\Mainpage\edit database button.png</PackagePath>
@@ -111,6 +207,14 @@
       <PackagePath>Assets\Mainpage\terminal icon.png</PackagePath>
       <Modified>2022-04-07T00:01:00.424</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\database badge.png">
+      <PackagePath>Assets\Managers\MongoDB\database badge.png</PackagePath>
+      <Modified>2022-04-10T06:47:07.819</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\delete database.png">
+      <PackagePath>Assets\Managers\MongoDB\delete database.png</PackagePath>
+      <Modified>2022-04-10T07:24:55.124</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\export data.png">
       <PackagePath>Assets\Managers\MongoDB\export data.png</PackagePath>
       <Modified>2022-04-09T08:08:48.636</Modified>
@@ -126,235 +230,235 @@
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:38.695</Modified>
+      <Modified>2022-04-10T06:58:24.874</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\SmallTile.scale-125.png">
       <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:38.706</Modified>
+      <Modified>2022-04-10T06:58:24.885</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\SmallTile.scale-150.png">
       <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:38.716</Modified>
+      <Modified>2022-04-10T06:58:24.895</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:38.728</Modified>
+      <Modified>2022-04-10T06:58:24.906</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:38.744</Modified>
+      <Modified>2022-04-10T06:58:24.925</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.430</Modified>
+      <Modified>2022-04-10T06:58:25.639</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\SplashScreen.scale-125.png">
       <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.461</Modified>
+      <Modified>2022-04-10T06:58:25.672</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\SplashScreen.scale-150.png">
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.505</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\SplashScreen.scale-400.png">
-      <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.830</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square150x150Logo.scale-100.png">
-      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:38.758</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square150x150Logo.scale-125.png">
-      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:38.769</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square150x150Logo.scale-150.png">
-      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:38.782</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square150x150Logo.scale-400.png">
-      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:38.840</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
-      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.366</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
-      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.373</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
-      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.406</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
-      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.380</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
-      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.388</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
-      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.319</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
-      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.359</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
-      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.333</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
-      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.341</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.scale-100.png">
-      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.231</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.scale-125.png">
-      <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.238</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.scale-150.png">
-      <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.247</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.scale-400.png">
-      <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.267</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.targetsize-16.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.274</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.targetsize-24.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.281</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.targetsize-256.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.312</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.targetsize-32.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.288</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.targetsize-48.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.296</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\StoreLogo.scale-100.png">
-      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.840</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\StoreLogo.scale-125.png">
-      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.849</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\StoreLogo.scale-150.png">
-      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.858</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\StoreLogo.scale-200.png">
-      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.868</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\StoreLogo.scale-400.png">
-      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.883</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Wide310x150Logo.scale-100.png">
-      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:38.851</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Wide310x150Logo.scale-125.png">
-      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:38.866</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Wide310x150Logo.scale-150.png">
-      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:38.882</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Wide310x150Logo.scale-400.png">
-      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:38.975</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\LockScreenLogo.scale-200.png">
-      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2022-03-30T06:42:37.165</Modified>
+      <Modified>2022-04-10T06:58:25.717</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.575</Modified>
+      <Modified>2022-04-10T06:58:25.789</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\SplashScreen.scale-400.png">
+      <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:26.058</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:24.939</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:24.951</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:24.965</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:38.799</Modified>
+      <Modified>2022-04-10T06:58:24.983</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square150x150Logo.scale-400.png">
+      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.024</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.572</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.579</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.614</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.587</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.595</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.522</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-unplated_targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.529</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.564</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.537</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.545</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.427</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.scale-125.png">
+      <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.435</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.scale-150.png">
+      <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.443</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.255</Modified>
+      <Modified>2022-04-10T06:58:25.452</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.scale-400.png">
+      <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:39.326</Modified>
+      <Modified>2022-04-10T06:58:25.465</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.473</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.481</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.514</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.489</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.497</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:26.068</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:26.078</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:26.086</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:26.097</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:26.112</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.036</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.051</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.068</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-08T00:23:38.905</Modified>
+      <Modified>2022-04-10T06:58:25.093</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2022-04-10T06:58:25.165</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\add button.png">
       <PackagePath>Assets\Managers\MongoDB\add button.png</PackagePath>
       <Modified>2022-04-09T07:42:40.506</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\table badge.png">
+      <PackagePath>Assets\Managers\MongoDB\table badge.png</PackagePath>
+      <Modified>2022-04-10T06:56:34.223</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Mainpage\background mainpage 2.jpg">
       <PackagePath>Assets\Mainpage\background mainpage 2.jpg</PackagePath>
@@ -370,47 +474,63 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Database Manager.xr.xml">
       <PackagePath>Database Manager.xr.xml</PackagePath>
-      <Modified>2022-04-09T08:12:35.256</Modified>
+      <Modified>2022-04-10T08:08:57.303</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-04-09T08:19:59.468</Modified>
+      <Modified>2022-04-10T08:08:57.318</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-04-09T08:19:59.468</Modified>
+      <Modified>2022-04-10T08:08:57.318</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\Expander Content.xbf">
+      <PackagePath>Views\Components\Expander Content.xbf</PackagePath>
+      <Modified>2022-04-10T08:08:57.318</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\Expander Header.xbf">
+      <PackagePath>Views\Components\Expander Header.xbf</PackagePath>
+      <Modified>2022-04-10T08:08:57.318</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\IconButton.xbf">
       <PackagePath>Views\Components\IconButton.xbf</PackagePath>
-      <Modified>2022-04-09T08:19:59.468</Modified>
+      <Modified>2022-04-10T08:08:57.318</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\Mainpage\Database Card.xbf">
       <PackagePath>Views\Components\Mainpage\Database Card.xbf</PackagePath>
-      <Modified>2022-04-09T08:19:59.468</Modified>
+      <Modified>2022-04-10T08:08:57.318</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\Managers\MongoDB\Database Treeview.xbf">
+      <PackagePath>Views\Components\Managers\MongoDB\Database Treeview.xbf</PackagePath>
+      <Modified>2022-04-10T08:08:57.318</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Database stack.xbf">
       <PackagePath>Views\Database stack.xbf</PackagePath>
-      <Modified>2022-04-09T08:19:59.469</Modified>
+      <Modified>2022-04-10T08:08:57.319</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Dialogs\Connect wURI.xbf">
       <PackagePath>Views\Dialogs\Connect wURI.xbf</PackagePath>
-      <Modified>2022-04-09T08:19:59.469</Modified>
+      <Modified>2022-04-10T08:08:57.319</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Dialogs\Database type to create.xbf">
       <PackagePath>Views\Dialogs\Database type to create.xbf</PackagePath>
-      <Modified>2022-04-09T08:19:59.469</Modified>
+      <Modified>2022-04-10T08:08:57.319</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Dialogs\Server creation\MongoDB Server.xbf">
       <PackagePath>Views\Dialogs\Server creation\MongoDB Server.xbf</PackagePath>
-      <Modified>2022-04-09T08:19:59.469</Modified>
+      <Modified>2022-04-10T08:08:57.319</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Managers\MongoDB Manager.xbf">
       <PackagePath>Views\Managers\MongoDB Manager.xbf</PackagePath>
-      <Modified>2022-04-09T08:19:59.469</Modified>
+      <Modified>2022-04-10T08:08:57.319</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Managers\TreeViewPage.xbf">
+      <PackagePath>Views\Managers\TreeViewPage.xbf</PackagePath>
+      <Modified>2022-04-10T08:08:57.319</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Settings page.xbf">
       <PackagePath>Views\Settings page.xbf</PackagePath>
-      <Modified>2022-04-09T08:19:59.469</Modified>
+      <Modified>2022-04-10T08:08:57.319</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -426,11 +546,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-04-09T08:19:59.803</Modified>
+      <Modified>2022-04-10T07:34:19.025</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Core\Database Manager.exe">
       <PackagePath>Database Manager.exe</PackagePath>
-      <Modified>2022-04-09T08:20:00.419</Modified>
+      <Modified>2022-04-10T08:08:58.126</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

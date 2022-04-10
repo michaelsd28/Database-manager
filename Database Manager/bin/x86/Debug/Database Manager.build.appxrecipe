@@ -28,11 +28,83 @@
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Database Manager.exe">
       <PackagePath>entrypoint\Database Manager.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\colorcode.core\2.0.6\lib\netstandard1.4\ColorCode.Core.dll">
+      <PackagePath>ColorCode.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\colorcode.uwp\2.0.6\lib\uap10.0\ColorCode.UWP.dll">
+      <PackagePath>ColorCode.UWP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.bcl.asyncinterfaces\5.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll">
+      <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit\7.1.2\lib\netstandard2.0\Microsoft.Toolkit.dll">
+      <PackagePath>Microsoft.Toolkit.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.core\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Core.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.input\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Input.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Input.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.layout\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Layout.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Layout.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.markdown\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Markdown.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Markdown.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.media\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Media.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Media.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.primitives\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Primitives.dll">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\system.runtime.compilerservices.unsafe\5.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+      <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\system.text.encodings.web\5.0.1\lib\netstandard2.0\System.Text.Encodings.Web.dll">
+      <PackagePath>System.Text.Encodings.Web.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\system.text.json\5.0.2\lib\netstandard2.0\System.Text.Json.dll">
+      <PackagePath>System.Text.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\win2d.uwp\1.25.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
+      <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\win2d.uwp\1.25.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
+      <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.core\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Core\Microsoft.Toolkit.Uwp.UI.Controls.Core.xr.xml">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Core\Microsoft.Toolkit.Uwp.UI.Controls.Core.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.input\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Input\Microsoft.Toolkit.Uwp.UI.Controls.Input.xr.xml">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Input\Microsoft.Toolkit.Uwp.UI.Controls.Input.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.layout\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Layout\Microsoft.Toolkit.Uwp.UI.Controls.Layout.xr.xml">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Layout\Microsoft.Toolkit.Uwp.UI.Controls.Layout.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.markdown\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Markdown\Microsoft.Toolkit.Uwp.UI.Controls.Markdown.xr.xml">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Markdown\Microsoft.Toolkit.Uwp.UI.Controls.Markdown.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\microsoft.toolkit.uwp.ui.controls.media\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Media\Microsoft.Toolkit.Uwp.UI.Controls.Media.xr.xml">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Media\Microsoft.Toolkit.Uwp.UI.Controls.Media.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\database app logo.png">
       <PackagePath>Assets\database app logo.png</PackagePath>
@@ -84,6 +156,12 @@
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Mainpage\terminal icon.png">
       <PackagePath>Assets\Mainpage\terminal icon.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\database badge.png">
+      <PackagePath>Assets\Managers\MongoDB\database badge.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\delete database.png">
+      <PackagePath>Assets\Managers\MongoDB\delete database.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\export data.png">
       <PackagePath>Assets\Managers\MongoDB\export data.png</PackagePath>
     </AppxPackagedFile>
@@ -125,6 +203,10 @@
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\SplashScreen.scale-200.png">
+      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -139,6 +221,10 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square150x150Logo.scale-150.png">
       <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square150x150Logo.scale-200.png">
+      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square150x150Logo.scale-400.png">
@@ -169,6 +255,10 @@
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-unplated_targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -191,6 +281,10 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.scale-150.png">
       <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.scale-200.png">
+      <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.scale-400.png">
@@ -249,35 +343,19 @@
       <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Wide310x150Logo.scale-400.png">
-      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\LockScreenLogo.scale-200.png">
-      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\SplashScreen.scale-200.png">
-      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square150x150Logo.scale-200.png">
-      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.scale-200.png">
-      <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\add button.png">
       <PackagePath>Assets\Managers\MongoDB\add button.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\table badge.png">
+      <PackagePath>Assets\Managers\MongoDB\table badge.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Mainpage\background mainpage 2.jpg">
       <PackagePath>Assets\Mainpage\background mainpage 2.jpg</PackagePath>
@@ -297,11 +375,20 @@
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\Expander Content.xbf">
+      <PackagePath>Views\Components\Expander Content.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\Expander Header.xbf">
+      <PackagePath>Views\Components\Expander Header.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\IconButton.xbf">
       <PackagePath>Views\Components\IconButton.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\Mainpage\Database Card.xbf">
       <PackagePath>Views\Components\Mainpage\Database Card.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\Managers\MongoDB\Database Treeview.xbf">
+      <PackagePath>Views\Components\Managers\MongoDB\Database Treeview.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Database stack.xbf">
       <PackagePath>Views\Database stack.xbf</PackagePath>
@@ -317,6 +404,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Managers\MongoDB Manager.xbf">
       <PackagePath>Views\Managers\MongoDB Manager.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Managers\TreeViewPage.xbf">
+      <PackagePath>Views\Managers\TreeViewPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Settings page.xbf">
       <PackagePath>Views\Settings page.xbf</PackagePath>

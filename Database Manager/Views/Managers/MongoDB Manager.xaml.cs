@@ -25,6 +25,21 @@ namespace Database_Manager.Views.Managers
         public MongoDB_Manager()
         {
             this.InitializeComponent();
+
+   
+        }
+        private void AddButton(object sender, RoutedEventArgs e)
+        {
+    
+
+
+
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void ImportButton(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(TreeViewPage));
         }
     }
 }

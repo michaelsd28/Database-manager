@@ -10,7 +10,6 @@
     xmlns:dialog ="using:Database_Manager.Views.Dialogs"
     RequestedTheme="Dark" 
     
-    
     >
     <Grid  >
         <Grid.Background >
