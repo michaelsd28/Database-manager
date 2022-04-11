@@ -28,6 +28,7 @@
       <RootProperty Name="Background" />
       <RootProperty Name="RequestedTheme" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
@@ -41,6 +42,7 @@
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="Padding" />
+      <RootProperty Name="Margin" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
       <RootMethod Name="GetColumn" />
@@ -127,8 +129,6 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Children" />
       <RootProperty Name="Background" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="CornerRadius" />
       <RootMethod Name="GetLeftOf" />
       <RootMethod Name="SetLeftOf" />
       <RootMethod Name="GetAlignHorizontalCenterWithPanel" />

@@ -1,6 +1,8 @@
 ﻿using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.Foundation;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -87,8 +89,8 @@ namespace Database_Manager
             deferral.Complete();
         }
 
-/*
-        private readonly double minW =600, minH = 500;
+        /*
+        private readonly double minW =1000, minH = 700;
 
         protected override void OnWindowCreated(WindowCreatedEventArgs args)
         {
@@ -107,7 +109,7 @@ namespace Database_Manager
             if (size.Width < minW || size.Height < minH)
             {
               if (size.Width < minW) size.Width = minW;
-                if (size.Height < minH) size.Height = minH;
+             if (size.Height < minH) size.Height = minH;
                 return ApplicationView.GetForCurrentView().TryResizeView(size);
             }
             return false;

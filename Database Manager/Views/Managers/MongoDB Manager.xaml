@@ -13,7 +13,6 @@
     
 
 
-
     >
 
     <Grid>
@@ -31,9 +30,9 @@
 
 
         <Grid.RowDefinitions>
-            <RowDefinition MinHeight="185"  Height="33*"/>
-            <RowDefinition MinHeight="35" Height="160*"/>
-            <RowDefinition MinHeight="35" Height="35"/>
+            <RowDefinition MinHeight="180"   Height="22*"/>
+            <RowDefinition  Height="71*"/>
+            <RowDefinition  MinHeight="50" Height="35"/>
 
 
         </Grid.RowDefinitions>
@@ -69,7 +68,7 @@
         
                        Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Canvas.ZIndex="4" >
 
-            <StackPanel  Name="HeadControls" Orientation="Vertical"   Margin="5,0,10,0"   >
+            <StackPanel  Name="HeadControls" Orientation="Vertical"   Margin="30,25,10,0"   >
 
                 <TextBlock HorizontalAlignment="Center"  Margin="10"   FontSize="16" VerticalAlignment="Center">Database/<LineBreak/>Collection</TextBlock>
                 <StackPanel   Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -99,13 +98,11 @@
 
         <!--*********       bottom panel  controls       *********-->
 
-        <Grid Padding="10,0,0,0" Canvas.ZIndex="3" Grid.Row="2"   Grid.Column="0"  Grid.ColumnSpan="2" Background="#202020" Height="35" VerticalAlignment="Center">
+        <Grid Padding="0,0,0,0" Canvas.ZIndex="3" Grid.Row="2"   Grid.Column="0"  Grid.ColumnSpan="2" Background="#202020"  VerticalAlignment="Bottom">
             <components:IconButton ButtonText="Delete" 
                                    ImageIcon="/Assets\Managers\MongoDB\delete database.png"
                             ButtonPadding="3"
                             ForegroundText="White"
-                                   
-                                   
                                    ButtonBackground="#181818" Margin="13,0,0,-1" Height="36" VerticalAlignment="Bottom"
                                    />
         </Grid>
@@ -113,7 +110,7 @@
         <!--*********       right panel  controls       *********-->
         <RelativePanel  Grid.Row="0" Grid.Column="1" >
 
-            <controls:WrapPanel  RelativePanel.AlignBottomWithPanel="True" Margin="10,35,446,17" >
+            <controls:WrapPanel  RelativePanel.AlignBottomWithPanel="True" Margin="10,-20,446,30" >
 
                 <StackPanel  Margin="0,10,0,10" Orientation="Horizontal" >
                     <TextBox Margin="5,0,5,0" Canvas.ZIndex="5"  x:Name="TextBoxFilter" Height="20" Width="180" PlaceholderText="Search in database"/>
@@ -142,14 +139,11 @@
         <!--*********       right panel  controls       *********-->
 
 
-        <RelativePanel Grid.Row="1" Grid.Column="1" Background="Red" BorderBrush="Aquamarine" BorderThickness="10">
-            <Grid  
-                HorizontalAlignment="Left"  
-                Background="AliceBlue" Margin="50" 
-                BorderBrush="DarkBlue" BorderThickness="10">
-                
-            </Grid>
-        </RelativePanel>
+        <Grid Grid.Row="1" Background="Red" BorderBrush="Aquamarine" 
+                  BorderThickness="10"  Grid.Column="1" Margin="0,-10,200,20" >
+
+
+        </Grid>
 
     </Grid>
 </Page>

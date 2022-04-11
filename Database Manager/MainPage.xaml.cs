@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
@@ -34,6 +35,7 @@ namespace Database_Manager
         {
             this.InitializeComponent();
             MainPageContext = this;
+            this.SizeChanged += MainPage_SizeChanged;
 
             var titleBar = ApplicationView.GetForCurrentView().TitleBar;
             titleBar.ForegroundColor = Colors.White;
@@ -41,9 +43,25 @@ namespace Database_Manager
             titleBar.ButtonForegroundColor = Colors.White;
             titleBar.ButtonBackgroundColor = Colors.Black;
 
+
+
+
+
+
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(500,500));
          
-            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(800,500));
-         
+        }
+
+        private void MainPage_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            //Get the current Windows Size
+            var bounds = Window.Current.Bounds;
+            double height = bounds.Height;
+            Debug.WriteLine(height);
+            double width = bounds.Width;
+            Debug.WriteLine(width);
+
+           // AppTitleTextBlock.Text = "Width: "+ width+ " Height: "+ height;
         }
 
         private void BCreateDB_Click(object sender, RoutedEventArgs e)
