@@ -45,6 +45,8 @@
       <RootMethod Name="SetRow" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
+      <RootMethod Name="GetRowSpan" />
+      <RootMethod Name="SetRowSpan" />
       <RootMethod Name="GetColumnSpan" />
       <RootMethod Name="SetColumnSpan" />
     </RootType>
@@ -107,7 +109,6 @@
       <RootProperty Name="Width" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Padding" />
-      <RootProperty Name="RenderTransformOrigin" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
@@ -116,7 +117,6 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="RenderTransformOrigin" />
     </RootType>
     <RootType FullName="Database_Manager.Views.Database_stack" />
     <RootType FullName="Database_Manager.Views.Dialogs.Connect_wURI" />
@@ -127,8 +127,8 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Children" />
       <RootProperty Name="Background" />
-      <RootProperty Name="CornerRadius" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="CornerRadius" />
       <RootMethod Name="GetLeftOf" />
       <RootMethod Name="SetLeftOf" />
       <RootMethod Name="GetAlignHorizontalCenterWithPanel" />
@@ -141,6 +141,8 @@
       <RootMethod Name="SetAlignVerticalCenterWithPanel" />
       <RootMethod Name="GetAlignRightWithPanel" />
       <RootMethod Name="SetAlignRightWithPanel" />
+      <RootMethod Name="GetAlignBottomWithPanel" />
+      <RootMethod Name="SetAlignBottomWithPanel" />
       <RootMethod Name="GetBelow" />
       <RootMethod Name="SetBelow" />
     </RootType>
@@ -246,6 +248,10 @@
       <RootProperty Name="TintOpacity" />
       <RootProperty Name="TintLuminosityOpacity" />
       <RootProperty Name="FallbackColor" />
+    </RootType>
+    <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.LineBreak" />
     <RootType FullName="Windows.UI.Xaml.Shapes.Line">

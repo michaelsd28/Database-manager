@@ -8,10 +8,10 @@
     xmlns:mongodb="using:Database_Manager.Views.Components.Managers.MongoDB"
     xmlns:components="using:Database_Manager.Views.Components" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
-
+    
     RequestedTheme="Dark" 
     
-    
+
 
 
     >
@@ -31,15 +31,15 @@
 
 
         <Grid.RowDefinitions>
-            <RowDefinition MinHeight="165"  Height="193*"/>
-
+            <RowDefinition MinHeight="185"  Height="33*"/>
+            <RowDefinition MinHeight="35" Height="160*"/>
             <RowDefinition MinHeight="35" Height="35"/>
 
 
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition MinWidth="250" Width="2*" />
-            <ColumnDefinition MinWidth="350"  Width="13*"/>
+            <ColumnDefinition  MinWidth="700"  Width="13*"/>
 
 
 
@@ -67,9 +67,9 @@
         <RelativePanel 
      
         
-                       Grid.Row="0" Grid.Column="0" Canvas.ZIndex="4" >
+                       Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Canvas.ZIndex="4" >
 
-            <StackPanel  Name="HeadControls" Orientation="Vertical"   Margin="30,25,10,0"   >
+            <StackPanel  Name="HeadControls" Orientation="Vertical"   Margin="5,0,10,0"   >
 
                 <TextBlock HorizontalAlignment="Center"  Margin="10"   FontSize="16" VerticalAlignment="Center">Database/<LineBreak/>Collection</TextBlock>
                 <StackPanel   Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -91,7 +91,6 @@
             </StackPanel>
 
             <StackPanel
-            
                  x:Name="TreeView_Data" RelativePanel.Below="HeadControls" Margin="0,50,0,0">
                 <mongodb:Database_Treeview/>
                 <mongodb:Database_Treeview />
@@ -100,7 +99,7 @@
 
         <!--*********       bottom panel  controls       *********-->
 
-        <Grid Padding="10,0,0,0" Canvas.ZIndex="3" Grid.Row="1"   Grid.Column="0"  Grid.ColumnSpan="2" Background="#202020" Height="35" VerticalAlignment="Bottom">
+        <Grid Padding="10,0,0,0" Canvas.ZIndex="3" Grid.Row="2"   Grid.Column="0"  Grid.ColumnSpan="2" Background="#202020" Height="35" VerticalAlignment="Center">
             <components:IconButton ButtonText="Delete" 
                                    ImageIcon="/Assets\Managers\MongoDB\delete database.png"
                             ButtonPadding="3"
@@ -112,39 +111,45 @@
         </Grid>
 
         <!--*********       right panel  controls       *********-->
-        <StackPanel  Grid.Row="0" Grid.Column="1" Margin="0,32,112,0" >
-      
-                <StackPanel HorizontalAlignment="Left"    Orientation="Horizontal" Margin="-5,6,16,-38" Width="290">
-                    
-                    
-                    
-                    <TextBlock Text="Show as:"  VerticalAlignment="Center" />
-                    <Image Source="/Assets\Managers\MongoDB\json document icon.png" Height="20" Margin="5,0,0,0" HorizontalAlignment="Left" Width="30"/>
-                    <Image Source="/Assets\Managers\MongoDB\table grid icon.png" Height="20" Margin="5,0,20,0"/>
-                    <Button RenderTransformOrigin="0.514,0.531" Content="Refresh"/>
-                    <Button Margin="10,0,0,0" Content="Insert"/>
+        <RelativePanel  Grid.Row="0" Grid.Column="1" >
+
+            <controls:WrapPanel  RelativePanel.AlignBottomWithPanel="True" Margin="10,35,446,17" >
+
+                <StackPanel  Margin="0,10,0,10" Orientation="Horizontal" >
+                    <TextBox Margin="5,0,5,0" Canvas.ZIndex="5"  x:Name="TextBoxFilter" Height="20" Width="180" PlaceholderText="Search in database"/>
+                    <Image  Margin="5,0,5,0"  Source="/Assets/Managers/MongoDB/search_folder badge.png" Height="30"  />
                 </StackPanel>
-            <StackPanel RelativePanel.AlignLeftWithPanel="True" Margin="0,45,0,0" Orientation="Horizontal">
-                <TextBox Canvas.ZIndex="5"  x:Name="TextBoxFilter" Height="20" Width="180" PlaceholderText="Search in database"/>
-                <Image   Source="/Assets/Managers/MongoDB/search_folder badge.png" Height="30" RenderTransformOrigin="0.524,0.467" Width="42" />
-            </StackPanel>
-        </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="8,10,0,10" >
+                    <TextBlock Text="Show as:"  VerticalAlignment="Center" />
+                    <Image Margin="5,0,5,0" Source="/Assets\Managers\MongoDB\json document icon.png" Height="25"  />
+                    <Image Margin="5,0,5,0" Source="/Assets\Managers\MongoDB\table grid icon.png" Height="25" />
+                </StackPanel>
+
+
+                <StackPanel  Margin="0,0,0,0" Orientation="Horizontal">
+                    <Button Margin="5,0,5,0"  Content="Refresh"/>
+                    <Button Margin="5,0,5,0" Content="Insert"/>
+                </StackPanel>
+
+
+
+            </controls:WrapPanel>
+
+        </RelativePanel>
 
 
         <!--*********       right panel  controls       *********-->
 
-        <RelativePanel 
-            Grid.Row="0" Grid.Column="1"
 
-         
-            CornerRadius="20"
-            Canvas.ZIndex="4" Margin="0,130,192,30"
-            Background="#242424"
-            
-            >
-       
+        <RelativePanel Grid.Row="1" Grid.Column="1" Background="Red" BorderBrush="Aquamarine" BorderThickness="10">
+            <Grid  
+                HorizontalAlignment="Left"  
+                Background="AliceBlue" Margin="50" 
+                BorderBrush="DarkBlue" BorderThickness="10">
+                
+            </Grid>
         </RelativePanel>
-
 
     </Grid>
 </Page>
