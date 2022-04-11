@@ -154,3 +154,13 @@ C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Mic
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\FxResources.System.Text.Encodings.Web.SR.resw
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\FxResources.System.Text.Json.SR.resw
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_637214534760000000.json
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\Managers\MongoDB\Document Card.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\Managers\MongoDB\Documents Container.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Document Card.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Document Card.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Documents Container.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Documents Container.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Document Card.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Documents Container.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Document Card.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Documents Container.xbf

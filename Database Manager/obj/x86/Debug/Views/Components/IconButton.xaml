@@ -10,9 +10,9 @@ RequestedTheme="Dark"
     x:Name="CustomButtonRoot"
     
     >
-    <Button Background="{Binding ButtonBackground,ElementName=CustomButtonRoot}">
+    <Button Background="{Binding ButtonBackground,ElementName=CustomButtonRoot}" Padding="{Binding ButtonPadding, ElementName=CustomButtonRoot}">
     <StackPanel Orientation="Horizontal">
-        <Image Source="{Binding ImageIcon, ElementName=CustomButtonRoot}" Height="{Binding ImageHeight,ElementName=CustomButtonRoot}" Margin="0,0,3,0"/>
+        <Image HorizontalAlignment="Center" Source="{Binding ImageIcon, ElementName=CustomButtonRoot}" Height="{Binding ImageHeight,ElementName=CustomButtonRoot}" />
             <TextBlock Text="{Binding ButtonText, ElementName=CustomButtonRoot}"  FontSize="{Binding BFontSize,ElementName=CustomButtonRoot}"  Foreground="{Binding ForegroundText,ElementName=CustomButtonRoot}"/>
         </StackPanel>
     </Button>

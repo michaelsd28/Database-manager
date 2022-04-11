@@ -19,7 +19,7 @@
 
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="10*"/>
+            <RowDefinition MinHeight="60" Height="10*"/>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="70*"/>
             <RowDefinition Height="10*"/>
@@ -54,7 +54,7 @@
 
             <Button x:ConnectionId='4' 
                                          
-                Background="#3C3C3C" Margin="10,10,10,10" x:Name="BCreateDB" 
+                Background="#3C3C3C" Margin="10,0,10,0" x:Name="BCreateDB" 
                 RelativePanel.LeftOf="BConnectDB" Width="74">Create</Button>
             <Button x:ConnectionId='5'  
                                         

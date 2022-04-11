@@ -2,7 +2,7 @@
     x:Class="Database_Manager.Views.Components.Expander_Header"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Database_Manager.Views.Components"
+    xmlns:Component="using:Database_Manager.Views.Components"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
@@ -10,9 +10,27 @@ RequestedTheme="Dark"
     
     >
 
-    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-        <Image Source="/Assets\Managers\MongoDB\database badge.png" Height="30" Margin="5" />
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Database name 01"/>
-    </StackPanel>
+    <RelativePanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="166">
+        <Image x:ConnectionId='2' 
+            x:Name="ImageHeader"
+            RelativePanel.AlignLeftWithPanel="True" 
+            Source="/Assets\Managers\MongoDB\database badge.png" 
+            Height="20"
+            Margin="0,4,5,0" />
+        <TextBlock x:ConnectionId='3' 
+            x:Name="TextBlockHeader" 
+            RelativePanel.RightOf="ImageHeader" 
+            Text="Database" Width="72"
+            Margin="0,3,0,0"
+            />
+
+        <Component:IconButton 
+            RelativePanel.RightOf="TextBlockHeader" 
+            ImageIcon="/Assets\Managers\MongoDB\delete button.png" 
+            Margin="15,0,0,0" 
+            ImageHeight="15" 
+            ButtonPadding="5" 
+            />
+    </RelativePanel>
 </UserControl>
 

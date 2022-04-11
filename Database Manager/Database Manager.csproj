@@ -138,6 +138,12 @@
     <Compile Include="Views\Components\Managers\MongoDB\Database Treeview.xaml.cs">
       <DependentUpon>Database Treeview.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Components\Managers\MongoDB\Document Card.xaml.cs">
+      <DependentUpon>Document Card.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\Managers\MongoDB\Documents Container.xaml.cs">
+      <DependentUpon>Documents Container.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Database stack.xaml.cs">
       <DependentUpon>Database stack.xaml</DependentUpon>
     </Compile>
@@ -184,10 +190,15 @@
     <Content Include="Assets\Mainpage\terminal icon 2.png" />
     <Content Include="Assets\Mainpage\terminal icon.png" />
     <Content Include="Assets\Managers\MongoDB\database badge.png" />
+    <Content Include="Assets\Managers\MongoDB\delete button.png" />
     <Content Include="Assets\Managers\MongoDB\delete database.png" />
     <Content Include="Assets\Managers\MongoDB\export data.png" />
+    <Content Include="Assets\Managers\MongoDB\filter badge.png" />
     <Content Include="Assets\Managers\MongoDB\import data.png" />
+    <Content Include="Assets\Managers\MongoDB\json document icon.png" />
     <Content Include="Assets\Managers\MongoDB\mongodb background.png" />
+    <Content Include="Assets\Managers\MongoDB\search_folder badge.png" />
+    <Content Include="Assets\Managers\MongoDB\table grid icon.png" />
     <Content Include="Assets\SmallTile.scale-100.png" />
     <Content Include="Assets\SmallTile.scale-125.png" />
     <Content Include="Assets\SmallTile.scale-150.png" />
@@ -263,6 +274,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Components\Managers\MongoDB\Database Treeview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Components\Managers\MongoDB\Document Card.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Components\Managers\MongoDB\Documents Container.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

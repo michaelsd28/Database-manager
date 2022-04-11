@@ -30,7 +30,7 @@ namespace Database_Manager.Views.Dialogs.Server_creation
 
         private void CancelButton(object sender, RoutedEventArgs e)
         {
-            MainPage.mainPageContext.Popup_Create.IsOpen = false;
+            MainPage.MainPageContext.Popup_Create.IsOpen = false;
         }
     }
 }

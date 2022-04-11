@@ -3,6 +3,7 @@ using Database_Manager.Views.Dialogs;
 using Database_Manager.Views.Managers;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -28,11 +29,11 @@ namespace Database_Manager
     /// </summary>
     public sealed partial class MainPage : Page
     {
-       public static  MainPage mainPageContext { get; set; }
+       public static  MainPage MainPageContext { get; set; }
         public MainPage()
         {
             this.InitializeComponent();
-            mainPageContext = this;
+            MainPageContext = this;
 
             var titleBar = ApplicationView.GetForCurrentView().TitleBar;
             titleBar.ForegroundColor = Colors.White;
@@ -40,8 +41,8 @@ namespace Database_Manager
             titleBar.ButtonForegroundColor = Colors.White;
             titleBar.ButtonBackgroundColor = Colors.Black;
 
-
-            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(500,500));
+         
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(800,500));
          
         }
 
@@ -93,11 +94,8 @@ namespace Database_Manager
         private void BRefreshDB_Click(object sender, RoutedEventArgs e)
         {
 
-      
-
-
-
             this.Frame.Navigate(typeof(MongoDB_Manager));
+       
 
         }
     }
