@@ -196,6 +196,7 @@
     <Content Include="Assets\Managers\MongoDB\database badge.png" />
     <Content Include="Assets\Managers\MongoDB\delete button.png" />
     <Content Include="Assets\Managers\MongoDB\delete database.png" />
+    <Content Include="Assets\Managers\MongoDB\expand left menu.png" />
     <Content Include="Assets\Managers\MongoDB\export data.png" />
     <Content Include="Assets\Managers\MongoDB\filter badge.png" />
     <Content Include="Assets\Managers\MongoDB\import data.png" />

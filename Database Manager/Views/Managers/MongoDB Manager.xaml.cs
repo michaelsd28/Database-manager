@@ -31,7 +31,7 @@ namespace Database_Manager.Views.Managers
 
         private void AddButton(object sender, RoutedEventArgs e)
         {
- 
+                LeftPopUp.IsOpen = false;
             Frame.Navigate(typeof(MainPage));
         }
 
@@ -53,6 +53,22 @@ namespace Database_Manager.Views.Managers
             }
 
      
+        }
+
+   
+
+        private void ExpandLeftBar(object sender, RoutedEventArgs e)
+        {
+            if (LeftPopUp.IsOpen)
+            {
+                LeftPopUp.IsOpen = false;
+            }
+            else
+            {
+
+                LeftPopUp.IsOpen = true;
+            }
+
         }
     }
 }

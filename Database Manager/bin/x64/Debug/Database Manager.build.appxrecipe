@@ -168,6 +168,9 @@
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\delete database.png">
       <PackagePath>Assets\Managers\MongoDB\delete database.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\expand left menu.png">
+      <PackagePath>Assets\Managers\MongoDB\expand left menu.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\export data.png">
       <PackagePath>Assets\Managers\MongoDB\export data.png</PackagePath>
     </AppxPackagedFile>

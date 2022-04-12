@@ -36,7 +36,7 @@
 
 
         <Grid.RowDefinitions>
-            <RowDefinition MinHeight="30" Height="30*"/>
+            <RowDefinition MinHeight="32" Height="30*"/>
             <RowDefinition MinHeight="60" Height="118*"/>
             <RowDefinition Height="89*"/>
             <RowDefinition Height="620*"/>
@@ -72,7 +72,7 @@
         <Grid Grid.Row="0" Background="Black">
 
             <StackPanel Orientation="Horizontal">
-                <Image Source="/Assets\Mainpage\back button.png" Height="25" Margin="10,0,0,0"/>
+                <Image Source="/Assets\Mainpage\back button.png" Height="20" Margin="10,0,0,0"/>
             </StackPanel>
         </Grid>
 
