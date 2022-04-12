@@ -10,10 +10,19 @@ RequestedTheme="Dark"
     x:Name="CustomButtonRoot"
     
     >
-    <Button Background="{Binding ButtonBackground,ElementName=CustomButtonRoot}" Padding="{Binding ButtonPadding, ElementName=CustomButtonRoot}">
+    <Button 
+        Background="{Binding ButtonBackground,ElementName=CustomButtonRoot}" 
+            Padding="{Binding ButtonPadding, ElementName=CustomButtonRoot}">
     <StackPanel Orientation="Horizontal">
-        <Image HorizontalAlignment="Center" Source="{Binding ImageIcon, ElementName=CustomButtonRoot}" Height="{Binding ImageHeight,ElementName=CustomButtonRoot}" />
-            <TextBlock Text="{Binding ButtonText, ElementName=CustomButtonRoot}"  FontSize="{Binding BFontSize,ElementName=CustomButtonRoot}"  Foreground="{Binding ForegroundText,ElementName=CustomButtonRoot}"/>
+        <Image  
+            Margin="{Binding ImageMargin,ElementName=CustomButtonRoot}"
+            HorizontalAlignment="Center" 
+                Source="{Binding ImageIcon, ElementName=CustomButtonRoot}" 
+                Height="{Binding ImageHeight,ElementName=CustomButtonRoot}" />
+            <TextBlock 
+                       Text="{Binding ButtonText, ElementName=CustomButtonRoot}"  
+                       FontSize="{Binding BFontSize,ElementName=CustomButtonRoot}"  
+                       Foreground="{Binding ForegroundText,ElementName=CustomButtonRoot}"/>
         </StackPanel>
     </Button>
 </UserControl>

@@ -6,6 +6,7 @@
     <RootPropertyPathName Name="ButtonText" />
     <RootPropertyPathName Name="BFontSize" />
     <RootPropertyPathName Name="ForegroundText" />
+    <RootPropertyPathName Name="ImageMargin" />
     <RootPropertyPathName Name="ImageIcon" />
     <RootPropertyPathName Name="ImageHeight" />
     <RootPropertyPathName Name="DetailFontSize" />
@@ -84,8 +85,10 @@
       <RootProperty Name="LightDismissOverlayMode" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Margin" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
       <RootProperty Name="Child" />
+      <RootProperty Name="ChildTransitions" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
       <RootMethod Name="GetZIndex" />
@@ -112,6 +115,7 @@
       <RootProperty Name="Width" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Padding" />
+      <RootProperty Name="Opacity" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
@@ -176,6 +180,7 @@
       <RootProperty Name="ButtonBackground" />
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="ImageMargin" />
       <RootEvent Name="PointerPressed" />
     </RootType>
     <RootType FullName="Database_Manager.Views.Components.Expander_Header">
@@ -241,6 +246,7 @@
     <RootType FullName="Windows.UI.Xaml.Setter">
       <RootProperty Name="Property" />
       <RootProperty Name="Value" />
+      <RootProperty Name="Target" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
       <RootProperty Name="Template" />
@@ -253,9 +259,26 @@
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Database_Manager.Views.Dialogs.Server_creation.MongoDB_Server" />
+    <RootType FullName="Windows.UI.Xaml.VisualStateManager">
+      <RootMethod Name="GetVisualStateGroups" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.VisualStateGroup">
+      <RootProperty Name="States" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.VisualState">
+      <RootProperty Name="Setters" />
+      <RootProperty Name="StateTriggers" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.AdaptiveTrigger">
+      <RootProperty Name="MinWindowWidth" />
+    </RootType>
     <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel">
       <RootProperty Name="Margin" />
       <RootProperty Name="Children" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.PaneThemeTransition">
+      <RootProperty Name="Edge" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.LineBreak" />
     <RootType FullName="Database_Manager.Views.Managers.MongoDB_Manager" />

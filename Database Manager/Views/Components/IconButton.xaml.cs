@@ -98,6 +98,18 @@ namespace Database_Manager.Views.Components
 
 
 
+        public string ImageMargin
+        {
+            get { return (string)GetValue(ImageMarginProperty); }
+            set { SetValue(ImageMarginProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for ImageMargin.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ImageMarginProperty =
+            DependencyProperty.Register("ImageMargin", typeof(string), typeof(IconButton), new PropertyMetadata(string.Empty));
+
+
+
         public IconButton()
         {
             this.InitializeComponent();

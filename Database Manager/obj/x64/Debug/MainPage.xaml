@@ -36,10 +36,11 @@
 
 
         <Grid.RowDefinitions>
-            <RowDefinition MinHeight="60" Height="10*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="70*"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition MinHeight="30" Height="30*"/>
+            <RowDefinition MinHeight="60" Height="118*"/>
+            <RowDefinition Height="89*"/>
+            <RowDefinition Height="620*"/>
+            <RowDefinition Height="88*"/>
             <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
 
@@ -50,7 +51,7 @@
 
 
 
-        <Grid Grid.Row="0" >
+        <Grid Grid.Row="1" >
 
 
 
@@ -68,9 +69,16 @@
 
 
 
+        <Grid Grid.Row="0" Background="Black">
+
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Assets\Mainpage\back button.png" Height="25" Margin="10,0,0,0"/>
+            </StackPanel>
+        </Grid>
 
 
-        <StackPanel  Grid.Row="1"     HorizontalAlignment="Center" Orientation="Horizontal" Width="494">
+
+        <StackPanel  Grid.Row="2"     HorizontalAlignment="Center" Orientation="Horizontal" Width="494">
 
 
             <Button x:ConnectionId='4' 
@@ -100,8 +108,7 @@
                 IsLightDismissEnabled="True"
                 LightDismissOverlayMode="On"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Margin="0,0,320,0"
+                VerticalAlignment="Center" Height="0" Width="0"
             >
 
             <dialog:Database_type_to_create/>
@@ -114,10 +121,8 @@
                 IsOpen="False" 
                 IsLightDismissEnabled="True"
                 LightDismissOverlayMode="On"
-         
-                Margin="-390,60,0,0"
             HorizontalAlignment="Center"
-            VerticalAlignment="Center"            
+            VerticalAlignment="Center" Height="0" Width="0"            
             >
 
             <dialog:Connect_wURI/>
@@ -127,7 +132,7 @@
 
 
 
-        <Grid Grid.Row="2" Canvas.ZIndex="9">
+        <Grid Grid.Row="3" Canvas.ZIndex="9">
 
 
             <views:Database_stack/>
@@ -135,7 +140,7 @@
 
         </Grid>
 
-        <Grid Grid.Row="3" >
+        <Grid Grid.Row="4" >
 
             <Button VerticalAlignment="Center" Margin="30,0,0,0"  Background="#212121">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
@@ -151,11 +156,15 @@
 
         </Grid>
 
-        <Grid Grid.Row="4" Background="#292929" Height="25" VerticalAlignment="Bottom"   >
+        <Grid Grid.Row="5" Background="#292929" Height="25" VerticalAlignment="Center"   >
 
             <TextBlock HorizontalAlignment="Center"> Database manager</TextBlock>
 
+
         </Grid>
+
+        <!-- title bar grid-->
+
 
 
     </Grid>

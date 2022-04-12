@@ -1,24 +1,12 @@
-﻿using Database_Manager.Views;
-using Database_Manager.Views.Dialogs;
+﻿using Database_Manager.Views.Dialogs;
 using Database_Manager.Views.Managers;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Core;
 using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Media.Animation;
-using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -37,30 +25,27 @@ namespace Database_Manager
 
 
 
-            this.SizeChanged += MainPage_SizeChanged;
-
+  
+            /*
             var titleBar = ApplicationView.GetForCurrentView().TitleBar;
             titleBar.ForegroundColor = Colors.White;
             titleBar.BackgroundColor = Colors.Black;
             titleBar.ButtonForegroundColor = Colors.White;
             titleBar.ButtonBackgroundColor = Colors.Black;
-
+            */
 
             ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(500, 500));
 
+
+
+            var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
+            coreTitleBar.ExtendViewIntoTitleBar = true;
+
+            // Set XAML element as a drag region.
+        //Window.Current.SetTitleBar(AppTitleBar);
+
         }
 
-        private void MainPage_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            //Get the current Windows Size
-            var bounds = Window.Current.Bounds;
-            double height = bounds.Height;
-            Debug.WriteLine(height);
-            double width = bounds.Width;
-            Debug.WriteLine(width);
-
-            // AppTitleTextBlock.Text = "Width: "+ width+ " Height: "+ height;
-        }
 
         private void BCreateDB_Click(object sender, RoutedEventArgs e)
         {

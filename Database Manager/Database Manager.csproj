@@ -181,6 +181,7 @@
     <Content Include="Assets\LargeTile.scale-150.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="Assets\Mainpage\back button.png" />
     <Content Include="Assets\Mainpage\background mainpage 2.jpg" />
     <Content Include="Assets\Mainpage\background page.jpg" />
     <Content Include="Assets\Mainpage\edit database button.png" />
