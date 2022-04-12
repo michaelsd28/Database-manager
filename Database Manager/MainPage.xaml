@@ -7,14 +7,31 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     xmlns:views ="using:Database_Manager.Views"
-    xmlns:dialog ="using:Database_Manager.Views.Dialogs"
+    xmlns:dialog ="using:Database_Manager.Views.Dialogs" xmlns:Windows10version1903="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 8)"
     RequestedTheme="Dark" 
     
     >
     <Grid  >
-        <Grid.Background >
+
+        <Grid.Background>
+            <AcrylicBrush    
+                              BackgroundSource="HostBackdrop"
+                              TintColor="#111111"
+                              TintOpacity="0.5"
+                              Windows10version1903:TintLuminosityOpacity="1"
+                              FallbackColor="#111111"
+                             />
+
+        </Grid.Background>
+
+
+        <!--
+                <Grid.Background >
             <ImageBrush  ImageSource="Assets\Mainpage\background mainpage 2.jpg"  Opacity="0.1"  />
         </Grid.Background>
+
+        
+        -->
 
 
 
@@ -35,17 +52,17 @@
 
         <Grid Grid.Row="0" >
 
-       
+
 
             <TextBlock VerticalAlignment="Center" FontSize="30"  HorizontalAlignment="Center">Database Manager</TextBlock>
             <Button 
                 HorizontalAlignment="Right" 
-                Margin="0,25,8,0" VerticalAlignment="Top" Width="105" Background="#3C3C3C">
+                Margin="0,15,8,0" VerticalAlignment="Top" Width="105" Background="#3C3C3C">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="Assets\Mainpage\settings icon.png" Height="20" Margin="0,0,3,0"/>
                     <TextBlock>Settings</TextBlock>
                 </StackPanel>
-                
+
             </Button>
         </Grid>
 
@@ -71,11 +88,11 @@
                     <Image Source="/Assets\Mainpage\refresh icon.png" Height="20" Width="15" Margin="0,0,1,0"/>
                     <TextBlock>Refresh</TextBlock>
                 </StackPanel>
-                
+
             </Button>
 
         </StackPanel>
-            
+
         <Popup 
          x:FieldModifier="Public"
                 x:Name="Popup_Create" 
@@ -86,10 +103,10 @@
                 VerticalAlignment="Center"
                 Margin="0,0,320,0"
             >
-       
+
             <dialog:Database_type_to_create/>
-            
-            </Popup>
+
+        </Popup>
 
         <Popup 
                 x:FieldModifier="Public"
@@ -111,7 +128,7 @@
 
 
         <Grid Grid.Row="2" Canvas.ZIndex="9">
-          
+
 
             <views:Database_stack/>
 
@@ -119,7 +136,7 @@
         </Grid>
 
         <Grid Grid.Row="3" >
-          
+
             <Button VerticalAlignment="Center" Margin="30,0,0,0"  Background="#212121">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
                     <Image Source="/Assets/Mainpage/terminal icon 2.png" Height="23" Margin="0,0,5,0"></Image>
@@ -127,17 +144,17 @@
 
 
                 </StackPanel>
-           
-                
-            
+
+
+
             </Button>
-            
+
         </Grid>
 
         <Grid Grid.Row="4" Background="#292929" Height="25" VerticalAlignment="Bottom"   >
 
             <TextBlock HorizontalAlignment="Center"> Database manager</TextBlock>
-            
+
         </Grid>
 
 

@@ -26,7 +26,7 @@ namespace Database_Manager.Views.Dialogs
 
         private void CancelButton(object sender, RoutedEventArgs e)
         {
-           MainPage.MainPageContext.Popup_ConnectURI.IsOpen = false;    
+      //     MainPage.MainPageContext.Popup_ConnectURI.IsOpen = false;    
         }
     }
 }

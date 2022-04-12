@@ -7,12 +7,41 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
 
-    
+
     >
 
-    <GridView Background="#242424">
+    <ScrollViewer 
+            Grid.Row="0"
+            Grid.Column="0" 
+            Grid.ColumnSpan="2"
+            Margin="10,82,10,12"
         
-        
+        CornerRadius="10"
+                >
 
-    </GridView>
+        <StackPanel
+                    Background="#242424" 
+                    CornerRadius="20">
+
+            <TextBox MaxHeight="100" TextWrapping="Wrap" MinHeight="100" Margin="20"   Text="The Connecticut Tercentenary half dollar is a commemorative fifty-cent piece struck by the United States Bureau of the Mint in 1935. The commemorative coin was designed by Henry Kreis and depicts the Charter Oak, where according to legend Connecticut's charter was hidden to save itThe Connecticut Tercentenary half dollar is a commemorative fifty-cent piece struck by the United States Bureau of the Mint in 1935. The commemorative coin was designed by Henry Kreis and depicts the Charter Oak, where according to legend Connecticut's charter was hidden to save itThe Connecticut Tercentenary half dollar is a commemorative fifty-cent piece struck by the United States Bureau of the Mint in 1935. The commemorative coin was designed by Henry Kreis and depicts the Charter Oak, where according to legend Connecticut's charter was hidden to save itThe Connecticut Tercentenary half dollar is a commemorative fifty-cent piece struck by the United States Bureau of the Mint in 1935. The commemorative coin was designed by Henry Kreis and depicts the Charter Oak, where according to legend Connecticut's charter was hidden to save itThe Connecticut Tercentenary half dollar is a commemorative fifty-cent piece struck by the United States Bureau of the Mint in 1935. The commemorative coin was designed by Henry Kreis and depicts the Charter Oak, where according to legend Connecticut's charter was hidden to save itThe Connecticut Tercentenary half dollar is a commemorative fifty-cent piece struck by the United States Bureau of the Mint in 1935. The commemorative coin was designed by Henry Kreis and depicts the Charter Oak, where according to legend Connecticut's charter was hidden to save it" HorizontalAlignment="Stretch"/>
+            <TextBox IsEnabled="False" MinHeight="100" Margin="20"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
+            <TextBox IsEnabled="False" MinHeight="100"  Margin="20"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
+            <TextBox IsEnabled="False" MinHeight="100"  Margin="20"     PlaceholderText="json text" HorizontalAlignment="Stretch"/>
+            <TextBox IsEnabled="False" MinHeight="100"  Margin="20"  PlaceholderText="json text" HorizontalAlignment="Stretch"/>
+            <TextBox IsEnabled="False" MinHeight="100"  Margin="20"     PlaceholderText="json text" HorizontalAlignment="Stretch"/>
+            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
+            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
+            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
+            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
+            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
+            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
+            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
+            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
+            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
+            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
+            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
+            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
+        </StackPanel>
+    </ScrollViewer>
+
 </UserControl>

@@ -13,7 +13,7 @@
 
 
 
-    <StackPanel    x:Name="SPanel_CreateMong"    Background="#FF272A2F"   CornerRadius="5" >
+    <StackPanel  HorizontalAlignment="Center"  x:Name="SPanel_CreateMong"    Background="#FF272A2F"   CornerRadius="5"  Margin="0,0,0,0">
 
         <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
             <Image Source="/Assets\Mainpage\MongoDB Badge.png" Height="80"/>

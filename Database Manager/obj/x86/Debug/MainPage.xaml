@@ -19,7 +19,7 @@
 
 
         <Grid.RowDefinitions>
-            <RowDefinition MinHeight="60" Height="10*"/>
+            <RowDefinition Height="10*"/>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="70*"/>
             <RowDefinition Height="10*"/>
@@ -31,11 +31,7 @@
 
         </Grid.ColumnDefinitions>
 
-
-
         <Grid Grid.Row="0" >
-
-       
 
             <TextBlock VerticalAlignment="Center" FontSize="30"  HorizontalAlignment="Center">Database Manager</TextBlock>
             <Button 
@@ -45,7 +41,7 @@
                     <Image Source="Assets\Mainpage\settings icon.png" Height="20" Margin="0,0,3,0"/>
                     <TextBlock>Settings</TextBlock>
                 </StackPanel>
-                
+
             </Button>
         </Grid>
 
@@ -58,7 +54,7 @@
 
             <Button x:ConnectionId='4' 
                                          
-                Background="#3C3C3C" Margin="10,0,10,0" x:Name="BCreateDB" 
+                Background="#3C3C3C" Margin="10,10,10,10" x:Name="BCreateDB" 
                 RelativePanel.LeftOf="BConnectDB" Width="74">Create</Button>
             <Button x:ConnectionId='5'  
                                         
@@ -68,14 +64,14 @@
 
             <Button x:ConnectionId='7'                          Margin="10,0,5,0" x:Name="BRefreshDB" RelativePanel.RightOf="TSearchDB" Background="#3C3C3C">
                 <StackPanel Orientation="Horizontal" Margin="-6,0,-5,0">
-                    <Image Source="/Assets\Mainpage\refresh icon.png" Height="20" Width="15" Margin="0,0,1,0"/>
+                    <Image Source="Assets\Mainpage\refresh icon.png" Height="20" Width="15" Margin="0,0,1,0"/>
                     <TextBlock>Refresh</TextBlock>
                 </StackPanel>
-                
+
             </Button>
 
         </StackPanel>
-            
+
         <Popup x:ConnectionId='2' 
          x:FieldModifier="Public"
                 x:Name="Popup_Create" 
@@ -86,10 +82,10 @@
                 VerticalAlignment="Center"
                 Margin="0,0,320,0"
             >
-       
+
             <dialog:Database_type_to_create/>
-            
-            </Popup>
+
+        </Popup>
 
         <Popup x:ConnectionId='3' 
                 x:FieldModifier="Public"
@@ -111,7 +107,7 @@
 
 
         <Grid Grid.Row="2" Canvas.ZIndex="9">
-          
+
 
             <views:Database_stack/>
 
@@ -119,7 +115,7 @@
         </Grid>
 
         <Grid Grid.Row="3" >
-          
+
             <Button VerticalAlignment="Center" Margin="30,0,0,0"  Background="#212121">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
                     <Image Source="/Assets/Mainpage/terminal icon 2.png" Height="23" Margin="0,0,5,0"></Image>
@@ -127,17 +123,17 @@
 
 
                 </StackPanel>
-           
-                
-            
+
+
+
             </Button>
-            
+
         </Grid>
 
         <Grid Grid.Row="4" Background="#292929" Height="25" VerticalAlignment="Bottom"   >
 
             <TextBlock HorizontalAlignment="Center"> Database manager</TextBlock>
-            
+
         </Grid>
 
 

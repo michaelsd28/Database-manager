@@ -144,6 +144,9 @@
     <Compile Include="Views\Components\Managers\MongoDB\Documents Container.xaml.cs">
       <DependentUpon>Documents Container.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Components\Managers\MongoDB\Single Document.xaml.cs">
+      <DependentUpon>Single Document.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Database stack.xaml.cs">
       <DependentUpon>Database stack.xaml</DependentUpon>
     </Compile>
@@ -285,6 +288,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Components\Managers\MongoDB\Single Document.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Database stack.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -327,7 +334,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
-    <Folder Include="muxc\" />
     <Folder Include="Resource dictionaries\Main page\" />
     <Folder Include="Services\" />
     <Folder Include="Views\Components\Managers\Redis\" />

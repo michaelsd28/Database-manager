@@ -7,7 +7,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
@@ -30,11 +29,14 @@ namespace Database_Manager
     /// </summary>
     public sealed partial class MainPage : Page
     {
-       public static  MainPage MainPageContext { get; set; }
+        public static MainPage MainPageContext { get; set; }
         public MainPage()
         {
             this.InitializeComponent();
             MainPageContext = this;
+
+
+
             this.SizeChanged += MainPage_SizeChanged;
 
             var titleBar = ApplicationView.GetForCurrentView().TitleBar;
@@ -44,12 +46,8 @@ namespace Database_Manager
             titleBar.ButtonBackgroundColor = Colors.Black;
 
 
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(500, 500));
 
-
-
-
-            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(500,500));
-         
         }
 
         private void MainPage_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -61,28 +59,29 @@ namespace Database_Manager
             double width = bounds.Width;
             Debug.WriteLine(width);
 
-           // AppTitleTextBlock.Text = "Width: "+ width+ " Height: "+ height;
+            // AppTitleTextBlock.Text = "Width: "+ width+ " Height: "+ height;
         }
 
         private void BCreateDB_Click(object sender, RoutedEventArgs e)
         {
 
-
+            
 
             Database_type_to_create._Type_To_CreateContext.Content = new Database_type_to_create();
 
             if (Popup_Create.IsOpen)
             {
-       
+
                 Popup_Create.IsOpen = false;
-                
+
             }
-            else {
-            
+            else
+            {
+
                 Popup_Create.IsOpen = true;
             }
 
-           
+
 
 
 
@@ -112,8 +111,11 @@ namespace Database_Manager
         private void BRefreshDB_Click(object sender, RoutedEventArgs e)
         {
 
-            this.Frame.Navigate(typeof(MongoDB_Manager));
-       
+
+
+
+
+          this.Frame.Navigate(typeof(MongoDB_Manager));
 
         }
     }

@@ -23,6 +23,7 @@
 
         <TextBlock Text="Choose database server" FontSize="20" Margin="20" HorizontalAlignment="Center"/>
         <components:IconButton 
+            ButtonPadding="10"
             BFontSize="25"
             ImageHeight="40"
             ForegroundText="#72B76B"
@@ -33,11 +34,13 @@
             ButtonText="MongoDB" 
             Margin="10"/>
         <components:IconButton
+             ButtonPadding="10"
                   BFontSize="25"
             ImageHeight="40"
             ForegroundText="#B24136"
             HorizontalAlignment="Center"   ImageIcon="/Assets/Mainpage/redis logo badge.png" ButtonText="Redis Server"  Margin="10"/>
         <components:IconButton 
+             ButtonPadding="10"
                   BFontSize="25"
             ImageHeight="40"
             ForegroundText="#EAA800"

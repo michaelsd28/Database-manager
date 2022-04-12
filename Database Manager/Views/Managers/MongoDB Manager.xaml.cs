@@ -26,5 +26,7 @@ namespace Database_Manager.Views.Managers
         {
             Frame.Navigate(typeof(TreeViewPage));
         }
+
+
     }
 }
