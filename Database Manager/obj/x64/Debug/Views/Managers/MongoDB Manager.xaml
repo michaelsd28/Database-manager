@@ -19,7 +19,6 @@
                 <VisualState x:ConnectionId='3' x:Name="SmallState">
                     <VisualState.Setters>
                         <Setter Target="grid.(Grid.Column)" Value="0"/>
-                        <Setter Target="ShowLeftBar.(UIElement.Opacity)" Value="1"/>
                     </VisualState.Setters>
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0"/>
@@ -28,7 +27,7 @@
                 <VisualState x:ConnectionId='4' x:Name="MediumState">
                     <VisualState.Setters>
                         <Setter Target="grid.(Grid.Column)" Value="1"/>
-                        <Setter Target="LeftPopUp.(Popup.IsOpen)" Value="True"/>
+                       
                         <Setter Target="button.(UIElement.Visibility)" Value="Collapsed"/>
                     </VisualState.Setters>
                     <VisualState.StateTriggers>
@@ -38,7 +37,6 @@
                 <VisualState x:ConnectionId='5' x:Name="LargeState"/>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-
         <Grid.Background>
             <AcrylicBrush    
                               BackgroundSource="HostBackdrop"
@@ -50,6 +48,12 @@
 
         </Grid.Background>
 
+        <!--
+        
+      
+        
+        -->
+     
 
         <Grid.RowDefinitions>
             <RowDefinition MinHeight="40" Height="40" MaxHeight="40"/>
@@ -71,6 +75,24 @@
             Background="Black"
             Grid.ColumnSpan="2"
               >
+
+            <Grid x:ConnectionId='14' x:Name="AppTitleBar" Background="Transparent">
+                <!-- Width of the padding columns is set in LayoutMetricsChanged handler. -->
+                <!-- Using padding columns instead of Margin ensures that the background
+         paints the area under the caption control buttons (for transparent buttons). -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:ConnectionId='18' x:Name="LeftPaddingColumn" Width="0"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition x:ConnectionId='19' x:Name="RightPaddingColumn" Width="0"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="Assets/WindowIcon.png" 
+           Grid.Column="1"
+           HorizontalAlignment="Left"
+           Width="16" Height="16"
+           Margin="8,0,0,0"/>
+       
+            </Grid>
+
             <RelativePanel >
                 <Image x:ConnectionId='15' x:Name="BackImage" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Source="/Assets\Mainpage\back button.png" Height="20" Margin="10,0,0,0" />
                 <Button x:ConnectionId='16' x:Name="button"                       Height="37" Background="#242424" RelativePanel.RightOf="BackImage" RelativePanel.AlignVerticalCenterWithPanel="True"  Margin="15,0,0,0">
@@ -86,7 +108,7 @@
 
         </Grid>
 
-        <Popup x:ConnectionId='6' Grid.Row="1" IsOpen="False" x:Name="LeftPopUp">
+        <Popup x:ConnectionId='6' Grid.Row="1" IsOpen="False" x:Name="LeftPopUp"  >
 
             <Popup.ChildTransitions>
                 <TransitionCollection>
@@ -96,14 +118,14 @@
                 </TransitionCollection>
             </Popup.ChildTransitions>
 
-            <StackPanel x:ConnectionId='11' x:Name="LeftSidePanel" Visibility="Visible" Orientation="Vertical" Grid.Row="1" BorderBrush="#4B4B4B"  BorderThickness="0,0,2,0">
+            <StackPanel x:ConnectionId='10' Background="Black" x:Name="LeftSidePanel" Visibility="Visible" Orientation="Vertical" Grid.Row="1" BorderBrush="#4B4B4B"  BorderThickness="0,0,2,0">
                 <TextBlock HorizontalAlignment="Center"  Margin="0,20,0,0"   FontSize="16" VerticalAlignment="Center">Database/<LineBreak/>Collection</TextBlock>
 
                 <StackPanel   Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10,0,40">
-                    <Button x:ConnectionId='13'                    Margin="5" >
+                    <Button x:ConnectionId='12'                    Margin="5" >
                         <Image Source="/Assets\Managers\MongoDB\add button.png" Height="20" />
                     </Button>
-                    <Button x:ConnectionId='14'                       Margin="5" >
+                    <Button x:ConnectionId='13'                       Margin="5" >
                         <Image Source="/Assets\Managers\MongoDB\import data.png" Height="20" />
                     </Button>
 
@@ -113,7 +135,7 @@
 
                 </StackPanel>
 
-                <TextBlock x:ConnectionId='12' x:Name="myTextBlock"  Text="test textblock"/>
+                <TextBlock x:ConnectionId='11' x:Name="myTextBlock"  Text="test textblock"/>
 
                 <mongodb:Database_Treeview HorizontalAlignment="Center"/>
                 <mongodb:Database_Treeview HorizontalAlignment="Center"/>
@@ -138,8 +160,8 @@
             <controls:WrapPanel  Margin="5,10,0,0" >
 
                 <StackPanel  Margin="0,10,0,10" Orientation="Horizontal" >
-                    <TextBox x:ConnectionId='9' Margin="5,0,5,0" Canvas.ZIndex="5"  x:Name="TextBoxFilter" Height="20" Width="158" PlaceholderText="Search in database"/>
-                    <Image x:ConnectionId='10' x:Name="image"  Margin="5,0,5,0"  Source="/Assets/Managers/MongoDB/search_folder badge.png" Height="25"  />
+                    <TextBox x:ConnectionId='8' Margin="5,0,5,0" Canvas.ZIndex="5"  x:Name="TextBoxFilter" Height="20" Width="158" PlaceholderText="Search in database"/>
+                    <Image x:ConnectionId='9' x:Name="image"  Margin="5,0,5,0"  Source="/Assets/Managers/MongoDB/search_folder badge.png" Height="25"  />
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="8,10,0,10" >
@@ -153,7 +175,6 @@
                     <Button Margin="5,0,5,0"  Content="Refresh"/>
                     <Button Margin="5,0,5,0" Content="Insert"/>
                 </StackPanel>
-                <Button x:ConnectionId='8' x:Name="ShowLeftBar"                    Content="click here" HorizontalAlignment="Center" Opacity="0" VerticalAlignment="Top"/>
 
             </controls:WrapPanel>
 

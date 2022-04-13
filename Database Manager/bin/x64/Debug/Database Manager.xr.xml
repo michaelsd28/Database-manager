@@ -116,7 +116,6 @@
       <RootProperty Name="Width" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Padding" />
-      <RootProperty Name="Opacity" />
       <RootProperty Name="Height" />
       <RootEvent Name="Click" />
     </RootType>

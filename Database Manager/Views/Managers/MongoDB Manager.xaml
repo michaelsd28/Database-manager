@@ -19,7 +19,6 @@
                 <VisualState x:Name="SmallState">
                     <VisualState.Setters>
                         <Setter Target="grid.(Grid.Column)" Value="0"/>
-                        <Setter Target="ShowLeftBar.(UIElement.Opacity)" Value="1"/>
                     </VisualState.Setters>
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0"/>
@@ -28,7 +27,7 @@
                 <VisualState x:Name="MediumState">
                     <VisualState.Setters>
                         <Setter Target="grid.(Grid.Column)" Value="1"/>
-                        <Setter Target="LeftPopUp.(Popup.IsOpen)" Value="True"/>
+                       
                         <Setter Target="button.(UIElement.Visibility)" Value="Collapsed"/>
                     </VisualState.Setters>
                     <VisualState.StateTriggers>
@@ -38,7 +37,6 @@
                 <VisualState x:Name="LargeState"/>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-
         <Grid.Background>
             <AcrylicBrush    
                               BackgroundSource="HostBackdrop"
@@ -50,6 +48,12 @@
 
         </Grid.Background>
 
+        <!--
+        
+      
+        
+        -->
+     
 
         <Grid.RowDefinitions>
             <RowDefinition MinHeight="40" Height="40" MaxHeight="40"/>
@@ -71,6 +75,24 @@
             Background="Black"
             Grid.ColumnSpan="2"
               >
+
+            <Grid x:Name="AppTitleBar" Background="Transparent">
+                <!-- Width of the padding columns is set in LayoutMetricsChanged handler. -->
+                <!-- Using padding columns instead of Margin ensures that the background
+         paints the area under the caption control buttons (for transparent buttons). -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="LeftPaddingColumn" Width="0"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="Assets/WindowIcon.png" 
+           Grid.Column="1"
+           HorizontalAlignment="Left"
+           Width="16" Height="16"
+           Margin="8,0,0,0"/>
+       
+            </Grid>
+
             <RelativePanel >
                 <Image x:Name="BackImage" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Source="/Assets\Mainpage\back button.png" Height="20" Margin="10,0,0,0" />
                 <Button x:Name="button" Click="ExpandLeftBar" Height="37" Background="#242424" RelativePanel.RightOf="BackImage" RelativePanel.AlignVerticalCenterWithPanel="True"  Margin="15,0,0,0">
@@ -86,7 +108,7 @@
 
         </Grid>
 
-        <Popup Grid.Row="1" IsOpen="False" x:Name="LeftPopUp">
+        <Popup Grid.Row="1" IsOpen="False" x:Name="LeftPopUp"  >
 
             <Popup.ChildTransitions>
                 <TransitionCollection>
@@ -96,7 +118,7 @@
                 </TransitionCollection>
             </Popup.ChildTransitions>
 
-            <StackPanel x:Name="LeftSidePanel" Visibility="Visible" Orientation="Vertical" Grid.Row="1" BorderBrush="#4B4B4B"  BorderThickness="0,0,2,0">
+            <StackPanel Background="Black" x:Name="LeftSidePanel" Visibility="Visible" Orientation="Vertical" Grid.Row="1" BorderBrush="#4B4B4B"  BorderThickness="0,0,2,0">
                 <TextBlock HorizontalAlignment="Center"  Margin="0,20,0,0"   FontSize="16" VerticalAlignment="Center">Database/<LineBreak/>Collection</TextBlock>
 
                 <StackPanel   Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10,0,40">
@@ -153,7 +175,6 @@
                     <Button Margin="5,0,5,0"  Content="Refresh"/>
                     <Button Margin="5,0,5,0" Content="Insert"/>
                 </StackPanel>
-                <Button x:Name="ShowLeftBar" Click="TestButton" Content="click here" HorizontalAlignment="Center" Opacity="0" VerticalAlignment="Top"/>
 
             </controls:WrapPanel>
 

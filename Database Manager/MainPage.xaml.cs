@@ -42,7 +42,7 @@ namespace Database_Manager
             coreTitleBar.ExtendViewIntoTitleBar = true;
 
             // Set XAML element as a drag region.
-        //Window.Current.SetTitleBar(AppTitleBar);
+        Window.Current.SetTitleBar(AppTitleBar);
 
         }
 

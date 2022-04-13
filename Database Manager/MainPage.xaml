@@ -11,8 +11,7 @@
     RequestedTheme="Dark" 
     
     >
-    <Grid  >
-
+    <Grid   >
         <Grid.Background>
             <AcrylicBrush    
                               BackgroundSource="HostBackdrop"
@@ -23,6 +22,22 @@
                              />
 
         </Grid.Background>
+
+
+         <!--
+         <Grid.Background>
+            <AcrylicBrush    
+                              BackgroundSource="HostBackdrop"
+                              TintColor="#111111"
+                              TintOpacity="0.5"
+                              Windows10version1903:TintLuminosityOpacity="1"
+                              FallbackColor="#111111"
+                             />
+
+        </Grid.Background>
+        
+        -->
+       
 
 
         <!--
@@ -52,6 +67,9 @@
 
 
         <Grid Grid.Row="1" >
+            
+            
+            
 
 
 
@@ -70,6 +88,24 @@
 
 
         <Grid Grid.Row="0" Background="Black">
+
+
+            <Grid x:Name="AppTitleBar" Background="Transparent">
+                <!-- Width of the padding columns is set in LayoutMetricsChanged handler. -->
+                <!-- Using padding columns instead of Margin ensures that the background
+         paints the area under the caption control buttons (for transparent buttons). -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="LeftPaddingColumn" Width="0"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="Assets/WindowIcon.png" 
+           Grid.Column="1"
+           HorizontalAlignment="Left"
+           Width="16" Height="16"
+           Margin="8,0,0,0"/>
+    
+            </Grid>
 
             <StackPanel Orientation="Horizontal">
                 <Image Source="/Assets\Mainpage\back button.png" Height="20" Margin="10,0,0,0"/>

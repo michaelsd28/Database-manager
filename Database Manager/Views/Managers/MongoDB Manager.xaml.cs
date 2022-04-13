@@ -1,4 +1,5 @@
 ﻿using System;
+using Windows.ApplicationModel.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -14,7 +15,14 @@ namespace Database_Manager.Views.Managers
         public MongoDB_Manager()
         {
             InitializeComponent();
-            this.SizeChanged += MongoDB_Manager_SizeChanged;
+            SizeChanged += MongoDB_Manager_SizeChanged;
+
+
+            var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
+            coreTitleBar.ExtendViewIntoTitleBar = true;
+
+            // Set XAML element as a drag region.
+            Window.Current.SetTitleBar(AppTitleBar);
 
         }
 
@@ -26,7 +34,17 @@ namespace Database_Manager.Views.Managers
 
             double width = bounds.Width;
 
-            myTextBlock.Text = "Height: " +height +" Width: "+width;
+            myTextBlock.Text = "Height: " +height +" Width: "+ width;
+
+            if (width < 740)
+            {
+                LeftPopUp.IsOpen = false;
+            }
+            else {
+
+                LeftPopUp.IsOpen = true;
+            }
+
         }
 
         private void AddButton(object sender, RoutedEventArgs e)
@@ -40,20 +58,7 @@ namespace Database_Manager.Views.Managers
             Frame.Navigate(typeof(TreeViewPage));
         }
 
-        private void TestButton(object sender, RoutedEventArgs e)
-        {
 
-            if (LeftPopUp.IsOpen)
-            {
-                LeftPopUp.IsOpen = false;
-            }
-            else {
-
-                LeftPopUp.IsOpen = true;
-            }
-
-     
-        }
 
    
 
