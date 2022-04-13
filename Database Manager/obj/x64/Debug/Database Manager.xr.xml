@@ -42,12 +42,15 @@
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="Padding" />
+      <RootProperty Name="Margin" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
       <RootMethod Name="GetColumnSpan" />
       <RootMethod Name="SetColumnSpan" />
+      <RootMethod Name="GetRowSpan" />
+      <RootMethod Name="SetRowSpan" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.AcrylicBrush">
       <RootProperty Name="BackgroundSource" />
@@ -76,9 +79,6 @@
       <RootProperty Name="Padding" />
       <RootProperty Name="Background" />
       <RootProperty Name="CornerRadius" />
-      <RootProperty Name="Visibility" />
-      <RootProperty Name="BorderBrush" />
-      <RootProperty Name="BorderThickness" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Primitives.Popup">
       <RootProperty Name="IsOpen" />
@@ -89,6 +89,7 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="Child" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="ChildTransitions" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
@@ -219,6 +220,9 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="VerticalScrollBarVisibility" />
+      <RootProperty Name="HorizontalScrollBarVisibility" />
       <RootMethod Name="GetBringIntoViewOnFocusChange" />
       <RootMethod Name="SetBringIntoViewOnFocusChange" />
       <RootMethod Name="GetHorizontalScrollBarVisibility" />
@@ -270,6 +274,7 @@
       <RootProperty Name="Setters" />
       <RootProperty Name="StateTriggers" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Thickness" />
     <RootType FullName="Windows.UI.Xaml.AdaptiveTrigger">
       <RootProperty Name="MinWindowWidth" />
     </RootType>

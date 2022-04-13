@@ -34,23 +34,22 @@ namespace Database_Manager.Views.Managers
 
             double width = bounds.Width;
 
-            myTextBlock.Text = "Height: " +height +" Width: "+ width;
+
 
             if (width < 740)
             {
-                LeftPopUp.IsOpen = false;
+              LeftPopUp.IsOpen = false;
             }
             else {
 
-                LeftPopUp.IsOpen = true;
+               LeftPopUp.IsOpen = true;
             }
-
+            LeftBar_GridContainer.Height = height-230;
         }
 
         private void AddButton(object sender, RoutedEventArgs e)
         {
-                LeftPopUp.IsOpen = false;
-            Frame.Navigate(typeof(MainPage));
+            
         }
 
         private void ImportButton(object sender, RoutedEventArgs e)
@@ -64,6 +63,8 @@ namespace Database_Manager.Views.Managers
 
         private void ExpandLeftBar(object sender, RoutedEventArgs e)
         {
+
+            
             if (LeftPopUp.IsOpen)
             {
                 LeftPopUp.IsOpen = false;
@@ -73,6 +74,16 @@ namespace Database_Manager.Views.Managers
 
                 LeftPopUp.IsOpen = true;
             }
+   
+       
+
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+
+              LeftPopUp.IsOpen = false;
+            Frame.Navigate(typeof(MainPage));
 
         }
     }
