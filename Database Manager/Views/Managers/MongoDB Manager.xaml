@@ -24,6 +24,16 @@
                                 <Thickness>0,10,0,0</Thickness>
                             </Setter.Value>
                         </Setter>
+                        <Setter Target="page_Controller.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0,0,0,5</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="documents_Container.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0,-20,0,-5</Thickness>
+                            </Setter.Value>
+                        </Setter>
                     </VisualState.Setters>
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0"/>
@@ -36,12 +46,17 @@
                         <Setter Target="button.(UIElement.Visibility)" Value="Collapsed"/>
                         <Setter Target="documents_Container.(FrameworkElement.Margin)">
                             <Setter.Value>
-                                <Thickness>15,-20,0,0</Thickness>
+                                <Thickness>15,-20,0,-5</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="page_Controller.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>220,0,0,5</Thickness>
                             </Setter.Value>
                         </Setter>
                     </VisualState.Setters>
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="740"/>
+                        <AdaptiveTrigger MinWindowWidth="755"/>
                     </VisualState.StateTriggers>
                 </VisualState>
                 <VisualState x:Name="LargeState"/>
@@ -66,7 +81,7 @@
 
 
         <Grid.RowDefinitions>
-            <RowDefinition MinHeight="40" Height="40" MaxHeight="40"/>
+            <RowDefinition MinHeight="33" Height="33" MaxHeight="33"/>
             <RowDefinition Height="19*"/>
             <RowDefinition  MinHeight="40" Height="35"/>
 
@@ -236,7 +251,16 @@
             </controls:WrapPanel>
 
 
-            <mongodb:Documents_Container x:Name="documents_Container" Margin="0,-20,0,0"  />
+
+            <mongodb:Documents_Container x:Name="documents_Container" Margin="0,-20,0,20"  />
+
+
+
+
+
+
+
+
 
 
         </Grid>
@@ -275,6 +299,8 @@
                 VerticalAlignment="Bottom"
                 ImageMargin="0,0,5,0"
                                    />
+
+            <mongodb:Page_Controller x:Name="page_Controller" Margin="200,0,0,5" Height="28" VerticalAlignment="Bottom"/>
         </Grid>
 
 

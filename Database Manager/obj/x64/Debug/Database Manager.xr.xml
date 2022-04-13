@@ -175,10 +175,10 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="ImageHeight" />
       <RootProperty Name="ButtonPadding" />
-      <RootProperty Name="BFontSize" />
-      <RootProperty Name="ForegroundText" />
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="ButtonText" />
+      <RootProperty Name="ForegroundText" />
+      <RootProperty Name="BFontSize" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="ButtonBackground" />
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
@@ -232,6 +232,11 @@
     </RootType>
     <RootType FullName="Database_Manager.Views.Components.Managers.MongoDB.Documents_Container">
       <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Database_Manager.Views.Components.Managers.MongoDB.Page_Controller">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Database_Manager.Views.Components.Managers.MongoDB.Single_Document" />
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">

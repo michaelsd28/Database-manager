@@ -36,7 +36,7 @@ namespace Database_Manager.Views.Managers
 
 
 
-            if (width < 740)
+            if (width < 755)
             {
               LeftPopUp.IsOpen = false;
             }

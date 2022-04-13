@@ -186,6 +186,12 @@
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\mongodb background.png">
       <PackagePath>Assets\Managers\MongoDB\mongodb background.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\next icon.png">
+      <PackagePath>Assets\Managers\MongoDB\next icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\previous icon.png">
+      <PackagePath>Assets\Managers\MongoDB\previous icon.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\Assets\Managers\MongoDB\search_folder badge.png">
       <PackagePath>Assets\Managers\MongoDB\search_folder badge.png</PackagePath>
     </AppxPackagedFile>
@@ -416,6 +422,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Documents Container.xbf">
       <PackagePath>Views\Components\Managers\MongoDB\Documents Container.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Page Controller.xbf">
+      <PackagePath>Views\Components\Managers\MongoDB\Page Controller.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Single Document.xbf">
       <PackagePath>Views\Components\Managers\MongoDB\Single Document.xbf</PackagePath>

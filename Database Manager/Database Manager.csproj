@@ -144,6 +144,9 @@
     <Compile Include="Views\Components\Managers\MongoDB\Documents Container.xaml.cs">
       <DependentUpon>Documents Container.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Components\Managers\MongoDB\Page Controller.xaml.cs">
+      <DependentUpon>Page Controller.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Components\Managers\MongoDB\Single Document.xaml.cs">
       <DependentUpon>Single Document.xaml</DependentUpon>
     </Compile>
@@ -202,6 +205,8 @@
     <Content Include="Assets\Managers\MongoDB\import data.png" />
     <Content Include="Assets\Managers\MongoDB\json document icon.png" />
     <Content Include="Assets\Managers\MongoDB\mongodb background.png" />
+    <Content Include="Assets\Managers\MongoDB\next icon.png" />
+    <Content Include="Assets\Managers\MongoDB\previous icon.png" />
     <Content Include="Assets\Managers\MongoDB\search_folder badge.png" />
     <Content Include="Assets\Managers\MongoDB\table grid icon.png" />
     <Content Include="Assets\SmallTile.scale-100.png" />
@@ -287,6 +292,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Components\Managers\MongoDB\Documents Container.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Components\Managers\MongoDB\Page Controller.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
