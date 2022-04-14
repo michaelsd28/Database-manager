@@ -29,17 +29,13 @@
                 />
             <TextBlock x:ConnectionId='2'
                 TextTrimming="WordEllipsis"
-                
-                
                 Name="serverName"
                 FontFamily="Roboto"
                 FontSize="16"
                 Foreground="White"
                 RelativePanel.AlignHorizontalCenterWithPanel="True" 
                 RelativePanel.AlignVerticalCenterWithPanel="True" 
-                
                Width="90"
- 
                 Text="{Binding TTitle, ElementName=CardRoot}"
                 />
 

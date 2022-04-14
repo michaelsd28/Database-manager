@@ -15,8 +15,8 @@
         <Grid.Background>
             <AcrylicBrush    
                               BackgroundSource="HostBackdrop"
-                              TintColor="#111111"
-                              TintOpacity="0.5"
+                              TintColor="Black"
+                              TintOpacity="0.1"
                               Windows10version1903:TintLuminosityOpacity="1"
                               FallbackColor="#111111"
                              />
@@ -24,29 +24,6 @@
         </Grid.Background>
 
 
-         <!--
-         <Grid.Background>
-            <AcrylicBrush    
-                              BackgroundSource="HostBackdrop"
-                              TintColor="#111111"
-                              TintOpacity="0.5"
-                              Windows10version1903:TintLuminosityOpacity="1"
-                              FallbackColor="#111111"
-                             />
-
-        </Grid.Background>
-        
-        -->
-       
-
-
-        <!--
-                <Grid.Background >
-            <ImageBrush  ImageSource="Assets\Mainpage\background mainpage 2.jpg"  Opacity="0.1"  />
-        </Grid.Background>
-
-        
-        -->
 
 
 
@@ -76,7 +53,11 @@
             <TextBlock VerticalAlignment="Center" FontSize="30"  HorizontalAlignment="Center">Database Manager</TextBlock>
             <Button 
                 HorizontalAlignment="Right" 
-                Margin="0,15,8,0" VerticalAlignment="Top" Width="105" Background="#3C3C3C">
+                Margin="0,15,8,0" VerticalAlignment="Top" 
+                Width="105" 
+                Background="#3C3C3C"
+                Click="SettingsButton"
+                >
                 <StackPanel Orientation="Horizontal">
                     <Image Source="Assets\Mainpage\settings icon.png" Height="20" Margin="0,0,3,0"/>
                     <TextBlock>Settings</TextBlock>
@@ -87,7 +68,8 @@
 
 
 
-        <Grid Grid.Row="0" Background="Black">
+        <Grid Grid.Row="0" Background="#0C0C0C" >
+
 
 
             <Grid x:Name="AppTitleBar" Background="Transparent">
@@ -107,9 +89,26 @@
     
             </Grid>
 
-            <StackPanel Orientation="Horizontal">
-                <Image Source="/Assets\Mainpage\back button.png" Height="20" Margin="10,0,0,0"/>
-            </StackPanel>
+            <RelativePanel >
+                <Button  
+                  Padding="7,0,10,0"
+            
+                    x:Name="BackButton"  Margin="10,0,0,0" Height="25"  
+                    RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+                    <Image Source="/Assets\Mainpage\back button.png"  Height="15"  />
+                </Button>
+
+
+
+
+                <Image 
+                    RelativePanel.AlignVerticalCenterWithPanel="True" 
+                    RelativePanel.AlignHorizontalCenterWithPanel="True"  
+                    Source="/Assets\Managers\MongoDB\database badge.png" Height="20"   HorizontalAlignment="Center"/>
+
+
+
+            </RelativePanel>
         </Grid>
 
 
@@ -129,7 +128,7 @@
 
             <Button Click="BRefreshDB_Click" Margin="10,0,5,0" x:Name="BRefreshDB" RelativePanel.RightOf="TSearchDB" Background="#3C3C3C">
                 <StackPanel Orientation="Horizontal" Margin="-6,0,-5,0">
-                    <Image Source="/Assets\Mainpage\refresh icon.png" Height="20" Width="15" Margin="0,0,1,0"/>
+                    <Image Source="/Assets\Mainpage\refresh icon.png" Height="20" Width="15" Margin="0,0,4,0"/>
                     <TextBlock>Refresh</TextBlock>
                 </StackPanel>
 
@@ -143,8 +142,8 @@
                 IsOpen="False" 
                 IsLightDismissEnabled="True"
                 LightDismissOverlayMode="On"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center" Height="0" Width="0"
+                Margin="-300,10,0,0"
+            Height="0" Width="0"
             >
 
             <dialog:Database_type_to_create/>

@@ -22,25 +22,29 @@
         <StackPanel
                     Background="#242424" 
                     CornerRadius="20">
-
+         <!--
             <TextBox MaxHeight="100" TextWrapping="Wrap" MinHeight="100" Margin="20"   Text="The Connecticut Tercentenary half dollar is a commemorative fifty-cent piece struck by the United States Bureau of the Mint in 1935. The commemorative coin was designed by Henry Kreis and depicts the Charter Oak, where according to legend Connecticut's charter was hidden to save itThe Connecticut Tercentenary half dollar is a commemorative fifty-cent piece struck by the United States Bureau of the Mint in 1935. The commemorative coin was designed by Henry Kreis and depicts the Charter Oak, where according to legend Connecticut's charter was hidden to save itThe Connecticut Tercentenary half dollar is a commemorative fifty-cent piece struck by the United States Bureau of the Mint in 1935. The commemorative coin was designed by Henry Kreis and depicts the Charter Oak, where according to legend Connecticut's charter was hidden to save itThe Connecticut Tercentenary half dollar is a commemorative fifty-cent piece struck by the United States Bureau of the Mint in 1935. The commemorative coin was designed by Henry Kreis and depicts the Charter Oak, where according to legend Connecticut's charter was hidden to save itThe Connecticut Tercentenary half dollar is a commemorative fifty-cent piece struck by the United States Bureau of the Mint in 1935. The commemorative coin was designed by Henry Kreis and depicts the Charter Oak, where according to legend Connecticut's charter was hidden to save itThe Connecticut Tercentenary half dollar is a commemorative fifty-cent piece struck by the United States Bureau of the Mint in 1935. The commemorative coin was designed by Henry Kreis and depicts the Charter Oak, where according to legend Connecticut's charter was hidden to save it" HorizontalAlignment="Stretch"/>
-            <TextBox IsEnabled="False" MinHeight="100" Margin="20"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
-            <TextBox IsEnabled="False" MinHeight="100"  Margin="20"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
-            <TextBox IsEnabled="False" MinHeight="100"  Margin="20"     PlaceholderText="json text" HorizontalAlignment="Stretch"/>
-            <TextBox IsEnabled="False" MinHeight="100"  Margin="20"  PlaceholderText="json text" HorizontalAlignment="Stretch"/>
-            <TextBox IsEnabled="False" MinHeight="100"  Margin="20"     PlaceholderText="json text" HorizontalAlignment="Stretch"/>
-            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
-            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
-            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
-            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
-            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
-            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
-            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
-            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
-            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
-            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
-            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
-            <TextBox IsEnabled="False" MinHeight="100" Margin="25"    PlaceholderText="json text" HorizontalAlignment="Stretch"/>
+                      -->
+            <local:Single_Document/>
+            <local:Single_Document/>
+            <local:Single_Document/>
+            <local:Single_Document/>
+            <local:Single_Document/>
+            <local:Single_Document/>
+            <local:Single_Document/>
+            <local:Single_Document/>
+            <local:Single_Document/>
+            <local:Single_Document/>
+            <local:Single_Document/>
+            <local:Single_Document/>
+            <local:Single_Document/>
+            <local:Single_Document/>
+            <local:Single_Document/>
+            <local:Single_Document/>
+            <local:Single_Document/>
+            <local:Single_Document/>
+            <local:Single_Document/>
+            <local:Single_Document/>
         </StackPanel>
     </ScrollViewer>
 

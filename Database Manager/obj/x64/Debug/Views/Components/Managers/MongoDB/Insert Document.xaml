@@ -1,0 +1,40 @@
+﻿<UserControl
+    x:Class="Database_Manager.Views.Components.Managers.MongoDB.Insert_Document"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Database_Manager.Views.Components.Managers.MongoDB"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:components="using:Database_Manager.Views.Components"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    RequestedTheme="Dark"
+    >
+
+    <StackPanel 
+  
+        Width="450" 
+        Orientation="Vertical" Margin="10" 
+        Padding="10" CornerRadius="10" 
+        Background="#0A0A0A">
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,5,20,-5">
+            <TextBlock Margin="0,5,45,0" HorizontalAlignment="Center" Foreground="#FFE4E4E4" FontFamily="Cascadia Code">Please enter a json text</TextBlock>
+            <components:IconButton  Margin="0,0,0,10" 
+                                    BFontSize="14"  
+                                    ButtonPadding="5" 
+    
+                                    ImageMargin="4,0,2,0"  
+                                    ImageIcon="/Assets\Managers\MongoDB\paste icon.png" 
+                                    ButtonText="Paste" />
+        </StackPanel>
+        <TextBox Margin="10" Height="160"/>
+
+        <StackPanel  Margin="0,0,10,0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Margin="0,10,0,5" Content="Save"/>
+            <Button x:ConnectionId='2' Margin="20,10,0,5" Content="Cancel"                     />
+        </StackPanel>
+
+    </StackPanel>
+</UserControl>
+

@@ -10,7 +10,7 @@ RequestedTheme="Dark"
     
     >
 
-    <RelativePanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="166">
+    <RelativePanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="166"  >
         <Image 
             x:Name="ImageHeader"
             RelativePanel.AlignLeftWithPanel="True" 
@@ -22,14 +22,17 @@ RequestedTheme="Dark"
             RelativePanel.RightOf="ImageHeader" 
             Text="Database" Width="72"
             Margin="0,3,0,0"
+            Padding="0,0,0,0"
             />
 
         <Component:IconButton 
+            
             RelativePanel.RightOf="TextBlockHeader" 
             ImageIcon="/Assets\Managers\MongoDB\delete button.png" 
-            Margin="15,0,0,0" 
-            ImageHeight="15" 
-            ButtonPadding="5" 
+            Margin="30,0,0,5" 
+            ImageHeight="8" 
+            ButtonPadding="5,2,5,3"
+  
             />
     </RelativePanel>
 </UserControl>

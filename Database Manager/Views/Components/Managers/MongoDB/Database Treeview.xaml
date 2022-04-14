@@ -11,8 +11,8 @@
     RequestedTheme="Dark"
     >
 
-    <StackPanel Margin="5,15,0,0"  >
-        <muxc:Expander x:Name="Expander2" IsExpanded="True"  MaxWidth="220" Width="220">
+    <StackPanel Margin="5,15,0,0" Background="#0E0E0E"  CornerRadius="5" >
+        <muxc:Expander Background="#121212" x:Name="Expander2" IsExpanded="True"  MaxWidth="220" Width="220">
             <muxc:Expander.Header>
                 <components:Expander_Header Margin="-14,5,0,-1" HorizontalAlignment="Left" Width="177"/>
             </muxc:Expander.Header>

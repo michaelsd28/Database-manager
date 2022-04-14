@@ -1,4 +1,5 @@
-﻿using Database_Manager.Views.Dialogs;
+﻿using Database_Manager.Views;
+using Database_Manager.Views.Dialogs;
 using Database_Manager.Views.Managers;
 using System.Diagnostics;
 using Windows.ApplicationModel.Core;
@@ -97,11 +98,13 @@ namespace Database_Manager
         {
 
 
+          Frame.Navigate(typeof(MongoDB_Manager));
 
+        }
 
-
-          this.Frame.Navigate(typeof(MongoDB_Manager));
-
+        private void SettingsButton(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate (typeof(Settings_page));
         }
     }
 }

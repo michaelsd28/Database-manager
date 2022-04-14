@@ -12,10 +12,13 @@ namespace Database_Manager.Views.Managers
     /// </summary>
     public sealed partial class MongoDB_Manager : Page
     {
+
+        public static MongoDB_Manager MongoDB_ManagerContext { get; set; }
         public MongoDB_Manager()
         {
             InitializeComponent();
             SizeChanged += MongoDB_Manager_SizeChanged;
+            MongoDB_ManagerContext = this;
 
 
             var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
@@ -38,18 +41,19 @@ namespace Database_Manager.Views.Managers
 
             if (width < 755)
             {
-              LeftPopUp.IsOpen = false;
+                LeftPopUp.IsOpen = false;
             }
-            else {
+            else
+            {
 
-               LeftPopUp.IsOpen = true;
+                LeftPopUp.IsOpen = true;
             }
-            LeftBar_GridContainer.Height = height-230;
+            LeftBar_GridContainer.Height = height - 230;
         }
 
         private void AddButton(object sender, RoutedEventArgs e)
         {
-            
+
         }
 
         private void ImportButton(object sender, RoutedEventArgs e)
@@ -59,12 +63,12 @@ namespace Database_Manager.Views.Managers
 
 
 
-   
+
 
         private void ExpandLeftBar(object sender, RoutedEventArgs e)
         {
 
-            
+
             if (LeftPopUp.IsOpen)
             {
                 LeftPopUp.IsOpen = false;
@@ -74,17 +78,36 @@ namespace Database_Manager.Views.Managers
 
                 LeftPopUp.IsOpen = true;
             }
-   
-       
+
+
 
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
 
-              LeftPopUp.IsOpen = false;
+            LeftPopUp.IsOpen = false;
             Frame.Navigate(typeof(MainPage));
+
+        }
+
+        private void Insert_Button(object sender, RoutedEventArgs e)
+
+        {
+
+            if (InsertDocument_POPUP.Visibility == Visibility.Visible)
+            {
+                InsertDocument_POPUP.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                InsertDocument_POPUP.Visibility = Visibility.Visible;
+            }
+
+
+
 
         }
     }
 }
+

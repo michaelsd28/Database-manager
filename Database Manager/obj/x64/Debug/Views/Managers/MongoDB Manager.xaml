@@ -46,7 +46,7 @@
                         <Setter Target="button.(UIElement.Visibility)" Value="Collapsed"/>
                         <Setter Target="documents_Container.(FrameworkElement.Margin)">
                             <Setter.Value>
-                                <Thickness>15,-20,0,-4.3</Thickness>
+                                <Thickness>15,-20,0,-5</Thickness>
                             </Setter.Value>
                         </Setter>
                         <Setter Target="page_Controller.(FrameworkElement.Margin)">
@@ -99,16 +99,17 @@
             Grid.Row="0"
             Background="Black"
             Grid.ColumnSpan="2"
+            Canvas.ZIndex="10"
               >
-
-            <Grid x:ConnectionId='17' x:Name="AppTitleBar" Background="Transparent">
+                
+            <Grid x:ConnectionId='19' x:Name="AppTitleBar" Background="Transparent">
                 <!-- Width of the padding columns is set in LayoutMetricsChanged handler. -->
                 <!-- Using padding columns instead of Margin ensures that the background
          paints the area under the caption control buttons (for transparent buttons). -->
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition x:ConnectionId='21' x:Name="LeftPaddingColumn" Width="0"/>
+                    <ColumnDefinition x:ConnectionId='23' x:Name="LeftPaddingColumn" Width="0"/>
                     <ColumnDefinition/>
-                    <ColumnDefinition x:ConnectionId='22' x:Name="RightPaddingColumn" Width="0"/>
+                    <ColumnDefinition x:ConnectionId='24' x:Name="RightPaddingColumn" Width="0"/>
                 </Grid.ColumnDefinitions>
                 <Image Source="Assets/WindowIcon.png" 
            Grid.Column="1"
@@ -119,37 +120,31 @@
             </Grid>
 
             <RelativePanel >
-                <Button x:ConnectionId='18'                           x:Name="BackButton"  Margin="10,0,0,0" Height="30"  RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
-                    <Image Source="/Assets\Mainpage\back button.png"   />
+                <Button x:ConnectionId='20'  
+                  Padding="7,0,10,0"
+                                             
+                    x:Name="BackButton"  Margin="10,0,0,0" Height="25"  
+                    RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+                    <Image Source="/Assets\Mainpage\back button.png"  Height="15"  />
                 </Button>
 
-                <Button x:ConnectionId='19' x:Name="button"                       Height="30" Background="Black" RelativePanel.RightOf="BackButton" RelativePanel.AlignVerticalCenterWithPanel="True"  Margin="15,0,0,0">
+                <Button x:ConnectionId='21' x:Name="button"                       Height="30" Background="Black" RelativePanel.RightOf="BackButton" RelativePanel.AlignVerticalCenterWithPanel="True"  Margin="15,0,0,0">
 
                     <Image  Source="/Assets\Managers\MongoDB\expand left menu.png" Margin="0,-3,0,-3" Width="23" />
                 </Button>
 
 
                 <Image RelativePanel.LeftOf="MongoDBTitleBar"  Source="/Assets\Mainpage\MongoDB Badge.png" Height="20" Margin="10,10,0,0"  HorizontalAlignment="Center"/>
-                <TextBlock x:ConnectionId='20' Foreground="#318025" FontSize="16"  FontFamily="Itim" x:Name="MongoDBTitleBar" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Text="MongoDB"/>
+                <TextBlock x:ConnectionId='22' Foreground="#318025" FontSize="16"  FontFamily="Itim" x:Name="MongoDBTitleBar" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Text="MongoDB"/>
             </RelativePanel>
 
 
         </Grid>
-        <!--
-            <Popup    Grid.Row="1"   Grid.Column="0"  IsOpen="True" x:Name="LeftPopUp"  >
-
-            <Popup.ChildTransitions>
-                <TransitionCollection>
-                    <PaneThemeTransition Edge="Left"/>
-                </TransitionCollection>
-            </Popup.ChildTransitions>
-                    </Popup>
-        -->
 
 
 
 
-        <Popup x:ConnectionId='6' Margin="5"  Grid.Row="1"   IsOpen="True" x:Name="LeftPopUp"   >
+        <Popup x:ConnectionId='6'  x:FieldModifier="Public" Canvas.ZIndex="5"  Margin="5"  Grid.Row="1"   IsOpen="True" x:Name="LeftPopUp"   >
 
 
             <Popup.ChildTransitions>
@@ -160,7 +155,7 @@
 
 
 
-            <StackPanel x:ConnectionId='13'  
+            <StackPanel x:ConnectionId='15'  
                 CornerRadius="10" 
                      Background="Black" 
                          Grid.RowSpan="3" Grid.ColumnSpan="3" 
@@ -170,10 +165,10 @@
                 <TextBlock HorizontalAlignment="Center"  Margin="0,20,0,0"   FontSize="16" VerticalAlignment="Center">Database/<LineBreak/>Collection</TextBlock>
 
                 <StackPanel   Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10,0,40">
-                    <Button x:ConnectionId='15'                    Margin="5" >
+                    <Button x:ConnectionId='17'                    Margin="5" >
                         <Image Source="/Assets\Managers\MongoDB\add button.png" Height="20" />
                     </Button>
-                    <Button x:ConnectionId='16'                       Margin="5" >
+                    <Button x:ConnectionId='18'                       Margin="5" >
                         <Image Source="/Assets\Managers\MongoDB\import data.png" Height="20" />
                     </Button>
 
@@ -185,7 +180,7 @@
 
 
 
-                <Grid x:ConnectionId='14' BorderBrush="DarkGray"  BorderThickness="0,2,0,0" Margin="0,-30,0,0" x:Name="LeftBar_GridContainer"  >
+                <Grid x:ConnectionId='16' BorderBrush="DarkGray"  BorderThickness="0,2,0,0" Margin="0,-30,0,0" x:Name="LeftBar_GridContainer"  >
                     <ScrollViewer  Padding="0,0,15,0"   VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible">
                         <StackPanel  Orientation="Vertical">
                             <mongodb:Database_Treeview HorizontalAlignment="Center"/>
@@ -232,8 +227,8 @@
             <controls:WrapPanel x:ConnectionId='9' x:Name="wrapPanel"  Margin="30,10,0,0" >
 
                 <StackPanel  Margin="0,10,0,10" Orientation="Horizontal" >
-                    <TextBox x:ConnectionId='11' Margin="5,0,5,0" Canvas.ZIndex="5"  x:Name="TextBoxFilter" Height="20" Width="158" PlaceholderText="Search in database"/>
-                    <Image x:ConnectionId='12' x:Name="image"  Margin="5,0,5,0"  Source="/Assets/Managers/MongoDB/search_folder badge.png" Height="25"  />
+                    <TextBox x:ConnectionId='13' Margin="5,0,5,0" Canvas.ZIndex="5"  x:Name="TextBoxFilter" Height="20" Width="158" PlaceholderText="Search in database"/>
+                    <Image x:ConnectionId='14' x:Name="image"  Margin="5,0,5,0"  Source="/Assets/Managers/MongoDB/search_folder badge.png" Height="25"  />
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="8,10,0,10" >
@@ -245,16 +240,33 @@
 
                 <StackPanel  Margin="0,0,0,0" Orientation="Horizontal">
                     <Button Margin="5,0,5,0"  Content="Refresh"/>
-                    <Button Margin="5,0,5,0" Content="Insert"/>
+                    <Button x:ConnectionId='12'                         Margin="5,0,5,0" Content="Insert"/>
                 </StackPanel>
 
             </controls:WrapPanel>
 
 
-
             <mongodb:Documents_Container x:ConnectionId='10' x:Name="documents_Container" Margin="0,-20,0,20"  />
 
+            <!--<mongodb:Insert_Document />-->
+            <Grid x:ConnectionId='11'
+ 
+                 Visibility="Collapsed"
+                 x:Name="InsertDocument_POPUP"  
+                 Grid.Row="1" 
+                 HorizontalAlignment="Center" 
+                 VerticalAlignment="Center"
+                 x:FieldModifier="Public"
+                
+                
+                >
+                
 
+         
+                    <mongodb:Insert_Document />
+
+           
+            </Grid>
 
 
 

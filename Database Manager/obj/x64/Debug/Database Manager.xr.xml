@@ -42,6 +42,8 @@
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="Padding" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
@@ -84,12 +86,12 @@
       <RootProperty Name="IsOpen" />
       <RootProperty Name="IsLightDismissEnabled" />
       <RootProperty Name="LightDismissOverlayMode" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="Child" />
-      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="ChildTransitions" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
@@ -104,6 +106,7 @@
       <RootProperty Name="Text" />
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Padding" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Name" />
       <RootProperty Name="TextTrimming" />
@@ -115,9 +118,9 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Content" />
       <RootProperty Name="Width" />
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Padding" />
       <RootProperty Name="Height" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
@@ -131,10 +134,10 @@
     <RootType FullName="Database_Manager.Views.Dialogs.Connect_wURI" />
     <RootType FullName="Database_Manager.Views.Dialogs.Database_type_to_create" />
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
+      <RootProperty Name="Children" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Children" />
       <RootProperty Name="Background" />
       <RootMethod Name="GetLeftOf" />
       <RootMethod Name="SetLeftOf" />
@@ -156,13 +159,11 @@
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="IsTextPredictionEnabled" />
-      <RootProperty Name="MaxHeight" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="MinHeight" />
-      <RootProperty Name="Text" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="IsEnabled" />
       <RootProperty Name="Height" />
+      <RootProperty Name="IsEnabled" />
+      <RootProperty Name="MinHeight" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Database_Manager.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
@@ -175,14 +176,14 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="ImageHeight" />
       <RootProperty Name="ButtonPadding" />
+      <RootProperty Name="BFontSize" />
+      <RootProperty Name="ImageMargin" />
       <RootProperty Name="ButtonText" />
       <RootProperty Name="ForegroundText" />
-      <RootProperty Name="BFontSize" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="ButtonBackground" />
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="ImageMargin" />
       <RootEvent Name="PointerPressed" />
     </RootType>
     <RootType FullName="Database_Manager.Views.Components.Expander_Header">
@@ -201,8 +202,10 @@
       <RootProperty Name="TDocument" />
       <RootProperty Name="TAverageSize" />
       <RootProperty Name="TLastUpdated" />
+      <RootEvent Name="PointerPressed" />
     </RootType>
     <RootType FullName="Microsoft.UI.Xaml.Controls.Expander">
+      <RootProperty Name="Background" />
       <RootProperty Name="IsExpanded" />
       <RootProperty Name="MaxWidth" />
       <RootProperty Name="Width" />
@@ -210,7 +213,6 @@
       <RootProperty Name="Content" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Background" />
     </RootType>
     <RootType FullName="Database_Manager.Views.Components.Managers.MongoDB.Database_Treeview">
       <RootProperty Name="HorizontalAlignment" />
@@ -230,15 +232,16 @@
       <RootMethod Name="GetVerticalScrollBarVisibility" />
       <RootMethod Name="SetVerticalScrollBarVisibility" />
     </RootType>
+    <RootType FullName="Database_Manager.Views.Components.Managers.MongoDB.Single_Document" />
     <RootType FullName="Database_Manager.Views.Components.Managers.MongoDB.Documents_Container">
       <RootProperty Name="Margin" />
     </RootType>
+    <RootType FullName="Database_Manager.Views.Components.Managers.MongoDB.Insert_Document" />
     <RootType FullName="Database_Manager.Views.Components.Managers.MongoDB.Page_Controller">
       <RootProperty Name="Margin" />
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
     </RootType>
-    <RootType FullName="Database_Manager.Views.Components.Managers.MongoDB.Single_Document" />
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="Background" />
       <RootProperty Name="CornerRadius" />
@@ -294,6 +297,18 @@
     <RootType FullName="Windows.UI.Xaml.Documents.LineBreak" />
     <RootType FullName="Database_Manager.Views.Managers.MongoDB_Manager" />
     <RootType FullName="Database_Manager.Views.Managers.TreeViewPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">
+      <RootProperty Name="Header" />
+      <RootProperty Name="OffContent" />
+      <RootProperty Name="OnContent" />
+      <RootProperty Name="IsOn" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="Items" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBoxItem">
+      <RootProperty Name="Content" />
+    </RootType>
     <RootType FullName="Database_Manager.Views.Settings_page" />
   </Roots.RootTypes>
 </Roots>

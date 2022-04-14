@@ -144,6 +144,9 @@
     <Compile Include="Views\Components\Managers\MongoDB\Documents Container.xaml.cs">
       <DependentUpon>Documents Container.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Components\Managers\MongoDB\Insert Document.xaml.cs">
+      <DependentUpon>Insert Document.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Components\Managers\MongoDB\Page Controller.xaml.cs">
       <DependentUpon>Page Controller.xaml</DependentUpon>
     </Compile>
@@ -199,6 +202,8 @@
     <Content Include="Assets\Managers\MongoDB\database badge.png" />
     <Content Include="Assets\Managers\MongoDB\delete button.png" />
     <Content Include="Assets\Managers\MongoDB\delete database.png" />
+    <Content Include="Assets\Managers\MongoDB\delete icon.png" />
+    <Content Include="Assets\Managers\MongoDB\edit database button.png" />
     <Content Include="Assets\Managers\MongoDB\expand left menu.png" />
     <Content Include="Assets\Managers\MongoDB\export data.png" />
     <Content Include="Assets\Managers\MongoDB\filter badge.png" />
@@ -206,7 +211,9 @@
     <Content Include="Assets\Managers\MongoDB\json document icon.png" />
     <Content Include="Assets\Managers\MongoDB\mongodb background.png" />
     <Content Include="Assets\Managers\MongoDB\next icon.png" />
+    <Content Include="Assets\Managers\MongoDB\paste icon.png" />
     <Content Include="Assets\Managers\MongoDB\previous icon.png" />
+    <Content Include="Assets\Managers\MongoDB\save icon.png" />
     <Content Include="Assets\Managers\MongoDB\search_folder badge.png" />
     <Content Include="Assets\Managers\MongoDB\table grid icon.png" />
     <Content Include="Assets\SmallTile.scale-100.png" />
@@ -292,6 +299,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Components\Managers\MongoDB\Documents Container.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Components\Managers\MongoDB\Insert Document.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

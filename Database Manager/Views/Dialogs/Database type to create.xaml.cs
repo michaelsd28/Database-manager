@@ -22,7 +22,7 @@ namespace Database_Manager.Views.Dialogs
 
             //// add click to mongodb button
             CMongoDB_Button.AddHandler(PointerPressedEvent,
-new PointerEventHandler(BMongoDB_Create), true);
+            new PointerEventHandler(BMongoDB_Create), true);
 
 
         }
@@ -31,7 +31,7 @@ new PointerEventHandler(BMongoDB_Create), true);
         {
 
 
-            this.Content = new MongoDB_Server();
+            Content = new MongoDB_Server();
 
         }
 

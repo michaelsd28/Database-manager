@@ -19,7 +19,7 @@
      
         Margin="20"
         Padding="20"
-                Canvas.ZIndex="100">
+                >
 
         <TextBlock Text="Choose database server" FontSize="20" Margin="20" HorizontalAlignment="Center"/>
         <components:IconButton 

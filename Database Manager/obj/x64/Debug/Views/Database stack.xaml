@@ -33,6 +33,7 @@
                                       TDocument="Documents: 5470 Docs"
                                       TAverageSize="Average size: 36.9KB"
                                       TLastUpdated="Last updated: 5 min  ago"
+                
                                       />
         </StackPanel>
         <StackPanel Margin="15">
@@ -47,14 +48,16 @@
                                       />
         </StackPanel>
         <StackPanel Margin="15">
-            <components:Database_Card 
-                ImageBadgeSRC="/Assets/Mainpage/MongoDB Badge.png"
-                  CTitleBackgroundColor="#285F1A"
+            <components:Database_Card x:ConnectionId='3' 
+                                    ImageBadgeSRC="/Assets/Mainpage/MongoDB Badge.png"
+                                    CTitleBackgroundColor="#285F1A"
                                       TTitle="Database"
                                       TSize="Storage size: 500 Megabytes" 
                                       TDocument="Documents: 5470 Docs"
                                       TAverageSize="Average size: 36.9KB"
                                       TLastUpdated="Last updated: 5 min  ago"
+                                       x:Name="MongoDB_Card"
+                                                                          
                                       />
         </StackPanel>
         <StackPanel Margin="15">

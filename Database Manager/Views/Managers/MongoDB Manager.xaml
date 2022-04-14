@@ -99,8 +99,9 @@
             Grid.Row="0"
             Background="Black"
             Grid.ColumnSpan="2"
+            Canvas.ZIndex="10"
               >
-
+                
             <Grid x:Name="AppTitleBar" Background="Transparent">
                 <!-- Width of the padding columns is set in LayoutMetricsChanged handler. -->
                 <!-- Using padding columns instead of Margin ensures that the background
@@ -119,8 +120,12 @@
             </Grid>
 
             <RelativePanel >
-                <Button  Click="BackButton_Click" x:Name="BackButton"  Margin="10,0,0,0" Height="30"  RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
-                    <Image Source="/Assets\Mainpage\back button.png"   />
+                <Button  
+                  Padding="7,0,10,0"
+                    Click="BackButton_Click" 
+                    x:Name="BackButton"  Margin="10,0,0,0" Height="25"  
+                    RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+                    <Image Source="/Assets\Mainpage\back button.png"  Height="15"  />
                 </Button>
 
                 <Button x:Name="button" Click="ExpandLeftBar" Height="30" Background="Black" RelativePanel.RightOf="BackButton" RelativePanel.AlignVerticalCenterWithPanel="True"  Margin="15,0,0,0">
@@ -135,21 +140,11 @@
 
 
         </Grid>
-        <!--
-            <Popup    Grid.Row="1"   Grid.Column="0"  IsOpen="True" x:Name="LeftPopUp"  >
-
-            <Popup.ChildTransitions>
-                <TransitionCollection>
-                    <PaneThemeTransition Edge="Left"/>
-                </TransitionCollection>
-            </Popup.ChildTransitions>
-                    </Popup>
-        -->
 
 
 
 
-        <Popup Margin="5"  Grid.Row="1"   IsOpen="True" x:Name="LeftPopUp"   >
+        <Popup  x:FieldModifier="Public" Canvas.ZIndex="5"  Margin="5"  Grid.Row="1"   IsOpen="True" x:Name="LeftPopUp"   >
 
 
             <Popup.ChildTransitions>
@@ -245,16 +240,33 @@
 
                 <StackPanel  Margin="0,0,0,0" Orientation="Horizontal">
                     <Button Margin="5,0,5,0"  Content="Refresh"/>
-                    <Button Margin="5,0,5,0" Content="Insert"/>
+                    <Button  Click="Insert_Button"  Margin="5,0,5,0" Content="Insert"/>
                 </StackPanel>
 
             </controls:WrapPanel>
 
 
-
             <mongodb:Documents_Container x:Name="documents_Container" Margin="0,-20,0,20"  />
 
+            <!--<mongodb:Insert_Document />-->
+            <Grid
+ 
+                 Visibility="Collapsed"
+                 x:Name="InsertDocument_POPUP"  
+                 Grid.Row="1" 
+                 HorizontalAlignment="Center" 
+                 VerticalAlignment="Center"
+                 x:FieldModifier="Public"
+                
+                
+                >
+                
 
+         
+                    <mongodb:Insert_Document />
+
+           
+            </Grid>
 
 
 

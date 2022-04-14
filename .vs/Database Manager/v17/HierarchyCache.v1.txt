@@ -1,0 +1,297 @@
+﻿++Solution 'Database Manager' ‎(1 of 1 project)
+i:{00000000-0000-0000-0000-000000000000}:Database Manager.sln
+++Database Manager ‎(Universal Windows)
+i:{00000000-0000-0000-0000-000000000000}:Database Manager
+++Properties
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\properties\
+++References
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:
+++Microsoft.NETCore.UniversalWindowsPlatform
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:
+++Microsoft.Toolkit.Uwp.UI.Controls
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:
+++Microsoft.UI.Xaml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:
+++Microsoft.UI.Xaml.Markup
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:
+++Microsoft.VCLibs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:
+++Universal Windows
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:
+++Assets
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\
+++Mainpage
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\mainpage\
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\mainpage\
+++back button.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\mainpage\back button.png
+++background mainpage 2.jpg
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\mainpage\background mainpage 2.jpg
+++background page.jpg
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\mainpage\background page.jpg
+++edit database button.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\mainpage\edit database button.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\mongodb\edit database button.png
+++MongoDB Badge.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\mainpage\mongodb badge.png
+++redis logo badge.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\mainpage\redis logo badge.png
+++refresh icon.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\mainpage\refresh icon.png
+++run database icon.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\mainpage\run database icon.png
+++settings icon.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\mainpage\settings icon.png
+++sql logo badge.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\mainpage\sql logo badge.png
+++terminal icon 2.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\mainpage\terminal icon 2.png
+++terminal icon.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\mainpage\terminal icon.png
+++Managers
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\managers\
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\managers\
+++MongoDB
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\mongodb\
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\managers\mongodb\
+++add button.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\mongodb\add button.png
+++database badge.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\mongodb\database badge.png
+++delete button.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\mongodb\delete button.png
+++delete database.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\mongodb\delete database.png
+++delete icon.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\mongodb\delete icon.png
+++expand left menu.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\mongodb\expand left menu.png
+++export data.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\mongodb\export data.png
+++filter badge.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\mongodb\filter badge.png
+++import data.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\mongodb\import data.png
+++json document icon.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\mongodb\json document icon.png
+++mongodb background.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\mongodb\mongodb background.png
+++next icon.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\mongodb\next icon.png
+++paste icon.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\mongodb\paste icon.png
+++previous icon.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\mongodb\previous icon.png
+++save icon.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\mongodb\save icon.png
+++search_folder badge.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\mongodb\search_folder badge.png
+++table badge.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\mongodb\table badge.png
+++table grid icon.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\managers\mongodb\table grid icon.png
+++database app logo.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\database app logo.png
+++LargeTile.scale-100.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\largetile.scale-100.png
+++LargeTile.scale-125.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\largetile.scale-125.png
+++LargeTile.scale-150.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\largetile.scale-150.png
+++LargeTile.scale-200.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\largetile.scale-200.png
+++LargeTile.scale-400.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\largetile.scale-400.png
+++SmallTile.scale-100.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\smalltile.scale-100.png
+++SmallTile.scale-125.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\smalltile.scale-125.png
+++SmallTile.scale-150.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\smalltile.scale-150.png
+++SmallTile.scale-200.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\smalltile.scale-200.png
+++SmallTile.scale-400.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\smalltile.scale-400.png
+++SplashScreen.scale-100.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\splashscreen.scale-100.png
+++SplashScreen.scale-125.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\splashscreen.scale-125.png
+++SplashScreen.scale-150.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\splashscreen.scale-150.png
+++SplashScreen.scale-200.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\splashscreen.scale-200.png
+++SplashScreen.scale-400.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\splashscreen.scale-400.png
+++Square150x150Logo.scale-100.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square150x150logo.scale-100.png
+++Square150x150Logo.scale-125.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square150x150logo.scale-125.png
+++Square150x150Logo.scale-150.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square150x150logo.scale-150.png
+++Square150x150Logo.scale-200.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square150x150logo.scale-200.png
+++Square150x150Logo.scale-400.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square150x150logo.scale-400.png
+++Square44x44Logo.altform-lightunplated_targetsize-16.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square44x44logo.altform-lightunplated_targetsize-16.png
+++Square44x44Logo.altform-lightunplated_targetsize-24.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square44x44logo.altform-lightunplated_targetsize-24.png
+++Square44x44Logo.altform-lightunplated_targetsize-256.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square44x44logo.altform-lightunplated_targetsize-256.png
+++Square44x44Logo.altform-lightunplated_targetsize-32.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square44x44logo.altform-lightunplated_targetsize-32.png
+++Square44x44Logo.altform-lightunplated_targetsize-48.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square44x44logo.altform-lightunplated_targetsize-48.png
+++Square44x44Logo.altform-unplated_targetsize-16.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square44x44logo.altform-unplated_targetsize-16.png
+++Square44x44Logo.altform-unplated_targetsize-24.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square44x44logo.altform-unplated_targetsize-24.png
+++Square44x44Logo.altform-unplated_targetsize-256.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square44x44logo.altform-unplated_targetsize-256.png
+++Square44x44Logo.altform-unplated_targetsize-32.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square44x44logo.altform-unplated_targetsize-32.png
+++Square44x44Logo.altform-unplated_targetsize-48.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square44x44logo.altform-unplated_targetsize-48.png
+++Square44x44Logo.scale-100.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square44x44logo.scale-100.png
+++Square44x44Logo.scale-125.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square44x44logo.scale-125.png
+++Square44x44Logo.scale-150.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square44x44logo.scale-150.png
+++Square44x44Logo.scale-200.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square44x44logo.scale-200.png
+++Square44x44Logo.scale-400.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square44x44logo.scale-400.png
+++Square44x44Logo.targetsize-16.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square44x44logo.targetsize-16.png
+++Square44x44Logo.targetsize-24.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square44x44logo.targetsize-24.png
+++Square44x44Logo.targetsize-256.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square44x44logo.targetsize-256.png
+++Square44x44Logo.targetsize-32.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square44x44logo.targetsize-32.png
+++Square44x44Logo.targetsize-48.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\square44x44logo.targetsize-48.png
+++StoreLogo.scale-100.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\storelogo.scale-100.png
+++StoreLogo.scale-125.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\storelogo.scale-125.png
+++StoreLogo.scale-150.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\storelogo.scale-150.png
+++StoreLogo.scale-200.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\storelogo.scale-200.png
+++StoreLogo.scale-400.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\storelogo.scale-400.png
+++Wide310x150Logo.scale-100.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\wide310x150logo.scale-100.png
+++Wide310x150Logo.scale-125.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\wide310x150logo.scale-125.png
+++Wide310x150Logo.scale-150.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\wide310x150logo.scale-150.png
+++Wide310x150Logo.scale-200.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\wide310x150logo.scale-200.png
+++Wide310x150Logo.scale-400.png
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\assets\wide310x150logo.scale-400.png
+++Model
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\model\
+++Resource dictionaries
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\resource dictionaries\
+++Main page
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\resource dictionaries\main page\
+++Services
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\services\
+++Views
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\
+++Components
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\
+++Database Card.xaml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\mainpage\database card.xaml
+++Database Treeview.xaml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\managers\mongodb\database treeview.xaml
+++Document Card.xaml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\managers\mongodb\document card.xaml
+++Documents Container.xaml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\managers\mongodb\documents container.xaml
+++Insert Document.xaml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\managers\mongodb\insert document.xaml
+++Page Controller.xaml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\managers\mongodb\page controller.xaml
+++Single Document.xaml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\managers\mongodb\single document.xaml
+++Redis
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\managers\redis\
+++SQL
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\managers\sql\
+++Expander Content.xaml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\expander content.xaml
+++Expander Content.xaml.cs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\expander content.xaml.cs
+++Expander Header.xaml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\expander header.xaml
+++Expander Header.xaml.cs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\expander header.xaml.cs
+++IconButton.xaml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\iconbutton.xaml
+++IconButton.xaml.cs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\iconbutton.xaml.cs
+++Dialogs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\dialogs\
+++Server creation
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\dialogs\server creation\
+++Connect wURI.xaml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\dialogs\connect wuri.xaml
+++Database type to create.xaml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\dialogs\database type to create.xaml
+++MongoDB Manager.xaml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\managers\mongodb manager.xaml
+++MongoDB Manager.xaml.cs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\managers\mongodb manager.xaml.cs
+++TreeViewPage.xaml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\managers\treeviewpage.xaml
+++Database stack.xaml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\database stack.xaml
+++Settings page.xaml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\settings page.xaml
+++App.xaml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\app.xaml
+++App.xaml.cs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\app.xaml.cs
+++MainPage.xaml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\mainpage.xaml
+++MainPage.xaml.cs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\mainpage.xaml.cs
+++Package.appxmanifest
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\package.appxmanifest
+++AssemblyInfo.cs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\properties\assemblyinfo.cs
+++Default.rd.xml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\properties\default.rd.xml
+++Database Card.xaml.cs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\mainpage\database card.xaml.cs
+++Database Treeview.xaml.cs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\managers\mongodb\database treeview.xaml.cs
+++Document Card.xaml.cs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\managers\mongodb\document card.xaml.cs
+++Documents Container.xaml.cs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\managers\mongodb\documents container.xaml.cs
+++Insert Document.xaml.cs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\managers\mongodb\insert document.xaml.cs
+++Page Controller.xaml.cs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\managers\mongodb\page controller.xaml.cs
+++Single Document.xaml.cs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\components\managers\mongodb\single document.xaml.cs
+++MongoDB Server.xaml
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\dialogs\server creation\mongodb server.xaml
+++Connect wURI.xaml.cs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\dialogs\connect wuri.xaml.cs
+++Database type to create.xaml.cs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\dialogs\database type to create.xaml.cs
+++TreeViewPage.xaml.cs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\managers\treeviewpage.xaml.cs
+++Database stack.xaml.cs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\database stack.xaml.cs
+++Settings page.xaml.cs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\settings page.xaml.cs
+++MongoDB Server.xaml.cs
+i:{6ed3f4b8-6025-480d-b70e-ffe3b79b9853}:c:\users\rd28\desktop\saveit\database manager\database manager\views\dialogs\server creation\mongodb server.xaml.cs

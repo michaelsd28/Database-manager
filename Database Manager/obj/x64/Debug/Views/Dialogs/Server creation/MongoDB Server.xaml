@@ -12,44 +12,45 @@
     >
 
 
+    <StackPanel x:ConnectionId='2'  HorizontalAlignment="Center"  x:Name="SPanel_CreateMong"    
+                 Background="#FF272A2F"   
+                 CornerRadius="5"  
+                 Margin="-40,0,0,0">
 
-    <StackPanel x:ConnectionId='2'  HorizontalAlignment="Center"  x:Name="SPanel_CreateMong"    Background="#FF272A2F"   CornerRadius="5"  Margin="0,0,0,0">
-
-        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <Image Source="/Assets\Mainpage\MongoDB Badge.png" Height="80"/>
-            <TextBlock FontSize="40" Text="MongoDB Connection" VerticalAlignment="Center" Foreground="#FF4CAF50"/>
+            <TextBlock FontSize="30" Text="MongoDB Connection" VerticalAlignment="Center" Foreground="#FF4CAF50"/>
         </StackPanel>
 
-        <TextBox PlaceholderText="Host name" Margin="15" VerticalAlignment="Center"  />
-        <TextBlock Text="- Default port is 27007 -" HorizontalAlignment="Center" />
+        <TextBox  Margin="10" PlaceholderText="Host name"  VerticalAlignment="Center"  />
+        <TextBlock  Margin="10" Text="- Default port is 27007 -" HorizontalAlignment="Center" />
 
-        
-        <TextBox PlaceholderText="Host name"  Margin="15"  />
-        
-        <TextBox x:ConnectionId='3' x:Name="Username_Server_Create" PlaceholderText="Username (Optional)"  Margin="15" />
 
-        <TextBox x:ConnectionId='4' x:Name="Password_Server_Create" PlaceholderText="Password (Optional)"  Margin="15"/>
+        <TextBox Margin="10" PlaceholderText="Host name"   />
+
+        <TextBox x:ConnectionId='3' Margin="10" x:Name="Username_Server_Create" PlaceholderText="Username (Optional)"  />
+
+        <TextBox x:ConnectionId='4' Margin="10" x:Name="Password_Server_Create" PlaceholderText="Password (Optional)" />
   
 
-        <muxc:Expander x:ConnectionId='5' x:Name="Expander2" Width="300" HorizontalAlignment="Center" Margin="10">
+        <muxc:Expander x:ConnectionId='5' x:Name="Expander2" Width="300" HorizontalAlignment="Center" >
             <muxc:Expander.Header>
                 <TextBlock Text="Advanced options"/>
             </muxc:Expander.Header>
             <muxc:Expander.Content>
                 <Grid>
-                    <Button Margin="15" Content="This is a Button in the content"/>
+                    <Button  Content="This is a Button in the content"/>
                 </Grid>
             </muxc:Expander.Content>
         </muxc:Expander>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Margin="25" Background="#056636">Create</Button>
+            <Button  Background="#056636">Create</Button>
             <Button x:ConnectionId='6'                      Margin="25" Background="#666666">Cancel</Button>
 
         </StackPanel>
     </StackPanel>
-    
-    
+
 
 </UserControl>
 

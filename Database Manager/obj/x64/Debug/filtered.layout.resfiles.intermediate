@@ -20,6 +20,8 @@ Assets\Managers\MongoDB\add button.png
 Assets\Managers\MongoDB\database badge.png
 Assets\Managers\MongoDB\delete button.png
 Assets\Managers\MongoDB\delete database.png
+Assets\Managers\MongoDB\delete icon.png
+Assets\Managers\MongoDB\edit database button.png
 Assets\Managers\MongoDB\expand left menu.png
 Assets\Managers\MongoDB\export data.png
 Assets\Managers\MongoDB\filter badge.png
@@ -27,7 +29,9 @@ Assets\Managers\MongoDB\import data.png
 Assets\Managers\MongoDB\json document icon.png
 Assets\Managers\MongoDB\mongodb background.png
 Assets\Managers\MongoDB\next icon.png
+Assets\Managers\MongoDB\paste icon.png
 Assets\Managers\MongoDB\previous icon.png
+Assets\Managers\MongoDB\save icon.png
 Assets\Managers\MongoDB\search_folder badge.png
 Assets\Managers\MongoDB\table badge.png
 Assets\Managers\MongoDB\table grid icon.png
@@ -86,6 +90,7 @@ Views\Components\Mainpage\Database Card.xbf
 Views\Components\Managers\MongoDB\Database Treeview.xbf
 Views\Components\Managers\MongoDB\Document Card.xbf
 Views\Components\Managers\MongoDB\Documents Container.xbf
+Views\Components\Managers\MongoDB\Insert Document.xbf
 Views\Components\Managers\MongoDB\Page Controller.xbf
 Views\Components\Managers\MongoDB\Single Document.xbf
 Views\Database stack.xbf
