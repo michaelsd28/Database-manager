@@ -426,6 +426,9 @@
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Mainpage\Database Card.xbf">
       <PackagePath>Views\Components\Mainpage\Database Card.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Create Database.xbf">
+      <PackagePath>Views\Components\Managers\MongoDB\Create Database.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Database Treeview.xbf">
       <PackagePath>Views\Components\Managers\MongoDB\Database Treeview.xbf</PackagePath>
     </AppxPackagedFile>

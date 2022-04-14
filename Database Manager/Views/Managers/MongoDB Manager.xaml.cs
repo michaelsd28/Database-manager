@@ -53,7 +53,14 @@ namespace Database_Manager.Views.Managers
 
         private void AddButton(object sender, RoutedEventArgs e)
         {
+            if (CreateDatabase_POPUP.Visibility == Visibility.Visible  ) {
 
+                CreateDatabase_POPUP.Visibility = Visibility.Collapsed;
+            }
+            else {
+                CreateDatabase_POPUP.Visibility = Visibility.Visible;
+            }
+    
         }
 
         private void ImportButton(object sender, RoutedEventArgs e)
@@ -108,6 +115,8 @@ namespace Database_Manager.Views.Managers
 
 
         }
+
+
     }
 }
 

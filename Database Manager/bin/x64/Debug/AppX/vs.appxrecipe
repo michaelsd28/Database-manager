@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-14T07:10:13.896</Modified>
+      <Modified>2022-04-14T07:29:22.641</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Database Manager.exe">
       <PackagePath>entrypoint\Database Manager.exe</PackagePath>
-      <Modified>2022-04-14T07:10:13.192</Modified>
+      <Modified>2022-04-14T07:29:21.987</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\.nuget\packages\colorcode.core\2.0.6\lib\netstandard1.4\ColorCode.Core.dll">
       <PackagePath>ColorCode.Core.dll</PackagePath>
@@ -526,83 +526,87 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Database Manager.xr.xml">
       <PackagePath>Database Manager.xr.xml</PackagePath>
-      <Modified>2022-04-14T07:10:13.082</Modified>
+      <Modified>2022-04-14T07:29:21.881</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-04-14T07:10:13.109</Modified>
+      <Modified>2022-04-14T07:29:21.908</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-04-14T07:10:13.093</Modified>
+      <Modified>2022-04-14T07:29:21.892</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Expander Content.xbf">
       <PackagePath>Views\Components\Expander Content.xbf</PackagePath>
-      <Modified>2022-04-14T07:10:13.109</Modified>
+      <Modified>2022-04-14T07:29:21.908</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Expander Header.xbf">
       <PackagePath>Views\Components\Expander Header.xbf</PackagePath>
-      <Modified>2022-04-14T07:10:13.109</Modified>
+      <Modified>2022-04-14T07:29:21.908</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\IconButton.xbf">
       <PackagePath>Views\Components\IconButton.xbf</PackagePath>
-      <Modified>2022-04-14T07:10:13.110</Modified>
+      <Modified>2022-04-14T07:29:21.908</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Mainpage\Database Card.xbf">
       <PackagePath>Views\Components\Mainpage\Database Card.xbf</PackagePath>
-      <Modified>2022-04-14T07:10:13.110</Modified>
+      <Modified>2022-04-14T07:29:21.908</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Create Database.xbf">
+      <PackagePath>Views\Components\Managers\MongoDB\Create Database.xbf</PackagePath>
+      <Modified>2022-04-14T07:29:21.908</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Database Treeview.xbf">
       <PackagePath>Views\Components\Managers\MongoDB\Database Treeview.xbf</PackagePath>
-      <Modified>2022-04-14T07:10:13.110</Modified>
+      <Modified>2022-04-14T07:29:21.909</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Document Card.xbf">
       <PackagePath>Views\Components\Managers\MongoDB\Document Card.xbf</PackagePath>
-      <Modified>2022-04-14T07:10:13.110</Modified>
+      <Modified>2022-04-14T07:29:21.909</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Documents Container.xbf">
       <PackagePath>Views\Components\Managers\MongoDB\Documents Container.xbf</PackagePath>
-      <Modified>2022-04-14T07:10:13.110</Modified>
+      <Modified>2022-04-14T07:29:21.909</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Insert Document.xbf">
       <PackagePath>Views\Components\Managers\MongoDB\Insert Document.xbf</PackagePath>
-      <Modified>2022-04-14T07:10:13.110</Modified>
+      <Modified>2022-04-14T07:29:21.909</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Page Controller.xbf">
       <PackagePath>Views\Components\Managers\MongoDB\Page Controller.xbf</PackagePath>
-      <Modified>2022-04-14T07:10:13.110</Modified>
+      <Modified>2022-04-14T07:29:21.909</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Single Document.xbf">
       <PackagePath>Views\Components\Managers\MongoDB\Single Document.xbf</PackagePath>
-      <Modified>2022-04-14T07:10:13.111</Modified>
+      <Modified>2022-04-14T07:29:21.909</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Database stack.xbf">
       <PackagePath>Views\Database stack.xbf</PackagePath>
-      <Modified>2022-04-14T07:10:13.111</Modified>
+      <Modified>2022-04-14T07:29:21.909</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Dialogs\Connect wURI.xbf">
       <PackagePath>Views\Dialogs\Connect wURI.xbf</PackagePath>
-      <Modified>2022-04-14T07:10:13.111</Modified>
+      <Modified>2022-04-14T07:29:21.910</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Dialogs\Database type to create.xbf">
       <PackagePath>Views\Dialogs\Database type to create.xbf</PackagePath>
-      <Modified>2022-04-14T07:10:13.111</Modified>
+      <Modified>2022-04-14T07:29:21.910</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Dialogs\Server creation\MongoDB Server.xbf">
       <PackagePath>Views\Dialogs\Server creation\MongoDB Server.xbf</PackagePath>
-      <Modified>2022-04-14T07:10:13.111</Modified>
+      <Modified>2022-04-14T07:29:21.910</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Managers\MongoDB Manager.xbf">
       <PackagePath>Views\Managers\MongoDB Manager.xbf</PackagePath>
-      <Modified>2022-04-14T07:10:13.107</Modified>
+      <Modified>2022-04-14T07:29:21.905</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Managers\TreeViewPage.xbf">
       <PackagePath>Views\Managers\TreeViewPage.xbf</PackagePath>
-      <Modified>2022-04-14T07:10:13.112</Modified>
+      <Modified>2022-04-14T07:29:21.910</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Settings page.xbf">
       <PackagePath>Views\Settings page.xbf</PackagePath>
-      <Modified>2022-04-14T07:10:13.112</Modified>
+      <Modified>2022-04-14T07:29:21.910</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -618,11 +622,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-04-14T01:39:02.993</Modified>
+      <Modified>2022-04-14T07:22:39.441</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Core\Database Manager.exe">
       <PackagePath>Database Manager.exe</PackagePath>
-      <Modified>2022-04-14T07:10:13.892</Modified>
+      <Modified>2022-04-14T07:29:22.637</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

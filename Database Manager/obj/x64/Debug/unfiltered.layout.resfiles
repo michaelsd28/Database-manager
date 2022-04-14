@@ -87,6 +87,7 @@ Views\Components\Expander Content.xbf
 Views\Components\Expander Header.xbf
 Views\Components\IconButton.xbf
 Views\Components\Mainpage\Database Card.xbf
+Views\Components\Managers\MongoDB\Create Database.xbf
 Views\Components\Managers\MongoDB\Database Treeview.xbf
 Views\Components\Managers\MongoDB\Document Card.xbf
 Views\Components\Managers\MongoDB\Documents Container.xbf

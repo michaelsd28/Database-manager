@@ -169,6 +169,8 @@
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
       <RootProperty Name="RequestedTheme" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Database_Manager.Views.Components.Expander_Content" />
     <RootType FullName="Database_Manager.Views.Components.IconButton">
@@ -203,6 +205,9 @@
       <RootProperty Name="TAverageSize" />
       <RootProperty Name="TLastUpdated" />
       <RootEvent Name="PointerPressed" />
+    </RootType>
+    <RootType FullName="Database_Manager.Views.Components.Managers.MongoDB.Create_Database">
+      <RootProperty Name="Visibility" />
     </RootType>
     <RootType FullName="Microsoft.UI.Xaml.Controls.Expander">
       <RootProperty Name="Background" />

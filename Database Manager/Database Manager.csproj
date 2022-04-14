@@ -135,6 +135,9 @@
     <Compile Include="Views\Components\Mainpage\Database Card.xaml.cs">
       <DependentUpon>Database Card.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Components\Managers\MongoDB\Create Database.xaml.cs">
+      <DependentUpon>Create Database.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Components\Managers\MongoDB\Database Treeview.xaml.cs">
       <DependentUpon>Database Treeview.xaml</DependentUpon>
     </Compile>
@@ -287,6 +290,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Components\Mainpage\Database Card.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Components\Managers\MongoDB\Create Database.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

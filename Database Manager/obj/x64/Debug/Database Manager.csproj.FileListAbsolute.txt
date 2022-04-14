@@ -179,3 +179,8 @@ C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Vie
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Insert Document.g.cs
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Insert Document.xaml
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Insert Document.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Create Database.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Create Database.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Create Database.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Create Database.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Create Database.xbf

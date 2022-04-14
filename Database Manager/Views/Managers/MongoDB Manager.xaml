@@ -248,6 +248,8 @@
 
             <mongodb:Documents_Container x:Name="documents_Container" Margin="0,-20,0,20"  />
 
+            <mongodb:Create_Database Visibility="Collapsed" x:Name="CreateDatabase_POPUP"/>
+
             <!--<mongodb:Insert_Document />-->
             <Grid
  
