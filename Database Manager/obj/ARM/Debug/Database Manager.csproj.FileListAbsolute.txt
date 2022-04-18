@@ -1,0 +1,187 @@
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Core\Microsoft.Toolkit.Uwp.UI.Controls.Core.xr.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Input\Microsoft.Toolkit.Uwp.UI.Controls.Input.xr.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Layout\Microsoft.Toolkit.Uwp.UI.Controls.Layout.xr.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Markdown\Microsoft.Toolkit.Uwp.UI.Controls.Markdown.xr.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Media\Microsoft.Toolkit.Uwp.UI.Controls.Media.xr.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\App.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\MainPage.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Views\Components\Expander Content.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Views\Components\Expander Header.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Views\Components\IconButton.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Views\Components\Mainpage\Database Card.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Views\Components\Managers\MongoDB\Create Database.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Views\Components\Managers\MongoDB\Database Treeview.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Views\Components\Managers\MongoDB\Document Card.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Views\Components\Managers\MongoDB\Documents Container.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Views\Components\Managers\MongoDB\Insert Document.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Views\Components\Managers\MongoDB\Page Controller.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Views\Components\Managers\MongoDB\Single Document.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Views\Database stack.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Views\Dialogs\Connect wURI.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Views\Dialogs\Database type to create.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Views\Dialogs\Server creation\MongoDB Server.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Views\Managers\MongoDB Manager.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Views\Managers\TreeViewPage.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Views\Settings page.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Database Manager.xr.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Database Manager.exe
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Database Manager.pdb
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\resources.pri
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\AppxManifest.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Core\AppxManifest.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Core\Database Manager.exe
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Database Manager.build.appxrecipe
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\ColorCode.Core.dll
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\ColorCode.Core.pdb
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\ColorCode.UWP.dll
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\ColorCode.UWP.pdb
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.dll
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.pdb
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.dll
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.pdb
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.dll
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.pdb
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Core.dll
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Core.pdb
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.pdb
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Input.dll
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Input.pdb
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Layout.dll
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Layout.pdb
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Markdown.dll
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Markdown.pdb
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Media.dll
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Media.pdb
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Primitives.dll
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Primitives.pdb
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\System.Runtime.dll
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\System.Text.Encodings.Web.dll
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\System.Text.Json.dll
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Graphics.Canvas.dll
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.Graphics.Canvas.winmd
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Microsoft.UI.Xaml.Markup.winmd
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Database Manager.csproj.AssemblyReference.cache
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\App.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\App.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\MainPage.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\MainPage.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Expander Content.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Expander Content.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Expander Header.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Expander Header.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\IconButton.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\IconButton.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Mainpage\Database Card.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Mainpage\Database Card.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Create Database.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Create Database.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Database Treeview.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Database Treeview.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Document Card.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Document Card.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Documents Container.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Documents Container.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Insert Document.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Insert Document.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Page Controller.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Page Controller.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Single Document.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Single Document.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Database stack.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Database stack.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Dialogs\Connect wURI.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Dialogs\Connect wURI.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Dialogs\Database type to create.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Dialogs\Database type to create.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Dialogs\Server creation\MongoDB Server.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Dialogs\Server creation\MongoDB Server.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Managers\MongoDB Manager.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Managers\MongoDB Manager.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Managers\TreeViewPage.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Managers\TreeViewPage.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Settings page.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Settings page.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\XamlTypeInfo.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\App.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\MainPage.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Expander Content.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Expander Header.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\IconButton.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Mainpage\Database Card.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Create Database.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Database Treeview.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Document Card.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Documents Container.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Insert Document.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Page Controller.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Single Document.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Database stack.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Dialogs\Connect wURI.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Dialogs\Database type to create.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Dialogs\Server creation\MongoDB Server.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Managers\MongoDB Manager.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Managers\TreeViewPage.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Settings page.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\App.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\MainPage.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Expander Content.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Expander Header.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\IconButton.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Mainpage\Database Card.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Create Database.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Database Treeview.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Document Card.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Documents Container.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Insert Document.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Page Controller.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Components\Managers\MongoDB\Single Document.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Database stack.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Dialogs\Connect wURI.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Dialogs\Database type to create.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Dialogs\Server creation\MongoDB Server.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Managers\MongoDB Manager.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Managers\TreeViewPage.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Views\Settings page.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\XamlSaveStateFile.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Database Manager.csproj.CoreCompileInputs.cache
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Database Manager.csproj.CopyComplete
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\ColorCode.UWP.pri.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Microsoft.Toolkit.Uwp.pri.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Microsoft.Toolkit.Uwp.UI.pri.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Core.pri.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.pri.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Input.pri.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Layout.pri.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Markdown.pri.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Media.pri.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.Primitives.pri.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Microsoft.UI.Xaml.pri.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Database Manager.exe
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Database Manager.pdb
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\ResourceHandlingTask.state
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\en-US\Microsoft.Toolkit.Uwp.UI.Controls.Resources.resw
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\FxResources.System.Text.Encodings.Web.SR.resw
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\FxResources.System.Text.Json.SR.resw
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\priconfig.xml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\priconfig.xml.intermediate
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\unfiltered.layout.resfiles
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\unfiltered.layout.resfiles.intermediate
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\filtered.layout.resfiles
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\filtered.layout.resfiles.intermediate
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\excluded.layout.resfiles
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\excluded.layout.resfiles.intermediate
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\resources.resfiles
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\resources.resfiles.intermediate
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\pri.resfiles
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\pri.resfiles.intermediate
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\qualifiers.txt
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\qualifiers.txt.intermediate
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\ProjectArchitectures.txt
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_637214534760000000.json
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424959200000000.json
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Core\ForBundle\AppxManifest.xml

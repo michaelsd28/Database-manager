@@ -1,0 +1,20 @@
+App.xbf
+MainPage.xbf
+Views\Components\Expander Content.xbf
+Views\Components\Expander Header.xbf
+Views\Components\IconButton.xbf
+Views\Components\Mainpage\Database Card.xbf
+Views\Components\Managers\MongoDB\Create Database.xbf
+Views\Components\Managers\MongoDB\Database Treeview.xbf
+Views\Components\Managers\MongoDB\Document Card.xbf
+Views\Components\Managers\MongoDB\Documents Container.xbf
+Views\Components\Managers\MongoDB\Insert Document.xbf
+Views\Components\Managers\MongoDB\Page Controller.xbf
+Views\Components\Managers\MongoDB\Single Document.xbf
+Views\Database stack.xbf
+Views\Dialogs\Connect wURI.xbf
+Views\Dialogs\Database type to create.xbf
+Views\Dialogs\Server creation\MongoDB Server.xbf
+Views\Managers\MongoDB Manager.xbf
+Views\Managers\TreeViewPage.xbf
+Views\Settings page.xbf

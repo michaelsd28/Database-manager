@@ -24,7 +24,7 @@
              SelectionMode="Single"
               HorizontalAlignment="Center"
    >
-        <StackPanel Margin="15">
+        <StackPanel x:Name="StackPanelDatabases" Margin="15">
             <components:Database_Card
                          ImageBadgeSRC="/Assets/Mainpage/redis logo badge.png"
                   CTitleBackgroundColor="#641F1A"

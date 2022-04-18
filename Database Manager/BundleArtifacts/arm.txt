@@ -1,0 +1,6 @@
+MainPackage=C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Database Manager_1.0.1.0_ARM_Debug.msix
+SymbolPackage=C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\ARM\Debug\Symbols\Database Manager_1.0.1.0_ARM_Debug.appxsym
+ResourcePack=C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Database Manager_1.0.1.0_scale-100.msix
+ResourcePack=C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Database Manager_1.0.1.0_scale-125.msix
+ResourcePack=C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Database Manager_1.0.1.0_scale-150.msix
+ResourcePack=C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\ARM\Debug\Database Manager_1.0.1.0_scale-400.msix

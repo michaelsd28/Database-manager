@@ -1,3 +1,4 @@
+WinMetadata\Windows.winmd
 Assets\database app logo.png
 Assets\LargeTile.scale-100.png
 Assets\LargeTile.scale-125.png
@@ -102,4 +103,3 @@ Views\Managers\MongoDB Manager.xbf
 Views\Managers\TreeViewPage.xbf
 Views\Settings page.xbf
 Properties\Default.rd.xml
-WinMetadata\Windows.winmd

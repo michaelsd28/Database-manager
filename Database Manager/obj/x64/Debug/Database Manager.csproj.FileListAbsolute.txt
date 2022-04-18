@@ -10,9 +10,13 @@ C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Vie
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Expander Header.xbf
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\IconButton.xbf
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Mainpage\Database Card.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Create Database.xbf
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Database Treeview.xbf
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Document Card.xbf
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Documents Container.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Insert Document.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Page Controller.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Single Document.xbf
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Database stack.xbf
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Dialogs\Connect wURI.xbf
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Dialogs\Database type to create.xbf
@@ -73,12 +77,20 @@ C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Vie
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\IconButton.g.cs
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Mainpage\Database Card.g.i.cs
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Mainpage\Database Card.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Create Database.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Create Database.g.cs
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Database Treeview.g.i.cs
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Database Treeview.g.cs
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Document Card.g.i.cs
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Document Card.g.cs
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Documents Container.g.i.cs
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Documents Container.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Insert Document.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Insert Document.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Page Controller.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Page Controller.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Single Document.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Single Document.g.cs
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Database stack.g.i.cs
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Database stack.g.cs
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Dialogs\Connect wURI.g.i.cs
@@ -100,9 +112,13 @@ C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Vie
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Expander Header.xaml
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\IconButton.xaml
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Mainpage\Database Card.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Create Database.xaml
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Database Treeview.xaml
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Document Card.xaml
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Documents Container.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Insert Document.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Page Controller.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Single Document.xaml
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Database stack.xaml
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Dialogs\Connect wURI.xaml
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Dialogs\Database type to create.xaml
@@ -116,9 +132,13 @@ C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Vie
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Expander Header.xbf
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\IconButton.xbf
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Mainpage\Database Card.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Create Database.xbf
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Database Treeview.xbf
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Document Card.xbf
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Documents Container.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Insert Document.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Page Controller.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Single Document.xbf
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Database stack.xbf
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Dialogs\Connect wURI.xbf
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Dialogs\Database type to create.xbf
@@ -164,23 +184,3 @@ C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Mul
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\ProjectArchitectures.txt
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_637214534760000000.json
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424959200000000.json
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Single Document.xbf
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Single Document.g.i.cs
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Single Document.g.cs
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Single Document.xaml
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Single Document.xbf
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Page Controller.xbf
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Page Controller.g.i.cs
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Page Controller.g.cs
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Page Controller.xaml
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Page Controller.xbf
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Insert Document.xbf
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Insert Document.g.i.cs
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Insert Document.g.cs
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Insert Document.xaml
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Insert Document.xbf
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Views\Components\Managers\MongoDB\Create Database.xbf
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Create Database.g.i.cs
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Create Database.g.cs
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Create Database.xaml
-C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Views\Components\Managers\MongoDB\Create Database.xbf

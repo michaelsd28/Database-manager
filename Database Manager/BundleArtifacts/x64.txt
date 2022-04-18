@@ -1,0 +1,2 @@
+MainPackage=C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x64\Debug\Database Manager_1.0.1.0_x64_Debug.msix
+SymbolPackage=C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x64\Debug\Symbols\Database Manager_1.0.1.0_x64_Debug.appxsym

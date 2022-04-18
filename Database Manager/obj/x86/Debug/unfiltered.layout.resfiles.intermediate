@@ -1,9 +1,11 @@
+WinMetadata\Windows.winmd
 Assets\database app logo.png
 Assets\LargeTile.scale-100.png
 Assets\LargeTile.scale-125.png
 Assets\LargeTile.scale-150.png
 Assets\LargeTile.scale-200.png
 Assets\LargeTile.scale-400.png
+Assets\Mainpage\back button.png
 Assets\Mainpage\background mainpage 2.jpg
 Assets\Mainpage\background page.jpg
 Assets\Mainpage\edit database button.png
@@ -19,11 +21,18 @@ Assets\Managers\MongoDB\add button.png
 Assets\Managers\MongoDB\database badge.png
 Assets\Managers\MongoDB\delete button.png
 Assets\Managers\MongoDB\delete database.png
+Assets\Managers\MongoDB\delete icon.png
+Assets\Managers\MongoDB\edit database button.png
+Assets\Managers\MongoDB\expand left menu.png
 Assets\Managers\MongoDB\export data.png
 Assets\Managers\MongoDB\filter badge.png
 Assets\Managers\MongoDB\import data.png
 Assets\Managers\MongoDB\json document icon.png
 Assets\Managers\MongoDB\mongodb background.png
+Assets\Managers\MongoDB\next icon.png
+Assets\Managers\MongoDB\paste icon.png
+Assets\Managers\MongoDB\previous icon.png
+Assets\Managers\MongoDB\save icon.png
 Assets\Managers\MongoDB\search_folder badge.png
 Assets\Managers\MongoDB\table badge.png
 Assets\Managers\MongoDB\table grid icon.png
@@ -79,9 +88,13 @@ Views\Components\Expander Content.xbf
 Views\Components\Expander Header.xbf
 Views\Components\IconButton.xbf
 Views\Components\Mainpage\Database Card.xbf
+Views\Components\Managers\MongoDB\Create Database.xbf
 Views\Components\Managers\MongoDB\Database Treeview.xbf
 Views\Components\Managers\MongoDB\Document Card.xbf
 Views\Components\Managers\MongoDB\Documents Container.xbf
+Views\Components\Managers\MongoDB\Insert Document.xbf
+Views\Components\Managers\MongoDB\Page Controller.xbf
+Views\Components\Managers\MongoDB\Single Document.xbf
 Views\Database stack.xbf
 Views\Dialogs\Connect wURI.xbf
 Views\Dialogs\Database type to create.xbf
@@ -90,4 +103,3 @@ Views\Managers\MongoDB Manager.xbf
 Views\Managers\TreeViewPage.xbf
 Views\Settings page.xbf
 Properties\Default.rd.xml
-WinMetadata\Windows.winmd

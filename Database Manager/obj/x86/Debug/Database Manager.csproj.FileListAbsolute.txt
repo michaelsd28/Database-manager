@@ -164,3 +164,24 @@ C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Vie
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Documents Container.xaml
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Document Card.xbf
 C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Documents Container.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\Managers\MongoDB\Create Database.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\Managers\MongoDB\Insert Document.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\Managers\MongoDB\Page Controller.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Views\Components\Managers\MongoDB\Single Document.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Create Database.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Create Database.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Insert Document.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Insert Document.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Page Controller.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Page Controller.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Single Document.g.i.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Single Document.g.cs
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Create Database.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Insert Document.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Page Controller.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Single Document.xaml
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Create Database.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Insert Document.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Page Controller.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\obj\x86\Debug\Views\Components\Managers\MongoDB\Single Document.xbf
+C:\Users\rd28\Desktop\saveit\Database Manager\Database Manager\bin\x86\Debug\Core\ForBundle\AppxManifest.xml

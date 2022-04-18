@@ -101,11 +101,7 @@
 
 
 
-                <Image 
-                    RelativePanel.AlignVerticalCenterWithPanel="True" 
-                    RelativePanel.AlignHorizontalCenterWithPanel="True"  
-                    Source="/Assets\Managers\MongoDB\database badge.png" Height="20"   HorizontalAlignment="Center"/>
-
+               
 
 
             </RelativePanel>

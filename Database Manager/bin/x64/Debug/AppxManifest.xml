@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="9fefd2ae-3f2e-4458-8205-9b9310388045" Publisher="CN=rd28" Version="1.0.0.0" ProcessorArchitecture="x64" />
+  <Identity Name="9fefd2ae-3f2e-4458-8205-9b9310388045" Publisher="CN=rd28" Version="1.0.1.0" ProcessorArchitecture="x64" />
   <mp:PhoneIdentity PhoneProductId="9fefd2ae-3f2e-4458-8205-9b9310388045" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Database Manager</DisplayName>

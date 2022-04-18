@@ -12,6 +12,8 @@ namespace Database_Manager.Views
         {
             InitializeComponent();
             MongoDB_Card.AddHandler(PointerPressedEvent,new PointerEventHandler(MongoDBCard_Click),true);
+
+
         }
 
         private void MongoDBCard_Click(object sender, PointerRoutedEventArgs e)
