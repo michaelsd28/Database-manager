@@ -3,7 +3,7 @@
 
 Manage and start sql,mongodb and redis server
 
-work in progess nothing is working yet
+mongodb is working with some bugs
 
 ![image](https://user-images.githubusercontent.com/39009298/163336814-19b7b691-1bfb-44e9-90ac-8f173f5d31e0.png)
 
