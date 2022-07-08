@@ -85,10 +85,6 @@ namespace Database_Manager.Services
             }
           
 
-           
-
-            
-
         }
 
 
