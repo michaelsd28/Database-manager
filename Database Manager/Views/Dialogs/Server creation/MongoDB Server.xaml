@@ -1,0 +1,65 @@
+﻿<UserControl
+    x:Class="Database_Manager.Views.Dialogs.Server_creation.MongoDB_Server"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Database_Manager.Views.Dialogs.Server_creation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:muxc="using:Microsoft.UI.Xaml.Controls" xmlns:Windows10version1903="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 8)"
+    mc:Ignorable="d"
+
+
+    
+    >
+
+
+    <StackPanel  HorizontalAlignment="Center"  x:Name="SPanel_CreateMong"    
+      
+                 CornerRadius="5"  
+                 Margin="-40,0,0,0">
+
+        <StackPanel.Background>
+            <AcrylicBrush    
+                              BackgroundSource="HostBackdrop"
+                              TintColor="#011201"
+                              TintOpacity="0.5"
+                              Windows10version1903:TintLuminosityOpacity="1"
+                              FallbackColor="#111111"
+                             />
+
+        </StackPanel.Background>
+
+        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Image Source="/Assets\Mainpage\MongoDB Badge.png" Height="80"/>
+            <TextBlock FontSize="30" Text="MongoDB Connection" VerticalAlignment="Center" Foreground="#FF4CAF50"/>
+        </StackPanel>
+
+        <TextBlock  Margin="10" Text="- If emty default is mongodb://localhost:27017 -"  />
+        <TextBox  Margin="20,10,20,10" PlaceholderText="Card name"  VerticalAlignment="Center"  />
+
+        <TextBox  Margin="20,10,20,10"  PlaceholderText="Host name"   />
+
+        <TextBox  Margin="20,10,20,10"   x:Name="Username_Server_Create" PlaceholderText="Username (Optional)"  />
+
+        <TextBox  Margin="20,10,20,10" x:Name="Password_Server_Create" PlaceholderText="Password (Optional)" />
+  
+
+        <muxc:Expander x:Name="Expander2" Width="300" HorizontalAlignment="Center" >
+            <muxc:Expander.Header>
+                <TextBlock Text="Advanced options"/>
+            </muxc:Expander.Header>
+            <muxc:Expander.Content>
+                <Grid>
+                    <Button  Content="This is a Button in the content"/>
+                </Grid>
+            </muxc:Expander.Content>
+        </muxc:Expander>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button  Background="#056636">Create</Button>
+            <Button Click="CancelButton" Margin="25" Background="#666666">Cancel</Button>
+
+        </StackPanel>
+    </StackPanel>
+
+
+</UserControl>

@@ -1,0 +1,60 @@
+﻿<UserControl
+    x:Class="Database_Manager.Views.Components.Managers.Redis.Add_ValuePair"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Database_Manager.Views.Components.Managers.MongoDB"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:components="using:Database_Manager.Views.Components" xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+
+    RequestedTheme="Dark"
+
+    Height="400"
+    >
+
+    <StackPanel 
+  
+        Width="450" 
+        Orientation="Vertical" 
+        Padding="10" CornerRadius="10" 
+        Background="#0A0A0A" BorderBrush="#1A1A1A" BorderThickness="1">
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,5,20,-5">
+
+            <TextBlock Margin="0,5,45,0" 
+                       HorizontalAlignment="Center" 
+                       Foreground="#FFE4E4E4" 
+                       FontFamily="Cascadia Code">Enter key value pair</TextBlock>
+
+
+            <components:IconButton  Margin="0,0,0,10" 
+                                    BFontSize="14"  
+                                    ButtonPadding="5" 
+    
+                                    ImageMargin="4,0,2,0"  
+                                    ImageIcon="/Assets\Managers\MongoDB\paste icon.png" 
+                                    ButtonText="Paste" 
+                                    
+                                    
+                                    
+                                    />
+        </StackPanel>
+        <TextBox   IsSpellCheckEnabled="False"  x:Name="KeyValue_TextBox" Margin="10" PlaceholderText="Enter key name" x:FieldModifier="Public"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" x:Name="ButtonType_StackPanel">
+            <Button x:Name="BStringType" Margin="5" Background="Black">String</Button>
+            <Button x:Name="BHashType" Margin="5" Background="Black">Hash</Button>
+            <Button x:Name="BSetType" Margin="5" Background="Black">Set</Button>
+            <Button x:Name="BSortedSetType" Margin="5" Background="Black">Sorted set</Button>
+            <Button x:Name="BListType" Margin="5" Background="Black">List</Button>
+        </StackPanel>
+        
+        <RichEditBox IsSpellCheckEnabled="False"  x:Name="Value_TextBox" Margin="10" Height="160" x:FieldModifier="Public"/>
+
+        <StackPanel  Margin="0,0,10,0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Background="#330E0E" Margin="0,10,0,5" Content="Save"  Click="Save_Button"/>
+            <Button Margin="20,10,0,5" Content="Cancel" Click="Cancel_Button"/>
+        </StackPanel>
+
+    </StackPanel>
+</UserControl>
