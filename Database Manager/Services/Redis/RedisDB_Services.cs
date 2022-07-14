@@ -1,4 +1,5 @@
-﻿using Database_Manager.Services.Redis;
+﻿using Database_Manager.Model;
+using Database_Manager.Services.Redis;
 using Database_Manager.Views.Components.Managers.Redis;
 using Database_Manager.Views.Components.Managers.Redis.tree;
 using FreeRedis;
@@ -240,34 +241,61 @@ namespace Database_Manager.Services
         ConnectionMultiplexer redis = ConnectionMultiplexer.Connect(new RedisLocalSettings().RedisURI());
         ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
 
-        DisplayValue displayValue = new DisplayValue(); 
+        DisplayValue displayValue = new DisplayValue();
+
+        private bool CheckIfCloud() 
+        {
+
+    
+         
+
+
+            bool isCloud = true;
+
+            var URI = new RedisLocalSettings().RedisURI();
+
+            if (URI.Contains("localhost") || URI.Contains("127.0.0.1")) 
+            {
+                isCloud = false;
+            }
+
+            Debug.WriteLine($"private bool CheckIfCloud():: {URI}");
+          
+            return isCloud;   
+
+
+        }
 
 
 
         public void checkTypeToSave(string key, string value, string typeToAdd = null,string KeyType = null)
         {
-           
+
+            bool isCloud = CheckIfCloud();
+
+
+
 
             switch (KeyType)
             {
                 case "String":
-                    SaveStringValue(key, value);
+                    SaveStringValue(key, value,isCloud);
                     break;
 
                 case "Hash":
-                    SaveHash(key, value);
+                    SaveHash(key, value, isCloud);
                     break;
 
                 case "List":
-                    SaveList(key,value);
+                    SaveList(key,value, isCloud);
                     break;
 
                 case "Set":
-                    SaveSet(key, value);
+                    SaveSet(key, value, isCloud);
                     break;
 
                 case "SortedSet":
-                    SaveSortedSet(key, value);
+                    SaveSortedSet(key, value, isCloud);
                     break;
 
                 default:
@@ -281,23 +309,23 @@ namespace Database_Manager.Services
             switch (typeToAdd)
             {
                 case "String":
-                    SaveStringValue(key, value);
+                    SaveStringValue(key, value, isCloud);
                     break;
 
                 case "Hash":
-                    SaveHash(key, value);
+                    SaveHash(key, value, isCloud);
                     break;
 
                 case "List":
-                    SaveList(key, value);
+                    SaveList(key, value, isCloud);
                     break;
 
                 case "Set":
-                    SaveSet(key, value);
+                    SaveSet(key, value, isCloud);
                     break;
 
                 case "Sorted set":
-                    SaveSortedSet(key, value);
+                    SaveSortedSet(key, value, isCloud);
                     break;
 
                 default:
@@ -309,7 +337,9 @@ namespace Database_Manager.Services
 
         }
 
-        private void SaveSortedSet(string key, string value)
+
+
+        private void SaveSortedSet(string key, string value, bool isCloud)
         {
             try
             {
@@ -348,7 +378,7 @@ namespace Database_Manager.Services
                     db.ZAdd(key, Convert.ToDecimal(entry.Value) ,entry.Key );
                 }
 
-                new RedisDB_Services().UpdateLeftMenu();
+                new RedisDB_Services().UpdateLeftMenu(isCloud);
 
                 displayValue.DisplaySortedSet(key, DBNumber);
 
@@ -361,7 +391,7 @@ namespace Database_Manager.Services
             }
         }
 
-        private void SaveSet(string key, string value)
+        private void SaveSet(string key, string value, bool isCloud)
         {
             try
             {
@@ -400,7 +430,7 @@ namespace Database_Manager.Services
 
 
 
-                new RedisDB_Services().UpdateLeftMenu();
+                new RedisDB_Services().UpdateLeftMenu(isCloud);
                 displayValue.DisplaySet(key, DBNumber);
 
             }
@@ -410,7 +440,7 @@ namespace Database_Manager.Services
             }
         }
 
-        private async void SaveList(string key, string value)
+        private async void SaveList(string key, string value, bool isCloud)
         {
 
             try { 
@@ -451,7 +481,7 @@ namespace Database_Manager.Services
 
 
 
-            new RedisDB_Services().UpdateLeftMenu();
+            new RedisDB_Services().UpdateLeftMenu(isCloud);
                 displayValue.DisplayList(key, DBNumber);
 
             }
@@ -461,9 +491,10 @@ namespace Database_Manager.Services
             }
         }
 
-        public async void SaveStringValue(string key, string value)
+        public async void SaveStringValue(string key, string value, bool isCloud)
         {
 
+            Debug.WriteLine($"public async void SaveStringValue:: {isCloud}");
 
               ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
               string RedisDBSettings = localSettings.Values["RedisDBSettings"] as string;
@@ -485,13 +516,13 @@ namespace Database_Manager.Services
 
             await db.StringSetAsync(key, value);
 
-            new RedisDB_Services().UpdateLeftMenu();
+            new RedisDB_Services().UpdateLeftMenu(isCloud);
 
           displayValue.DisplayString(key, DBNumber);
 
         }
 
-        internal void SaveHash(string key, string value)
+        internal void SaveHash(string key, string value, bool isCloud)
         {
 
             try { 
@@ -499,7 +530,7 @@ namespace Database_Manager.Services
             string RedisDBSettings = localSettings.Values["RedisDBSettings"] as string;
             int DBNumber = int.Parse(BsonDocument.Parse(RedisDBSettings)["DBNumber"].ToString());
 
-                Debug.WriteLine($"/**/DBNumber:: {DBNumber}");
+
 
                 //ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("localhost");
 
@@ -527,7 +558,7 @@ namespace Database_Manager.Services
 
                 db.HSet(key, dicValue);
 
-            new RedisDB_Services().UpdateLeftMenu();
+            new RedisDB_Services().UpdateLeftMenu(isCloud);
 
                 displayValue.DisplayHash(key, DBNumber);
 
@@ -594,7 +625,7 @@ namespace Database_Manager.Services
                 {
 
                     
-                    Single_Document nullTextBox = SingleDocument_TextBox("*Null*","No type", "*Empty*");
+                    var nullTextBox = SingleDocument_TextBox("*Null*","No type", "*Empty*");
          
                     Redis_Manager.Redis_ManagerContext.Redis_documentContainer.Children.Clear();
                     Redis_Manager.Redis_ManagerContext.Redis_documentContainer.Children.Add(nullTextBox);
@@ -607,7 +638,7 @@ namespace Database_Manager.Services
                 if (new RedisDB_Services().ValidateJSON(value)) value = JsonFormatter.Format(value);
 
 
-                Single_Document currentTextBox = SingleDocument_TextBox(KeyText,keyType.ToString(),value); 
+                var currentTextBox = SingleDocument_TextBox(KeyText,keyType.ToString(),value); 
 
       
 
@@ -693,7 +724,7 @@ namespace Database_Manager.Services
                 Debug.WriteLine("called display list");
 
        
-                ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
+                var localSettings = ApplicationData.Current.LocalSettings;
                 string RedisDBSettings = localSettings.Values["RedisDBSettings"] as string;
      
 
@@ -702,10 +733,10 @@ namespace Database_Manager.Services
 
 
                 var RedisURI = new RedisLocalSettings().RedisURI();
-                ConnectionMultiplexer redis02 = ConnectionMultiplexer.Connect(RedisURI);
+                var redis02 = ConnectionMultiplexer.Connect(RedisURI);
                 var db02 = redis02.GetDatabase(dBNumber);
 
-                RedisClient redis = new RedisClient(RedisURI);
+                var redis = new RedisClient(RedisURI);
                 var db = redis.GetDatabase(dBNumber);
 
 

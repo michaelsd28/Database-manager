@@ -1,44 +1,45 @@
 ﻿using Database_Manager.Services;
-using Database_Manager.Services.Redis;
-using FreeRedis;
 using MongoDB.Bson;
-using StackExchange.Redis;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel.Core;
-using Windows.Storage;
-using Windows.UI;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Database_Manager.Views.Components.Managers.Redis
+namespace Database_Manager.Views.Managers
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Redis_Manager : Page
+    public sealed partial class SQL_Manager : Page
     {
-        public static Redis_Manager Redis_ManagerContext { get; set; }
-     
-        public Redis_Manager()
+        public SQL_Manager()
         {
-            Redis_ManagerContext = this;
-
-            InitializeComponent();
+            this.InitializeComponent();
 
 
-           // testRedis();
+
+            // testRedis();
             var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
             coreTitleBar.ExtendViewIntoTitleBar = true;
 
             // Set XAML element as a drag region.
             Window.Current.SetTitleBar(AppTitleBar);
 
-            SizeChanged += Redis_Manager_SizeChanged;
+            SizeChanged += SQL_Manager_SizeChanged;
         }
 
 
@@ -55,7 +56,7 @@ namespace Database_Manager.Views.Components.Managers.Redis
                 uri = parametersPassed.Replace("URI: ", "");
 
 
-                new RedisLocalSettings().RedisURI(newURL: uri);
+ 
 
             }
 
@@ -66,17 +67,17 @@ namespace Database_Manager.Views.Components.Managers.Redis
                 isCloudURI = false;
 
             }
-           
+
+
+
+
       
-
-
-            new RedisDB_Services().UpdateLeftMenu(isCloudURI);
 
         }
 
 
 
-        private void Redis_Manager_SizeChanged(object sender, SizeChangedEventArgs e)
+        private void SQL_Manager_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             //Get the current Windows Size
             var bounds = Window.Current.Bounds;
@@ -87,28 +88,19 @@ namespace Database_Manager.Views.Components.Managers.Redis
 
             if (width < 755)
             {
+
+                Debug.WriteLine($"width < 755):: {width < 755}");
                 LeftPopUp.IsOpen = false;
+        
             }
             else
             {
-
+                Debug.WriteLine($"width < 755):: {width < 755}");
                 LeftPopUp.IsOpen = true;
 
-             
-
- 
             }
 
-            try {
-                var isPleaseSelect = Redis_documentContainer.Children[0].ToBsonDocument()["Text"].ToString();
-
-                if (isPleaseSelect == "Please select a key")
-                {
-                    LeftPopUp.IsOpen = true;
-                }
-
-            } catch { }
-
+     
 
             LeftBar_GridContainer.Height = height - 230;
         }
@@ -122,15 +114,15 @@ namespace Database_Manager.Views.Components.Managers.Redis
 
         private void InsertKeyValue_Modal(object sender, RoutedEventArgs e)
         {
-            Redis_Manager.Redis_ManagerContext.AddKey_Grid.Visibility = Visibility.Visible;
+    
         }
 
 
- 
 
 
 
-  
+
+
 
         private void BExpandLeftMenu(object sender, RoutedEventArgs e)
         {
@@ -139,9 +131,9 @@ namespace Database_Manager.Views.Components.Managers.Redis
                 LeftPopUp.IsOpen = false;
                 return;
             }
-   
-                LeftPopUp.IsOpen = true;
-            
+
+            LeftPopUp.IsOpen = true;
+
         }
 
 
@@ -150,20 +142,10 @@ namespace Database_Manager.Views.Components.Managers.Redis
         {
             try
             {
-                var sValue = Single_Document.RedisContextSingle_Document.SingleTextBox.Text;
-
-                int selectStart = sValue.IndexOf(TextBoxFilter.Text);
-                int selectEnd = TextBoxFilter.Text.Length;
+          
 
 
 
-                Single_Document.RedisContextSingle_Document.SingleTextBox.Select(selectStart, selectEnd);
-
-
-                Single_Document.RedisContextSingle_Document.SingleTextBox.Select(selectStart, selectEnd);
-
-
-                Single_Document.RedisContextSingle_Document.SingleTextBox.Focus(FocusState.Keyboard);
 
             }
             catch (Exception ex)

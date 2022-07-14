@@ -9,19 +9,19 @@
         public string Type { get; set; }
         public string URI { get; set; }
 
-        private string status; // field
+        public string status; // field
 
-        private string userName { get; set; }
+        public string userName { get; set; }
 
-        private string userPassword { get; set; }
+        public string userPassword { get; set; }
 
-        private string userClientName { get; set; }
+        public string userClientName { get; set; }
 
-        private bool serverSSL  { get; set; }
+        public bool serverSSL  { get; set; }
 
-       private bool allowAdmin { get; set; }
+        public bool allowAdmin { get; set; }
 
-        private int serverPort { get; set; }
+        public int serverPort { get; set; }
 
         public string Status   // property
         {

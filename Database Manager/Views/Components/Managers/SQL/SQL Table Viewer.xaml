@@ -1,0 +1,34 @@
+﻿<UserControl
+    x:Class="Database_Manager.Views.Components.Managers.Redis.SQL_Table_Viewer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+
+    
+    RequestedTheme="Dark"
+    >
+
+    <Grid     >
+
+
+    <controls:DataGrid 
+
+        ScrollViewer.BringIntoViewOnFocusChange="True"
+        VerticalScrollBarVisibility="Visible"
+        HorizontalScrollBarVisibility="Visible"
+        CanBeScrollAnchor="True"
+        VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+        ScrollViewer.HorizontalScrollBarVisibility="Visible"
+        ScrollViewer.VerticalScrollBarVisibility="Visible"
+      
+                x:Name="dataGrid"
+
+
+
+      
+        
+        />
+    </Grid>
+</UserControl>

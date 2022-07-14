@@ -132,6 +132,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Cusomer.cs" />
     <Compile Include="Model\DatabaseCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\localSettings Service.cs" />
@@ -185,6 +186,10 @@
     <Compile Include="Views\Components\Managers\Redis\Create Database.xaml.cs">
       <DependentUpon>Create Database.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Components\Managers\SQL\Cusomer.cs" />
+    <Compile Include="Views\Components\Managers\SQL\SQL Table Viewer.xaml.cs">
+      <DependentUpon>SQL Table Viewer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Components\Managers\Redis\tree\Database Cloud Tree.xaml.cs">
       <DependentUpon>Database Cloud Tree.xaml</DependentUpon>
     </Compile>
@@ -235,6 +240,9 @@
     </Compile>
     <Compile Include="Views\Managers\MongoDB Manager.xaml.cs">
       <DependentUpon>MongoDB Manager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Managers\SQL Manager.xaml.cs">
+      <DependentUpon>SQL Manager.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MongoDB_Card.cs" />
     <Compile Include="Views\Settings page.xaml.cs">
@@ -297,6 +305,9 @@
     <Content Include="Assets\Managers\Redis\key icon.png" />
     <Content Include="Assets\Managers\Redis\Redis Logo .png" />
     <Content Include="Assets\Managers\Redis\redis-key.png" />
+    <Content Include="Assets\Managers\SQL\insert icon.png" />
+    <Content Include="Assets\Managers\SQL\refresh icon.png" />
+    <Content Include="Assets\Managers\SQL\SQL Logo.png" />
     <Content Include="Assets\SmallTile.scale-100.png" />
     <Content Include="Assets\SmallTile.scale-125.png" />
     <Content Include="Assets\SmallTile.scale-150.png" />
@@ -415,6 +426,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Components\Managers\SQL\SQL Table Viewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Components\Managers\Redis\tree\Database Cloud Tree.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -483,6 +498,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Managers\SQL Manager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Settings page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -496,7 +515,7 @@
       <Version>1.0.2</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.2.13</Version>
+      <Version>6.2.14</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls">
       <Version>7.1.2</Version>
@@ -505,7 +524,10 @@
       <Version>2.7.1</Version>
     </PackageReference>
     <PackageReference Include="MongoDB.Driver">
-      <Version>2.15.0</Version>
+      <Version>2.16.1</Version>
+    </PackageReference>
+    <PackageReference Include="MySqlConnector">
+      <Version>2.1.11</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.1</Version>
@@ -514,12 +536,11 @@
       <Version>1.0.2</Version>
     </PackageReference>
     <PackageReference Include="StackExchange.Redis">
-      <Version>2.6.45</Version>
+      <Version>2.6.48</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resource dictionaries\Main page\" />
-    <Folder Include="Views\Components\Managers\SQL\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Database Manager_TemporaryKey.pfx" />

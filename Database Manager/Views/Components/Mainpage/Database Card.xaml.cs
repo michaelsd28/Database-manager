@@ -264,6 +264,7 @@ namespace Database_Manager.Resource_dictionaries.Main_page
                     break;
 
                         case "sql logo badge.png":
+                    goSQLPage(URI);
                     break;
 
 
@@ -280,6 +281,12 @@ namespace Database_Manager.Resource_dictionaries.Main_page
         }
 
 
+        private void goSQLPage(string URI) 
+        {
+
+            MainPage.MainPageContext.Frame.Navigate(typeof(SQL_Manager), URI);
+
+        }
 
         private void goRedisManager(string URI) {
 
