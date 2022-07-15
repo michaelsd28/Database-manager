@@ -5,9 +5,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:components="using:Database_Manager.Views.Components" 
-    xmlns:SQLComponent="using:Database_Manager.Views.Components.Managers.Redis" 
+    xmlns:SQLComponent="using:Database_Manager.Views.Components.Managers.SQL" 
     xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls" 
-    xmlns:Windows10version1903="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 8)"
+    xmlns:Windows10version1903="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 8)" 
+    xmlns:mongodb="using:Database_Manager.Views.Components.Managers.MongoDB"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     
@@ -36,7 +37,7 @@
         </ResourceDictionary>
     </Page.Resources>
 
-    
+
     <Grid  Background="{ThemeResource MainAcrylicB}">
 
         <VisualStateManager.VisualStateGroups>
@@ -96,7 +97,7 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        
+
 
 
 
@@ -319,18 +320,21 @@
 
 
                     </Grid>
-               
+
                 </Grid>
 
 
 
-
-
-                <Grid x:Name="AddKey_Grid" x:FieldModifier="Public" Visibility="Collapsed">
+                <!--
+                
+                          <Grid x:Name="AddKey_Grid" x:FieldModifier="Public" Visibility="Collapsed">
 
                     <SQLComponent:Add_ValuePair/>
 
                 </Grid>
+
+                -->
+
 
             </Grid>
 
@@ -344,6 +348,7 @@
                 VerticalAlignment="Center"
                 Margin="0,0,350,300"
                 IsOpen="False" x:Name="CreateMyDB_POPUP" x:FieldModifier="Public">
+
                 <SQLComponent:Create_Database  />
             </Popup>
 
@@ -361,22 +366,6 @@
             <!-- <mongodb:Create_Database Visibility="Collapsed" x:Name="CreateDatabase_Grid" x:FieldModifier="Public"/>-->
 
 
-            <Grid
- 
-                 Visibility="Collapsed"
-                 x:Name="InsertDocument_POPUP"  
-                 Grid.Row="1" 
-                 HorizontalAlignment="Center" 
-                 VerticalAlignment="Center"
-                 x:FieldModifier="Public"
-                
-                >
-
-
-                <SQLComponent:Add_ValuePair />
-
-
-            </Grid>
 
 
 
@@ -395,9 +384,10 @@
               Grid.Row="2"   
               Grid.Column="0"  
               Grid.ColumnSpan="2" 
-              Background="#0F0E0F"  VerticalAlignment="Bottom" Height="35">
+              Background="#0F0E0F"  VerticalAlignment="Center" Height="42">
 
 
+         
 
             <components:IconButton 
                 
@@ -412,8 +402,8 @@
                 ImageMargin="0,0,5,0"
                 
                                    />
+            <SQLComponent:Page_Controller x:Name="page_Controller"  />
 
-            <SQLComponent:Page_Controller x:Name="page_Controller" Margin="200,0,0,5" Height="28" VerticalAlignment="Bottom"/>
 
 
         </Grid>

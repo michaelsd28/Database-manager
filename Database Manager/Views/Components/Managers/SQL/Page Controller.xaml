@@ -1,0 +1,38 @@
+﻿<UserControl
+    x:Class="Database_Manager.Views.Components.Managers.SQL.Page_Controller"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Database_Manager.Views.Components.Managers.SQL"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:components="using:Database_Manager.Views.Components"
+    mc:Ignorable="d"
+
+    RequestedTheme="Dark"
+    >
+
+    <StackPanel Margin="0,3,0,0"  Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Center"  >
+
+
+
+        <Button Padding="5,7,6,7" Margin="15,2,3,0">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Assets\Managers\MongoDB\previous icon.png" Height="13"/>
+     
+            </StackPanel>
+        </Button>
+
+
+        <Button  Margin="2,1,2,0"   Foreground="White" Padding="10,2,10,6" Content="1"  />
+        <Button  Margin="2,1,2,0"  Foreground="White" Padding="10,2,10,6" Content="2"  />
+        <Button  Margin="2,1,2,0"  Foreground="White" Padding="10,2,10,6" Content="3"  />
+        <Button  Margin="2,1,2,0"  Foreground="White" Padding="10,2,10,6" Content="4"/>
+        <Button  Margin="2,1,2,0"  Foreground="White" Padding="10,2,10,6" Content="5" />
+        
+        <TextBox  x:Name="TGoToPage" Margin="3,0,1,0"   Height="33"   FontSize="12"  PlaceholderText="Page 📃"  TextAlignment="Center" Width="67"/>
+
+        <Button Padding="5,7,6,7" Margin="3,2,3,0">
+            <Image Source="/Assets\Managers\MongoDB\next icon.png"  Height="13"  />
+        </Button>
+
+    </StackPanel>
+</UserControl>
