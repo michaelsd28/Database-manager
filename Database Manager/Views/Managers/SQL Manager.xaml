@@ -313,7 +313,8 @@
 
                     <Grid  x:Name="documents_Container"  Background="Transparent" CornerRadius="5">
                         <ScrollViewer CornerRadius="5" Margin="0,90,10,30"   Background="{ThemeResource LeftMenuB}"  ScrollViewer.VerticalScrollMode="Disabled" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Visible" >
-                            <SQLComponent:SQL_Table_Viewer/>
+                            <controls:DataGrid></controls:DataGrid>
+                            <!--- <SQLComponent:SQL_Table_Viewer/>-->
                         </ScrollViewer>
 
 

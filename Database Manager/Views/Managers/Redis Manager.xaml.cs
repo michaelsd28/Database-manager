@@ -150,7 +150,9 @@ namespace Database_Manager.Views.Components.Managers.Redis
         {
             try
             {
-                var sValue = Single_Document.RedisContextSingle_Document.SingleTextBox.Text;
+
+
+                var sValue =  Single_Document.RedisContextSingle_Document.SingleTextBox.Text;
 
                 int selectStart = sValue.IndexOf(TextBoxFilter.Text);
                 int selectEnd = TextBoxFilter.Text.Length;

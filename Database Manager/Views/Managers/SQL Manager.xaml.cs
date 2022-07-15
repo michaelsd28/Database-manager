@@ -1,4 +1,5 @@
 ﻿using Database_Manager.Services;
+using Database_Manager.Services.SQL;
 using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
@@ -26,11 +27,13 @@ namespace Database_Manager.Views.Managers
     /// </summary>
     public sealed partial class SQL_Manager : Page
     {
+
+        public static SQL_Manager sQL_ManagerContext { get; set; }
         public SQL_Manager()
         {
             this.InitializeComponent();
 
-
+            sQL_ManagerContext = this;
 
             // testRedis();
             var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
@@ -48,7 +51,17 @@ namespace Database_Manager.Views.Managers
         {
 
             string uri = String.Empty;
-            bool isCloudURI = true;
+
+
+            DatabaseStackPanel.Children.Add( new SQL_Service().GetLeftMenu());
+            DatabaseStackPanel.Children.Add(new SQL_Service().GetLeftMenu());
+            DatabaseStackPanel.Children.Add(new SQL_Service().GetLeftMenu());
+            DatabaseStackPanel.Children.Add(new SQL_Service().GetLeftMenu());
+
+            DatabaseStackPanel.Children.Add(new SQL_Service().GetLeftMenu());
+            DatabaseStackPanel.Children.Add(new SQL_Service().GetLeftMenu());
+            DatabaseStackPanel.Children.Add(new SQL_Service().GetLeftMenu());
+            DatabaseStackPanel.Children.Add(new SQL_Service().GetLeftMenu());
 
             if (e.Parameter != null)
             {
@@ -61,17 +74,7 @@ namespace Database_Manager.Views.Managers
             }
 
 
-            if (uri.Contains("127.0.0.1") || uri.Contains("localhost"))
 
-            {
-                isCloudURI = false;
-
-            }
-
-
-
-
-      
 
         }
 

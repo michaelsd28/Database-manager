@@ -1,0 +1,22 @@
+﻿<UserControl
+    x:Class="Database_Manager.Views.Components.Managers.SQL.tree.Tree_header"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Database_Manager.Views.Components.Managers.SQL.tree"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    RequestedTheme="Dark"
+                >
+
+    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+        <Image Source="/Assets\Managers\SQL\database header icon.png" Height="22" />
+
+        <TextBlock Margin="3,0,0,0" VerticalAlignment="Center" FontFamily="Roboto">Header</TextBlock>
+
+        <Button Padding="5,0,5,3" Margin="30,0,0,0"> x</Button>
+        
+        
+    </StackPanel>
+</UserControl>

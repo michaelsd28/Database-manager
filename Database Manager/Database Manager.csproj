@@ -141,6 +141,7 @@
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Services\Redis\RedisDB_Services.cs" />
     <Compile Include="Services\Redis\RedisLocalSettings.cs" />
+    <Compile Include="Services\SQL\SQL Service.cs" />
     <Compile Include="Views\Components\Mainpage\Main MenuBar.xaml.cs">
       <DependentUpon>Main MenuBar.xaml</DependentUpon>
     </Compile>
@@ -213,6 +214,15 @@
     </Compile>
     <Compile Include="Views\Components\Managers\Redis\tree\Tree Key.xaml.cs">
       <DependentUpon>Tree Key.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\Managers\SQL\tree\Database tree.xaml.cs">
+      <DependentUpon>Database tree.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\Managers\SQL\tree\Table button.xaml.cs">
+      <DependentUpon>Table button.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\Managers\SQL\tree\Tree header.xaml.cs">
+      <DependentUpon>Tree header.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Dialogs\Server creation\RedisDB CreateConn.xaml.cs">
       <DependentUpon>RedisDB CreateConn.xaml</DependentUpon>
@@ -305,9 +315,11 @@
     <Content Include="Assets\Managers\Redis\key icon.png" />
     <Content Include="Assets\Managers\Redis\Redis Logo .png" />
     <Content Include="Assets\Managers\Redis\redis-key.png" />
+    <Content Include="Assets\Managers\SQL\database header icon.png" />
     <Content Include="Assets\Managers\SQL\insert icon.png" />
     <Content Include="Assets\Managers\SQL\refresh icon.png" />
     <Content Include="Assets\Managers\SQL\SQL Logo.png" />
+    <Content Include="Assets\Managers\SQL\sql table.png" />
     <Content Include="Assets\SmallTile.scale-100.png" />
     <Content Include="Assets\SmallTile.scale-125.png" />
     <Content Include="Assets\SmallTile.scale-150.png" />
@@ -459,6 +471,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Components\Managers\Redis\tree\Tree Key.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Components\Managers\SQL\tree\Database tree.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Components\Managers\SQL\tree\Table button.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Components\Managers\SQL\tree\Tree header.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
