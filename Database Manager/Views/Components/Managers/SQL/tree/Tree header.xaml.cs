@@ -19,6 +19,25 @@ namespace Database_Manager.Views.Components.Managers.SQL.tree
 {
     public sealed partial class Tree_header : UserControl
     {
+
+
+
+
+
+
+        public string TextHeader
+        {
+            get { return (string)GetValue(TextHeaderProperty); }
+            set { SetValue(TextHeaderProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for TextHeader.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty TextHeaderProperty =
+            DependencyProperty.Register("TextHeader", typeof(string), typeof(Tree_header), new PropertyMetadata(string.Empty));
+
+
+
+
         public Tree_header()
         {
             this.InitializeComponent();

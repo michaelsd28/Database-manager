@@ -325,6 +325,7 @@
     <Content Include="Assets\Managers\Redis\Redis Logo .png" />
     <Content Include="Assets\Managers\Redis\redis-key.png" />
     <Content Include="Assets\Managers\SQL\database header icon.png" />
+    <Content Include="Assets\Managers\SQL\delete database.png" />
     <Content Include="Assets\Managers\SQL\insert icon.png" />
     <Content Include="Assets\Managers\SQL\refresh icon.png" />
     <Content Include="Assets\Managers\SQL\SQL Logo.png" />

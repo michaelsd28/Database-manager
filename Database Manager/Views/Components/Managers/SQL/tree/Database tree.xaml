@@ -10,13 +10,13 @@
     mc:Ignorable="d"
 RequestedTheme="Dark"
     
+    x:Name="TreeRoot"
+    
     >
 
     <UserControl.Resources>
         <ResourceDictionary>
-            <TransitionCollection x:Key="TransitionAn">
-                <AddDeleteThemeTransition  />
-            </TransitionCollection>
+ 
         </ResourceDictionary>
     </UserControl.Resources>
 
@@ -26,7 +26,7 @@ RequestedTheme="Dark"
 
             <muxc:Expander.Header >
 
-                <local:Tree_header/>
+                <local:Tree_header TextHeader="{Binding DBName,ElementName=TreeRoot}"/>
 
             </muxc:Expander.Header>
 
@@ -43,7 +43,7 @@ RequestedTheme="Dark"
                                 x:Name="ContentExpander" 
                                 Orientation="Vertical" 
                                 HorizontalAlignment="Left"
-                        Transitions="{ThemeResource TransitionAn}"
+           
 
                     
                         >
@@ -55,15 +55,8 @@ RequestedTheme="Dark"
                                     x:Name="SVStackpaneltest" Height="100" 
                                     Padding="0,0,20,0"
                                             >
-                                    <StackPanel x:Name="SPSVinside">
-                                        <local:Table_button/>
-                                        <local:Table_button/>
-                                        <local:Table_button/>
-                                        <local:Table_button/>
-                                        <local:Table_button/>
-                                        <local:Table_button/>
-                                        <local:Table_button/>
-                                        <local:Table_button/>
+                                    <StackPanel x:Name="stackpanel_Tables">
+                                
                                     </StackPanel>
                                 </ScrollViewer>
                             </StackPanel>

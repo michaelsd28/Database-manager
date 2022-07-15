@@ -177,7 +177,7 @@
                            x:Name="MongoDBTitleBar" 
                            RelativePanel.AlignHorizontalCenterWithPanel="True" 
                            RelativePanel.AlignVerticalCenterWithPanel="True" 
-                           Text="SQL Manager" FocusVisualPrimaryBrush="#E4FF0000"/>
+                           Text="SQL Manager" />
             </RelativePanel>
 
 
@@ -387,21 +387,13 @@
               Background="#0F0E0F"  VerticalAlignment="Center" Height="42">
 
 
-         
 
-            <components:IconButton 
-                
-                ButtonText="Delete" 
-                ImageIcon="/Assets\Managers\MongoDB\delete database.png" 
-                ButtonPadding="5,3,5,3"
-                ForegroundText="White"
-                ButtonBackground="#181818" 
-                Margin="13,0,0,-1" 
-                Height="36" 
-                VerticalAlignment="Bottom"
-                ImageMargin="0,0,5,0"
-                
-                                   />
+
+            <Button Margin="10,0,0,0" Padding="5,3,5,3" ToolTipService.ToolTip="Delete database" >
+                <Image  Height="20" Source="/Assets\Managers\SQL\delete database.png"/>
+            </Button>
+
+
             <SQLComponent:Page_Controller x:Name="page_Controller"  />
 
 

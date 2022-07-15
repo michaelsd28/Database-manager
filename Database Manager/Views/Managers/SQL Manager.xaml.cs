@@ -50,18 +50,15 @@ namespace Database_Manager.Views.Managers
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
 
-            string uri = String.Empty;
+            String uri = String.Empty;
 
 
-            DatabaseStackPanel.Children.Add( new SQL_Service().GetLeftMenu());
-            DatabaseStackPanel.Children.Add(new SQL_Service().GetLeftMenu());
-            DatabaseStackPanel.Children.Add(new SQL_Service().GetLeftMenu());
-            DatabaseStackPanel.Children.Add(new SQL_Service().GetLeftMenu());
 
-            DatabaseStackPanel.Children.Add(new SQL_Service().GetLeftMenu());
-            DatabaseStackPanel.Children.Add(new SQL_Service().GetLeftMenu());
-            DatabaseStackPanel.Children.Add(new SQL_Service().GetLeftMenu());
-            DatabaseStackPanel.Children.Add(new SQL_Service().GetLeftMenu());
+            new SQL_Service().LoadDatabases();
+
+
+
+
 
             if (e.Parameter != null)
             {

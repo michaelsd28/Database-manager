@@ -7,15 +7,29 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     RequestedTheme="Dark"
+    x:Name="HeaderRoot"
                 >
 
-    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+    <StackPanel 
+                Orientation="Horizontal" 
+                VerticalAlignment="Center" 
+                CornerRadius="5"
+                HorizontalAlignment="Center">
 
         <Image Source="/Assets\Managers\SQL\database header icon.png" Height="22" />
 
-        <TextBlock Margin="3,0,0,0" VerticalAlignment="Center" FontFamily="Roboto">Header</TextBlock>
+        <TextBlock 
+            
+            Margin="3,0,0,0" 
+            ToolTipService.ToolTip="{Binding TextHeader,ElementName=HeaderRoot}"
+                   VerticalAlignment="Center" 
+            Width="95"
+            FontSize="13"
+            TextTrimming="CharacterEllipsis"
+                   FontFamily="Roboto" 
+                   Text="{Binding TextHeader,ElementName=HeaderRoot}"/>
 
-        <Button Padding="5,0,5,3" Margin="30,0,0,0"> x</Button>
+        <Button Padding="5,0,5,3" > +</Button>
         
         
     </StackPanel>

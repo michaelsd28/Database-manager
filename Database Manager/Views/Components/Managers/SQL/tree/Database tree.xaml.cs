@@ -1,5 +1,9 @@
-﻿using System;
+﻿using Database_Manager.Services;
+using Database_Manager.Services.SQL;
+using MySqlConnector;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -19,9 +23,39 @@ namespace Database_Manager.Views.Components.Managers.SQL.tree
 {
     public sealed partial class Database_tree : UserControl
     {
-        public Database_tree()
+
+
+
+
+
+
+        public string DBName
         {
-            this.InitializeComponent();
+            get { return (string)GetValue(DBNameProperty); }
+            set { SetValue(DBNameProperty, value); }
         }
+
+        // Using a DependencyProperty as the backing store for DBName.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty DBNameProperty =
+            DependencyProperty.Register("DBName", typeof(string), typeof(Database_tree), new PropertyMetadata(string.Empty));
+
+
+        public Database_tree(string MyDBName)
+        {
+            InitializeComponent();
+            DBName = MyDBName;
+            LoadTables();
+        }
+
+
+
+
+
+        public  void LoadTables() 
+
+          =>  new SQL_Service().GetTables(DBName,stackpanel_Tables);
+
+
+
     }
 }
