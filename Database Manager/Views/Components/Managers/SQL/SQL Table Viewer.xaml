@@ -11,7 +11,17 @@
     
     >
 
-    <Grid>
+
+
+
+    <Grid  x:Name="documents_Container"    CornerRadius="5" >
+        <ScrollViewer CornerRadius="5" Margin="30,90,10,30"   
+                      ScrollViewer.VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Hidden" 
+                      HorizontalScrollBarVisibility="Visible" 
+                      Background="Black"
+                      
+                      >
+            <Grid>
 
 
     <controls:DataGrid 
@@ -29,5 +39,8 @@
 
         
         />
+
+    </Grid>
+        </ScrollViewer>
     </Grid>
 </UserControl>

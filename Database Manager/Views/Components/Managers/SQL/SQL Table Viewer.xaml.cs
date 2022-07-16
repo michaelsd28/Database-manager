@@ -23,10 +23,11 @@ namespace Database_Manager.Views.Components.Managers.Redis
 
 
         
-        public SQL_Table_Viewer()
+        public SQL_Table_Viewer(string connString, string tableName)
         {
             InitializeComponent();
-            LoadDataGrid("","");
+            //string connString = ""; string tableName ="";
+            LoadDataGrid(connString,tableName);
 
         }
 
@@ -38,9 +39,8 @@ namespace Database_Manager.Views.Components.Managers.Redis
         {
 
              connString = @"Server=localhost;User ID=debian-sys-maint;Password=oYM7Qh9SqgL3RD7T;Database=mydb";
-            tableName = "Persons";
 
-
+            
             var query = $"SELECT * FROM {tableName};";
 
 

@@ -89,13 +89,13 @@ namespace Database_Manager.Views.Managers
             if (width < 755)
             {
 
-                Debug.WriteLine($"width < 755):: {width < 755}");
+
                 LeftPopUp.IsOpen = false;
         
             }
             else
             {
-                Debug.WriteLine($"width < 755):: {width < 755}");
+      
                 LeftPopUp.IsOpen = true;
 
             }

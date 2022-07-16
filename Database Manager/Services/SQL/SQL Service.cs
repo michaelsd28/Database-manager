@@ -40,9 +40,6 @@ namespace Database_Manager.Services.SQL
                 var query = "SHOW DATABASES;";
 
 
-
-
-
                 using (var conn = new MySqlConnection(connString))
                 {
                     await conn.OpenAsync();
@@ -63,10 +60,7 @@ namespace Database_Manager.Services.SQL
                  
                             }
                
-                  
-
                         }
-              
                 }
             }
             catch (Exception ex)
@@ -74,8 +68,6 @@ namespace Database_Manager.Services.SQL
 
                 _ = new DialogService()._DialogService("Error", ex.Message);
             }
-
-
 
         }
 

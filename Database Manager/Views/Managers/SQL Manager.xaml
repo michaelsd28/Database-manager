@@ -8,7 +8,7 @@
     xmlns:SQLComponent="using:Database_Manager.Views.Components.Managers.SQL" 
     xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls" 
     xmlns:Windows10version1903="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 8)" 
-    xmlns:mongodb="using:Database_Manager.Views.Components.Managers.MongoDB"
+    xmlns:mongodb="using:Database_Manager.Views.Components.Managers.MongoDB" xmlns:SQLComponent1="using:Database_Manager.Views.Components.Managers.Redis"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     
@@ -313,10 +313,8 @@
                     </Grid.ChildrenTransitions>
 
                     <Grid  x:Name="documents_Container"  Background="Transparent" CornerRadius="5">
-                        <ScrollViewer CornerRadius="5" Margin="0,90,10,30"   Background="{ThemeResource LeftMenuB}"  ScrollViewer.VerticalScrollMode="Disabled" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Visible" >
-                            <controls:DataGrid></controls:DataGrid>
-                            <!--- <SQLComponent:SQL_Table_Viewer/>-->
-                        </ScrollViewer>
+
+                        <TextBlock FontSize="16" FontFamily="Roboto" VerticalAlignment="Center" HorizontalAlignment="Center"> Please select a table</TextBlock>
 
 
                     </Grid>
@@ -324,16 +322,6 @@
                 </Grid>
 
 
-
-                <!--
-                
-                          <Grid x:Name="AddKey_Grid" x:FieldModifier="Public" Visibility="Collapsed">
-
-                    <SQLComponent:Add_ValuePair/>
-
-                </Grid>
-
-                -->
 
 
             </Grid>

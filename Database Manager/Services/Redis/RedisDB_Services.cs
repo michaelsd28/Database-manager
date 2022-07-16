@@ -259,7 +259,7 @@ namespace Database_Manager.Services
                 isCloud = false;
             }
 
-            Debug.WriteLine($"private bool CheckIfCloud():: {URI}");
+        
           
             return isCloud;   
 
@@ -494,7 +494,7 @@ namespace Database_Manager.Services
         public async void SaveStringValue(string key, string value, bool isCloud)
         {
 
-            Debug.WriteLine($"public async void SaveStringValue:: {isCloud}");
+
 
               ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
               string RedisDBSettings = localSettings.Values["RedisDBSettings"] as string;
@@ -721,7 +721,7 @@ namespace Database_Manager.Services
             try
             {
 
-                Debug.WriteLine("called display list");
+   
 
        
                 var localSettings = ApplicationData.Current.LocalSettings;

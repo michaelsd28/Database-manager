@@ -1,10 +1,15 @@
-﻿using System;
+﻿using Database_Manager.Views.Components.Managers.Redis;
+using Database_Manager.Views.Managers;
+using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -36,6 +41,23 @@ namespace Database_Manager.Views.Components.Managers.SQL.tree
         public Table_button()
         {
             InitializeComponent();
+        }
+
+        private void BTable_Click(object sender, RoutedEventArgs e)
+        {
+
+            Grid grid = new Grid();
+            grid.Name = "documents_Container";
+          SQL_Manager.sQL_ManagerContext.Redis_documentContainer.Children.Clear();
+
+            var sQL_Table_Viewer = new SQL_Table_Viewer("",TableName);
+
+            grid.Children.Add(sQL_Table_Viewer);
+
+
+         
+            SQL_Manager.sQL_ManagerContext.Redis_documentContainer.Children.Add(grid);
+            
         }
     }
 }
