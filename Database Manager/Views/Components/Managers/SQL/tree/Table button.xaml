@@ -14,7 +14,7 @@ Margin="0,0,0,10"
 
     <RelativePanel>
 
-        <Button Margin="0,0,20,0" RelativePanel.AlignLeftWithPanel="True"  Click="BTable_Click">
+        <Button MinWidth="130" Margin="0,0,20,0" RelativePanel.AlignLeftWithPanel="True"  Click="BTable_Click">
             <StackPanel Orientation="Horizontal" >
                 <Image Margin="0,0,5,0" Source="/Assets\Managers\SQL\sql table.png" Height="15"/>
                 <TextBlock   TextTrimming="CharacterEllipsis" 
@@ -24,7 +24,7 @@ Margin="0,0,0,10"
             </StackPanel>
         </Button>
 
-        <Button Padding="5,3,5,6" Margin="5,0,0,0" 
+        <Button Padding="5,3,5,6" Margin="20,0,0,0" 
                 RelativePanel.AlignRightWithPanel="True" 
                 RelativePanel.AlignVerticalCenterWithPanel="True" 
                 Content="-"

@@ -198,8 +198,9 @@
 
 
             <StackPanel  
+                
                 CornerRadius="10" 
-           Background="{ThemeResource LeftMenuB}" 
+                Background="{ThemeResource LeftMenuB}" 
                 Grid.RowSpan="3" 
                 Grid.ColumnSpan="3" 
                 x:Name="LeftSidePanel"  
@@ -313,6 +314,8 @@
                     </Grid.ChildrenTransitions>
 
                     <Grid  x:Name="documents_Container"  Background="Transparent" CornerRadius="5">
+                        
+                        
 
                         <TextBlock FontSize="16" FontFamily="Roboto" VerticalAlignment="Center" HorizontalAlignment="Center"> Please select a table</TextBlock>
 

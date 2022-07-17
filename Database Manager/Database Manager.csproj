@@ -224,6 +224,9 @@
     <Compile Include="Views\Components\Managers\Redis\tree\Tree Key.xaml.cs">
       <DependentUpon>Tree Key.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Components\Managers\SQL\SQL_DataGrid.xaml.cs">
+      <DependentUpon>SQL_DataGrid.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Components\Managers\SQL\tree\Database tree.xaml.cs">
       <DependentUpon>Database tree.xaml</DependentUpon>
     </Compile>
@@ -496,9 +499,21 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Components\Managers\SQL\SQL_DataGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Components\Managers\SQL\tree\Database tree.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourceDictionary\Dictionary1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Components\Managers\SQL\tree\ResourceDictionary\Dictionary1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Components\Managers\SQL\tree\Table button.xaml">
       <SubType>Designer</SubType>
@@ -585,9 +600,7 @@
       <Version>2.6.48</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resource dictionaries\Main page\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Database Manager_TemporaryKey.pfx" />
   </ItemGroup>

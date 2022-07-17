@@ -16,7 +16,7 @@ RequestedTheme="Dark"
 
     <UserControl.Resources>
         <ResourceDictionary>
- 
+
         </ResourceDictionary>
     </UserControl.Resources>
 
@@ -30,45 +30,113 @@ RequestedTheme="Dark"
 
             </muxc:Expander.Header>
 
-    
-
-                <muxc:Expander.Content >
 
 
+            <muxc:Expander.Content >
 
-                <StackPanel  x:Name="stackpanel_Content" Orientation="Vertical" VerticalAlignment="Center"   >
 
-                    <StackPanel 
-                        x:FieldModifier="Public" 
-                                x:Name="ContentExpander" 
-                                Orientation="Vertical" 
-                                HorizontalAlignment="Left"
-           
-
-                    
-                        >
-                        <Grid >
-                        
-                            <StackPanel x:Name="SPMain" HorizontalAlignment="Left" MaxHeight="100"  
-                                       >
-                                <ScrollViewer 
-                                    x:Name="SVStackpaneltest" Height="100" 
-                                    Padding="0,0,20,0"
-                                            >
-                                    <StackPanel x:Name="stackpanel_Tables">
+                <GridView Padding="0,0,20,0" x:Name="stackpanel_Tables" Height="100" IsActiveView="False" IsItemClickEnabled="False" UseSystemFocusVisuals="False" IsTapEnabled="False">
+                    <GridView.ItemContainerStyle>
+                     
+                            <Style TargetType="GridViewItem">
+                            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}" />
+                            <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}" />
+                            <Setter Property="Background" Value="{ThemeResource GridViewItemBackground}" />
+                            <Setter Property="Foreground" Value="{ThemeResource GridViewItemForeground}" />
+                            <Setter Property="TabNavigation" Value="Local" />
+                            <Setter Property="IsHoldingEnabled" Value="True" />
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            <Setter Property="VerticalContentAlignment" Value="Center" />
+                            <Setter Property="Margin" Value="0" />
                                 
-                                    </StackPanel>
-                                </ScrollViewer>
-                            </StackPanel>
-                        </Grid>
+                            <Setter Property="HorizontalAlignment" Value="Left"/>
+                            <Setter Property="MinWidth" Value="{ThemeResource GridViewItemMinWidth}" />
+                            <Setter Property="MinHeight" Value="{ThemeResource GridViewItemMinHeight}" />
+                            <Setter Property="AllowDrop" Value="False" />
+                            <Setter Property="UseSystemFocusVisuals" Value="{StaticResource UseSystemFocusVisuals}" />
+                            <Setter Property="FocusVisualMargin" Value="-2" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="GridViewItem">
+                                        <ListViewItemPresenter
+                            x:Name="Root"
+   
+                            PlaceholderBackground="Transparent"
+                            PointerOverBackground="Transparent"
+                            PointerOverForeground="Transparent"
 
-                    </StackPanel>
+                            RevealBorderThickness="0"
+                            SelectedBackground="Transparent"
+                            SelectedForeground="Transparent"
+                            SelectedPointerOverBackground="Transparent"
+                            SelectedPressedBackground="Transparent"
+          
+                            >
+                                            <VisualStateManager.VisualStateGroups>
+                                                <VisualStateGroup x:Name="CommonStates">
+                                                    <VisualState x:Name="Normal" />
+                                                    <VisualState x:Name="Selected" />
+                                                    <VisualState x:Name="PointerOver">
+                                                        <VisualState.Setters>
+                                                            <Setter Target="Root.(RevealBrush.State)" Value="PointerOver" />
+                                                        </VisualState.Setters>
+                                                    </VisualState>
+                                                    <VisualState x:Name="PointerOverSelected">
+                                                        <VisualState.Setters>
+                                                            <Setter Target="Root.(RevealBrush.State)" Value="PointerOver" />
+                                                        </VisualState.Setters>
+                                                    </VisualState>
+                                                    <VisualState x:Name="PointerOverPressed">
+                                                        <VisualState.Setters>
+                                                            <Setter Target="Root.(RevealBrush.State)" Value="Pressed" />
+                                                        </VisualState.Setters>
+                                                    </VisualState>
+                                                    <VisualState x:Name="Pressed">
+                                                        <VisualState.Setters>
+                                                            <Setter Target="Root.(RevealBrush.State)" Value="Pressed" />
+                                                        </VisualState.Setters>
+                                                    </VisualState>
+                                                    <VisualState x:Name="PressedSelected">
+                                                        <VisualState.Setters>
+                                                            <Setter Target="Root.(RevealBrush.State)" Value="Pressed" />
+                                                        </VisualState.Setters>
+                                                    </VisualState>
+                                                </VisualStateGroup>
+                                                <VisualStateGroup x:Name="DisabledStates">
+                                                    <VisualState x:Name="Enabled" />
+                                                    <VisualState x:Name="Disabled">
+                                                        <VisualState.Setters>
+                                                            <Setter Target="Root.RevealBorderThickness" Value="0" />
+                                                        </VisualState.Setters>
+                                                    </VisualState>
+                                                </VisualStateGroup>
+                                            </VisualStateManager.VisualStateGroups>
+                                        </ListViewItemPresenter>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </GridView.ItemContainerStyle>
 
-                </StackPanel>
+                    <GridView.ItemsPanel >
+                        <ItemsPanelTemplate >
+                            <ItemsWrapGrid Orientation="Horizontal"
+                                             MaximumRowsOrColumns="1"
+                                           
+                      
+                                           />
+                            
+                        </ItemsPanelTemplate>
+                    </GridView.ItemsPanel>
                     
+
+
+                </GridView>
+
+     
             </muxc:Expander.Content>
 
-    
+
         </muxc:Expander>
     </StackPanel>
 </UserControl>

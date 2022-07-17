@@ -1,13 +1,13 @@
 ﻿using Database_Manager.Views.Components.Managers.SQL.tree;
 using Database_Manager.Views.Managers;
+using Microsoft.Toolkit.Uwp.UI.Controls;
 using MySqlConnector;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
+using System.Data;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Data;
 
 namespace Database_Manager.Services.SQL
 {
@@ -25,7 +25,64 @@ namespace Database_Manager.Services.SQL
         
         }
 
+        public void DisplayTable_DataGrid(string connString, string tableName,DataGrid dataGrid,int limitNumber = 20) 
+        {
+            try
+            {
 
+                connString = @"Server=localhost;User ID=debian-sys-maint;Password=oYM7Qh9SqgL3RD7T;Database=mydb";
+
+
+                var query = $"SELECT * FROM {tableName} LIMIT {limitNumber};";
+
+
+
+                DataTable dataTable = new DataTable();
+
+                MySqlConnection conn = new MySqlConnection(connString);
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                conn.Open();
+
+                // create data adapter
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                // this will query your database and return the result to your datatable
+                da.Fill(dataTable);
+                ToSourceCollection(dataTable, dataGrid);
+                conn.Close();
+                da.Dispose();
+
+            }
+            catch (Exception ex)
+            {
+
+
+                _ = new DialogService()._DialogService("Display grid error", ex.Message);
+            }
+
+
+
+        }
+
+
+        private void ToSourceCollection(DataTable dt, DataGrid dataGrid)
+        {
+            dataGrid.Columns.Clear();
+            dataGrid.AutoGenerateColumns = false;
+            for (int i = 0; i < dt.Columns.Count; i++)
+            {
+                dataGrid.Columns.Add(new DataGridTextColumn()
+                {
+                    Header = dt.Columns[i].ColumnName,
+                    Binding = new Binding { Path = new PropertyPath("[" + i.ToString() + "]") }
+                });
+            }
+
+            var sourceCollection = new ObservableCollection<object>();
+            foreach (DataRow row in dt.Rows)
+                sourceCollection.Add(row.ItemArray);
+
+            dataGrid.ItemsSource = sourceCollection;
+        }
 
 
 
@@ -71,7 +128,7 @@ namespace Database_Manager.Services.SQL
 
         }
 
-        internal async void GetTables(string DBName,StackPanel stackPanel)
+        internal async void GetTables(string DBName,GridView stackPanel)
         {
             try
             {
@@ -100,8 +157,10 @@ namespace Database_Manager.Services.SQL
                             {
 
                                 var tableName = reader.GetString(x);
+          
 
-                                stackPanel.Children.Add(new Table_button() { TableName = tableName });
+
+                                stackPanel.Items.Add(new Table_button() { TableName = tableName });
 
                             }
 

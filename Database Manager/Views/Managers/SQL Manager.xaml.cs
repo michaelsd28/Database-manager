@@ -1,5 +1,6 @@
 ﻿using Database_Manager.Services;
 using Database_Manager.Services.SQL;
+using Database_Manager.Views.Components.Managers.SQL;
 using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading;
 using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -42,7 +44,15 @@ namespace Database_Manager.Views.Managers
             // Set XAML element as a drag region.
             Window.Current.SetTitleBar(AppTitleBar);
 
-            SizeChanged += SQL_Manager_SizeChanged;
+
+
+
+                SizeChanged += SQL_Manager_SizeChanged;
+
+           SQL_DataGrid qL_DataGrid = new SQL_DataGrid();
+            documents_Container.Children.Clear();
+            documents_Container.Children.Add(qL_DataGrid);
+
         }
 
 
@@ -79,6 +89,7 @@ namespace Database_Manager.Views.Managers
 
         private void SQL_Manager_SizeChanged(object sender, SizeChangedEventArgs e)
         {
+
             //Get the current Windows Size
             var bounds = Window.Current.Bounds;
             double height = bounds.Height;
@@ -91,16 +102,16 @@ namespace Database_Manager.Views.Managers
 
 
                 LeftPopUp.IsOpen = false;
-        
+
             }
             else
             {
-      
+
                 LeftPopUp.IsOpen = true;
 
             }
 
-     
+
 
             LeftBar_GridContainer.Height = height - 230;
         }

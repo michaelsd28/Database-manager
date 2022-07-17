@@ -1,4 +1,6 @@
-﻿using Microsoft.Toolkit.Uwp.UI.Controls;
+﻿using Database_Manager.Services;
+using Database_Manager.Services.SQL;
+using Microsoft.Toolkit.Uwp.UI.Controls;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;
@@ -22,9 +24,10 @@ namespace Database_Manager.Views.Components.Managers.Redis
 
 
 
-        
+
         public SQL_Table_Viewer(string connString, string tableName)
         {
+
             InitializeComponent();
             //string connString = ""; string tableName ="";
             LoadDataGrid(connString,tableName);
@@ -36,29 +39,10 @@ namespace Database_Manager.Views.Components.Managers.Redis
 
         
         public void LoadDataGrid(string connString, string tableName ) 
-        {
-
-             connString = @"Server=localhost;User ID=debian-sys-maint;Password=oYM7Qh9SqgL3RD7T;Database=mydb";
-
-            
-            var query = $"SELECT * FROM {tableName};";
-
-
-
-            DataTable dataTable = new DataTable();
-
-            MySqlConnection conn = new MySqlConnection(connString);
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            conn.Open();
-
-            // create data adapter
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            // this will query your database and return the result to your datatable
-            da.Fill(dataTable);
-            ToSourceCollection(dataTable, dataGrid);
-            conn.Close();
-            da.Dispose();
-        }
+        
+         =>   new SQL_Service().DisplayTable_DataGrid(connString,tableName,dataGrid);
+     
+        
 
         private void ToSourceCollection(DataTable dt, DataGrid dataGrid)
         {

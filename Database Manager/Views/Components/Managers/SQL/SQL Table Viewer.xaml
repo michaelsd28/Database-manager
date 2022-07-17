@@ -24,6 +24,8 @@
             <Grid>
 
 
+  
+
     <controls:DataGrid 
 
         ScrollViewer.BringIntoViewOnFocusChange="True"
@@ -33,11 +35,12 @@
         VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
         ScrollViewer.HorizontalScrollBarVisibility="Visible"
         ScrollViewer.VerticalScrollBarVisibility="Visible"
+    
       
                 x:Name="dataGrid"
 
-
-        
+                x:FieldModifier="Public"
+       
         />
 
     </Grid>
