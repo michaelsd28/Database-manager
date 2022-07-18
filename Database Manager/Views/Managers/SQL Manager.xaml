@@ -232,7 +232,7 @@
                 </StackPanel>
 
 
-
+                <!--*********       right panel  controls       *********-->
 
                 <Grid BorderBrush="DarkGray"  BorderThickness="0,2,0,0" Margin="0,-30,0,0" x:Name="LeftBar_GridContainer"  >
                     <ScrollViewer  Padding="0,0,15,0"   VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible">
@@ -292,21 +292,18 @@
 
                 <StackPanel  Margin="0,0,0,0" Orientation="Horizontal">
                     <Button Margin="5,0,5,0"  Content="↻" FontSize="20" Padding="6,0,6,4"/>
-                    <Button Click="InsertKeyValue_Modal"    Margin="5,0,5,0" Content="Insert"/>
+                    <Button Click="InsertRow_Button"    Margin="5,0,5,0" Content="Insert"/>
                 </StackPanel>
 
             </controls:WrapPanel>
 
-            <Grid 
-                x:FieldModifier="Public"
-                x:Name="RedisTextBox_Grid"
-                >
 
 
-
+            <!--*********       table  container  grid       *********-->
+            <Grid   >
 
                 <Grid         x:FieldModifier="Public"
-                x:Name="Redis_documentContainer">
+                x:Name="SQL_GridTableContainer">
                     <Grid.ChildrenTransitions>
                         <TransitionCollection>
                             <EntranceThemeTransition IsStaggeringEnabled="True" />
@@ -314,10 +311,10 @@
                     </Grid.ChildrenTransitions>
 
                     <Grid  x:Name="documents_Container"    CornerRadius="5">
-                        
-                        
 
-                        <TextBlock Foreground="Red" FontSize="16" FontFamily="Roboto" VerticalAlignment="Center" HorizontalAlignment="Center"> Please select a table</TextBlock>
+
+
+                        <TextBlock Foreground="#CCCCCC" FontSize="16" FontFamily="Roboto" VerticalAlignment="Center" HorizontalAlignment="Center">Please select a table</TextBlock>
 
 
                     </Grid>
@@ -338,9 +335,10 @@
                     HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Margin="0,0,350,300"
-                IsOpen="False" x:Name="CreateMyDB_POPUP" x:FieldModifier="Public">
+                IsOpen="False" x:Name="InsertRow_Popup" x:FieldModifier="Public">
 
-                <SQLComponent:Create_Database  />
+                <SQLComponent:Insert_Row  />
+                
             </Popup>
 
             <Popup 

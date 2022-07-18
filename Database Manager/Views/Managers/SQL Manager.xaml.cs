@@ -30,12 +30,17 @@ namespace Database_Manager.Views.Managers
     public sealed partial class SQL_Manager : Page
     {
 
+
         public static SQL_Manager sQL_ManagerContext { get; set; }
+
         public SQL_Manager()
         {
-            this.InitializeComponent();
 
             sQL_ManagerContext = this;
+          
+            InitializeComponent();
+
+        
 
             // testRedis();
             var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
@@ -45,27 +50,20 @@ namespace Database_Manager.Views.Managers
             Window.Current.SetTitleBar(AppTitleBar);
 
 
-
-
                 SizeChanged += SQL_Manager_SizeChanged;
 
 
 
         }
 
-
+      
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
 
             String uri = String.Empty;
 
-
-
             new SQL_Service().LoadDatabases();
-
-
-
 
 
             if (e.Parameter != null)
@@ -73,46 +71,16 @@ namespace Database_Manager.Views.Managers
                 string parametersPassed = e.Parameter.ToString();
                 uri = parametersPassed.Replace("URI: ", "");
 
-
- 
-
             }
-
-
-
 
         }
 
 
 
         private void SQL_Manager_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-
-            //Get the current Windows Size
-            var bounds = Window.Current.Bounds;
-            double height = bounds.Height;
-
-            double width = bounds.Width;
-
-
-            if (width < 755)
-            {
-
-
-                LeftPopUp.IsOpen = false;
-
-            }
-            else
-            {
-
-                LeftPopUp.IsOpen = true;
-
-            }
-
-
-
-            LeftBar_GridContainer.Height = height - 230;
-        }
+        
+          =>  new SQLManagerServices().LeftMenu_SizeChanged(LeftPopUp, LeftBar_GridContainer);
+        
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
@@ -121,40 +89,26 @@ namespace Database_Manager.Views.Managers
 
         }
 
-        private void InsertKeyValue_Modal(object sender, RoutedEventArgs e)
-        {
-    
-        }
+        private void InsertRow_Button(object sender, RoutedEventArgs e)
 
 
+          =>  new SQLManagerServices().TogglePopup(InsertRow_Popup);
 
 
-
-
-
+        
 
         private void BExpandLeftMenu(object sender, RoutedEventArgs e)
-        {
-            if (LeftPopUp.IsOpen)
-            {
-                LeftPopUp.IsOpen = false;
-                return;
-            }
+        
 
-            LeftPopUp.IsOpen = true;
+          =>  new SQLManagerServices().TogglePopup(LeftPopUp);
 
-        }
-
-
+        
 
         private void BSearchValue(object sender, RoutedEventArgs e)
         {
             try
             {
           
-
-
-
 
             }
             catch (Exception ex)
@@ -166,4 +120,55 @@ namespace Database_Manager.Views.Managers
 
         }
     }
+}
+
+
+public  class SQLManagerServices{
+
+
+    public void TogglePopup(Popup popup)
+    {
+
+
+        if (!popup.IsOpen)
+        {
+            popup.IsOpen = true;
+
+            return;
+        }
+
+        popup.IsOpen = false;
+    }
+
+
+
+
+    public void LeftMenu_SizeChanged (Popup LeftPopup, Grid LeftBar_GridContainer) 
+    {
+        //Get the current Windows Size
+        var bounds = Window.Current.Bounds;
+        double height = bounds.Height;
+
+        double width = bounds.Width;
+
+
+        if (width < 755)
+        {
+
+
+            LeftPopup.IsOpen = false;
+
+        }
+        else
+        {
+
+            LeftPopup.IsOpen = true;
+
+        }
+
+        LeftBar_GridContainer.Height = height - 230;
+
+
+    }
+
 }

@@ -46,9 +46,11 @@ namespace Database_Manager.Views.Components.Managers.SQL.tree
         private void BTable_Click(object sender, RoutedEventArgs e)
         {
 
+
+
             Grid grid = new Grid();
             grid.Name = "documents_Container";
-          SQL_Manager.sQL_ManagerContext.Redis_documentContainer.Children.Clear();
+          SQL_Manager.sQL_ManagerContext.SQL_GridTableContainer.Children.Clear();
 
             var sQL_Table_Viewer = new SQL_DataGrid("",TableName);
 
@@ -56,7 +58,7 @@ namespace Database_Manager.Views.Components.Managers.SQL.tree
 
 
          
-            SQL_Manager.sQL_ManagerContext.Redis_documentContainer.Children.Add(grid);
+            SQL_Manager.sQL_ManagerContext.SQL_GridTableContainer.Children.Add(grid);
             
         }
     }

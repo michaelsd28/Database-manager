@@ -14,6 +14,56 @@ namespace Database_Manager.Services.SQL
     internal class SQL_Service
     {
 
+
+        /// <summary>
+        /// Insert row
+        /// </summary>
+        /// <param name="DBName"></param>
+        /// <returns></returns>
+
+        public async void InsertRow() 
+        {
+            try
+            {
+                string connString = @"Server=localhost;User ID=debian-sys-maint;Password=oYM7Qh9SqgL3RD7T;Database=mydb";
+                //     var query = "SELECT * FROM Persons;";
+                var query = "SHOW DATABASES;";
+
+
+                using (var conn = new MySqlConnection(connString))
+                {
+                    await conn.OpenAsync();
+
+
+
+                    // Retrieve all rows
+                    using (var cmd = new MySqlCommand(query, conn))
+                    using (var reader = await cmd.ExecuteReaderAsync())
+
+                        while (await reader.ReadAsync())
+                        {
+
+                            for (int x = 0; x < reader.FieldCount; x++)
+                            {
+
+                                var dbName = reader.GetString(x);
+
+                                SQL_Manager.sQL_ManagerContext.DatabaseStackPanel.Children.Add(new SQL_Service().GetLeftMenu(dbName));
+
+                            }
+
+                        }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                _ = new DialogService()._DialogService("Error", ex.Message);
+            }
+
+        }
+
+
         public StackPanel GetLeftMenu(string DBName = "")
         {
             var stackPanel = new StackPanel();   
@@ -83,8 +133,6 @@ namespace Database_Manager.Services.SQL
 
             dataGrid.ItemsSource = sourceCollection;
         }
-
-
 
 
         internal async void LoadDatabases()

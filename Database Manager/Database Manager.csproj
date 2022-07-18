@@ -194,11 +194,11 @@
     <Compile Include="Views\Components\Managers\SQL\Import Database.xaml.cs">
       <DependentUpon>Import Database.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Components\Managers\SQL\Insert Row.xaml.cs">
+      <DependentUpon>Insert Row.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Components\Managers\SQL\Page Controller.xaml.cs">
       <DependentUpon>Page Controller.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Components\Managers\SQL\SQL Table Viewer.xaml.cs">
-      <DependentUpon>SQL Table Viewer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Components\Managers\Redis\tree\Database Cloud Tree.xaml.cs">
       <DependentUpon>Database Cloud Tree.xaml</DependentUpon>
@@ -459,11 +459,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Components\Managers\SQL\Page Controller.xaml">
+    <Page Include="Views\Components\Managers\SQL\Insert Row.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Components\Managers\SQL\SQL Table Viewer.xaml">
+    <Page Include="Views\Components\Managers\SQL\Page Controller.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
