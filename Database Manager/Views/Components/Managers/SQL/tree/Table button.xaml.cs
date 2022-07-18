@@ -50,7 +50,7 @@ namespace Database_Manager.Views.Components.Managers.SQL.tree
             grid.Name = "documents_Container";
           SQL_Manager.sQL_ManagerContext.Redis_documentContainer.Children.Clear();
 
-            var sQL_Table_Viewer = new SQL_Table_Viewer("",TableName);
+            var sQL_Table_Viewer = new SQL_DataGrid("",TableName);
 
             grid.Children.Add(sQL_Table_Viewer);
 

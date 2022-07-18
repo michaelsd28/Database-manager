@@ -21,12 +21,19 @@ namespace Database_Manager.Views.Components.Managers.SQL
     public sealed partial class SQL_DataGrid : UserControl
     {
        public static SQL_DataGrid sQL_DataGridContext { get; set; }
-        public SQL_DataGrid()
+        public SQL_DataGrid(string connString, string tableName)
         {
             sQL_DataGridContext = this;
             InitializeComponent();
 
-            new SQL_Service().DisplayTable_DataGrid("","FakeTable",dataGrid,5);
+            LoadDataGrid(connString, tableName);
+
+          
         }
+
+        private void LoadDataGrid(string connString, string tableName)
+        
+           => new SQL_Service().DisplayTable_DataGrid(connString, tableName, dataGrid);
+        
     }
 }

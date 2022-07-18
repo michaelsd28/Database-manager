@@ -6,6 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls" xmlns:Windows10version1903="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 8)"
     mc:Ignorable="d"
+    
+     x:Name="documents_Container"  Margin="30,90,10,30"             
 >
 
     <UserControl.Resources>
@@ -22,12 +24,14 @@
     </UserControl.Resources>
 
 
-    <Grid  x:Name="documents_Container"    CornerRadius="5" >
 
 
+    <Grid               CornerRadius="5">
+
+            <controls:DataGrid 
   
-
-                <controls:DataGrid 
+                Background="{ThemeResource MainAcrylicB}"
+               
             CacheMode="BitmapCache"
         ScrollViewer.BringIntoViewOnFocusChange="True"
         VerticalScrollBarVisibility="Visible"
@@ -43,8 +47,8 @@
                 x:FieldModifier="Public"
        
         />
-
-
-   
     </Grid>
+
+
+
 </UserControl>

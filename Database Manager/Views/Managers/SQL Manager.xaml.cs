@@ -49,9 +49,7 @@ namespace Database_Manager.Views.Managers
 
                 SizeChanged += SQL_Manager_SizeChanged;
 
-           SQL_DataGrid qL_DataGrid = new SQL_DataGrid();
-            documents_Container.Children.Clear();
-            documents_Container.Children.Add(qL_DataGrid);
+
 
         }
 

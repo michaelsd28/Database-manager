@@ -313,7 +313,7 @@
                         </TransitionCollection>
                     </Grid.ChildrenTransitions>
 
-                    <Grid  x:Name="documents_Container" Background="Black"   CornerRadius="5">
+                    <Grid  x:Name="documents_Container"    CornerRadius="5">
                         
                         
 
