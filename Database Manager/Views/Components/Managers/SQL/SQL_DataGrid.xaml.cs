@@ -26,7 +26,7 @@ namespace Database_Manager.Views.Components.Managers.SQL
             sQL_DataGridContext = this;
             InitializeComponent();
 
-            new SQL_Service().DisplayTable_DataGrid("","FakeTable",dataGrid,200);
+            new SQL_Service().DisplayTable_DataGrid("","FakeTable",dataGrid,5);
         }
     }
 }

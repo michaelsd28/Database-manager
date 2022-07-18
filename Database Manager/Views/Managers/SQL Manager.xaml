@@ -313,11 +313,11 @@
                         </TransitionCollection>
                     </Grid.ChildrenTransitions>
 
-                    <Grid  x:Name="documents_Container"  Background="Transparent" CornerRadius="5">
+                    <Grid  x:Name="documents_Container" Background="Black"   CornerRadius="5">
                         
                         
 
-                        <TextBlock FontSize="16" FontFamily="Roboto" VerticalAlignment="Center" HorizontalAlignment="Center"> Please select a table</TextBlock>
+                        <TextBlock Foreground="Red" FontSize="16" FontFamily="Roboto" VerticalAlignment="Center" HorizontalAlignment="Center"> Please select a table</TextBlock>
 
 
                     </Grid>
