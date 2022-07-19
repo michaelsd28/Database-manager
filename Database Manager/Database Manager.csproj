@@ -136,7 +136,7 @@
     <Compile Include="Model\DatabaseCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\localSettings Service.cs" />
-    <Compile Include="Services\MongoDB_DatabaseService.cs" />
+    <Compile Include="Services\MongoDB\MongoDB_DatabaseService.cs" />
     <Compile Include="Services\DatabaseStack_Service.cs" />
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Services\Redis\RedisDB_Services.cs" />

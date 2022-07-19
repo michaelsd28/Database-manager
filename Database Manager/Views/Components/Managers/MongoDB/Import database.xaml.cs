@@ -29,9 +29,9 @@ namespace Database_Manager.Views.Components.Managers.MongoDB
             MongoDB_Manager.MongoDB_ManagerContext.ImportDB_POPUP.IsOpen = false;
         }
 
+
         private void CancelButton(object sender, RoutedEventArgs e)
-        {
-            MongoDB_Manager.MongoDB_ManagerContext.ImportDB_POPUP.IsOpen = false;
-        }
+          =>  MongoDB_Manager.MongoDB_ManagerContext.ImportDB_POPUP.IsOpen = false;
+        
     }
 }

@@ -41,13 +41,16 @@ namespace Database_Manager.Views.Components.Managers.MongoDB
         }
 
         private async void DeleteDocument_Button(object sender, RoutedEventArgs e)
-        {
-            await new DialogService()._DialogService("Do you want to delete this document?", "press ok to delete", DeleteThisDocuement);
-        }
+        =>    await new DialogService()._DialogService
+            (
+            "Do you want to delete this document?", 
+            "press ok to delete", 
+            DeleteThisDocuement
+            );
+        
 
         private void DeleteThisDocuement(ContentDialog sender, ContentDialogButtonClickEventArgs args)
-        {
-            new MongoDB_DatabaseService().DeleteDocumentW_ID(SingleTextBox.Text);
-        }
+           => new MongoDB_DatabaseService().DeleteDocumentW_ID(SingleTextBox.Text);
+        
     }
 }

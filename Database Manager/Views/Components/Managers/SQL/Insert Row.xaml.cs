@@ -23,18 +23,16 @@ namespace Database_Manager.Views.Components.Managers.SQL
 {
     public sealed partial class Insert_Row : UserControl
     {
+
+        public static Insert_Row insert_RowContext { set; get; }
         public Insert_Row()
         {
+            insert_RowContext = this;
             InitializeComponent();
-
-   
-
-          
-            //LoadTextBox();
-     
+      
         }
 
-        private void LoadTextBox()
+        public void LoadTextBox()
         {
             try
             {
@@ -43,10 +41,10 @@ namespace Database_Manager.Views.Components.Managers.SQL
                 var TableNames = new List<string>();
 
 
-                if (SQL_DataGrid.sQL_DataGridContext.dataGrid.Name == null) return;
+                isTableSelected();
 
 
-                var columns = SQL_DataGrid.sQL_DataGridContext.dataGrid.Columns;
+                    var columns = SQL_DataGrid.sQL_DataGridContext.dataGrid.Columns;
 
                 foreach (var column in columns)
                 {
@@ -57,7 +55,7 @@ namespace Database_Manager.Views.Components.Managers.SQL
                 var TableTitle = "People";
 
                 var stringText = $"INSERT INTO {TableTitle} ({string.Join(", ", TableNames)})" +
-                    $"VALUES({string.Join(", ", TableNames)})";
+                    $"\n VALUES ({string.Join(", ", TableNames)})";
 
                 Value_TextBox.Document.SetText(Windows.UI.Text.TextSetOptions.None, stringText);
                 SQL_Manager.sQL_ManagerContext.InsertRow_Popup.IsOpen = false;
@@ -73,23 +71,35 @@ namespace Database_Manager.Views.Components.Managers.SQL
 
         private void InsertRow_Button(object sender, RoutedEventArgs e)
         {
-            var Grids = SQL_Manager.sQL_ManagerContext.SQL_GridTableContainer.Children;
-            Grid containerGrid = null;
-            foreach (Grid grid in Grids)
-            {
-                if (grid.Name == "documents_Container") 
-                {
-                    Debug.WriteLine($"contains?? ::: {grid.Children[0].ToJson()}");
-                }
+
+
+
+        }
+
+
+        public void isTableSelected() 
+        {
      
-          
-          
+
+      
+
+         var dataGridContext =    SQL_DataGrid.sQL_DataGridContext.ToJson();
+            Debug.WriteLine("Table****:: " + dataGridContext);
+            if (dataGridContext =="")
+
+            {
+
+                Debug.WriteLine("Table****:: "+ dataGridContext);
+                return;
+        
             }
 
 
 
+            
 
 
+          
         }
 
         private void CancelButton(object sender, RoutedEventArgs e)

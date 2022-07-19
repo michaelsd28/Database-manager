@@ -29,24 +29,21 @@ namespace Database_Manager.Views.Components.Managers.Redis
 
 
 
-        private void Cancel_Button(object sender, RoutedEventArgs e)
-        {
-            Redis_Manager.Redis_ManagerContext.AddKey_Grid.Visibility = Visibility.Collapsed;
-            ClearTextBoxes();
-        }
+        private void Cancel_Button(object sender, RoutedEventArgs e)  
+          =>  ClearTextBoxes();
+        
 
         private void Save_Button(object sender, RoutedEventArgs e)
         {
 
 
-            string value = "";
-            Value_TextBox.Document.GetText(Windows.UI.Text.TextGetOptions.None, out value);
 
-            
+            Value_TextBox.Document.GetText(Windows.UI.Text.TextGetOptions.None, out string value);
 
+           
             new RedisDB_Services().SaveKeyValue(KeyValue_TextBox.Text, value, typeToAdd: new RedisLocalSettings().AddValue_ButtonType());
 
-            Redis_Manager.Redis_ManagerContext.AddKey_Grid.Visibility = Visibility.Collapsed;
+         
             ClearTextBoxes();
 
         }
@@ -57,7 +54,7 @@ namespace Database_Manager.Views.Components.Managers.Redis
 
             KeyValue_TextBox.Text = "";
             Value_TextBox.Document.SetText(Windows.UI.Text.TextSetOptions.None, "");
-
+            Redis_Manager.Redis_ManagerContext.AddKey_Grid.Visibility = Visibility.Collapsed;
         }
 
 

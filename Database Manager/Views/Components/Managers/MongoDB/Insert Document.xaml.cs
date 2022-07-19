@@ -56,16 +56,11 @@ namespace Database_Manager.Views.Components.Managers.MongoDB
             try
             {
 
-                string json = string.Empty;
+       
                 MyTextDocument.Document
-                    .GetText(Windows.UI.Text.TextGetOptions.None, out json);
+                    .GetText(Windows.UI.Text.TextGetOptions.None, out string json);
 
-                BsonDocument newBsonDocument = new BsonDocument();
-                newBsonDocument.Add(BsonDocument.Parse(json));
-
-                new MongoDB_DatabaseService().InsertDocument(newBsonDocument);
-
-
+                new MongoDB_DatabaseService().InsertDocument(BsonDocument.Parse(json));
                 MongoDB_Manager.MongoDB_ManagerContext.InsertDocument_POPUP.Visibility = Visibility.Collapsed;
 
 

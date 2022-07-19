@@ -31,110 +31,37 @@ namespace Database_Manager.Views.Components.Managers.MongoDB
 
 
         private void PreviusButton_PointerPressed(object sender, PointerRoutedEventArgs e)
-        {
-            pagaFrom -= 10;
-            pagaTo -= 10;
-
-            List<object> RangedList = new MongoDB_DatabaseService().GetDocList_WRange(pagaFrom, pagaTo);
-
-            if (RangedList == null || RangedList.Count == 0)
-            {
-
-                _ = new DialogService()._DialogService("No more documents", "please try search");
-                return;
-            }
-            new MongoDB_DatabaseService().UpdateDocumentList(RangedList);
-        }
+            => ChangePageControl(pagaFrom: pagaFrom -= 10, pagaTo: pagaTo -= 10);
 
         private void Page1Button(object sender, RoutedEventArgs e)
-        {
-            pagaFrom = 0;
-            pagaTo = 10;
-
-            List<object> RangedList = new MongoDB_DatabaseService().GetDocList_WRange(pagaFrom, pagaTo);
-
-                      if (RangedList == null || RangedList.Count == 0)
-            {
-
-                _ = new DialogService()._DialogService("No more documents", "please try search");
-                return;
-            }
-            new MongoDB_DatabaseService().UpdateDocumentList(RangedList);
-        }
+            => ChangePageControl(pagaFrom: 0, pagaTo: 10);
 
         private void Page2Button(object sender, RoutedEventArgs e)
-        {
-
-            pagaFrom = 10;
-            pagaTo = 20;
-
-            List<object> RangedList = new MongoDB_DatabaseService().GetDocList_WRange(pagaFrom, pagaTo);
-
-
-
-            if (RangedList == null || RangedList.Count == 0)
-            {
-
-                _ = new DialogService()._DialogService("No more documents", "please try search");
-                return;
-            }
-            new MongoDB_DatabaseService().UpdateDocumentList(RangedList);
-
-        }
+            => ChangePageControl(pagaFrom: 10, pagaTo: 20);
 
         private void Page3Button(object sender, RoutedEventArgs e)
-        {
-            pagaFrom = 20;
-            pagaTo = 30;
+            => ChangePageControl(pagaFrom: 20, pagaTo: 30);
 
-            List<object> RangedList = new MongoDB_DatabaseService().GetDocList_WRange(pagaFrom, pagaTo);
+        private void Page4Button(object sender, RoutedEventArgs e) 
+            => ChangePageControl(pagaFrom: 30, pagaTo: 40);
 
-            if (RangedList == null || RangedList.Count == 0)
-            {
 
-                _ = new DialogService()._DialogService("No more documents", "please try search");
-                return;
-            }
-            new MongoDB_DatabaseService().UpdateDocumentList(RangedList);
-        }
+        private  void Page5Button(object sender, RoutedEventArgs e) 
+            => ChangePageControl(pagaFrom: 40, pagaTo:  50);
 
-        private void Page4Button(object sender, RoutedEventArgs e)
-        {
-            pagaFrom = 30;
-            pagaTo = 40;
-
-            List<object> RangedList = new MongoDB_DatabaseService().GetDocList_WRange(pagaFrom, pagaTo);
-
-            if (RangedList == null || RangedList.Count == 0)
-            {
-
-                _ = new DialogService()._DialogService("No more documents", "please try search");
-                return;
-            }
-            new MongoDB_DatabaseService().UpdateDocumentList(RangedList);
-        }
-
-        private  void Page5Button(object sender, RoutedEventArgs e)
-        {
-            pagaFrom = 40;
-            pagaTo = 50;
-
-            List<object> RangedList = new MongoDB_DatabaseService().GetDocList_WRange(pagaFrom, pagaTo);
-
-            if (RangedList == null || RangedList.Count == 0)
-            {
-
-                _ = new DialogService()._DialogService("No more documents", "please try search");
-                return;
-            }
-            new MongoDB_DatabaseService().UpdateDocumentList(RangedList);
-        }
 
         private void NextButton_PointerPressed(object sender, PointerRoutedEventArgs e)
+            => ChangePageControl(pagaFrom: pagaFrom += 10, pagaTo:  pagaTo += 10);
+
+        
+
+
+
+        public void ChangePageControl(int pagaFrom, int pagaTo) 
+        
         {
 
-            pagaFrom += 10;
-            pagaTo += 10;
+        
 
             List<object> RangedList = new MongoDB_DatabaseService().GetDocList_WRange(pagaFrom, pagaTo);
 
@@ -144,37 +71,33 @@ namespace Database_Manager.Views.Components.Managers.MongoDB
                 _ = new DialogService()._DialogService("No more documents", "please try search");
                 return;
             }
-
             new MongoDB_DatabaseService().UpdateDocumentList(RangedList);
+
+
         }
 
         private void TGoToPage_TextChanged(object sender, TextChangedEventArgs e)
         {
 
-            try {
+            try 
+            {
 
+
+                //// if empty
                 if (TGoToPage.Text =="") {
                     Page1Button(sender,e);
                     return;
                 }
 
+
                 int pageNumber = int.Parse(TGoToPage.Text)*10;
-                int fromTOPAGE = pageNumber-10;
-                int goTOPAGE = pageNumber;
+          
+           ChangePageControl(pagaFrom: pageNumber - 10, pagaTo: pageNumber);
 
-            List<object> RangedList = new MongoDB_DatabaseService().GetDocList_WRange(fromTOPAGE, goTOPAGE);
 
-            if (RangedList == null || RangedList.Count == 0)
+            }
+                catch (Exception ex) 
             {
-
-                _ = new DialogService()._DialogService("No more documents", "please try search");
-                return;
-            }
-
-            new MongoDB_DatabaseService().UpdateDocumentList(RangedList);
-            }
-            catch (Exception ex) {
-
                 _ = new DialogService()._DialogService("Invalid page",ex.Message);
             }
         }

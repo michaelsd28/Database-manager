@@ -13,7 +13,7 @@
     >
 
     <StackPanel 
-  
+
         Width="450" 
         Orientation="Vertical" 
         Padding="10" CornerRadius="10" 

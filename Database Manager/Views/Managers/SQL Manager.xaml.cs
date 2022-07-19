@@ -90,9 +90,26 @@ namespace Database_Manager.Views.Managers
         }
 
         private void InsertRow_Button(object sender, RoutedEventArgs e)
+        {
+
+          var isNull =  SQL_DataGrid.sQL_DataGridContext.ToJson();
+
+            Debug.WriteLine(" var isNull:: " +  isNull);
+
+            if (isNull.ToString() =="null") 
+            
+            {
+                _ = new DialogService()._DialogService("Error", "Please select a table");
+
+                return;
+            }
 
 
-          =>  new SQLManagerServices().TogglePopup(InsertRow_Popup);
+
+            Insert_Row.insert_RowContext.LoadTextBox();
+            new SQLManagerServices().TogglePopup(InsertRow_Popup);
+        }
+
 
 
         
