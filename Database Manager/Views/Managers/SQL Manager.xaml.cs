@@ -94,13 +94,11 @@ namespace Database_Manager.Views.Managers
 
           var isNull =  SQL_DataGrid.sQL_DataGridContext.ToJson();
 
-            Debug.WriteLine(" var isNull:: " +  isNull);
 
             if (isNull.ToString() =="null") 
             
             {
                 _ = new DialogService()._DialogService("Error", "Please select a table");
-
                 return;
             }
 

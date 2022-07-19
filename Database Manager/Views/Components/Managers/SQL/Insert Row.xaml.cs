@@ -41,7 +41,7 @@ namespace Database_Manager.Views.Components.Managers.SQL
                 var TableNames = new List<string>();
 
 
-                isTableSelected();
+
 
 
                     var columns = SQL_DataGrid.sQL_DataGridContext.dataGrid.Columns;
@@ -77,30 +77,7 @@ namespace Database_Manager.Views.Components.Managers.SQL
         }
 
 
-        public void isTableSelected() 
-        {
-     
-
-      
-
-         var dataGridContext =    SQL_DataGrid.sQL_DataGridContext.ToJson();
-            Debug.WriteLine("Table****:: " + dataGridContext);
-            if (dataGridContext =="")
-
-            {
-
-                Debug.WriteLine("Table****:: "+ dataGridContext);
-                return;
-        
-            }
-
-
-
-            
-
-
-          
-        }
+    
 
         private void CancelButton(object sender, RoutedEventArgs e)
         {
