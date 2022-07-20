@@ -1,4 +1,5 @@
 ﻿using Database_Manager.Services;
+using Database_Manager.Services.SQL;
 using Database_Manager.Views.Managers;
 using MongoDB.Bson;
 using System;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Text;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -54,10 +56,10 @@ namespace Database_Manager.Views.Components.Managers.SQL
 
                 var TableTitle = "People";
 
-                var stringText = $"INSERT INTO {TableTitle} ({string.Join(", ", TableNames)})" +
-                    $"\n VALUES ({string.Join(", ", TableNames)})";
+                var stringText = $"INSERT INTO {TableTitle} ({''string.Join(", ", TableNames)})" +
+                    $"\n VALUES ({string.Join(", ", TableNames)});";
 
-                Value_TextBox.Document.SetText(Windows.UI.Text.TextSetOptions.None, stringText);
+                Value_TextBox.Document.SetText(TextSetOptions.None, stringText);
                 SQL_Manager.sQL_ManagerContext.InsertRow_Popup.IsOpen = false;
 
             }
@@ -72,7 +74,9 @@ namespace Database_Manager.Views.Components.Managers.SQL
         private void InsertRow_Button(object sender, RoutedEventArgs e)
         {
 
-
+    
+            Value_TextBox.Document.GetText(TextGetOptions.None, out string value);
+            new SQL_Services().ExecQuery(value);
 
         }
 

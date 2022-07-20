@@ -63,7 +63,7 @@ namespace Database_Manager.Views.Managers
 
             String uri = String.Empty;
 
-            new SQL_Service().LoadDatabases();
+            new SQL_Services().LoadDatabases();
 
 
             if (e.Parameter != null)
@@ -92,10 +92,10 @@ namespace Database_Manager.Views.Managers
         private void InsertRow_Button(object sender, RoutedEventArgs e)
         {
 
-          var isNull =  SQL_DataGrid.sQL_DataGridContext.ToJson();
+          var isTableNull =  SQL_DataGrid.sQL_DataGridContext.ToJson();
 
 
-            if (isNull.ToString() =="null") 
+            if (isTableNull.ToString() =="null") 
             
             {
                 _ = new DialogService()._DialogService("Error", "Please select a table");

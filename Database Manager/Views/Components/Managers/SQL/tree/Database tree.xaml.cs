@@ -53,7 +53,7 @@ namespace Database_Manager.Views.Components.Managers.SQL.tree
 
         public  void LoadTables() 
 
-          =>  new SQL_Service().GetTables(DBName,stackpanel_Tables);
+          =>  new SQL_Services().GetTables(DBName,stackpanel_Tables);
 
 
 

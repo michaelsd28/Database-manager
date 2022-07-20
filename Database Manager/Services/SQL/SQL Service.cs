@@ -8,10 +8,12 @@ using System.Data;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
+using System.Diagnostics;
+using MongoDB.Bson;
 
 namespace Database_Manager.Services.SQL
 {
-    internal class SQL_Service
+    internal class SQL_Services
     {
 
 
@@ -21,13 +23,13 @@ namespace Database_Manager.Services.SQL
         /// <param name="DBName"></param>
         /// <returns></returns>
 
-        public async void InsertRow() 
+        public async void ExecQuery(string query) 
         {
             try
             {
                 string connString = @"Server=localhost;User ID=debian-sys-maint;Password=oYM7Qh9SqgL3RD7T;Database=mydb";
-                //     var query = "SELECT * FROM Persons;";
-                var query = "SHOW DATABASES;";
+
+    
 
 
                 using (var conn = new MySqlConnection(connString))
@@ -46,9 +48,11 @@ namespace Database_Manager.Services.SQL
                             for (int x = 0; x < reader.FieldCount; x++)
                             {
 
-                                var dbName = reader.GetString(x);
+                                var dbName = reader.GetValue(x).ToString() ;
 
-                                SQL_Manager.sQL_ManagerContext.DatabaseStackPanel.Children.Add(new SQL_Service().GetLeftMenu(dbName));
+                                Debug.WriteLine($"dbName:: {dbName}");
+
+                             
 
                             }
 
@@ -161,7 +165,7 @@ namespace Database_Manager.Services.SQL
 
                                 var dbName = reader.GetString(x);
 
-                                SQL_Manager.sQL_ManagerContext.DatabaseStackPanel.Children.Add(new SQL_Service().GetLeftMenu(dbName));
+                                SQL_Manager.sQL_ManagerContext.DatabaseStackPanel.Children.Add(new SQL_Services().GetLeftMenu(dbName));
                  
                             }
                
@@ -176,6 +180,9 @@ namespace Database_Manager.Services.SQL
 
         }
 
+
+
+
         internal async void GetTables(string DBName,GridView stackPanel)
         {
             try
@@ -183,9 +190,6 @@ namespace Database_Manager.Services.SQL
                 string connString = @"Server=localhost;User ID=debian-sys-maint;Password=oYM7Qh9SqgL3RD7T;Database=mydb";
                 //     var query = "SELECT * FROM Persons;";
                 string query = $"SHOW TABLES FROM {DBName};";
-
-
-
 
 
                 using (var conn = new MySqlConnection(connString))
