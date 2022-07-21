@@ -1,4 +1,5 @@
-﻿using Database_Manager.Views.Components.Managers.Redis;
+﻿using Database_Manager.Services.SQL;
+using Database_Manager.Views.Components.Managers.Redis;
 using Database_Manager.Views.Managers;
 using MongoDB.Bson;
 using System;
@@ -44,22 +45,10 @@ namespace Database_Manager.Views.Components.Managers.SQL.tree
         }
 
         private void BTable_Click(object sender, RoutedEventArgs e)
-        {
-
-
-
-            Grid grid = new Grid();
-            grid.Name = "documents_Container";
-          SQL_Manager.sQL_ManagerContext.SQL_GridTableContainer.Children.Clear();
-
-            var sQL_Table_Viewer = new SQL_DataGrid("",TableName);
-
-            grid.Children.Add(sQL_Table_Viewer);
-
-
-         
-            SQL_Manager.sQL_ManagerContext.SQL_GridTableContainer.Children.Add(grid);
+       
+           => new SQL_Services().UpdateTableGrid(TableName);
             
-        }
+        
+
     }
 }

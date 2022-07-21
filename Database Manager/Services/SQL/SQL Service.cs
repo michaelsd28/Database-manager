@@ -10,6 +10,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
 using System.Diagnostics;
 using MongoDB.Bson;
+using Database_Manager.Views.Components.Managers.SQL;
 
 namespace Database_Manager.Services.SQL
 {
@@ -50,10 +51,6 @@ namespace Database_Manager.Services.SQL
 
                                 var dbName = reader.GetValue(x).ToString() ;
 
-                                Debug.WriteLine($"dbName:: {dbName}");
-
-                             
-
                             }
 
                         }
@@ -66,6 +63,8 @@ namespace Database_Manager.Services.SQL
             }
 
         }
+
+
 
 
         public StackPanel GetLeftMenu(string DBName = "")
@@ -117,6 +116,25 @@ namespace Database_Manager.Services.SQL
 
         }
 
+        internal void UpdateTableGrid(string currentTable)
+        {
+
+            Grid grid = new Grid();
+            grid.Name = "documents_Container";
+            SQL_Manager.sQL_ManagerContext.SQL_GridTableContainer.Children.Clear();
+
+
+            var sQL_Table_Viewer = new SQL_DataGrid("", currentTable);
+
+            grid.Children.Add(sQL_Table_Viewer);
+
+
+            new SQLLocalSettings().UpdateCurrentTable(currentTable);
+
+       
+            SQL_Manager.sQL_ManagerContext.SQL_GridTableContainer.Children.Add(grid);
+        }
+        
 
         private void ToSourceCollection(DataTable dt, DataGrid dataGrid)
         {

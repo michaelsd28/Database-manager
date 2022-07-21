@@ -39,11 +39,10 @@ namespace Database_Manager.Views.Components.Managers.SQL
             try
             {
 
+                var currentTable  = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
+
 
                 var TableNames = new List<string>();
-
-
-
 
 
                     var columns = SQL_DataGrid.sQL_DataGridContext.dataGrid.Columns;
@@ -54,12 +53,12 @@ namespace Database_Manager.Views.Components.Managers.SQL
 
                 }
 
-                var TableTitle = "People";
 
-                var stringText = $"INSERT INTO {TableTitle} ({''string.Join(", ", TableNames)})" +
-                    $"\n VALUES ({string.Join(", ", TableNames)});";
 
-                Value_TextBox.Document.SetText(TextSetOptions.None, stringText);
+                var stringQuery = $"INSERT INTO {currentTable} ({string.Join(", ", TableNames)})" +
+                    $"\n VALUES ({string.Join("' , '", TableNames)});";
+
+                Value_TextBox.Document.SetText(TextSetOptions.None, stringQuery);
                 SQL_Manager.sQL_ManagerContext.InsertRow_Popup.IsOpen = false;
 
             }
@@ -67,6 +66,7 @@ namespace Database_Manager.Views.Components.Managers.SQL
             {
 
                 _ = new DialogService()._DialogService("Error inserting row", ex.Message);
+
             }
 
         }
@@ -74,13 +74,26 @@ namespace Database_Manager.Views.Components.Managers.SQL
         private void InsertRow_Button(object sender, RoutedEventArgs e)
         {
 
-    
+
             Value_TextBox.Document.GetText(TextGetOptions.None, out string value);
-            new SQL_Services().ExecQuery(value);
+
+           
+
+
+            SQL_Manager.sQL_ManagerContext.InsertRow_Popup.IsOpen = false;
+      //     var delete5 = "DELETE FROM Persons WHERE PersonID=5;";
+          //  new SQL_Services().ExecQuery(delete5);
+          new SQL_Services().ExecQuery(value);
+
+            var currentTable = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
+
+            new SQL_Services().UpdateTableGrid(currentTable);
 
         }
 
 
+
+ 
     
 
         private void CancelButton(object sender, RoutedEventArgs e)

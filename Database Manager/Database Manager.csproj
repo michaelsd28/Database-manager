@@ -142,6 +142,7 @@
     <Compile Include="Services\Redis\RedisDB_Services.cs" />
     <Compile Include="Services\Redis\RedisLocalSettings.cs" />
     <Compile Include="Services\SQL\SQL Service.cs" />
+    <Compile Include="Services\SQL\SQLLocalSettings.cs" />
     <Compile Include="Views\Components\Mainpage\Main MenuBar.xaml.cs">
       <DependentUpon>Main MenuBar.xaml</DependentUpon>
     </Compile>

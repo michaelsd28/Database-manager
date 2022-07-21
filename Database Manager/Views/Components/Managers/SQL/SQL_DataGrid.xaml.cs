@@ -31,9 +31,13 @@ namespace Database_Manager.Views.Components.Managers.SQL
           
         }
 
-        private void LoadDataGrid(string connString, string tableName)
+        public void LoadDataGrid(string connString, string tableName)
         
            => new SQL_Services().DisplayTable_DataGrid(connString, tableName, dataGrid);
-        
+
+
+
+   
+
     }
 }
