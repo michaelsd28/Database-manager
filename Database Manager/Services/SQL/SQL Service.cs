@@ -11,6 +11,7 @@ using Windows.UI.Xaml.Data;
 using System.Diagnostics;
 using MongoDB.Bson;
 using Database_Manager.Views.Components.Managers.SQL;
+using System.Threading.Tasks;
 
 namespace Database_Manager.Services.SQL
 {
@@ -24,7 +25,7 @@ namespace Database_Manager.Services.SQL
         /// <param name="DBName"></param>
         /// <returns></returns>
 
-        public async void ExecQuery(string query) 
+        public async Task ExecQuery(string query) 
         {
             try
             {
@@ -49,7 +50,7 @@ namespace Database_Manager.Services.SQL
                             for (int x = 0; x < reader.FieldCount; x++)
                             {
 
-                                var dbName = reader.GetValue(x).ToString() ;
+                                var ReaderValue = reader.GetValue(x).ToString() ;
 
                             }
 
@@ -60,6 +61,7 @@ namespace Database_Manager.Services.SQL
             {
 
                 _ = new DialogService()._DialogService("Error", ex.Message);
+
             }
 
         }
@@ -119,20 +121,31 @@ namespace Database_Manager.Services.SQL
         internal void UpdateTableGrid(string currentTable)
         {
 
-            Grid grid = new Grid();
-            grid.Name = "documents_Container";
             SQL_Manager.sQL_ManagerContext.SQL_GridTableContainer.Children.Clear();
 
 
-            var sQL_Table_Viewer = new SQL_DataGrid("", currentTable);
 
-            grid.Children.Add(sQL_Table_Viewer);
+
+            Grid grid = new Grid { Name = "documents_Container" };
+
+        
+ 
+
+
+
+
+            var sqlGrid = new SQL_DataGrid("", currentTable);
+            DisplayTable_DataGrid("", currentTable, sqlGrid.dataGrid);
+
+            grid.Children.Add(sqlGrid);
 
 
             new SQLLocalSettings().UpdateCurrentTable(currentTable);
 
        
             SQL_Manager.sQL_ManagerContext.SQL_GridTableContainer.Children.Add(grid);
+
+        
         }
         
 

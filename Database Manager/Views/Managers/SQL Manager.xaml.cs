@@ -105,7 +105,7 @@ namespace Database_Manager.Views.Managers
 
 
             Insert_Row.insert_RowContext.LoadTextBox();
-            new SQLManagerServices().TogglePopup(InsertRow_Popup);
+            new SQLManagerServices().ToggleGrid(InsertRow_Popup);
         }
 
 
@@ -140,6 +140,20 @@ namespace Database_Manager.Views.Managers
 
 public  class SQLManagerServices{
 
+
+    public void ToggleGrid(Grid grid) 
+    {
+
+        if (grid.Visibility == Visibility.Visible)
+        {
+            grid.Visibility = Visibility.Collapsed;
+
+            return;
+        }
+
+        grid.Visibility = Visibility.Visible;
+
+    }
 
     public void TogglePopup(Popup popup)
     {

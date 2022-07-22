@@ -310,11 +310,17 @@
                         </TransitionCollection>
                     </Grid.ChildrenTransitions>
 
-                    <Grid  x:Name="documents_Container"    CornerRadius="5">
+                    <Grid  x:Name="documents_Container"  x:FieldModifier="Public"   CornerRadius="5">
 
 
 
-                        <TextBlock Foreground="#CCCCCC" FontSize="16" FontFamily="Roboto" VerticalAlignment="Center" HorizontalAlignment="Center">Please select a table</TextBlock>
+                        <TextBlock Foreground="#CCCCCC" 
+                                   FontSize="16" 
+                                   FontFamily="Roboto" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Center"
+                                   Text="Please select a table"/>
+
 
 
                     </Grid>
@@ -329,17 +335,17 @@
 
 
 
-            <Popup 
-                IsLightDismissEnabled="True"
-                LightDismissOverlayMode="On"
+            <Grid 
+
                     HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                Margin="0,0,350,300"
-                IsOpen="False" x:Name="InsertRow_Popup" x:FieldModifier="Public">
+                Margin="50,0,0,0"
+                Visibility="Collapsed"
+                x:Name="InsertRow_Popup" x:FieldModifier="Public">
 
                 <SQLComponent:Insert_Row  />
                 
-            </Popup>
+            </Grid>
 
             <Popup 
                 IsLightDismissEnabled="True"

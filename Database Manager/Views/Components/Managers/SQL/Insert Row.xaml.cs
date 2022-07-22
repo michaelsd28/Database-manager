@@ -59,7 +59,7 @@ namespace Database_Manager.Views.Components.Managers.SQL
                     $"\n VALUES ({string.Join("' , '", TableNames)});";
 
                 Value_TextBox.Document.SetText(TextSetOptions.None, stringQuery);
-                SQL_Manager.sQL_ManagerContext.InsertRow_Popup.IsOpen = false;
+                SQL_Manager.sQL_ManagerContext.InsertRow_Popup.Visibility = Visibility.Collapsed;
 
             }
             catch (Exception ex)
@@ -71,23 +71,27 @@ namespace Database_Manager.Views.Components.Managers.SQL
 
         }
 
-        private void InsertRow_Button(object sender, RoutedEventArgs e)
+        private async void InsertRow_Button(object sender, RoutedEventArgs e)
         {
 
 
             Value_TextBox.Document.GetText(TextGetOptions.None, out string value);
 
-           
 
 
-            SQL_Manager.sQL_ManagerContext.InsertRow_Popup.IsOpen = false;
-      //     var delete5 = "DELETE FROM Persons WHERE PersonID=5;";
-          //  new SQL_Services().ExecQuery(delete5);
-          new SQL_Services().ExecQuery(value);
+
+       
+            //var delete5 = "DELETE FROM Persons WHERE PersonID=5;";
+            //new SQL_Services().ExecQuery(delete5);
+
 
             var currentTable = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
 
+          await  new SQL_Services().ExecQuery(value);
+
             new SQL_Services().UpdateTableGrid(currentTable);
+         
+            SQL_Manager.sQL_ManagerContext.InsertRow_Popup.Visibility = Visibility.Collapsed;
 
         }
 
@@ -97,9 +101,9 @@ namespace Database_Manager.Views.Components.Managers.SQL
     
 
         private void CancelButton(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
+         =>   SQL_Manager.sQL_ManagerContext.InsertRow_Popup.Visibility = Visibility.Collapsed;
+        
 
         private void Value_TextBox_Loaded(object sender, RoutedEventArgs e)
         {
