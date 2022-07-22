@@ -24,7 +24,7 @@
                               TintColor="#303300"
                               TintOpacity="0.5"
                               Windows10version1903:TintLuminosityOpacity="0.8"
-                              FallbackColor="#353600"
+                              FallbackColor="#272727"
                              />
             <AcrylicBrush    
                 x:Key="LeftMenuB"
@@ -291,7 +291,7 @@
 
 
                 <StackPanel  Margin="0,0,0,0" Orientation="Horizontal">
-                    <Button Margin="5,0,5,0"  Content="↻" FontSize="20" Padding="6,0,6,4"/>
+                    <Button Click="RefreshTable_Button" Margin="5,0,5,0"  Content="↻" FontSize="20" Padding="6,0,6,4"/>
                     <Button Click="InsertRow_Button"    Margin="5,0,5,0" Content="Insert"/>
                 </StackPanel>
 

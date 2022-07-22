@@ -81,8 +81,8 @@ namespace Database_Manager.Views.Components.Managers.SQL
 
 
        
-            //var delete5 = "DELETE FROM Persons WHERE PersonID=5;";
-            //new SQL_Services().ExecQuery(delete5);
+           // var delete5 = "DELETE FROM Persons WHERE PersonID=5;";
+         //  await new SQL_Services().ExecQuery(delete5);
 
 
             var currentTable = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();

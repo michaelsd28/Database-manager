@@ -103,6 +103,17 @@ namespace Database_Manager.Services.SQL
                 // this will query your database and return the result to your datatable
                 da.Fill(dataTable);
                 ToSourceCollection(dataTable, dataGrid);
+
+                
+
+                var enumerator = dataGrid.ItemsSource.GetEnumerator();
+                while (enumerator.MoveNext()) 
+                {
+                    var element =enumerator.Current;
+
+                    Debug.WriteLine($"dataGrid.ItemsSource:: {element.ToBsonDocument()["_v"]}");
+
+                }
                 conn.Close();
                 da.Dispose();
 
@@ -135,7 +146,7 @@ namespace Database_Manager.Services.SQL
 
 
             var sqlGrid = new SQL_DataGrid("", currentTable);
-            DisplayTable_DataGrid("", currentTable, sqlGrid.dataGrid);
+ 
 
             grid.Children.Add(sqlGrid);
 

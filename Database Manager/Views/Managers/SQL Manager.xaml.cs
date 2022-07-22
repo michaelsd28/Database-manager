@@ -134,6 +134,15 @@ namespace Database_Manager.Views.Managers
             }
 
         }
+
+        private void RefreshTable_Button(object sender, RoutedEventArgs e)
+
+        {
+
+            var CurrentTable = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
+            new SQL_Services().UpdateTableGrid(CurrentTable);
+        } 
+        
     }
 }
 

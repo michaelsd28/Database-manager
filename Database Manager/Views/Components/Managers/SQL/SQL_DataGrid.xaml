@@ -19,7 +19,7 @@
                               TintColor="#292600"
                               TintOpacity="0.5"
                               Windows10version1903:TintLuminosityOpacity="0.8"
-                              FallbackColor="#353600"
+                              FallbackColor="#212400"
                              />
         </ResourceDictionary>
     </UserControl.Resources>

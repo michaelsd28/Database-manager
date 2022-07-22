@@ -28,6 +28,8 @@ namespace Database_Manager.Views.Components.Managers.SQL
 
             LoadDataGrid(connString, tableName);
 
+  
+
           
         }
 
