@@ -600,6 +600,9 @@
     <PackageReference Include="StackExchange.Redis">
       <Version>2.6.48</Version>
     </PackageReference>
+    <PackageReference Include="System.Linq.Dynamic">
+      <Version>1.0.8</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

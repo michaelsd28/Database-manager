@@ -49,6 +49,7 @@
                      x:Name="Value_TextBox" 
                      Margin="10" Height="160" 
                      x:FieldModifier="Public"
+            FontFamily="Roboto"
             />
 
         <StackPanel  Margin="0,0,10,0" Orientation="Horizontal" HorizontalAlignment="Center">

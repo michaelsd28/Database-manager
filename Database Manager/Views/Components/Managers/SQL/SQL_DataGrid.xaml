@@ -29,7 +29,7 @@
 
     <Grid               CornerRadius="5">
 
-            <controls:DataGrid 
+        <controls:DataGrid 
   
                 Background="{ThemeResource MainAcrylicB}"
                
@@ -42,12 +42,40 @@
         ScrollViewer.HorizontalScrollBarVisibility="Visible"
         ScrollViewer.VerticalScrollBarVisibility="Visible"
     
-      
+      AlternatingRowBackground="#1F1B00"
                 x:Name="dataGrid"
 
                 x:FieldModifier="Public"
-       
-        />
+            
+            Sorting="dataGrid_Sorting"
+
+
+     CanUserSortColumns="True"
+      
+        >
+
+            <controls:DataGrid.RowStyle>
+                <Style TargetType="controls:DataGridRow">
+     
+                    <Setter Property="controls:DataGridRow.ContextFlyout">
+               
+                  
+                        <Setter.Value>
+                            
+                            <MenuFlyout>
+                                <MenuFlyoutItem x:Name="MyMenuItem"
+                                Click="DeleteRow_FlyOut"
+                                    Text="Delete row" />
+                            </MenuFlyout>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </controls:DataGrid.RowStyle>
+
+        </controls:DataGrid>
+
+
+
     </Grid>
 
 

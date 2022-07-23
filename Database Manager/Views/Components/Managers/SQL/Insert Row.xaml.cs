@@ -56,7 +56,7 @@ namespace Database_Manager.Views.Components.Managers.SQL
 
 
                 var stringQuery = $"INSERT INTO {currentTable} ({string.Join(", ", TableNames)})" +
-                    $"\n VALUES ({string.Join("' , '", TableNames)});";
+                    $"\n VALUES ('{string.Join("' , '", TableNames)}');";
 
                 Value_TextBox.Document.SetText(TextSetOptions.None, stringQuery);
                 SQL_Manager.sQL_ManagerContext.InsertRow_Popup.Visibility = Visibility.Collapsed;

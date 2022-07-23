@@ -86,16 +86,17 @@ namespace Database_Manager.Services.SQL
             {
 
                 connString = @"Server=localhost;User ID=debian-sys-maint;Password=oYM7Qh9SqgL3RD7T;Database=mydb";
-
+        
 
                 var query = $"SELECT * FROM {tableName} LIMIT {limitNumber};";
+           var adsd =     "SELECT TO* , ROW_NUMBER()  over (order by (SELECT NULL))  as `#️⃣` from dbo.Persons ;";
+                string query2 = "SELECT* , ROW_NUMBER() over (order by (SELECT NULL)) as `#️⃣` from " + tableName+";";
 
-
-
+                Debug.WriteLine($"query2:: {query2}");
                 DataTable dataTable = new DataTable();
 
                 MySqlConnection conn = new MySqlConnection(connString);
-                MySqlCommand cmd = new MySqlCommand(query, conn);
+                MySqlCommand cmd = new MySqlCommand(query2, conn);
                 conn.Open();
 
                 // create data adapter
@@ -111,7 +112,7 @@ namespace Database_Manager.Services.SQL
                 {
                     var element =enumerator.Current;
 
-                    Debug.WriteLine($"dataGrid.ItemsSource:: {element.ToBsonDocument()["_v"]}");
+                  //  Debug.WriteLine($"dataGrid.ItemsSource:: {element.ToBsonDocument()["_v"]}");
 
                 }
                 conn.Close();
@@ -135,19 +136,14 @@ namespace Database_Manager.Services.SQL
             SQL_Manager.sQL_ManagerContext.SQL_GridTableContainer.Children.Clear();
 
 
-
-
             Grid grid = new Grid { Name = "documents_Container" };
 
         
- 
-
-
 
 
             var sqlGrid = new SQL_DataGrid("", currentTable);
- 
 
+ 
             grid.Children.Add(sqlGrid);
 
 
@@ -169,7 +165,9 @@ namespace Database_Manager.Services.SQL
                 dataGrid.Columns.Add(new DataGridTextColumn()
                 {
                     Header = dt.Columns[i].ColumnName,
-                    Binding = new Binding { Path = new PropertyPath("[" + i.ToString() + "]") }
+                    Binding = new Binding { Path = new PropertyPath("[" + i.ToString() + "]") },
+                    Tag = dt.Columns[i].ColumnName,     
+                    
                 });
             }
 
