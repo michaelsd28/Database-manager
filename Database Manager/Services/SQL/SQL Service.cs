@@ -12,6 +12,8 @@ using System.Diagnostics;
 using MongoDB.Bson;
 using Database_Manager.Views.Components.Managers.SQL;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Database_Manager.Services.SQL
 {
@@ -46,6 +48,8 @@ namespace Database_Manager.Services.SQL
 
                         while (await reader.ReadAsync())
                         {
+
+                           
 
                             for (int x = 0; x < reader.FieldCount; x++)
                             {
@@ -86,35 +90,37 @@ namespace Database_Manager.Services.SQL
             {
 
                 connString = @"Server=localhost;User ID=debian-sys-maint;Password=oYM7Qh9SqgL3RD7T;Database=mydb";
+
+
+
         
 
                 var query = $"SELECT * FROM {tableName} LIMIT {limitNumber};";
-           var adsd =     "SELECT TO* , ROW_NUMBER()  over (order by (SELECT NULL))  as `#️⃣` from dbo.Persons ;";
-                string query2 = "SELECT* , ROW_NUMBER() over (order by (SELECT NULL)) as `#️⃣` from " + tableName+";";
+           var adsd = "SELECT ROW_NUMBER()  over (order by (SELECT NULL))  as loco, *  from  LIMIT {limitNumber} ;";
+                string query2 = $"SELECT * ,  ROW_NUMBER() over (order by (SELECT NULL)) as `#️⃣`  from  {tableName} ;";
 
-                Debug.WriteLine($"query2:: {query2}");
+ 
                 DataTable dataTable = new DataTable();
 
                 MySqlConnection conn = new MySqlConnection(connString);
-                MySqlCommand cmd = new MySqlCommand(query2, conn);
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+           
                 conn.Open();
 
                 // create data adapter
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 // this will query your database and return the result to your datatable
                 da.Fill(dataTable);
+
+ 
+
+        
+
+  
                 ToSourceCollection(dataTable, dataGrid);
 
                 
 
-                var enumerator = dataGrid.ItemsSource.GetEnumerator();
-                while (enumerator.MoveNext()) 
-                {
-                    var element =enumerator.Current;
-
-                  //  Debug.WriteLine($"dataGrid.ItemsSource:: {element.ToBsonDocument()["_v"]}");
-
-                }
                 conn.Close();
                 da.Dispose();
 
@@ -160,23 +166,51 @@ namespace Database_Manager.Services.SQL
         {
             dataGrid.Columns.Clear();
             dataGrid.AutoGenerateColumns = false;
-            for (int i = 0; i < dt.Columns.Count; i++)
+
+            dataGrid.Columns.Add(new DataGridTextColumn()
             {
+                Header = "#",
+                Binding = new Binding { Path = new PropertyPath("[" + 0.ToString() + "]") },
+
+
+            });
+
+
+            for (int i = 1; i < dt.Columns.Count+1; i++)
+            {
+
+
                 dataGrid.Columns.Add(new DataGridTextColumn()
                 {
-                    Header = dt.Columns[i].ColumnName,
+                    Header = dt.Columns[i-1].ColumnName,
                     Binding = new Binding { Path = new PropertyPath("[" + i.ToString() + "]") },
-                    Tag = dt.Columns[i].ColumnName,     
+                    Tag = dt.Columns[i-1].ColumnName,     
                     
                 });
             }
 
+
+
             var sourceCollection = new ObservableCollection<object>();
-            foreach (DataRow row in dt.Rows)
-                sourceCollection.Add(row.ItemArray);
+            var index = 1;
+            foreach (DataRow row in dt.Rows) {
+
+                var arr = row.ItemArray.ToList();
+
+                arr.Insert(0,index);
+
+    
+                sourceCollection.Add(arr);
+                index++;
+            }
+          
 
             dataGrid.ItemsSource = sourceCollection;
         }
+
+
+
+     
 
 
         internal async void LoadDatabases()

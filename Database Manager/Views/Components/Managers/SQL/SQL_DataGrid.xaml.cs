@@ -27,20 +27,12 @@ namespace Database_Manager.Views.Components.Managers.SQL
 
             LoadDataGrid(connString, tableName);
 
-
-   
-
-
            /* MyMenuItem.AddHandler(PointerPressedEvent, 
                 new PointerEventHandler(MyMenuItem_PointerPressed),true);*/
 
-
-
-
-
         }
 
-        int currentIndex = 0;
+        int currentIndex = 1;
 
         public void LoadDataGrid(string connString, string tableName)
         
@@ -52,11 +44,11 @@ namespace Database_Manager.Views.Components.Managers.SQL
             string rowFirstValue = "Value";
             string TableName = "My Table";
 
-            string query = $"SELECT * FROM {TableName} WHERE {columnName}=rowFirstValue ;";
+     
             _ = new DialogService()._DialogService
                 (
                 $"Do you want to delete row {dataGrid.SelectedIndex}?", 
-                $"You are running {query}",
+                $"Press sure to continue",
                 PrimaryButton: DeleteRowService
                 );
 
@@ -68,17 +60,17 @@ namespace Database_Manager.Views.Components.Managers.SQL
             
 
 
-            string columnName = "";
-            string rowFirstValue = "";
-            string TableName = "";
-            string query = $"`SELECT * FROM {TableName} WHERE {columnName}=rowFirstValue;`";
 
 
-           // await new SQL_Services().ExecQuery(query);
+            string TableName = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
+            string query = $"`; with cte(rownum) as ( select row_number() over(order by(SELECT NULL)) from {TableName}) " +
+                $"delete from cte where rownum = {dataGrid.SelectedIndex+1}`";
 
 
+            await new SQL_Services().ExecQuery(query);
 
-     
+            new SQL_Services().UpdateTableGrid(TableName);
+
 
         }
 
