@@ -280,70 +280,79 @@ namespace Database_Manager.Services
         {
 
 
-            try {
-
-            StackPanel stackPanel = new StackPanel();
-
-
-            object dbURI = ApplicationData.Current.LocalSettings.Values["CurrentURI"];
-
-            MongoClient dbClient = new MongoClient(dbURI.ToString());
-            var dbList = dbClient.ListDatabases().ToList();
-            List<string> dbNames = dbList.Select(db => (string)db["name"]).ToList();
-
-
-
-
-            var listCollections = dbNames.Select(ccollection => dbClient.GetDatabase(ccollection)
-               .ListCollectionsAsync()
-               .Result.ToListAsync()
-               .Result);
-
-
-
-
-
-            Dictionary<string, List<string>> databaseN_collection = new Dictionary<string, List<string>>();
-
-
-            foreach (var db in dbNames)
+            try
             {
 
-                var myDB = dbClient.GetDatabase(db);
-                string cname = string.Empty;
-                List<string> collections = new List<string>();
-                foreach (var item in myDB.ListCollectionsAsync().Result.ToListAsync().Result)
-                {
-
-                    cname = item["name"].ToString();
-                    collections.Add(cname);
-
-                }
-                databaseN_collection.Add(db, collections);
-
-            }
-
-
-
-            foreach (KeyValuePair<string, List<string>> entry in databaseN_collection)
-            {
-                Database_Treeview current = new Database_Treeview(entry.Key, entry.Value);
-
-                current.myTextHeader = entry.Key;
-
-                stackPanel.Children.Add(current);
-            }
-            return stackPanel;
-
-            }
-            catch (Exception ex) {
-
-           
-                
-                _ = new DialogService()._DialogService("Error trying to connect", ex.Message,GoBackError);
               
 
-                return null;    
+                StackPanel stackPanel = new StackPanel();
+
+
+                object dbURI = ApplicationData.Current.LocalSettings.Values["CurrentURI"];
+
+                MongoClient dbClient = new MongoClient(dbURI.ToString());
+               
+                var dbList = dbClient.ListDatabases().ToList();
+                List<string> dbNames = dbList.Select(db => (string)db["name"]).ToList();
+
+
+
+
+                var listCollections = dbNames.Select(ccollection => dbClient.GetDatabase(ccollection)
+                   .ListCollectionsAsync()
+                   .Result.ToListAsync()
+                   .Result);
+
+
+
+
+
+                Dictionary<string, List<string>> databaseN_collection = new Dictionary<string, List<string>>();
+
+
+                foreach (var db in dbNames)
+                {
+
+                    var myDB = dbClient.GetDatabase(db);
+                    string cname = string.Empty;
+                    List<string> collections = new List<string>();
+                    foreach (var item in myDB.ListCollectionsAsync().Result.ToListAsync().Result)
+                    {
+
+                        cname = item["name"].ToString();
+                        collections.Add(cname);
+
+                    }
+                    databaseN_collection.Add(db, collections);
+
+                }
+
+
+
+                foreach (KeyValuePair<string, List<string>> entry in databaseN_collection)
+                {
+                    Database_Treeview current = new Database_Treeview(entry.Key, entry.Value);
+
+                    current.myTextHeader = entry.Key;
+
+                    stackPanel.Children.Add(current);
+                }
+                return stackPanel;
+
+            }
+            catch (Exception ex)
+            {
+
+
+
+                _ = new DialogService()._DialogService("Error trying to connect", ex.Message, GoBackError);
+
+
+                return null;
+            }
+            finally 
+            { 
+            
             }
 
         }

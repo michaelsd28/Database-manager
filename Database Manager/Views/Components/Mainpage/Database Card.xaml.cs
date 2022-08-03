@@ -281,14 +281,28 @@ namespace Database_Manager.Resource_dictionaries.Main_page
         }
 
 
-        private void goSQLPage(string URI) 
+        private void goSQLPage(string URI)
         {
 
-            MainPage.MainPageContext.Frame.Navigate(typeof(SQL_Manager), URI);
+            try
+            {
+                MainPage.MainPageContext.LoadingIndicator.IsActive = true;  
+
+            } catch (Exception ex) 
+            {
+
+            } finally {
+
+                MainPage.MainPageContext.LoadingIndicator.IsActive = false;
+
+                MainPage.MainPageContext.Frame.Navigate(typeof(SQL_Manager), URI);
+            }
+
+          
 
         }
 
-        private void goRedisManager(string URI) {
+        private async void goRedisManager(string URI) {
 
             try
             {
@@ -301,21 +315,37 @@ namespace Database_Manager.Resource_dictionaries.Main_page
 
                 var completeURI = URI + "," + settingSTR;
 
-      
+                MainPage.MainPageContext.LoadingIndicator.IsActive = true;  
 
-                ConnectionMultiplexer.Connect($"{URI},{settingSTR}");
-                MainPage.MainPageContext.Frame.Navigate(typeof(Redis_Manager), URI);
+                await ConnectionMultiplexer.ConnectAsync($"{URI},{settingSTR}");
+
+
+             
 
 
             }
             catch (Exception ex)
             {
 
-                _ = new DialogService()._DialogService("Redis server was not found", ex.Message);
+                _ = new DialogService()._DialogService("Redis server was not found", ex.Message,GoToMainFrame);
                 return;
 
             }
+            finally 
+            {
+                MainPage.MainPageContext.LoadingIndicator.IsActive = false;
+                MainPage.MainPageContext.Frame.Navigate(typeof(Redis_Manager), URI);
 
+            }
+
+
+            
+
+        }
+
+        private void GoToMainFrame(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        {
+            MainPage.MainPageContext.Frame.GoBack();
         }
     }
 }

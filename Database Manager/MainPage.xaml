@@ -200,6 +200,7 @@
 
 
             <views:Database_stack/>
+            <ProgressRing Width="60" Height="60" x:Name="LoadingIndicator" IsActive="False" x:FieldModifier="Public" />
 
 
         </Grid>

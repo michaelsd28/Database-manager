@@ -31,9 +31,9 @@ namespace Database_Manager.Services.SQL
         {
             try
             {
-                string connString = @"Server=localhost;User ID=debian-sys-maint;Password=oYM7Qh9SqgL3RD7T;Database=mydb";
+                string connString = @"Server=localhost;User ID=root;Password=admin;Database=mydb";
 
-    
+
 
 
                 using (var conn = new MySqlConnection(connString))
@@ -48,13 +48,15 @@ namespace Database_Manager.Services.SQL
 
                         while (await reader.ReadAsync())
                         {
-
+                    
                            
 
                             for (int x = 0; x < reader.FieldCount; x++)
                             {
 
                                 var ReaderValue = reader.GetValue(x).ToString() ;
+
+                                Debug.WriteLine("ReaderValue:: " + ReaderValue);
 
                             }
 
@@ -89,14 +91,14 @@ namespace Database_Manager.Services.SQL
             try
             {
 
-                connString = @"Server=localhost;User ID=debian-sys-maint;Password=oYM7Qh9SqgL3RD7T;Database=mydb";
+                 connString = @"Server=localhost;User ID=root;Password=admin;Database=mydb";
 
 
 
-        
+
 
                 var query = $"SELECT * FROM {tableName} LIMIT {limitNumber};";
-           var adsd = "SELECT ROW_NUMBER()  over (order by (SELECT NULL))  as loco, *  from  LIMIT {limitNumber} ;";
+       
                 string query2 = $"SELECT * ,  ROW_NUMBER() over (order by (SELECT NULL)) as `#️⃣`  from  {tableName} ;";
 
  
@@ -127,8 +129,6 @@ namespace Database_Manager.Services.SQL
             }
             catch (Exception ex)
             {
-
-
                 _ = new DialogService()._DialogService("Display grid error", ex.Message);
             }
 
@@ -218,8 +218,10 @@ namespace Database_Manager.Services.SQL
 
             try
             {
-                string connString = @"Server=localhost;User ID=debian-sys-maint;Password=oYM7Qh9SqgL3RD7T;Database=mydb";
-                //     var query = "SELECT * FROM Persons;";
+
+                string connString = @"Server=localhost;User ID=root;Password=admin;Database=mydb";
+                //  string connString = @"Server=localhost;User ID=root;Password=";
+
                 var query = "SHOW DATABASES;";
 
 
@@ -249,7 +251,7 @@ namespace Database_Manager.Services.SQL
             catch (Exception ex)
             {
 
-                _ = new DialogService()._DialogService("Error", ex.Message);
+                _ = new DialogService()._DialogService("Error LoadDatabases", ex.Message);
             }
 
         }
@@ -261,7 +263,7 @@ namespace Database_Manager.Services.SQL
         {
             try
             {
-                string connString = @"Server=localhost;User ID=debian-sys-maint;Password=oYM7Qh9SqgL3RD7T;Database=mydb";
+                string connString = @"Server=localhost;User ID=root;Password=admin;Database=mydb";
                 //     var query = "SELECT * FROM Persons;";
                 string query = $"SHOW TABLES FROM {DBName};";
 

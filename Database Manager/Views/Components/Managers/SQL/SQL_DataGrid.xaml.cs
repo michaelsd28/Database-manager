@@ -11,6 +11,7 @@ using System;
 using System.Diagnostics;
 using MongoDB.Bson;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 // The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 
@@ -43,12 +44,12 @@ namespace Database_Manager.Views.Components.Managers.SQL
             string columnName = "Column";
             string rowFirstValue = "Value";
             string TableName = "My Table";
+            string query = $"DELETE FROM Persons WHERE {GetDelString()} ;";
 
-     
             _ = new DialogService()._DialogService
                 (
-                $"Do you want to delete row {dataGrid.SelectedIndex}?", 
-                $"Press sure to continue",
+                title: $"Do you want to delete row {dataGrid.SelectedIndex}?", 
+                content: $"Executing: \n{query} \n*multiple rows could be deleted*",
                 PrimaryButton: DeleteRowService
                 );
 
@@ -57,20 +58,49 @@ namespace Database_Manager.Views.Components.Managers.SQL
         private async void DeleteRowService(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
 
-            
 
+       
 
-
+    
+             
 
             string TableName = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
-            string query = $"`; with cte(rownum) as ( select row_number() over(order by(SELECT NULL)) from {TableName}) " +
-                $"delete from cte where rownum = {dataGrid.SelectedIndex+1}`";
+
+           // string query = $"DELETE T1 FROM(SELECT *, ROW_NUMBER() OVER(ORDER by(SELECT NULL)) AS Row_Numbers FROM Persons) as T1 WHERE T1.Row_Numbers = 5; ";
+
+            string query = $"DELETE FROM Persons WHERE {GetDelString()} ;";
 
 
-            await new SQL_Services().ExecQuery(query);
+           await new SQL_Services().ExecQuery(query);
 
             new SQL_Services().UpdateTableGrid(TableName);
 
+
+        }
+
+
+
+
+        public string GetDelString() {
+
+            var valueList = dataGrid.SelectedItem.ToJson().ToString();
+            var keyList = dataGrid.Columns.Select(x => x.Header).Skip(1).ToArray();
+            var deleteString = "";
+
+            var valueListColl = JsonConvert.DeserializeObject<List<string>>(valueList).Skip(1).ToArray();
+
+            for (int x = 0; x < keyList.Count(); x++)
+            {
+
+                if (keyList.Count() == 1) return $"{keyList[x]}='{valueListColl[x]}' ";
+
+                deleteString += $"{keyList[x]}='{valueListColl[x]}' AND ";
+
+            }
+
+            deleteString = deleteString.Substring(0, deleteString.Length - 4);
+
+            return deleteString;    
 
         }
 

@@ -42,17 +42,8 @@ namespace Database_Manager.Views.Components.Managers.SQL
                 var currentTable  = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
 
 
-                var TableNames = new List<string>();
-
-
-                    var columns = SQL_DataGrid.sQL_DataGridContext.dataGrid.Columns;
-
-                foreach (var column in columns)
-                {
-                    TableNames.Add(column.Header.ToString());
-
-                }
-
+                var columnsGrid = SQL_DataGrid.sQL_DataGridContext.dataGrid.Columns;
+                var TableNames = columnsGrid.Skip(1).ToList().Select(x => x.Header); ;
 
 
                 var stringQuery = $"INSERT INTO {currentTable} ({string.Join(", ", TableNames)})" +
