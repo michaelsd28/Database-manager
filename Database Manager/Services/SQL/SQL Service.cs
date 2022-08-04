@@ -213,11 +213,13 @@ namespace Database_Manager.Services.SQL
      
 
 
-        internal async void LoadDatabases()
+        internal async Task  LoadDatabases()
         {
 
             try
             {
+
+                SQL_Manager.sQL_ManagerContext.DatabaseStackPanel.Children.Clear();
 
                 string connString = @"Server=localhost;User ID=root;Password=admin;Database=mydb";
                 //  string connString = @"Server=localhost;User ID=root;Password=";

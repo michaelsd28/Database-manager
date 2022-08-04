@@ -31,7 +31,9 @@ namespace Database_Manager.Views.Components.Managers.SQL
         {
             insert_RowContext = this;
             InitializeComponent();
-      
+
+
+           TTableName.Text =  new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
         }
 
         public void LoadTextBox()

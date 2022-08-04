@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Database_Manager.Views.Managers;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -42,5 +43,34 @@ namespace Database_Manager.Views.Components.Managers.SQL.tree
         {
             this.InitializeComponent();
         }
+
+        private void BAddTable(object sender, RoutedEventArgs e)
+        {
+
+            ToggleGrid(SQL_Manager.sQL_ManagerContext.CreateTable_Popup);
+      
+        }
+
+
+        private void ToggleGrid(Grid createTable_Popup) 
+        {
+
+            if (createTable_Popup.Visibility == Visibility.Collapsed)
+            {
+                createTable_Popup.Visibility = Visibility.Visible;
+
+            }
+            else {
+                createTable_Popup.Visibility = Visibility.Collapsed;
+
+            }
+      
+            
+
+
+      
+
+        }
+      
     }
 }

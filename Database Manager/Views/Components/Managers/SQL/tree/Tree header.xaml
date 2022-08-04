@@ -29,7 +29,7 @@
                    FontFamily="Roboto" 
                    Text="{Binding TextHeader,ElementName=HeaderRoot}"/>
 
-        <Button Padding="5,0,5,3" > +</Button>
+        <Button Padding="5,0,5,3"  Click="BAddTable"> +</Button>
         
         
     </StackPanel>

@@ -43,12 +43,12 @@ namespace Database_Manager.Views.Components.Managers.SQL
         {
             string columnName = "Column";
             string rowFirstValue = "Value";
-            string TableName = "My Table";
+      
             string query = $"DELETE FROM Persons WHERE {GetDelString()} ;";
 
             _ = new DialogService()._DialogService
                 (
-                title: $"Do you want to delete row {dataGrid.SelectedIndex}?", 
+                title: $"Do you want to delete row {dataGrid.SelectedIndex+1}?", 
                 content: $"Executing: \n{query} \n*multiple rows could be deleted*",
                 PrimaryButton: DeleteRowService
                 );
@@ -83,6 +83,8 @@ namespace Database_Manager.Views.Components.Managers.SQL
 
         public string GetDelString() {
 
+            try { 
+
             var valueList = dataGrid.SelectedItem.ToJson().ToString();
             var keyList = dataGrid.Columns.Select(x => x.Header).Skip(1).ToArray();
             var deleteString = "";
@@ -100,7 +102,13 @@ namespace Database_Manager.Views.Components.Managers.SQL
 
             deleteString = deleteString.Substring(0, deleteString.Length - 4);
 
-            return deleteString;    
+            return deleteString;
+
+            }
+            catch (Exception ex) {
+                _ = new DialogService()._DialogService("Error Selecting", ex.Message);
+                return "";
+            }
 
         }
 

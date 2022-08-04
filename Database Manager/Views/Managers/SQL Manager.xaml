@@ -346,6 +346,17 @@
                 <SQLComponent:Insert_Row  />
                 
             </Grid>
+            <Grid 
+
+                    HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="50,0,0,0"
+                Visibility="Collapsed"
+                x:Name="CreateTable_Popup" x:FieldModifier="Public">
+
+                <SQLComponent:Insert_Table  />
+
+            </Grid>
 
             <Popup 
                 IsLightDismissEnabled="True"

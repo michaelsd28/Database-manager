@@ -1,4 +1,5 @@
-﻿using Database_Manager.Services.SQL;
+﻿using Database_Manager.Services;
+using Database_Manager.Services.SQL;
 using Database_Manager.Views.Components.Managers.Redis;
 using Database_Manager.Views.Managers;
 using MongoDB.Bson;
@@ -42,13 +43,28 @@ namespace Database_Manager.Views.Components.Managers.SQL.tree
         public Table_button()
         {
             InitializeComponent();
+
+  
+
+
         }
 
         private void BTable_Click(object sender, RoutedEventArgs e)
        
            => new SQL_Services().UpdateTableGrid(TableName);
-            
-        
 
+        private void BDeleteTable(object sender, RoutedEventArgs e)
+        {
+
+            _ = new DialogService()._DialogService($"Do you want to delete *{TableName}*?", PrimaryButton: DeleteTableService );
+           
+        }
+
+        private async void DeleteTableService(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        {
+         
+           await new SQL_Services().ExecQuery($"DROP TABLE {TableName};");
+             new SQL_Services().LoadDatabases();
+        }
     }
 }

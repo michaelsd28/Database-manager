@@ -198,6 +198,9 @@
     <Compile Include="Views\Components\Managers\SQL\Insert Row.xaml.cs">
       <DependentUpon>Insert Row.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Components\Managers\SQL\Insert Table.xaml.cs">
+      <DependentUpon>Insert Table.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Components\Managers\SQL\Page Controller.xaml.cs">
       <DependentUpon>Page Controller.xaml</DependentUpon>
     </Compile>
@@ -461,6 +464,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Components\Managers\SQL\Insert Row.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Components\Managers\SQL\Insert Table.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
