@@ -172,5 +172,10 @@ namespace Database_Manager.Views.Components.Managers.SQL
                 _ = new DialogService()._DialogService    (    "Error sorting",      ex.Message    );
             }
         }
+
+        private void UpdateRow(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

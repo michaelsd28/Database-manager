@@ -63,9 +63,12 @@
                         <Setter.Value>
                             
                             <MenuFlyout>
-                                <MenuFlyoutItem x:Name="MyMenuItem"
+                                <MenuFlyoutItem x:Name="FlyOut_DeleteRow"
                                 Click="DeleteRow_FlyOut"
                                     Text="Delete row" />
+                                <MenuFlyoutItem x:Name="FlyOut_UpdateRow"
+                                       Click="UpdateRow"
+                                    Text="Update row" />
                             </MenuFlyout>
                         </Setter.Value>
                     </Setter>
