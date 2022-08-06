@@ -27,7 +27,7 @@ namespace Database_Manager.Services.SQL
         /// <param name="DBName"></param>
         /// <returns></returns>
 
-        public async Task ExecQuery(string query) 
+        public async Task ExecQuery(string query)
         {
             try
             {
@@ -48,13 +48,13 @@ namespace Database_Manager.Services.SQL
 
                         while (await reader.ReadAsync())
                         {
-                    
-                           
+
+
 
                             for (int x = 0; x < reader.FieldCount; x++)
                             {
 
-                                var ReaderValue = reader.GetValue(x).ToString() ;
+                                var ReaderValue = reader.GetValue(x).ToString();
 
                                 Debug.WriteLine("ReaderValue:: " + ReaderValue);
 
@@ -72,7 +72,14 @@ namespace Database_Manager.Services.SQL
 
         }
 
+        public async void DelRow(string DelString) 
+        {
+            string TableName = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
+            string query = $"DELETE FROM {TableName} WHERE {DelString} ;";
+            await ExecQuery(query);
+            new SQL_Services().UpdateTableGrid(TableName);
 
+        }
 
 
         public StackPanel GetLeftMenu(string DBName = "")
@@ -209,7 +216,7 @@ namespace Database_Manager.Services.SQL
         }
 
 
-
+        
      
 
 

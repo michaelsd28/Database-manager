@@ -12,6 +12,8 @@ using System.Diagnostics;
 using MongoDB.Bson;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using Database_Manager.Views.Managers;
+using Windows.UI.Text;
 
 // The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 
@@ -41,10 +43,11 @@ namespace Database_Manager.Views.Components.Managers.SQL
 
         private void DeleteRow_FlyOut(object sender, RoutedEventArgs e)
         {
-            string columnName = "Column";
+   
             string rowFirstValue = "Value";
-      
-            string query = $"DELETE FROM Persons WHERE {GetDelString()} ;";
+            string TableName = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
+
+            string query = $"DELETE FROM {TableName} WHERE {GetDelString()} ;";
 
             _ = new DialogService()._DialogService
                 (
@@ -55,28 +58,11 @@ namespace Database_Manager.Views.Components.Managers.SQL
 
         }
 
-        private async void DeleteRowService(ContentDialog sender, ContentDialogButtonClickEventArgs args)
-        {
+        private void DeleteRowService(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+
+         => new SQL_Services().DelRow(GetDelString());
 
 
-       
-
-    
-             
-
-            string TableName = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
-
-           // string query = $"DELETE T1 FROM(SELECT *, ROW_NUMBER() OVER(ORDER by(SELECT NULL)) AS Row_Numbers FROM Persons) as T1 WHERE T1.Row_Numbers = 5; ";
-
-            string query = $"DELETE FROM Persons WHERE {GetDelString()} ;";
-
-
-           await new SQL_Services().ExecQuery(query);
-
-            new SQL_Services().UpdateTableGrid(TableName);
-
-
-        }
 
 
 
@@ -173,9 +159,13 @@ namespace Database_Manager.Views.Components.Managers.SQL
             }
         }
 
-        private void UpdateRow(object sender, RoutedEventArgs e)
+        private void UpdateRow_FlyOut(object sender, RoutedEventArgs e)
         {
+            SQL_Manager.sQL_ManagerContext.UpdateRow_Popup.Visibility = Visibility.Visible;
 
+            var updateString = Update_Row.update_RowContext.Value_TextBox_Loaded();
+
+             Update_Row.update_RowContext.Value_TextBox.Document.SetText(TextSetOptions.None, updateString);
         }
     }
 }

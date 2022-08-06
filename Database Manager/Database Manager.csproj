@@ -191,7 +191,6 @@
     <Compile Include="Views\Components\Managers\SQL\Create Database.xaml.cs">
       <DependentUpon>Create Database.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Components\Managers\SQL\Cusomer.cs" />
     <Compile Include="Views\Components\Managers\SQL\Import Database.xaml.cs">
       <DependentUpon>Import Database.xaml</DependentUpon>
     </Compile>
@@ -239,6 +238,9 @@
     </Compile>
     <Compile Include="Views\Components\Managers\SQL\tree\Tree header.xaml.cs">
       <DependentUpon>Tree header.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\Managers\SQL\Update Row.xaml.cs">
+      <DependentUpon>Update Row.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Dialogs\Server creation\RedisDB CreateConn.xaml.cs">
       <DependentUpon>RedisDB CreateConn.xaml</DependentUpon>
@@ -528,6 +530,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Components\Managers\SQL\tree\Tree header.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Components\Managers\SQL\Update Row.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

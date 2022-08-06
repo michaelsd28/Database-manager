@@ -67,7 +67,7 @@
                                 Click="DeleteRow_FlyOut"
                                     Text="Delete row" />
                                 <MenuFlyoutItem x:Name="FlyOut_UpdateRow"
-                                       Click="UpdateRow"
+                                       Click="UpdateRow_FlyOut"
                                     Text="Update row" />
                             </MenuFlyout>
                         </Setter.Value>
