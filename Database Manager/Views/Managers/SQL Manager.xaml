@@ -273,8 +273,10 @@
                     <TextBox 
                         Margin="5,0,5,0" 
                         Canvas.ZIndex="5"  x:Name="TextBoxFilter" Height="20" Width="190" 
-                        PlaceholderText="Search value "
+                      PlaceholderText=" {&quot;Column&quot;:&quot; Search value&quot;} "
                         IsSpellCheckEnabled="False"
+                        TextChanged="TextBoxFilter_TextChanged"
+                        
           
                  
                         />

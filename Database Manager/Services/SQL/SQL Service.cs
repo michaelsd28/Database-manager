@@ -14,6 +14,7 @@ using Database_Manager.Views.Components.Managers.SQL;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
+using Newtonsoft.Json;
 
 namespace Database_Manager.Services.SQL
 {
@@ -101,12 +102,8 @@ namespace Database_Manager.Services.SQL
                  connString = @"Server=localhost;User ID=root;Password=admin;Database=mydb";
 
 
-
-
-
                 var query = $"SELECT * FROM {tableName} LIMIT {limitNumber};";
        
-                string query2 = $"SELECT * ,  ROW_NUMBER() over (order by (SELECT NULL)) as `#️⃣`  from  {tableName} ;";
 
  
                 DataTable dataTable = new DataTable();
@@ -117,21 +114,14 @@ namespace Database_Manager.Services.SQL
                 conn.Open();
 
                 // create data adapter
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                MySqlDataAdapter sqlAdapter = new MySqlDataAdapter(cmd);
                 // this will query your database and return the result to your datatable
-                da.Fill(dataTable);
+                sqlAdapter.Fill(dataTable);
 
- 
-
-        
-
-  
                 ToSourceCollection(dataTable, dataGrid);
 
-                
-
                 conn.Close();
-                da.Dispose();
+                sqlAdapter.Dispose();
 
             }
             catch (Exception ex)
@@ -143,34 +133,66 @@ namespace Database_Manager.Services.SQL
 
         }
 
+
+        internal void SearchValue(string ColumnName,string SearchValue) 
+        {
+
+
+          
+            var columns = SQL_DataGrid.sQL_DataGridContext.dataGrid.Columns.Select(x => x.Header.ToString()).ToArray();
+            var rows = SQL_DataGrid.sQL_DataGridContext.dataGrid.ItemsSource;
+            var rowList = new List<string[]>();
+
+            int searchValueIndex = 0;
+            for (int i = 0; i < columns.Count(); i++)
+            {
+
+                if (columns[i] == ColumnName)
+                    searchValueIndex = i;
+                
+
+            }
+
+
+            foreach (var row in rows)
+            {
+                rowList.Add(JsonConvert.DeserializeObject<string[]>(row.ToJson().ToString()));
+            }
+
+            var filterList = rowList.Where(x => x[searchValueIndex] == SearchValue );
+
+            var sourceCollection = filterList;
+
+
+
+
+            SQL_DataGrid.sQL_DataGridContext.dataGrid.ItemsSource = sourceCollection;
+
+
+        }
+
         internal void UpdateTableGrid(string currentTable)
         {
 
             SQL_Manager.sQL_ManagerContext.SQL_GridTableContainer.Children.Clear();
-
-
             Grid grid = new Grid { Name = "documents_Container" };
-
-        
 
 
             var sqlGrid = new SQL_DataGrid("", currentTable);
-
- 
             grid.Children.Add(sqlGrid);
 
 
             new SQLLocalSettings().UpdateCurrentTable(currentTable);
-
-       
             SQL_Manager.sQL_ManagerContext.SQL_GridTableContainer.Children.Add(grid);
-
         
         }
         
 
         private void ToSourceCollection(DataTable dt, DataGrid dataGrid)
         {
+
+      
+
             dataGrid.Columns.Clear();
             dataGrid.AutoGenerateColumns = false;
 
@@ -199,8 +221,14 @@ namespace Database_Manager.Services.SQL
 
 
             var sourceCollection = new ObservableCollection<object>();
+
+    
+
+
             var index = 1;
             foreach (DataRow row in dt.Rows) {
+
+      
 
                 var arr = row.ItemArray.ToList();
 
@@ -210,7 +238,11 @@ namespace Database_Manager.Services.SQL
                 sourceCollection.Add(arr);
                 index++;
             }
-          
+
+
+
+    
+
 
             dataGrid.ItemsSource = sourceCollection;
         }

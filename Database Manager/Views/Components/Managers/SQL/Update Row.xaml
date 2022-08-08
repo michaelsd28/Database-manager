@@ -49,6 +49,7 @@
                      x:Name="Value_TextBox" 
                      Margin="10" Height="160" 
                      x:FieldModifier="Public"
+            FontSize="14"
             FontFamily="Roboto"
             />
 

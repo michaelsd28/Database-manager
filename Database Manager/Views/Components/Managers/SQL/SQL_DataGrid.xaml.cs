@@ -1,14 +1,12 @@
 ﻿using Database_Manager.Services;
 using Database_Manager.Services.SQL;
 using Microsoft.Toolkit.Uwp.UI.Controls;
-using System.Collections.ObjectModel;
 
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using System.Linq.Dynamic;
 using System.Linq;
 using System;
-using System.Diagnostics;
 using MongoDB.Bson;
 using System.Collections.Generic;
 using Newtonsoft.Json;
@@ -30,16 +28,21 @@ namespace Database_Manager.Views.Components.Managers.SQL
 
             LoadDataGrid(connString, tableName);
 
-           /* MyMenuItem.AddHandler(PointerPressedEvent, 
-                new PointerEventHandler(MyMenuItem_PointerPressed),true);*/
-
+            //new SQL_Services().SearchValue("PersonID", "3",   dataGrid);
         }
 
-        int currentIndex = 1;
+
+
+
+        private void DeleteRowService(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+            => new SQL_Services().DelRow(GetDelString());
 
         public void LoadDataGrid(string connString, string tableName)
-        
-           => new SQL_Services().DisplayTable_DataGrid(connString, tableName, dataGrid);
+            => new SQL_Services().DisplayTable_DataGrid(connString, tableName, dataGrid);
+
+
+
+
 
         private void DeleteRow_FlyOut(object sender, RoutedEventArgs e)
         {
@@ -58,9 +61,6 @@ namespace Database_Manager.Views.Components.Managers.SQL
 
         }
 
-        private void DeleteRowService(ContentDialog sender, ContentDialogButtonClickEventArgs args)
-
-         => new SQL_Services().DelRow(GetDelString());
 
 
 

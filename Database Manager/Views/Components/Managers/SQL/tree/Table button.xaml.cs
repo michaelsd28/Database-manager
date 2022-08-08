@@ -1,24 +1,7 @@
 ﻿using Database_Manager.Services;
 using Database_Manager.Services.SQL;
-using Database_Manager.Views.Components.Managers.Redis;
-using Database_Manager.Views.Managers;
-using MongoDB.Bson;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 // The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 
@@ -56,7 +39,10 @@ namespace Database_Manager.Views.Components.Managers.SQL.tree
         private void BDeleteTable(object sender, RoutedEventArgs e)
         {
 
-            _ = new DialogService()._DialogService($"Do you want to delete *{TableName}*?", PrimaryButton: DeleteTableService );
+            _ = new DialogService()._DialogService(
+                title:  $"Do you want to delete *{TableName}*?", 
+                PrimaryButton:  DeleteTableService 
+                );
            
         }
 
@@ -64,7 +50,7 @@ namespace Database_Manager.Views.Components.Managers.SQL.tree
         {
          
            await new SQL_Services().ExecQuery($"DROP TABLE {TableName};");
-             new SQL_Services().LoadDatabases();
+            _ = new SQL_Services().LoadDatabases();
         }
     }
 }

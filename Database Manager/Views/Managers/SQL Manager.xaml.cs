@@ -2,22 +2,15 @@
 using Database_Manager.Services.SQL;
 using Database_Manager.Views.Components.Managers.SQL;
 using MongoDB.Bson;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Threading;
 using Windows.ApplicationModel.Core;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -123,7 +116,29 @@ namespace Database_Manager.Views.Managers
         {
             try
             {
-          
+
+                var searchText = TextBoxFilter.Text;
+
+                if (searchText == "") {
+
+                    string TableName = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
+                    new SQL_Services().UpdateTableGrid(TableName);
+                    return;
+                };
+
+                var keyValues = JsonConvert.DeserializeObject<Dictionary<string, string>>(searchText);
+
+                var columnName = keyValues.Keys.ToArray()[0];
+                var searchValue = keyValues[columnName];
+
+                Debug.WriteLine($"columnName:: {columnName} and value:: {searchValue}");
+
+
+
+
+                new SQL_Services().SearchValue(columnName, searchValue);
+
+
 
             }
             catch (Exception ex)
@@ -141,8 +156,18 @@ namespace Database_Manager.Views.Managers
 
             var CurrentTable = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
             new SQL_Services().UpdateTableGrid(CurrentTable);
-        } 
-        
+        }
+
+        private void TextBoxFilter_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (TextBoxFilter.Text == "")
+            {
+
+                string TableName = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
+                new SQL_Services().UpdateTableGrid(TableName);
+                return;
+            };
+        }
     }
 }
 
