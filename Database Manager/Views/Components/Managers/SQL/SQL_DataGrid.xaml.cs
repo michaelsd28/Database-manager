@@ -20,13 +20,13 @@ namespace Database_Manager.Views.Components.Managers.SQL
     public sealed partial class SQL_DataGrid : UserControl
     {
        public static SQL_DataGrid sQL_DataGridContext { get; set; }
-        public SQL_DataGrid(string connString, string tableName)
+        public SQL_DataGrid()
         {
             sQL_DataGridContext = this;
             InitializeComponent();
 
 
-            LoadDataGrid(connString, tableName);
+       //     LoadDataGrid(connString, tableName);
 
             //new SQL_Services().SearchValue("PersonID", "3",   dataGrid);
         }
@@ -37,10 +37,7 @@ namespace Database_Manager.Views.Components.Managers.SQL
         private void DeleteRowService(ContentDialog sender, ContentDialogButtonClickEventArgs args)
             => new SQL_Services().DelRow(GetDelString());
 
-        public void LoadDataGrid(string connString, string tableName)
-            => new SQL_Services().DisplayTable_DataGrid(connString, tableName, dataGrid);
-
-
+ 
 
 
 
@@ -48,7 +45,7 @@ namespace Database_Manager.Views.Components.Managers.SQL
         {
    
             string rowFirstValue = "Value";
-            string TableName = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
+            string TableName = new SQLLocalSettings().GetLocalSettings_Bson()["CurrentTable"].ToString();
 
             string query = $"DELETE FROM {TableName} WHERE {GetDelString()} ;";
 

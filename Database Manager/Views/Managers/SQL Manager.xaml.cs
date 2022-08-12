@@ -51,18 +51,21 @@ namespace Database_Manager.Views.Managers
 
       
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
-
-            String uri = String.Empty;
-
-            new SQL_Services().LoadDatabases();
+            await new SQL_Services().LoadDatabases();
 
 
             if (e.Parameter != null)
             {
                 string parametersPassed = e.Parameter.ToString();
-                uri = parametersPassed.Replace("URI: ", "");
+                string uri = parametersPassed.Replace("URI: ", "");
+
+
+            //   new SQLLocalSettings().UpdateURI(uri);
+
+
+
 
             }
 
@@ -72,7 +75,7 @@ namespace Database_Manager.Views.Managers
 
         private void SQL_Manager_SizeChanged(object sender, SizeChangedEventArgs e)
         
-          =>  new SQLManagerServices().LeftMenu_SizeChanged(LeftPopUp, LeftBar_GridContainer);
+          =>  new SQLManagerService_Helper().LeftMenu_SizeChanged(LeftPopUp, LeftBar_GridContainer);
         
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -98,7 +101,7 @@ namespace Database_Manager.Views.Managers
 
 
             Insert_Row.insert_RowContext.LoadTextBox();
-            new SQLManagerServices().ToggleGrid(InsertRow_Popup);
+            new SQLManagerService_Helper().ToggleGrid(InsertRow_Popup);
         }
 
 
@@ -106,56 +109,46 @@ namespace Database_Manager.Views.Managers
         
 
         private void BExpandLeftMenu(object sender, RoutedEventArgs e)
-        
-
-          =>  new SQLManagerServices().TogglePopup(LeftPopUp);
+          =>  new SQLManagerService_Helper().TogglePopup(LeftPopUp);
 
         
 
-        private void BSearchValue(object sender, RoutedEventArgs e)
+        private async void BSearchValue(object sender, RoutedEventArgs e)
         {
             try
             {
-
+                string TableName = new SQLLocalSettings().GetLocalSettings_Bson()["CurrentTable"].ToString();
                 var searchText = TextBoxFilter.Text;
 
                 if (searchText == "") {
-
-                    string TableName = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
-                    new SQL_Services().UpdateTableGrid(TableName);
-                    return;
+                   await new SQL_Services().UpdateTableGrid(TableName);
+                   return;
                 };
 
-                var keyValues = JsonConvert.DeserializeObject<Dictionary<string, string>>(searchText);
+                var SearchDictionary = JsonConvert.DeserializeObject<Dictionary<string, string>>(searchText);
 
-                var columnName = keyValues.Keys.ToArray()[0];
-                var searchValue = keyValues[columnName];
+                var columnName = SearchDictionary.Keys.ToArray()[0];
+                var searchValue = SearchDictionary[columnName];
 
-                Debug.WriteLine($"columnName:: {columnName} and value:: {searchValue}");
+                SearchDictionary.Add("SearchColumn", columnName);
+                SearchDictionary.Add("SearchTerm", searchValue);
 
-
-
-
-                new SQL_Services().SearchValue(columnName, searchValue);
-
-
+                await new SQL_Services().UpdateTableGrid(TableName, SearchDictionary);
 
             }
             catch (Exception ex)
             {
 
-                _ = new DialogService()._DialogService("Select error", ex.Message);
+                _ = new DialogService()._DialogService("Search value error", ex.Message);
 
             }
 
         }
 
-        private void RefreshTable_Button(object sender, RoutedEventArgs e)
-
+        private async void RefreshTable_Button(object sender, RoutedEventArgs e)
         {
-
-            var CurrentTable = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
-            new SQL_Services().UpdateTableGrid(CurrentTable);
+            var CurrentTable = new SQLLocalSettings().GetLocalSettings_Bson()["CurrentTable"].ToString();
+           await new SQL_Services().UpdateTableGrid(CurrentTable);
         }
 
         private void TextBoxFilter_TextChanged(object sender, TextChangedEventArgs e)
@@ -163,7 +156,7 @@ namespace Database_Manager.Views.Managers
             if (TextBoxFilter.Text == "")
             {
 
-                string TableName = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
+                string TableName = new SQLLocalSettings().GetLocalSettings_Bson()["CurrentTable"].ToString();
                 new SQL_Services().UpdateTableGrid(TableName);
                 return;
             };
@@ -172,7 +165,7 @@ namespace Database_Manager.Views.Managers
 }
 
 
-public  class SQLManagerServices{
+public  class SQLManagerService_Helper{
 
 
     public void ToggleGrid(Grid grid) 

@@ -32,9 +32,9 @@ namespace Database_Manager.Views.Components.Managers.SQL.tree
 
         }
 
-        private void BTable_Click(object sender, RoutedEventArgs e)
+        private async void BTable_Click(object sender, RoutedEventArgs e)
        
-           => new SQL_Services().UpdateTableGrid(TableName);
+           => await new SQL_Services().UpdateTableGrid(TableName);
 
         private void BDeleteTable(object sender, RoutedEventArgs e)
         {

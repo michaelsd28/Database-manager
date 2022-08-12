@@ -26,7 +26,7 @@ namespace Database_Manager.Views.Components.Managers.MongoDB
 
             string newDocument = SingleTextBox.Text;
 
-            new MongoDB_DatabaseService().updateDocument(CurrentDocument, newDocument);
+            new MongoDB_DatabaseService().UpdateDocument(CurrentDocument, newDocument);
             SingleTextBox.IsEnabled = false;
 
 

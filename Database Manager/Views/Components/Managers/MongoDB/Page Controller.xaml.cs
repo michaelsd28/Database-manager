@@ -57,13 +57,13 @@ namespace Database_Manager.Views.Components.Managers.MongoDB
 
 
 
-        public void ChangePageControl(int pagaFrom, int pagaTo) 
+        public async void ChangePageControl(int pagaFrom, int pagaTo) 
         
         {
 
         
 
-            List<object> RangedList = new MongoDB_DatabaseService().GetDocList_WRange(pagaFrom, pagaTo);
+            List<object> RangedList = await new MongoDB_DatabaseService().GetDocList_WRange(pagaFrom, pagaTo);
 
             if (RangedList == null || RangedList.Count == 0)
             {
@@ -71,7 +71,7 @@ namespace Database_Manager.Views.Components.Managers.MongoDB
                 _ = new DialogService()._DialogService("No more documents", "please try search");
                 return;
             }
-            new MongoDB_DatabaseService().UpdateDocumentList(RangedList);
+          await  new MongoDB_DatabaseService().UpdateDocumentList(RangedList);
 
 
         }

@@ -1,6 +1,9 @@
 ﻿using Database_Manager.Services;
 using Database_Manager.Services.SQL;
+using JsonFormatterPlus;
+using MongoDB.Bson;
 using MySqlConnector;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -45,11 +48,23 @@ namespace Database_Manager.Views.Components.Managers.SQL.tree
             InitializeComponent();
             DBName = MyDBName;
             LoadTables();
+
+            SQLExpander.AddHandler(PointerPressedEvent,
+                new PointerEventHandler(UpdateCurrentDB),true);
         }
 
+        private void UpdateCurrentDB(object sender, PointerRoutedEventArgs e)
+        {
 
 
 
+            var CurrentDB = sender.ToBsonDocument()["Header"]["TextHeader"].ToString();
+
+            new SQLLocalSettings().UpdateCurrentDB(CurrentDB);
+
+     
+
+        }
 
         public  void LoadTables() 
 

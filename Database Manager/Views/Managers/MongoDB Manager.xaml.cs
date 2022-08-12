@@ -1,10 +1,20 @@
 ﻿using Database_Manager.Services;
+using Database_Manager.Services.MongoDB;
+using Database_Manager.Views.Components.Managers.MongoDB;
+using Microsoft.Toolkit.Uwp.UI.Controls;
+using MongoDB.Bson;
+using Newtonsoft.Json;
 using System;
+using System.Collections.ObjectModel;
+using System.Data;
 using System.Diagnostics;
+using System.Linq;
 using Windows.ApplicationModel.Core;
 using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -36,22 +46,23 @@ namespace Database_Manager.Views.Managers
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+
+
+
             LeftPopUp.IsOpen = false;
-            string uri = String.Empty;
             if (e.Parameter != null)
             {
                 string parametersPassed = e.Parameter.ToString();
-                uri = parametersPassed.Replace("URI: ", "");
+                string uri = parametersPassed.Replace("URI: ", "");
 
-                var localSettings = ApplicationData.Current.LocalSettings;
 
-                // Create a simple setting.
-                localSettings.Values["CurrentURI"] = uri;
 
-  
+                new MongoDB_LocalSettings().UpdateURI(uri);
+     
+
 
             }
-            else CreateMyDB_POPUP.IsOpen = true;
+         
 
             new MongoDB_DatabaseService().UpdateDBLeftMenu();
 
@@ -59,39 +70,16 @@ namespace Database_Manager.Views.Managers
 
 
         private void MongoDB_Manager_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            //Get the current Windows Size
-            var bounds = Window.Current.Bounds;
-            double height = bounds.Height;
-
-            double width = bounds.Width;
-
-
-
-            if (width < 755)
-            {
-                LeftPopUp.IsOpen = false;
-            }
-            else
-            {
-
-                LeftPopUp.IsOpen = true;
-            }
-            LeftBar_GridContainer.Height = height - 230;
-        }
-
-
+          => new Helper().HandleSizeChange_LeftPopUp(LeftPopUp,LeftBar_GridContainer);
+        
 
         private void AddButton(object sender, RoutedEventArgs e)
-        {
+           => new Helper().TogglePopUP(CreateMyDB_POPUP);
+
+         
 
 
-
-            if (CreateMyDB_POPUP.IsOpen == true) CreateMyDB_POPUP.IsOpen = false;
-            else CreateMyDB_POPUP.IsOpen = true;
-
-
-        }
+        
 
 
 
@@ -100,22 +88,13 @@ namespace Database_Manager.Views.Managers
 
 
         private void ExpandLeftBar(object sender, RoutedEventArgs e)
-        {
-
-
-            if (LeftPopUp.IsOpen)
-            {
-                LeftPopUp.IsOpen = false;
-            }
-            else
-            {
-
-                LeftPopUp.IsOpen = true;
-            }
+           => new Helper().TogglePopUP(LeftPopUp);
 
 
 
-        }
+
+
+        
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
@@ -142,15 +121,8 @@ namespace Database_Manager.Views.Managers
             }
 
 
+           new Helper(). ToggleGrid_Visibility(InsertDocument_POPUP);
 
-            if (InsertDocument_POPUP.Visibility == Visibility.Visible)
-            {
-                InsertDocument_POPUP.Visibility = Visibility.Collapsed;
-            }
-            else
-            {
-                InsertDocument_POPUP.Visibility = Visibility.Visible;
-            }
 
 
 
@@ -160,45 +132,110 @@ namespace Database_Manager.Views.Managers
 
 
         private void TextBoxFilter_TextChanged(object sender, TextChangedEventArgs e)
-        {
+          =>  new Helper().Documents_FilterSearch(TextBoxFilter.Text);
 
-
-            if (TextBoxFilter.Text == string.Empty)
-            {
-
-                new MongoDB_DatabaseService().UpdateDocumentList();
-                return;
-            }
-
-            new MongoDB_DatabaseService().SearchInCollection(TextBoxFilter.Text);
-
-        }
+        
 
         private void ExportButton(object sender, RoutedEventArgs e)
-        {
-
-            new MongoDB_DatabaseService().ExportCollection();
+            =>new MongoDB_DatabaseService().ExportCollection();
 
      
 
-        }
-
-
-
-
         private void ImportButton(object sender, RoutedEventArgs e)
+           => new Helper().TogglePopUP(ImportDB_POPUP);
+
+ 
+
+        private void BViewAsJson(object sender, RoutedEventArgs e)
         {
 
+        }
 
-            if (ImportDB_POPUP.IsOpen == false)
-            {
-                ImportDB_POPUP.IsOpen = true;
-            }
-            else
-            {
-                ImportDB_POPUP.IsOpen = false;
+        private void BViewAsGrid(object sender, RoutedEventArgs e)
+             =>   new MongoDB_DatabaseService().ViewCollectionAsGrid();
+
+    
+
+
+        internal class Helper {
+
+
+            public void Documents_FilterSearch(string textSearch) {
+
+
+                try
+                {
+
+                    if (textSearch == string.Empty)
+                    {
+
+                        new MongoDB_DatabaseService().UpdateDocumentList();
+                        return;
+                    }
+
+
+                    var FilterDocs = BsonDocument.Parse(textSearch);
+
+                    new MongoDB_DatabaseService().SearchInCollection(FilterDocs);
+
+                }
+                catch { }
+
+
             }
 
+
+            public void ToggleGrid_Visibility(Grid grid) 
+            {
+                if (grid.Visibility == Visibility.Visible)
+                {
+                    grid.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    grid.Visibility = Visibility.Visible;
+                }
+
+
+            }
+
+
+            public void TogglePopUP(Popup myPopup) {
+
+                if (myPopup.IsOpen == false)
+                {
+                    myPopup.IsOpen = true;
+                }
+                else
+                {
+                    myPopup.IsOpen = false;
+                }
+
+            }
+
+            public void HandleSizeChange_LeftPopUp(Popup LeftPopUp,Grid LeftBar_GridContainer) 
+            {
+
+                //Get the current Windows Size
+                var bounds = Window.Current.Bounds;
+                double height = bounds.Height;
+
+                double width = bounds.Width;
+
+
+
+                if (width < 755)
+                {
+                    LeftPopUp.IsOpen = false;
+                }
+                else
+                {
+
+                    LeftPopUp.IsOpen = true;
+                }
+
+                LeftBar_GridContainer.Height = height - 230;
+            }
 
 
         }
@@ -206,3 +243,27 @@ namespace Database_Manager.Views.Managers
 
 }
 
+/*    <controls:DataGrid 
+
+    Background="{ThemeResource MainAcrylicB}"
+
+CacheMode="BitmapCache"
+ScrollViewer.BringIntoViewOnFocusChange="True"
+VerticalScrollBarVisibility="Visible"
+HorizontalScrollBarVisibility="Visible"
+CanBeScrollAnchor="True"
+VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+ScrollViewer.HorizontalScrollBarVisibility="Visible"
+ScrollViewer.VerticalScrollBarVisibility="Visible"
+
+AlternatingRowBackground="#1F1B00"
+    x:Name="dataGrid"
+
+    x:FieldModifier="Public"
+
+Sorting="dataGrid_Sorting"
+
+
+CanUserSortColumns="True"
+
+>*/

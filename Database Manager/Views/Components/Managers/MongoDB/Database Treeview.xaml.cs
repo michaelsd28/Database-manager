@@ -1,4 +1,6 @@
 ﻿using Database_Manager.Services;
+using Database_Manager.Services.MongoDB;
+using Microsoft.Toolkit.Uwp.UI.Controls;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
@@ -18,7 +20,7 @@ namespace Database_Manager.Views.Components.Managers.MongoDB
 
 
 
-        public string myTextHeader
+        public string DBTextHeader
         {
             get { return (string)GetValue(myTextHeaderProperty); }
             set { SetValue(myTextHeaderProperty, value); }
@@ -55,7 +57,7 @@ namespace Database_Manager.Views.Components.Managers.MongoDB
             HdabaseName = headerName;
             ClistCollection = listCollection;
 
-            myTextHeader = headerName;
+            DBTextHeader = headerName;
 
 
             foreach (var item in listCollection)
@@ -65,55 +67,38 @@ namespace Database_Manager.Views.Components.Managers.MongoDB
             }
         }
 
-        private void collectionButton_PointerPressed(object sender, PointerRoutedEventArgs e)
+        private void CollectionButton_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
+
+            var helper = new Helper();
 
             try
             {
-                PageController_Restart();
+                helper.PageController_Reset();
 
                 string collectName = (string)sender.ToBsonDocument()["ButtonText"];
                 List<object> dotNetObjList = new List<object>();
-                dotNetObjList = new MongoDB_DatabaseService().GetDocumentList(myTextHeader, collectName, 10);
+                dotNetObjList = new MongoDB_DatabaseService().GetDocumentList(DBTextHeader, collectName, 10);
 
+                ///update settings with current db and collection
+                helper.UpdateColAndDB(collectName,DBTextHeader);
 
-                var localSettings = ApplicationData.Current.LocalSettings;
-                // Create a simple setting.
-                localSettings.Values["CurrentCollection"] = collectName;
-                localSettings.Values["CurrentDB"] = myTextHeader;
-
-
-
-                //// clear stack 
-                Documents_Container
-                     .Documents_ContainerContext
-                     .DocumentContainer_StackPanel
-                     .Children.Clear();
+                 /// clear container stack
+                helper.DocContainer_ClearStack();
 
 
                 //// if error occurs
                 if (dotNetObjList != null && dotNetObjList.Count < 1)
                 {
 
-                    TextBlock textBlock = new TextBlock();
-                    textBlock.Text = "Please select a table/collection";
-                    textBlock.FontSize = 24;
-                    textBlock.HorizontalAlignment = HorizontalAlignment.Center;
-                    textBlock.VerticalAlignment = VerticalAlignment.Center;
-                    textBlock.Padding = new Thickness(30);
-
-
-                    Documents_Container
-                    .Documents_ContainerContext
-                    .DocumentContainer_StackPanel
-                    .Children
-                    .Add(textBlock);
+                    helper.DocContainer_AddUIElement(helper.SelectACollection_TextBlock());
+            
 
                     return;
 
                 }
 
-
+    
 
                 /// add documents
                 if (dotNetObjList != null)
@@ -125,59 +110,22 @@ namespace Database_Manager.Views.Components.Managers.MongoDB
             catch (Exception ex)
             {
 
-                Documents_Container
-                  .Documents_ContainerContext
-                  .DocumentContainer_StackPanel
-                  .Children.Clear();
+                helper.DocContainer_ClearStack();
 
 
                 TextBlock textBlock = new TextBlock();
                 textBlock.Text = $"Error: {ex.ToString()}";
                 textBlock.FontSize = 24;
                 textBlock.Padding = new Thickness(30);
+                helper.DocContainer_AddUIElement(new TextBlock() { Text = ex.Message });
 
-                Documents_Container
-                 .Documents_ContainerContext
-                 .DocumentContainer_StackPanel
-                 .Children.Add(new TextBlock() { Text = ex.Message });
-
-
-       
+    
 
             }
 
         }
 
 
-
-
-        public IconButton GetDeleteButton(string CollectName)
-        {
-
-            IconButton DeleteButton = new IconButton
-            {
-
-                ImageIcon = @"/Assets\Managers\MongoDB\minus icon.png",
-                Margin = new Thickness(15, 15, 0, 15),
-                ImageHeight = "8",
-                ButtonPadding = "5,2,5,3",
-                ButtonText = CollectName,
-                MaxWidth = 20
-
-            };
-
-
-
-            DeleteButton.PointerPressed += DeleteCollection_PointerPressed;
-            DeleteButton.AddHandler(PointerPressedEvent,
-            new PointerEventHandler(DeleteCollection_PointerPressed), true);
-
-
-            DeleteButton.HorizontalAlignment = HorizontalAlignment.Right;
-            DeleteButton.HorizontalContentAlignment = HorizontalAlignment.Right;
-
-            return DeleteButton;
-        }
 
         public StackPanel GetCollecButton(string buttonText = null)
         {
@@ -187,56 +135,20 @@ namespace Database_Manager.Views.Components.Managers.MongoDB
 
 
 
-            IconButton CollectIcon_Button = new IconButton
-            {
-                MaxWidth = 150,
-                ButtonText = buttonText,
-                ButtonPadding = "7",
-                BFontSize = "14",
-                ButtonBackground = "#171717",
-                ImageMargin = "0,0,6,0",
-                ImageIcon = @"/Assets\Managers\MongoDB\table badge.png",
-
-
-            };
-
-            CollectIcon_Button.PointerPressed += collectionButton_PointerPressed;
-            CollectIcon_Button.AddHandler(PointerPressedEvent,
-            new PointerEventHandler(collectionButton_PointerPressed), true);
-
+            IconButton CollectIcon_Button = new Helper().GetCollectIcon_Icon(buttonText, CollectionButton_PointerPressed);
+            var DelColButton = new Helper().GetDeleteButton(buttonText, DeleteCollection_PointerPressed);
 
             stackPanel.Children.Add(CollectIcon_Button);
-            stackPanel.Children.Add(GetDeleteButton(buttonText));
+            stackPanel.Children.Add(DelColButton);
 
             return stackPanel;
 
 
         }
 
-
-
-
-        public void PageController_Restart()
-        {
-
-
-            Page_Controller.pagaFrom = 0;
-            Page_Controller.pagaTo = 10;
-
-        }
-
-
-
         private async void DeleteCollection_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
             string collectName = (string)sender.ToBsonDocument()["ButtonText"];
-
-            /*  string title,
-              string content,
-               TypedEventHandler< ContentDialog, ContentDialogButtonClickEventArgs > PrimaryButton
-            */
-
-
             await new DialogService()._DialogService("Do you want to delete " + collectName, "Press ok to delete", DeleteCollection);
 
         }
@@ -250,19 +162,124 @@ namespace Database_Manager.Views.Components.Managers.MongoDB
 
 
 
-            new MongoDB_DatabaseService().DropCollectionWithName(collectName, myTextHeader);
+            new MongoDB_DatabaseService().DropCollectionWithName(collectName, DBTextHeader);
+
             ContentExpander.Children.Clear();
 
-            new MongoDB_DatabaseService()
-                .GetCollections_WithDB(myTextHeader)
-                .ForEachAsync(collection =>
+            var MongoService = new MongoDB_DatabaseService();
+            var CollList = MongoService.GetCollections_WithDB(DBTextHeader);
+
+
+            CollList.ForEachAsync(collection => 
+
+            { ContentExpander.Children.Add(GetCollecButton(collection)); });
+
+  
+
+        }
+
+        internal class Helper {
+
+            public void UpdateColAndDB(string CollectName, string DBTextHeader) {
+                var mongoDBLocalSettings = new MongoDB_LocalSettings().GetLocalSettings_Bson();
+                mongoDBLocalSettings["CurrentCollection"] = CollectName;
+                mongoDBLocalSettings["CurrentDB"] = DBTextHeader;
+                new MongoDB_LocalSettings().UpdateSettings(mongoDBLocalSettings);
+
+            }
+
+
+            public void DocContainer_ClearStack() 
+            {
+                Documents_Container
+                .Documents_ContainerContext
+                .DocumentContainer_StackPanel
+                .Children.Clear();
+            }
+
+
+
+            public void DocContainer_AddUIElement(UIElement uIElement) 
+            {
+                Documents_Container
+               .Documents_ContainerContext
+               .DocumentContainer_StackPanel
+               .Children
+               .Add(uIElement);
+
+            }
+
+            public TextBlock SelectACollection_TextBlock() {
+
+                TextBlock textBlock = new TextBlock();
+                textBlock.Text = "Please select a table/collection";
+                textBlock.FontSize = 24;
+                textBlock.HorizontalAlignment = HorizontalAlignment.Center;
+                textBlock.VerticalAlignment = VerticalAlignment.Center;
+                textBlock.Padding = new Thickness(30);
+                return textBlock;
+
+            }
+
+
+            public IconButton GetCollectIcon_Icon(String buttonText, PointerEventHandler collectionButton_PointerPressed) 
+            {
+                IconButton CollectIcon_Button = new IconButton
+                {
+                    MaxWidth = 150,
+                    ButtonText = buttonText,
+                    ButtonPadding = "7",
+                    BFontSize = "14",
+                    ButtonBackground = "#171717",
+                    ImageMargin = "0,0,6,0",
+                    ImageIcon = @"/Assets\Managers\MongoDB\table badge.png",
+
+                };
+
+                CollectIcon_Button.PointerPressed += collectionButton_PointerPressed;
+                CollectIcon_Button.AddHandler(PointerPressedEvent,
+                new PointerEventHandler(collectionButton_PointerPressed), true);
+
+                return CollectIcon_Button;
+
+            }
+
+            public void PageController_Reset()
+            {
+
+
+                Page_Controller.pagaFrom = 0;
+                Page_Controller.pagaTo = 10;
+
+            }
+
+            public IconButton GetDeleteButton(string CollectName, PointerEventHandler DeleteCollection_PointerPressed)
+            {
+
+                IconButton DeleteButton = new IconButton
                 {
 
-                    ContentExpander.Children.Add(GetCollecButton(collection));
+                    ImageIcon = @"/Assets\Managers\MongoDB\minus icon.png",
+                    Margin = new Thickness(15, 15, 0, 15),
+                    ImageHeight = "8",
+                    ButtonPadding = "5,2,5,3",
+                    ButtonText = CollectName,
+                    MaxWidth = 20
 
-                });
+                };
 
 
+
+                DeleteButton.PointerPressed += DeleteCollection_PointerPressed;
+                DeleteButton.AddHandler(PointerPressedEvent,
+                new PointerEventHandler(DeleteCollection_PointerPressed), true);
+
+
+                DeleteButton.HorizontalAlignment = HorizontalAlignment.Right;
+                DeleteButton.HorizontalContentAlignment = HorizontalAlignment.Right;
+
+                return DeleteButton;
+            }
 
         }
     }

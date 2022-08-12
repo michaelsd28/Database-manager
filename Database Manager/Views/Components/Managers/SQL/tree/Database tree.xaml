@@ -20,9 +20,9 @@ RequestedTheme="Dark"
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <StackPanel Margin="5,15,0,0" Background="#0E0E0E"  CornerRadius="5"  >
+    <StackPanel   Margin="5,15,0,0" Background="#0E0E0E"  CornerRadius="5"  >
 
-        <muxc:Expander  Background="#121212" x:Name="RedisExpander" IsExpanded="True"  MaxWidth="220" Width="220">
+        <muxc:Expander   Background="#121212" x:Name="SQLExpander" IsExpanded="True"  MaxWidth="220" Width="220">
 
             <muxc:Expander.Header >
 

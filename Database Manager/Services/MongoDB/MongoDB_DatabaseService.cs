@@ -1,18 +1,26 @@
-﻿using Database_Manager.Views.Components.Managers.MongoDB;
+﻿using Database_Manager.Services.MongoDB;
+using Database_Manager.Views.Components.Managers.MongoDB;
 using Database_Manager.Views.Managers;
+using Microsoft.Toolkit.Uwp.UI.Controls;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.Storage.Provider;
 using Windows.Storage.Streams;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Data;
 
 namespace Database_Manager.Services
 {
@@ -23,7 +31,8 @@ namespace Database_Manager.Services
         {
 
 
-            object dbURI = ApplicationData.Current.LocalSettings.Values["CurrentURI"];
+            var MongoDB_LocalSettings = new MongoDB_LocalSettings().GetLocalSettings_Bson();
+            var dbURI = MongoDB_LocalSettings["StringConnection URI"].ToString();
 
             MongoClient dbClient = new MongoClient(dbURI.ToString());
             var database = dbClient.GetDatabase(NameDB);
@@ -83,9 +92,10 @@ namespace Database_Manager.Services
             {
 
 
-                object dbURI = ApplicationData.Current.LocalSettings.Values["CurrentURI"];
-                object myCollect = ApplicationData.Current.LocalSettings.Values["CurrentCollection"];
-                object currentDB = ApplicationData.Current.LocalSettings.Values["CurrentDB"];
+                var MongoDB_LocalSettings = new MongoDB_LocalSettings().GetLocalSettings_Bson();
+                var myCollect = MongoDB_LocalSettings["CurrentCollection"].ToString();
+                var currentDB = MongoDB_LocalSettings["CurrentDB"].ToString();
+                var dbURI = MongoDB_LocalSettings["StringConnection URI"].ToString();
 
 
 
@@ -173,21 +183,22 @@ namespace Database_Manager.Services
         /// <summary>
         /// Get the hole list
         /// </summary>
-        public List<object> GetDocList_WRange(int rangeFROM, int rangeTO)
+        public Task<List<object>>  GetDocList_WRange(int rangeFROM, int rangeTO)
         {
 
             try
             {
-                object dbURI = ApplicationData.Current.LocalSettings.Values["CurrentURI"];
-                object myCollect = ApplicationData.Current.LocalSettings.Values["CurrentCollection"];
-                object currentDB = ApplicationData.Current.LocalSettings.Values["CurrentDB"];
+                var MongoDB_LocalSettings = new MongoDB_LocalSettings().GetLocalSettings_Bson();
+                var myCollect = MongoDB_LocalSettings["CurrentCollection"].ToString();
+                var currentDB = MongoDB_LocalSettings["CurrentDB"].ToString();
+                var dbURI = MongoDB_LocalSettings["StringConnection URI"].ToString();
 
                 ///database client
                 var dbClient = new MongoClient(dbURI.ToString());
                 /// get database
-                var database = dbClient.GetDatabase(currentDB.ToString());
+                var database = dbClient.GetDatabase(currentDB);
                 ///   get collection
-                var collection = database.GetCollection<BsonDocument>(myCollect.ToString());
+                var collection = database.GetCollection<BsonDocument>(myCollect);
 
                 ///get all 
                 List<object> myList = collection
@@ -198,7 +209,7 @@ namespace Database_Manager.Services
                         .ConvertAll(BsonTypeMapper.MapToDotNetValue);
 
                 ///return new list with range
-                return myList;
+                return Task.FromResult(myList) ;
 
 
 
@@ -216,65 +227,67 @@ namespace Database_Manager.Services
         }
 
 
-
-
-
-        public void UpdateDocumentList(List<object> DocumentList = null)
+        public Task UpdateDocumentList(List<object> DocumentList = null)
         {
-            try { 
-
-            object myCollect = ApplicationData.Current.LocalSettings.Values["CurrentCollection"];
-            object currentDB = ApplicationData.Current.LocalSettings.Values["CurrentDB"];
+            try {
 
 
-
-            var dotNetObjList = new MongoDB_DatabaseService().GetDocumentList(
-
-                currentDB.ToString(),  /// my database
-                myCollect.ToString(),  /// collection
-                10 ///amount of documents
-
-                );
+                var MongoDB_LocalSettings = new MongoDB_LocalSettings().GetLocalSettings_Bson();
+                var myCollect = MongoDB_LocalSettings["CurrentCollection"].ToString();
+                var currentDB = MongoDB_LocalSettings["CurrentDB"].ToString(); 
 
 
-            if (DocumentList != null)
-            {
-                dotNetObjList = DocumentList;
-            }
 
-            /// clear list
-            Documents_Container
-                 .Documents_ContainerContext
-                 .DocumentContainer_StackPanel
-                 .Children.Clear();
+                var dotNetObjList = new MongoDB_DatabaseService().GetDocumentList(
+
+                    currentDB,  /// my database
+                    myCollect,  /// collection
+                    10 ///amount of documents
+
+                    );
 
 
-            foreach (var document in dotNetObjList)
-            {
-                string json = JsonConvert.SerializeObject(document, Formatting.Indented);
+                if (DocumentList != null)
+                {
+                    dotNetObjList = DocumentList;
+                }
 
-                Single_Document currentDocument = new Single_Document();
-                currentDocument.SingleTextBox.Text = json;
-
-
+                /// clear list
                 Documents_Container
-                    .Documents_ContainerContext
-                    .DocumentContainer_StackPanel
-                    .Children
-                    .Add(currentDocument);
+                     .Documents_ContainerContext
+                     .DocumentContainer_StackPanel
+                     .Children.Clear();
 
-            }
+
+
+                foreach (var document in dotNetObjList)
+                {
+                    string json = JsonConvert.SerializeObject(document, Formatting.Indented);
+
+                    Single_Document currentDocument = new Single_Document();
+                    currentDocument.SingleTextBox.Text = json;
+
+
+
+
+
+                    Documents_Container
+                        .Documents_ContainerContext
+                        .DocumentContainer_StackPanel
+                        .Children
+                        .Add(currentDocument);
+
+                }
 
             }
             catch (Exception ex) {
 
-                _ = new DialogService()._DialogService("Error updating documents",ex.Message);
-            
+                _ = new DialogService()._DialogService("Error updating documents", ex.Message);
+
             }
 
+            return Task.CompletedTask;
         }
-
-
 
         public StackPanel GetDatabase_StackPanel()
         {
@@ -283,15 +296,19 @@ namespace Database_Manager.Services
             try
             {
 
-              
+
 
                 StackPanel stackPanel = new StackPanel();
 
 
-                object dbURI = ApplicationData.Current.LocalSettings.Values["CurrentURI"];
+
+                var MongoDB_LocalSettings = new MongoDB_LocalSettings().GetLocalSettings_Bson();
+                var dbURI = MongoDB_LocalSettings["StringConnection URI"].ToString();
+
+
 
                 MongoClient dbClient = new MongoClient(dbURI.ToString());
-               
+
                 var dbList = dbClient.ListDatabases().ToList();
                 List<string> dbNames = dbList.Select(db => (string)db["name"]).ToList();
 
@@ -333,7 +350,7 @@ namespace Database_Manager.Services
                 {
                     Database_Treeview current = new Database_Treeview(entry.Key, entry.Value);
 
-                    current.myTextHeader = entry.Key;
+                    current.DBTextHeader = entry.Key;
 
                     stackPanel.Children.Add(current);
                 }
@@ -350,9 +367,9 @@ namespace Database_Manager.Services
 
                 return null;
             }
-            finally 
-            { 
-            
+            finally
+            {
+
             }
 
         }
@@ -370,9 +387,10 @@ namespace Database_Manager.Services
             {
 
 
-                object dbURI = ApplicationData.Current.LocalSettings.Values["CurrentURI"];
-                object myCollect = ApplicationData.Current.LocalSettings.Values["CurrentCollection"];
-                object currentDB = ApplicationData.Current.LocalSettings.Values["CurrentDB"];
+                var MongoDB_LocalSettings = new MongoDB_LocalSettings().GetLocalSettings_Bson();
+                var myCollect = MongoDB_LocalSettings["CurrentCollection"].ToString();
+                var currentDB = MongoDB_LocalSettings["CurrentDB"].ToString();
+                var dbURI = MongoDB_LocalSettings["StringConnection URI"].ToString();
 
 
                 if (myCollect == string.Empty)
@@ -407,16 +425,18 @@ namespace Database_Manager.Services
 
         public async void DeleteDocumentW_ID(string DelDocument)
         {
+            var MongoDB_LocalSettings = new MongoDB_LocalSettings().GetLocalSettings_Bson();
+            var myCollect = MongoDB_LocalSettings["CurrentCollection"].ToString();
+            var currentDB = MongoDB_LocalSettings["CurrentDB"].ToString();
+            var dbURI = MongoDB_LocalSettings["StringConnection URI"].ToString();
 
+        
 
-            object dbURI = ApplicationData.Current.LocalSettings.Values["CurrentURI"];
-            object myCollect = ApplicationData.Current.LocalSettings.Values["CurrentCollection"];
-            object currentDB = ApplicationData.Current.LocalSettings.Values["CurrentDB"];
 
             ///database client
             MongoClient dbClient = new MongoClient(dbURI.ToString());
-            var myDB = dbClient.GetDatabase(currentDB.ToString());
-            var CurrentCollect = myDB.GetCollection<BsonDocument>(myCollect.ToString());
+            var myDB = dbClient.GetDatabase(currentDB);
+            var CurrentCollect = myDB.GetCollection<BsonDocument>(myCollect);
 
             BsonDocument currentBson = BsonDocument.Parse(DelDocument);
             string id = currentBson["_id"].ToString();
@@ -438,23 +458,28 @@ namespace Database_Manager.Services
         /// search in collection with text
         /// </summary>
         /// <param name="text"></param>
-        internal void SearchInCollection(string text)
+        internal void SearchInCollection(BsonDocument FilterBson)
         {
 
             try
             {
-                object dbURI = ApplicationData.Current.LocalSettings.Values["CurrentURI"];
-                object myCollect = ApplicationData.Current.LocalSettings.Values["CurrentCollection"];
-                object currentDB = ApplicationData.Current.LocalSettings.Values["CurrentDB"];
+
+                var MongoDB_LocalSettings = new MongoDB_LocalSettings().GetLocalSettings_Bson();
+                var myCollect = MongoDB_LocalSettings["CurrentCollection"].ToString();
+                var currentDB = MongoDB_LocalSettings["CurrentDB"].ToString();
+                var dbURI = MongoDB_LocalSettings["StringConnection URI"].ToString();
 
                 ///database client
-                MongoClient dbClient = new MongoClient(dbURI.ToString());
+                MongoClient dbClient = new MongoClient(dbURI);
                 ///database 
-                var myDB = dbClient.GetDatabase(currentDB.ToString());
-                var CurrentCollect = myDB.GetCollection<BsonDocument>(myCollect.ToString());
+                var myDB = dbClient.GetDatabase(currentDB);
+                var CurrentCollect = myDB.GetCollection<BsonDocument>(myCollect);
 
 
-                var FilterBson = BsonDocument.Parse(text);
+         
+
+                Debug.WriteLine("FilterBson:: " + FilterBson.ToJson());
+
 
                 var myFilteredList = CurrentCollect.Find(FilterBson).Limit(10).ToList();
 
@@ -463,11 +488,11 @@ namespace Database_Manager.Services
 
 
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
-                _ = new DialogService()._DialogService("Error in program", ex.Message);
 
-       
+           //   _= new DialogService()._DialogService("Error while searching",ex.Message);
+
             }
 
 
@@ -475,15 +500,16 @@ namespace Database_Manager.Services
 
 
 
-        public async void updateDocument(string CurrentDocument, string newDocument)
+        public async void UpdateDocument(string CurrentDocument, string newDocument)
         {
 
             try
             {
 
-                object dbURI = ApplicationData.Current.LocalSettings.Values["CurrentURI"];
-                object myCollect = ApplicationData.Current.LocalSettings.Values["CurrentCollection"];
-                object currentDB = ApplicationData.Current.LocalSettings.Values["CurrentDB"];
+                var MongoDB_LocalSettings = new MongoDB_LocalSettings().GetLocalSettings_Bson();
+                var myCollect = MongoDB_LocalSettings["CurrentCollection"].ToString();
+                var currentDB = MongoDB_LocalSettings["CurrentDB"].ToString();
+                var dbURI = MongoDB_LocalSettings["StringConnection URI"].ToString();
 
                 ///database client
                 MongoClient dbClient = new MongoClient(dbURI.ToString());
@@ -522,45 +548,46 @@ namespace Database_Manager.Services
 
         public void UpdateDBLeftMenu()
         {
-            try { 
-            MongoDB_Manager.MongoDB_ManagerContext.DatabaseStackPanel.Children.Clear();
-            MongoDB_Manager.MongoDB_ManagerContext.DatabaseStackPanel.Children.Add(GetDatabase_StackPanel());
+            try {
 
-        }
+                MongoDB_Manager.MongoDB_ManagerContext.DatabaseStackPanel.Children.Clear();
+                MongoDB_Manager.MongoDB_ManagerContext.DatabaseStackPanel.Children.Add(GetDatabase_StackPanel());
+
+            }
             catch (Exception ex)
             {
 
                 _ = new DialogService()._DialogService("Error getting range", ex.Message);
 
-     
+
 
             }
-}
-
+        }
 
 
         public async void CreateDB_AND_Collection(string DBName, string CollectionName)
         {
 
-            object dbURI = ApplicationData.Current.LocalSettings.Values["CurrentURI"];
+            var MongoDB_LocalSettings = new MongoDB_LocalSettings().GetLocalSettings_Bson();
+            var dbURI = MongoDB_LocalSettings["StringConnection URI"].ToString();
 
             ///database client
             ///
 
 
-            MongoClient dbClient = new MongoClient(dbURI.ToString());   
-            
-         
+            MongoClient dbClient = new MongoClient(dbURI.ToString());
+
+
             var myDB = dbClient.GetDatabase(DBName);
             myDB.CreateCollection(CollectionName);
-   
+
             await new DialogService()._DialogService("Dabase created", "created");
 
         }
 
 
-
-        public List<object> GetDocumentList(
+        public List<object> GetDocumentList
+            (
             string dabaseName,
             string collectionName,
             int amount,
@@ -570,7 +597,10 @@ namespace Database_Manager.Services
 
             try
             {
-                object dbURI = ApplicationData.Current.LocalSettings.Values["CurrentURI"];
+                var MongoDB_LocalSettings = new MongoDB_LocalSettings().GetLocalSettings_Bson();
+                var dbURI = MongoDB_LocalSettings["StringConnection URI"].ToString();
+
+   
 
                 ///database client
                 MongoClient dbClient = new MongoClient(dbURI.ToString());
@@ -590,6 +620,9 @@ namespace Database_Manager.Services
 
 
                     var filteredDocuments = collection.Find(filterDefinition).Limit(amount).ToList();
+
+
+
                     return filteredDocuments.ConvertAll(BsonTypeMapper.MapToDotNetValue);
 
                 }
@@ -598,10 +631,11 @@ namespace Database_Manager.Services
                 var documents = collection.Find(x => true).Limit(amount).ToList();
 
 
+
                 return documents.ConvertAll(BsonTypeMapper.MapToDotNetValue);
 
             }
-            catch 
+            catch
             {
 
                 return null;
@@ -613,16 +647,17 @@ namespace Database_Manager.Services
         {
 
 
-            object dbURI = ApplicationData.Current.LocalSettings.Values["CurrentURI"];
+            var MongoDB_LocalSettings = new MongoDB_LocalSettings().GetLocalSettings_Bson();
+            var dbURI = MongoDB_LocalSettings["StringConnection URI"].ToString();
 
             ///database client
-            MongoClient dbClient = new MongoClient(dbURI.ToString());
+            MongoClient dbClient = new MongoClient(dbURI);
 
             var database = dbClient.GetDatabase(DdatabaseName);
             database.DropCollection(DcollectionName);
 
 
-     
+
 
 
         }
@@ -631,7 +666,8 @@ namespace Database_Manager.Services
         public IAsyncCursor<string> GetCollections_WithDB(string GdbName)
         {
 
-            object dbURI = ApplicationData.Current.LocalSettings.Values["CurrentURI"];
+            var MongoDB_LocalSettings = new MongoDB_LocalSettings().GetLocalSettings_Bson();
+            var dbURI = MongoDB_LocalSettings["StringConnection URI"].ToString();
 
             ///database client
             MongoClient dbClient = new MongoClient(dbURI.ToString());
@@ -647,12 +683,97 @@ namespace Database_Manager.Services
         public void DeleteDatabase(string DatabaseToDelete)
         {
 
-            object dbURI = ApplicationData.Current.LocalSettings.Values["CurrentURI"];
+            var MongoDB_LocalSettings = new MongoDB_LocalSettings().GetLocalSettings_Bson();
+            var dbURI = MongoDB_LocalSettings["StringConnection URI"].ToString();
 
             ///database client
             MongoClient dbClient = new MongoClient(dbURI.ToString());
 
             dbClient.DropDatabase(DatabaseToDelete);
+
+        }
+
+
+        public void ViewCollectionAsGrid()
+        {
+
+            var MongoDBLocalSettings = new MongoDB_LocalSettings().GetLocalSettings_Bson();
+            var CurrentColl = MongoDBLocalSettings["CurrentCollection"].ToString();
+            var CurrentDB = MongoDBLocalSettings["CurrentDB"].ToString();
+
+
+
+            Documents_Container.Documents_ContainerContext.DocumentContainer_StackPanel.Children.Clear();
+
+            var dotNetObjList = new MongoDB_DatabaseService().GetDocumentList(CurrentDB, CurrentColl, 10);
+            var stringJson = JsonConvert.SerializeObject(dotNetObjList);
+
+            DataGrid dataGrid = new DataGrid();
+            dataGrid.MaxColumnWidth = 200;
+            dataGrid.CanUserResizeColumns = true;
+            DataTable dataTable = JsonConvert.DeserializeObject<DataTable>(stringJson);
+
+            new Helper().ToSourceCollection(dataTable, dataGrid);
+
+
+        }
+
+
+        internal class Helper   {
+
+
+            public void ToSourceCollection(DataTable dt, DataGrid dataGrid)
+            {
+
+
+
+                dataGrid.Columns.Clear();
+                dataGrid.AutoGenerateColumns = false;
+
+                dataGrid.Columns.Add(new DataGridTextColumn()
+                {
+                    Header = "#",
+                    Binding = new Binding { Path = new PropertyPath("[" + 0.ToString() + "]") },
+
+
+                });
+
+
+                for (int i = 1; i < dt.Columns.Count + 1; i++)
+                {
+
+
+                    dataGrid.Columns.Add(new DataGridTextColumn()
+                    {
+                        Header = dt.Columns[i - 1].ColumnName,
+                        Binding = new Binding { Path = new PropertyPath("[" + i.ToString() + "]") },
+                        Tag = dt.Columns[i - 1].ColumnName,
+
+                    });
+                }
+
+
+
+                var sourceCollection = new ObservableCollection<object>();
+
+
+
+                ////add index to datagrid
+                var index = 1;
+                foreach (DataRow row in dt.Rows)
+                {
+
+                    var arr = row.ItemArray.ToList();
+                    arr.Insert(0, index);
+
+                    sourceCollection.Add(arr);
+                    index++;
+                }
+
+
+                dataGrid.ItemsSource = sourceCollection;
+            }
+
 
         }
 

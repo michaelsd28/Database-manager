@@ -1,5 +1,4 @@
-﻿using Database_Manager.Model;
-using Database_Manager.Services.Redis;
+﻿using Database_Manager.Services.Redis;
 using Database_Manager.Views.Components.Managers.Redis;
 using Database_Manager.Views.Components.Managers.Redis.tree;
 using FreeRedis;
@@ -11,11 +10,11 @@ using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using Windows.Storage;
-using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Input;
 
 namespace Database_Manager.Services
 {
@@ -24,23 +23,23 @@ namespace Database_Manager.Services
 
         public ConnectionMultiplexer redisConn() {
 
-  
+
             try {
 
 
-            //    var name = "michael";
-            //    var password = "ZvXL6R0OCTdOuvl3BPuLzeKugnVFCvRY";
+                //    var name = "michael";
+                //    var password = "ZvXL6R0OCTdOuvl3BPuLzeKugnVFCvRY";
 
 
                 var RedisURI = new RedisLocalSettings().RedisURI();
                 //    var testURl = "redis-19535.c89.us-east-1-3.ec2.cloud.redislabs.com:19535";
 
-            
+
                 var redis = ConnectionMultiplexer.Connect($"{RedisURI},abortConnect=true,connectRetry=1,connectTimeout=500,connectTimeout=5000");
 
                 return redis;
             }
-            catch (Exception ex) { 
+            catch (Exception ex) {
                 _ = new DialogService()._DialogService("Connection error", ex.Message);
                 return null;
             }
@@ -70,21 +69,22 @@ namespace Database_Manager.Services
         }
 
 
-        public void UpdateLeftMenu(bool isCloud = false) {
+        public async void UpdateLeftMenu(bool isCloud = false) {
 
             Redis_Manager.Redis_ManagerContext.DatabaseStackPanel.Children.Clear();
 
-            if (isCloud) 
+            if (isCloud)
             {
                 Redis_Manager.Redis_ManagerContext.DatabaseStackPanel.Children.Add(CloudLeftMenu_StackPanel());
             }
-             else
+            else
             {
+                var localStackPanel = await LocalLeftMenu_StackPanelAsync();
 
-                Redis_Manager.Redis_ManagerContext.DatabaseStackPanel.Children.Add(LocalLeftMenu_StackPanel());
+                Redis_Manager.Redis_ManagerContext.DatabaseStackPanel.Children.Add(localStackPanel);
 
             }
-          
+
 
         }
 
@@ -95,7 +95,7 @@ namespace Database_Manager.Services
 
             StackPanel stackPanel = new StackPanel();
 
-        
+
 
             Database_Cloud_Tree database_Cloud_Tree = new Database_Cloud_Tree
                 (
@@ -112,9 +112,9 @@ namespace Database_Manager.Services
         }
 
 
-            public StackPanel LocalLeftMenu_StackPanel() {
+        public async Task<StackPanel> LocalLeftMenu_StackPanelAsync() {
 
-   
+
 
             StackPanel stackPanel = new StackPanel();
 
@@ -123,10 +123,16 @@ namespace Database_Manager.Services
             for (int dbNumber = 0; dbNumber < 16; dbNumber++)
             {
 
-                Database_tree currentTree = new Database_tree
-                      (
-                    HeadText: $"My database {dbNumber}"
-                    );
+
+
+                Database_tree currentTree = new Database_tree();
+
+                currentTree.HeaderText = $"My database {dbNumber}";
+
+                await new Helper().LoadKeys(HeaderNumber:  $"{dbNumber}",  DBTree:   currentTree);
+
+
+
 
 
 
@@ -139,17 +145,20 @@ namespace Database_Manager.Services
 
 
 
-        public void CloudMenu() { 
-        
-        
+        public void CloudMenu() {
+
+
         }
 
 
-        public  void DisplayKeyValue(string KeyText, int dBNumber = 0) {
 
 
 
-        
+        public void DisplayKeyValue(string KeyText, int dBNumber = 0) {
+
+
+
+
             var db = redisConn().GetDatabase(dBNumber);
 
             DisplayValue displayValue = new DisplayValue();
@@ -158,17 +167,17 @@ namespace Database_Manager.Services
 
             string KeyType = db.KeyType(KeyText).ToString();
 
-        
+
 
 
             switch (KeyType)
             {
                 case "String":
-                        displayValue.DisplayString(KeyText, dBNumber);
+                    displayValue.DisplayString(KeyText, dBNumber);
                     break;
 
                 case "Hash":
-                        displayValue.DisplayHash(KeyText, dBNumber);
+                    displayValue.DisplayHash(KeyText, dBNumber);
                     break;
 
                 case "List":
@@ -184,7 +193,7 @@ namespace Database_Manager.Services
                     break;
 
                 default:
-                //    _ = new DialogService()._DialogService("Not a valid type", "Please press sure to continue");
+                    //    _ = new DialogService()._DialogService("Not a valid type", "Please press sure to continue");
                     break;
 
 
@@ -212,7 +221,7 @@ namespace Database_Manager.Services
         }
 
 
-        public void SaveKeyValue(string key, string value,string typeToAdd = null) {
+        public void SaveKeyValue(string key, string value, string typeToAdd = null) {
 
             SaveValue saveValue = new SaveValue();
 
@@ -225,7 +234,7 @@ namespace Database_Manager.Services
 
             string KeyType = db.KeyType(key).ToString();
 
-            saveValue.checkTypeToSave (  key,  value, typeToAdd, KeyType );
+            saveValue.checkTypeToSave(key, value, typeToAdd, KeyType);
 
 
 
@@ -243,32 +252,32 @@ namespace Database_Manager.Services
 
         DisplayValue displayValue = new DisplayValue();
 
-        private bool CheckIfCloud() 
+        private bool CheckIfCloud()
         {
 
-    
-         
+
+
 
 
             bool isCloud = true;
 
             var URI = new RedisLocalSettings().RedisURI();
 
-            if (URI.Contains("localhost") || URI.Contains("127.0.0.1")) 
+            if (URI.Contains("localhost") || URI.Contains("127.0.0.1"))
             {
                 isCloud = false;
             }
 
-        
-          
-            return isCloud;   
+
+
+            return isCloud;
 
 
         }
 
 
 
-        public void checkTypeToSave(string key, string value, string typeToAdd = null,string KeyType = null)
+        public void checkTypeToSave(string key, string value, string typeToAdd = null, string KeyType = null)
         {
 
             bool isCloud = CheckIfCloud();
@@ -279,7 +288,7 @@ namespace Database_Manager.Services
             switch (KeyType)
             {
                 case "String":
-                    SaveStringValue(key, value,isCloud);
+                    SaveStringValue(key, value, isCloud);
                     break;
 
                 case "Hash":
@@ -287,7 +296,7 @@ namespace Database_Manager.Services
                     break;
 
                 case "List":
-                    SaveList(key,value, isCloud);
+                    SaveList(key, value, isCloud);
                     break;
 
                 case "Set":
@@ -299,7 +308,7 @@ namespace Database_Manager.Services
                     break;
 
                 default:
-                 //   _ = new DialogService()._DialogService("Not a valid type");
+                    //   _ = new DialogService()._DialogService("Not a valid type");
                     break;
 
             }
@@ -329,7 +338,7 @@ namespace Database_Manager.Services
                     break;
 
                 default:
-              //      _ = new DialogService()._DialogService("Not a valid type");
+                    //      _ = new DialogService()._DialogService("Not a valid type");
                     break;
 
             }
@@ -375,7 +384,7 @@ namespace Database_Manager.Services
                 db.Del(key);
                 foreach (KeyValuePair<string, object> entry in dicValue)
                 {
-                    db.ZAdd(key, Convert.ToDecimal(entry.Value) ,entry.Key );
+                    db.ZAdd(key, Convert.ToDecimal(entry.Value), entry.Key);
                 }
 
                 new RedisDB_Services().UpdateLeftMenu(isCloud);
@@ -443,49 +452,49 @@ namespace Database_Manager.Services
         private async void SaveList(string key, string value, bool isCloud)
         {
 
-            try { 
+            try {
 
 
-              string RedisDBSettings = localSettings.Values["RedisDBSettings"] as string;
-              int DBNumber = int.Parse(BsonDocument.Parse(RedisDBSettings)["DBNumber"].ToString());
+                string RedisDBSettings = localSettings.Values["RedisDBSettings"] as string;
+                int DBNumber = int.Parse(BsonDocument.Parse(RedisDBSettings)["DBNumber"].ToString());
 
-     
+
                 var db = redis.GetDatabase(DBNumber);
 
-            if (key == "" || value == "")
-            {
+                if (key == "" || value == "")
+                {
 
-                _ = new DialogService()._DialogService("Not empty values allowed", "Press 'sure' to continue");
+                    _ = new DialogService()._DialogService("Not empty values allowed", "Press 'sure' to continue");
 
-                new Add_ValuePair().ClearTextBoxes();
+                    new Add_ValuePair().ClearTextBoxes();
 
-                return;
+                    return;
 
-            }
+                }
 
 
                 var stringList = JsonConvert.DeserializeObject<List<string>>(value);
 
-              
 
 
-                db.KeyDelete(key );
-         
 
-                foreach ( var newItem in stringList) {
-                    db.ListRightPush(key,newItem );
+                db.KeyDelete(key);
+
+
+                foreach (var newItem in stringList) {
+                    db.ListRightPush(key, newItem);
                 }
 
-             
 
 
 
 
-            new RedisDB_Services().UpdateLeftMenu(isCloud);
+
+                new RedisDB_Services().UpdateLeftMenu(isCloud);
                 displayValue.DisplayList(key, DBNumber);
 
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 _ = new DialogService()._DialogService("Error saving list", ex.Message);
             }
@@ -496,9 +505,9 @@ namespace Database_Manager.Services
 
 
 
-              ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
-              string RedisDBSettings = localSettings.Values["RedisDBSettings"] as string;
-             int DBNumber = int.Parse(BsonDocument.Parse(RedisDBSettings)["DBNumber"].ToString());
+            ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
+            string RedisDBSettings = localSettings.Values["RedisDBSettings"] as string;
+            int DBNumber = int.Parse(BsonDocument.Parse(RedisDBSettings)["DBNumber"].ToString());
 
             var db = redis.GetDatabase(DBNumber);
 
@@ -518,17 +527,17 @@ namespace Database_Manager.Services
 
             new RedisDB_Services().UpdateLeftMenu(isCloud);
 
-          displayValue.DisplayString(key, DBNumber);
+            displayValue.DisplayString(key, DBNumber);
 
         }
 
         internal void SaveHash(string key, string value, bool isCloud)
         {
 
-            try { 
-            ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
-            string RedisDBSettings = localSettings.Values["RedisDBSettings"] as string;
-            int DBNumber = int.Parse(BsonDocument.Parse(RedisDBSettings)["DBNumber"].ToString());
+            try {
+                ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
+                string RedisDBSettings = localSettings.Values["RedisDBSettings"] as string;
+                int DBNumber = int.Parse(BsonDocument.Parse(RedisDBSettings)["DBNumber"].ToString());
 
 
 
@@ -541,24 +550,24 @@ namespace Database_Manager.Services
 
 
 
-            if (key == "" || value == "")
-            {
+                if (key == "" || value == "")
+                {
 
-                _ = new DialogService()._DialogService("Not empty values allowed", "Press 'sure' to continue");
+                    _ = new DialogService()._DialogService("Not empty values allowed", "Press 'sure' to continue");
 
-                new Add_ValuePair().ClearTextBoxes();
+                    new Add_ValuePair().ClearTextBoxes();
 
-                return;
+                    return;
 
-            }
+                }
 
 
 
-                Dictionary<string,object> dicValue = JsonConvert.DeserializeObject<Dictionary<string, object>>(value);
+                Dictionary<string, object> dicValue = JsonConvert.DeserializeObject<Dictionary<string, object>>(value);
 
                 db.HSet(key, dicValue);
 
-            new RedisDB_Services().UpdateLeftMenu(isCloud);
+                new RedisDB_Services().UpdateLeftMenu(isCloud);
 
                 displayValue.DisplayHash(key, DBNumber);
 
@@ -569,6 +578,108 @@ namespace Database_Manager.Services
 
             }
         }
+    }
+
+
+    internal class Helper{
+
+
+        public async Task LoadKeys(string HeaderNumber, string keyToSearch = "", Database_tree DBTree = null)
+        {
+            try
+            {
+
+                var settingSTR = "abortConnect=true,connectRetry=1,connectTimeout=500,allowAdmin=true";
+                int dbNumber = int.Parse(HeaderNumber);
+
+
+
+                var RedisURI = new RedisLocalSettings().RedisURI();
+                var compleURI = RedisURI + "," + settingSTR;
+                var indexServer = compleURI.ToString().IndexOf(",");
+
+                var serverSTR = compleURI.ToString().Substring(0, indexServer);
+
+
+
+                var redis = await ConnectionMultiplexer.ConnectAsync(compleURI);
+
+
+                var ListKeys = redis.GetServer(serverSTR).Keys(dbNumber);
+
+                var db = redis.GetDatabase();
+
+
+                DBTree.RedisListBox.Items.Clear();
+
+                bool isEmpty = true;
+
+        
+
+                foreach (var key in ListKeys)
+                {
+
+
+                    if (key.ToString().Contains(keyToSearch))
+                    {
+
+                        var keyType = db.KeyType(key.ToString()).ToString();
+
+                        var myTreeKey = new Tree_Key(keyType) { KeyText = key };
+
+
+         
+
+                        myTreeKey.AddHandler(UIElement.PointerPressedEvent,
+                            new PointerEventHandler(DBTree.DisplayKeyValue_Handler), true);
+
+
+                        DBTree.RedisListBox.Items.Add(myTreeKey);
+                    }
+
+
+                    isEmpty = false;
+
+                }
+
+
+                if (isEmpty) DBTree.RedisExpander.IsExpanded = false;
+
+            }
+            catch 
+            {
+
+                
+             
+
+      
+
+
+            }
+
+        }
+
+
+
+        private void GoBack(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+
+        {
+
+            if (MainPage.MainPageContext.Frame.CanGoBack)   { 
+                MainPage.MainPageContext.Frame.GoBack(); 
+            }
+
+
+
+   
+
+        } 
+        
+
+
+
+
+
     }
 
 

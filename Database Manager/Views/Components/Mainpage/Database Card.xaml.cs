@@ -1,13 +1,16 @@
 ﻿using Database_Manager.Model;
 using Database_Manager.Services;
 using Database_Manager.Services.Redis;
+using Database_Manager.Services.SQL;
 using Database_Manager.Views.Components.Managers.Redis;
 using Database_Manager.Views.Managers;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using MySqlConnector;
 using StackExchange.Redis;
 using System;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -20,160 +23,169 @@ namespace Database_Manager.Resource_dictionaries.Main_page
     public sealed partial class Database_Card : UserControl
     {
 
-
         public string TSize
         {
-            get { return (string)GetValue(TSizeProperty); }
-            set { SetValue(TSizeProperty, value); }
+            get
+            {
+                return (string)GetValue(TSizeProperty);
+            }
+            set
+            {
+                SetValue(TSizeProperty, value);
+            }
         }
 
         // Using a DependencyProperty as the backing store for Size.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TSizeProperty =
-            DependencyProperty.Register("Sizeize", typeof(string), typeof(Database_Card), new PropertyMetadata(string.Empty));
-
-
+          DependencyProperty.Register("Sizeize", typeof(string), typeof(Database_Card), new PropertyMetadata(string.Empty));
 
         public string TDocument
         {
-            get { return (string)GetValue(TDocumentProperty); }
-            set { SetValue(TDocumentProperty, value); }
+            get
+            {
+                return (string)GetValue(TDocumentProperty);
+            }
+            set
+            {
+                SetValue(TDocumentProperty, value);
+            }
         }
 
         // Using a DependencyProperty as the backing store for TDocument.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TDocumentProperty =
-            DependencyProperty.Register("TDocument", typeof(string), typeof(Database_Card), new PropertyMetadata(string.Empty));
-
-
-
-
+          DependencyProperty.Register("TDocument", typeof(string), typeof(Database_Card), new PropertyMetadata(string.Empty));
 
         public string TextURI
         {
-            get { return (string)GetValue(TextURIProperty); }
-            set { SetValue(TextURIProperty, value); }
+            get
+            {
+                return (string)GetValue(TextURIProperty);
+            }
+            set
+            {
+                SetValue(TextURIProperty, value);
+            }
         }
 
         // Using a DependencyProperty as the backing store for TextURI.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TextURIProperty =
-            DependencyProperty.Register("TextURI", typeof(string), typeof(Database_Card), new PropertyMetadata(string.Empty));
-
-
-
-
-
-
-
+          DependencyProperty.Register("TextURI", typeof(string), typeof(Database_Card), new PropertyMetadata(string.Empty));
 
         public string TLastUpdated
         {
-            get { return (string)GetValue(TLastUpdatedProperty); }
-            set { SetValue(TLastUpdatedProperty, value); }
+            get
+            {
+                return (string)GetValue(TLastUpdatedProperty);
+            }
+            set
+            {
+                SetValue(TLastUpdatedProperty, value);
+            }
         }
 
         // Using a DependencyProperty as the backing store for TLastUpdated.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TLastUpdatedProperty =
-            DependencyProperty.Register("TLastUpdated", typeof(string), typeof(Database_Card), new PropertyMetadata(string.Empty));
-
-
+          DependencyProperty.Register("TLastUpdated", typeof(string), typeof(Database_Card), new PropertyMetadata(string.Empty));
 
         public string TTitle
         {
-            get { return (string)GetValue(TTitleProperty); }
-            set { SetValue(TTitleProperty, value); }
+            get
+            {
+                return (string)GetValue(TTitleProperty);
+            }
+            set
+            {
+                SetValue(TTitleProperty, value);
+            }
         }
 
         // Using a DependencyProperty as the backing store for TTitle.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TTitleProperty =
-            DependencyProperty.Register("TTitle", typeof(string), typeof(Database_Card), new PropertyMetadata(string.Empty));
-
-
-
+          DependencyProperty.Register("TTitle", typeof(string), typeof(Database_Card), new PropertyMetadata(string.Empty));
 
         public string CTitleBackgroundColor
         {
-            get { return (string)GetValue(CTitleBackgroundColorProperty); }
-            set { SetValue(CTitleBackgroundColorProperty, value); }
+            get
+            {
+                return (string)GetValue(CTitleBackgroundColorProperty);
+            }
+            set
+            {
+                SetValue(CTitleBackgroundColorProperty, value);
+            }
         }
 
         // Using a DependencyProperty as the backing store for CTitleBackgroundColor.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty CTitleBackgroundColorProperty =
-            DependencyProperty.Register("CTitleBackgroundColor", typeof(string), typeof(Database_Card), new PropertyMetadata(string.Empty));
-
-
+          DependencyProperty.Register("CTitleBackgroundColor", typeof(string), typeof(Database_Card), new PropertyMetadata(string.Empty));
 
         public string ImageBadgeSRC
         {
-            get { return (string)GetValue(ImageBadgeSRCProperty); }
-            set { SetValue(ImageBadgeSRCProperty, value); }
+            get
+            {
+                return (string)GetValue(ImageBadgeSRCProperty);
+            }
+            set
+            {
+                SetValue(ImageBadgeSRCProperty, value);
+            }
         }
 
         // Using a DependencyProperty as the backing store for ImageBadgeSRC.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ImageBadgeSRCProperty =
-            DependencyProperty.Register("ImageBadgeSRC", typeof(string), typeof(Database_Card), new PropertyMetadata(string.Empty));
-
-
-
+          DependencyProperty.Register("ImageBadgeSRC", typeof(string), typeof(Database_Card), new PropertyMetadata(string.Empty));
 
         public string RunDB_Icon
         {
-            get { return (string)GetValue(RunDB_IconProperty); }
-            set { SetValue(RunDB_IconProperty, value); }
+            get
+            {
+                return (string)GetValue(RunDB_IconProperty);
+            }
+            set
+            {
+                SetValue(RunDB_IconProperty, value);
+            }
         }
 
         // Using a DependencyProperty as the backing store for RunDB_Icon.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty RunDB_IconProperty =
-            DependencyProperty.Register("RunDB_Icon", typeof(string), typeof(Database_Card), new PropertyMetadata("/Assets/Mainpage/run database icon.png"));
-
-
+          DependencyProperty.Register("RunDB_Icon", typeof(string), typeof(Database_Card), new PropertyMetadata("/Assets/Mainpage/run database icon.png"));
 
         public string DetailFontSize
         {
-            get { return (string)GetValue(MyPropertyProperty); }
-            set { SetValue(MyPropertyProperty, value); }
+            get
+            {
+                return (string)GetValue(MyPropertyProperty);
+            }
+            set
+            {
+                SetValue(MyPropertyProperty, value);
+            }
         }
 
         // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty MyPropertyProperty =
-            DependencyProperty.Register("MyProperty", typeof(string), typeof(Database_Card), new PropertyMetadata("16"));
-
-
-
+          DependencyProperty.Register("MyProperty", typeof(string), typeof(Database_Card), new PropertyMetadata("16"));
 
         public Database_Card()
         {
             this.InitializeComponent();
 
-
-
             BDelete_Card.AddHandler(PointerPressedEvent,
-            new PointerEventHandler(BDelete_Card_PointerPressed), true);
-
-
-
+              new PointerEventHandler(BDelete_Card_PointerPressed), true);
 
             CardRoot.AddHandler(PointerPressedEvent,
-                new PointerEventHandler(CardRoot_PointerPressed), true);
+              new PointerEventHandler(CardRoot_PointerPressed), true);
         }
-
-
 
         private void BDelete_Card_PointerPressed(object sender, PointerRoutedEventArgs e)
 
-        =>  _ = new DialogService()._DialogService("Do you want to delete this card?", TextURI, deleteTheCard).ConfigureAwait(false);
-
-
-
-        
-
-
-
+          => _ = new DialogService()._DialogService("Do you want to delete this card?", TextURI, deleteTheCard).ConfigureAwait(false);
 
         private void deleteTheCard(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
 
             string uriToDelete = TextURI.Replace("URI: ", "");
-
-           
 
             DatabaseCard delCard = new DatabaseCard
             {
@@ -190,9 +202,7 @@ namespace Database_Manager.Resource_dictionaries.Main_page
             new DatabaseStack_Service().RemoveCard(delCard);
         }
 
-
-
-        private void CardRoot_PointerPressed(object sender, PointerRoutedEventArgs e)
+        private async void CardRoot_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
 
             try
@@ -201,23 +211,13 @@ namespace Database_Manager.Resource_dictionaries.Main_page
                 var RedisURI = sender.ToBsonDocument()["TextURI"].ToString().Replace("URI: ", "");
                 new RedisLocalSettings().RedisURI(RedisURI);
 
-
- 
-
-
                 var location = sender.ToBsonDocument()["ImageBadgeSRC"].ToString();
 
-
-                whereTO(location, URI: RedisURI);
-
-    
-
-     
-
-
+                await whereTO(location, URI: RedisURI);
 
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
 
                 _ = new DialogService()._DialogService("Cannot navigate", ex.Message);
             }
@@ -240,112 +240,151 @@ namespace Database_Manager.Resource_dictionaries.Main_page
 
             new DatabaseStack_Service().RunCard(runCard);
 
-
         }
 
-
-
-        public void whereTO(string location, string URI = "") {
+        public async Task whereTO(string location, string URI = "")
+        {
 
             location = location.Replace("/Assets/Mainpage/", "");
 
-            switch (location) 
+            switch (location)
             {
                 case "MongoDB Badge.png":
 
-                        MainPage.MainPageContext.Frame.Navigate(typeof(MongoDB_Manager), TextURI);
+                    await GoTo_MongoDBMangager(URI);
 
-                   
-             
                     break;
 
                 case "redis logo badge.png":
-                    goRedisManager(URI);
+                    await goRedisManager(URI);
                     break;
 
-                        case "sql logo badge.png":
-                    goSQLPage(URI);
+                case "sql logo badge.png":
+                    await goSQLPage(URI);
                     break;
-
-
 
                 default:
                     _ = new DialogService()._DialogService("Not a valid Database");
                     break;
-                        
-            
+
             }
 
-
-        
         }
 
+        private async Task GoTo_MongoDBMangager(string URI)
 
-        private void goSQLPage(string URI)
         {
 
             try
             {
-                MainPage.MainPageContext.LoadingIndicator.IsActive = true;  
 
-            } catch (Exception ex) 
+                MainPage.MainPageContext.LoadingIndicator.IsActive = true;
+
+                MongoClient dbClient = new MongoClient(URI);
+
+                await dbClient.StartSessionAsync();
+
+            }
+            catch (Exception ex)
             {
 
-            } finally {
+                _ = new DialogService()._DialogService("MongoDB server was not found", ex.Message, GoToMainFrame);
+                return;
 
-                MainPage.MainPageContext.LoadingIndicator.IsActive = false;
-
-                MainPage.MainPageContext.Frame.Navigate(typeof(SQL_Manager), URI);
             }
+            finally
+            {
+                MainPage.MainPageContext.LoadingIndicator.IsActive = false;
+                MainPage.MainPageContext.Frame.Navigate(typeof(MongoDB_Manager), URI);
 
-          
+            }
 
         }
 
-        private async void goRedisManager(string URI) {
+        private async Task goSQLPage(string URI)
+        {
+
+            try
+            {
+
+                string ConnectionURI =  TextURI.Replace("URI: ", "");
+
+                new SQLLocalSettings().UpdateCurrentDB(ConnectionURI);
+          
+
+                string connString = $"{ConnectionURI}";
+
+                var conn = new MySqlConnection(connString);
+                MainPage.MainPageContext.LoadingIndicator.IsActive = true;
+                await conn.OpenAsync();
+                await conn.CloseAsync();
+
+            }
+            catch (Exception ex)
+            {
+
+                _ = new DialogService()._DialogService("Error navigating to SQL", ex.Message, GoToMainFrame);
+
+            }
+            finally
+            {
+
+                MainPage.MainPageContext.LoadingIndicator.IsActive = false;
+                MainPage.MainPageContext.Frame.Navigate(typeof(SQL_Manager), URI);
+            }
+
+        }
+
+        private async Task goRedisManager(string URI)
+        {
+
+            ConnectionMultiplexer conn = null;
 
             try
             {
 
                 var settingSTR = "abortConnect=true,connectRetry=1,connectTimeout=500";
 
-
+                MainPage.MainPageContext.LoadingIndicator.IsActive = true;
                 new RedisLocalSettings().RedisURI(URI);
-
 
                 var completeURI = URI + "," + settingSTR;
 
-                MainPage.MainPageContext.LoadingIndicator.IsActive = true;  
+                conn = await ConnectionMultiplexer.ConnectAsync($"{URI},{settingSTR}");
 
-                await ConnectionMultiplexer.ConnectAsync($"{URI},{settingSTR}");
-
-
-             
-
+                await conn.CloseAsync();
 
             }
             catch (Exception ex)
             {
 
-                _ = new DialogService()._DialogService("Redis server was not found", ex.Message,GoToMainFrame);
+                _ = new DialogService()._DialogService("Redis server was not found ** goRedisManager", ex.Message, GoToMainFrame);
+
                 return;
 
             }
-            finally 
+            finally
             {
                 MainPage.MainPageContext.LoadingIndicator.IsActive = false;
+
                 MainPage.MainPageContext.Frame.Navigate(typeof(Redis_Manager), URI);
 
             }
-
-
-            
 
         }
 
         private void GoToMainFrame(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
-            MainPage.MainPageContext.Frame.GoBack();
+
+            if (MainPage.MainPageContext.Frame.CanGoBack)
+            {
+
+                MainPage.MainPageContext.Frame.GoBack();
+
+            }
+
         }
+
     }
+
 }

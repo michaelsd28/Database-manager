@@ -25,6 +25,7 @@ namespace Database_Manager.Views.Dialogs
 
 
         string databaseType = string.Empty;
+        BsonDocument CardSettings_Bson = new BsonDocument();
 
         private void CancelButton(object sender, RoutedEventArgs e)
 
@@ -35,31 +36,29 @@ namespace Database_Manager.Views.Dialogs
         {
 
 
+        
 
-           
+            
+            CardSettings_Bson["CardType"] = databaseType;
+            CardSettings_Bson["URI_Link"] = TURI_Link.Text;
+            CardSettings_Bson["CardName"] = CardName.Text;
 
 
 
-            DatabaseCard newCard = new DatabaseCard
-            {
+            var newCard = new Helper().GetDatabaseCard(CardSettings_Bson);
 
-                Id = 01,
-                Name = CardName.Text,
-                URI = TURI_Link.Text,
-                Type = new localSettings_Service().NewCardType(),
-                Status = "Stopped",
-                StorageSize = "0 kb"
+            
 
-            };
 
             if (CardName.Text != "" || TURI_Link.Text != "" || databaseType != "")
             {
 
                 if (!new DatabaseStack_Service().AddNewCard(newCard))
                 {
-              
+
                     MainPage.MainPageContext.Popup_ConnectURI.IsOpen = false;
                     Database_stack.Database_stackContext.updateStack();
+
                 }
                 else
                 {
@@ -86,38 +85,67 @@ namespace Database_Manager.Views.Dialogs
 
             foreach (Button button in myButtons)
             {
-
                 button.Click += typeButton_OnClick;
             }
-        
+
         }
 
         private void typeButton_OnClick(object sender, RoutedEventArgs e)
         {
-
-          var buttonType =  sender.ToBsonDocument()["Content"].ToString();
-             new localSettings_Service().NewCardType(buttonType);
+        
+            var buttonType = sender.ToBsonDocument()["Content"].ToString();
+            databaseType = buttonType;
+            new localSettings_Service().NewCardType(buttonType);
 
             var myButtons = Stack_typeButtons.Children;
 
             foreach (Button button in myButtons)
-            { 
-            
+            {
+
                 if (button.Content.ToString() == buttonType)
                 {
-
                     button.Background = new localSettings_Service().ConvertColorFromHexString("#001333");
                 }
                 else {
 
-            
-                    button.Background = new SolidColorBrush(Colors.Black);  
+                    button.Background = new SolidColorBrush(Colors.Black);
 
                 }
-              
+
             }
 
 
+        }
+
+        internal class Helper{
+
+            public DatabaseCard GetDatabaseCard(BsonDocument CardSettings ) {
+
+
+                string CardType = CardSettings["CardType"].ToString();
+                string URI_Link = CardSettings["URI_Link"].ToString();
+                string CardName = CardSettings["CardName"].ToString();
+
+
+
+
+                DatabaseCard newCard = new DatabaseCard
+                {
+
+                    Id = 01,
+                    Name = CardName,
+                    URI = URI_Link,
+                    Type = CardType,
+                    Status = "Stopped",
+                    StorageSize = "0 kb"
+
+                };
+
+                return newCard;
+
+
+            }
+        
         }
     }
 }

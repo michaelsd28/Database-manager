@@ -33,7 +33,7 @@ namespace Database_Manager.Views.Components.Managers.SQL
             InitializeComponent();
 
 
-           TTableName.Text =  new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
+           TTableName.Text =  new SQLLocalSettings().GetLocalSettings_Bson()["CurrentTable"].ToString();
         }
 
         public void LoadTextBox()
@@ -41,7 +41,7 @@ namespace Database_Manager.Views.Components.Managers.SQL
             try
             {
 
-                var currentTable  = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
+                var currentTable  = new SQLLocalSettings().GetLocalSettings_Bson()["CurrentTable"].ToString();
 
 
                 var columnsGrid = SQL_DataGrid.sQL_DataGridContext.dataGrid.Columns;
@@ -78,7 +78,9 @@ namespace Database_Manager.Views.Components.Managers.SQL
          //  await new SQL_Services().ExecQuery(delete5);
 
 
-            var currentTable = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
+            var currentTable = new SQLLocalSettings().GetLocalSettings_Bson()["CurrentTable"].ToString();
+
+
 
           await  new SQL_Services().ExecQuery(value);
 

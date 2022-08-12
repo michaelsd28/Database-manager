@@ -12,16 +12,34 @@ namespace Database_Manager.Services.SQL
     {
 
 
-        public BsonDocument GetLocalSettings() 
+
+        public void UpdateURI(string URI) {
+
+        var LocalSettings_Bson = GetLocalSettings_Bson();
+            LocalSettings_Bson["StringConnection URI"] = URI;
+
+            UpdateSettings(LocalSettings_Bson);
+
+
+        }
+
+        public void UpdateCurrentDB(string CurrentDB) 
         {
-            var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            var LocalSettings_Bson = GetLocalSettings_Bson();
+            LocalSettings_Bson["CurrentDatabase"] = CurrentDB;
+
+            UpdateSettings(LocalSettings_Bson);
+
+
+        }
+
+        public BsonDocument GetLocalSettings_Bson() 
+        {
+            var localSettings = new Helper().GetLocalSettings();
             try {
 
-     
 
                 string localValue = localSettings.Values["SQL Local Settings"] as string;
-
-
 
 
                 return  BsonDocument.Parse(localValue);
@@ -30,16 +48,7 @@ namespace Database_Manager.Services.SQL
             catch (Exception ex) 
             {
 
-
-                var localBson = new BsonDocument();
-                localBson["StringConnection"] = "";
-                localBson["CurrentTable"] = "";
-                localBson["PortNumber"] = "";
-                localBson["name"] = "";
-                localSettings.Values["SQL Local Settings"] = localBson.ToJson().ToString();
-
-      
-                return localBson;
+                return new Helper().IfNotSettings();
             }
         }
 
@@ -59,15 +68,7 @@ namespace Database_Manager.Services.SQL
             }
             catch (Exception ex)
             {
-                var localBson = new BsonDocument();
-                localBson["StringConnection"] = "";
-                localBson["CurrentTable"] = "";
-                localBson["PortNumber"] = "";
-                localBson["name"] = "";
-                localSettings.Values["SQL Local Settings"] = localBson.ToJson().ToString();
-
-
-                return localBson;
+                return new Helper().IfNotSettings();
             }
         }
 
@@ -79,10 +80,8 @@ namespace Database_Manager.Services.SQL
             {
 
 
-                var NewJsonBson = GetLocalSettings();
+                var NewJsonBson = GetLocalSettings_Bson();
                 NewJsonBson["CurrentTable"] = newTable;
-
-
 
                 localSettings.Values["SQL Local Settings"] = NewJsonBson.ToJson().ToString();
 
@@ -94,18 +93,42 @@ namespace Database_Manager.Services.SQL
             }
             catch (Exception ex)
             {
-                var localBson = new BsonDocument();
-                localBson["StringConnection"] = "";
-                localBson["CurrentTable"] = "";
-                localBson["PortNumber"] = "";
-                localBson["name"] = "";
-                localSettings.Values["SQL Local Settings"] = localBson.ToJson().ToString();
 
 
-                return localBson;
+                return new Helper().IfNotSettings();
+
             }
         }
 
+
+
+
+        internal class Helper {
+
+
+            public Windows.Storage.ApplicationDataContainer GetLocalSettings() 
+            
+            {
+                return Windows.Storage.ApplicationData.Current.LocalSettings;
+            }
+
+
+            public BsonDocument IfNotSettings() {
+           
+                var localBson = new BsonDocument();
+                localBson["StringConnection"] = "";
+                localBson["StringConnection URI"] = "";
+                localBson["CurrentDatabase"] = "";
+                localBson["CurrentTable"] = "";
+                localBson["PortNumber"] = "";
+                localBson["name"] = "";
+                GetLocalSettings().Values["SQL Local Settings"] = localBson.ToJson().ToString();
+
+                return localBson;
+            }
+        
+        
+        }
 
     }
 }

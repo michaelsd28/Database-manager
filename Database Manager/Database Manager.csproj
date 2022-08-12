@@ -139,6 +139,7 @@
     <Compile Include="Services\MongoDB\MongoDB_DatabaseService.cs" />
     <Compile Include="Services\DatabaseStack_Service.cs" />
     <Compile Include="Services\DialogService.cs" />
+    <Compile Include="Services\MongoDB\MongoDB_LocalSettings.cs" />
     <Compile Include="Services\Redis\RedisDB_Services.cs" />
     <Compile Include="Services\Redis\RedisLocalSettings.cs" />
     <Compile Include="Services\SQL\SQL Service.cs" />

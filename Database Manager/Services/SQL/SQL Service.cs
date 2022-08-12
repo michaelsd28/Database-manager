@@ -32,7 +32,13 @@ namespace Database_Manager.Services.SQL
         {
             try
             {
-                string connString = @"Server=localhost;User ID=root;Password=admin;Database=mydb";
+
+                string connString = new SQLLocalSettings().GetLocalSettings_Bson()["StringConnection URI"].ToString();
+
+
+
+
+                //    string connString = @"Server=localhost;User ID=root;Password=admin;Database=mydb";
 
 
 
@@ -75,10 +81,10 @@ namespace Database_Manager.Services.SQL
 
         public async void DelRow(string DelString) 
         {
-            string TableName = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
+            string TableName = new SQLLocalSettings().GetLocalSettings_Bson()["CurrentTable"].ToString();
             string query = $"DELETE FROM {TableName} WHERE {DelString} ;";
             await ExecQuery(query);
-            new SQL_Services().UpdateTableGrid(TableName);
+          await  new SQL_Services().UpdateTableGrid(TableName);
 
         }
 
@@ -94,18 +100,38 @@ namespace Database_Manager.Services.SQL
         
         }
 
-        public void DisplayTable_DataGrid(string connString, string tableName,DataGrid dataGrid,int limitNumber = 20) 
+        public void DisplayTable_DataGrid( 
+            string tableName,
+            DataGrid dataGrid, 
+            Dictionary<string,string> SearchValue = null ,
+            int limitNumber = 20
+            ) 
         {
             try
             {
 
-                 connString = @"Server=localhost;User ID=root;Password=admin;Database=mydb";
-
-
                 var query = $"SELECT * FROM {tableName} LIMIT {limitNumber};";
-       
+                if (SearchValue != null) {
 
- 
+                     query = $"SELECT * FROM {tableName} WHERE {SearchValue["SearchColumn"]} LIKE '{SearchValue["SearchTerm"]}%'; ";
+
+                }
+
+
+                string ConnectionURI = new SQLLocalSettings().GetLocalSettings_Bson()["StringConnection URI"].ToString();
+                string CurrentDB = new SQLLocalSettings().GetLocalSettings_Bson()["CurrentDatabase"].ToString();
+                string connString =  $"{ConnectionURI};Database={CurrentDB}";
+
+                Debug.WriteLine($"Complete URL:: {connString}");
+
+
+                //string  connString = @"Server=localhost;User ID=root;Password=admin;Database=mydb";
+
+
+
+
+
+
                 DataTable dataTable = new DataTable();
 
                 MySqlConnection conn = new MySqlConnection(connString);
@@ -134,59 +160,28 @@ namespace Database_Manager.Services.SQL
         }
 
 
-        internal void SearchValue(string ColumnName,string SearchValue) 
+
+
+        internal Task  UpdateTableGrid(string currentTable, Dictionary<string, string> SearchDictionary = null)
         {
 
-
-          
-            var columns = SQL_DataGrid.sQL_DataGridContext.dataGrid.Columns.Select(x => x.Header.ToString()).ToArray();
-            var rows = SQL_DataGrid.sQL_DataGridContext.dataGrid.ItemsSource;
-            var rowList = new List<string[]>();
-
-            int searchValueIndex = 0;
-            for (int i = 0; i < columns.Count(); i++)
-            {
-
-                if (columns[i] == ColumnName)
-                    searchValueIndex = i;
-                
-
-            }
-
-
-            foreach (var row in rows)
-            {
-                rowList.Add(JsonConvert.DeserializeObject<string[]>(row.ToJson().ToString()));
-            }
-
-            var filterList = rowList.Where(x => x[searchValueIndex] == SearchValue );
-
-            var sourceCollection = filterList;
-
-
-
-
-            SQL_DataGrid.sQL_DataGridContext.dataGrid.ItemsSource = sourceCollection;
-
-
-        }
-
-        internal void UpdateTableGrid(string currentTable)
-        {
+    
 
             SQL_Manager.sQL_ManagerContext.SQL_GridTableContainer.Children.Clear();
-            Grid grid = new Grid { Name = "documents_Container" };
+            var grid = new Grid { Name = "documents_Container" };
 
 
-            var sqlGrid = new SQL_DataGrid("", currentTable);
+            var sqlGrid = new SQL_DataGrid();
+            DisplayTable_DataGrid( currentTable,sqlGrid.dataGrid, SearchDictionary);
             grid.Children.Add(sqlGrid);
+            
+         
 
 
             new SQLLocalSettings().UpdateCurrentTable(currentTable);
             SQL_Manager.sQL_ManagerContext.SQL_GridTableContainer.Children.Add(grid);
-        
+            return Task.CompletedTask;
         }
-        
 
         private void ToSourceCollection(DataTable dt, DataGrid dataGrid)
         {
@@ -224,24 +219,16 @@ namespace Database_Manager.Services.SQL
 
     
 
-
+            ////add index to datagrid
             var index = 1;
             foreach (DataRow row in dt.Rows) {
 
-      
-
                 var arr = row.ItemArray.ToList();
-
                 arr.Insert(0,index);
 
-    
                 sourceCollection.Add(arr);
                 index++;
             }
-
-
-
-    
 
 
             dataGrid.ItemsSource = sourceCollection;
@@ -260,7 +247,8 @@ namespace Database_Manager.Services.SQL
 
                 SQL_Manager.sQL_ManagerContext.DatabaseStackPanel.Children.Clear();
 
-                string connString = @"Server=localhost;User ID=root;Password=admin;Database=mydb";
+                string connString = new SQLLocalSettings().GetLocalSettings_Bson()["StringConnection URI"].ToString();
+                //string connString = @"Server=localhost;User ID=root;Password=admin;Database=mydb";
                 //  string connString = @"Server=localhost;User ID=root;Password=";
 
                 var query = "SHOW DATABASES;";
@@ -304,7 +292,9 @@ namespace Database_Manager.Services.SQL
         {
             try
             {
-                string connString = @"Server=localhost;User ID=root;Password=admin;Database=mydb";
+
+                string connString = new SQLLocalSettings().GetLocalSettings_Bson()["StringConnection URI"].ToString();
+                //string connString = @"Server=localhost;User ID=root;Password=admin;Database=mydb";
                 //     var query = "SELECT * FROM Persons;";
                 string query = $"SHOW TABLES FROM {DBName};";
 

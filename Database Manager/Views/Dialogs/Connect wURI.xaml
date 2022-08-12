@@ -28,11 +28,18 @@ RequestedTheme="Dark"
                               Windows10version1903:TintLuminosityOpacity="1"
                               FallbackColor="#111111"
                              />
-
+            <!--  Server=localhost;User ID=root;Password=admin;Database=mydb -->
         </StackPanel.Background>
         <TextBlock Text="Connect with uri/hostname" Margin="10" FontSize="25"/>
         <TextBox IsSpellCheckEnabled="False" x:Name="CardName" PlaceholderText="Enter name" Margin="10"/>
-        <TextBox TextWrapping="Wrap" x:Name="TURI_Link"  IsSpellCheckEnabled="False" Height="80" Margin="10" PlaceholderText="Enter uri host:port"/>
+        <TextBox 
+            TextWrapping="Wrap" 
+                 x:Name="TURI_Link"  
+                 IsSpellCheckEnabled="False" 
+                 Height="80" 
+                 Margin="10" 
+                 PlaceholderText="MongoDB: mongodb://localhost:&lt;port number&gt;/ &#x0a;Redis: localhost:&lt;port number&gt; &#x0a;SQL: Server=&lt;E.g. localhost&gt;;User ID=&lt;user&gt;;Password=?;"
+            />
         <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" x:Name="Stack_typeButtons">
             <!--#001333-->
             <Button Content="Redis" Background="Black" Margin="10"    />

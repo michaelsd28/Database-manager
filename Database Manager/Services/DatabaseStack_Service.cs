@@ -1,5 +1,6 @@
 ﻿using Database_Manager.Model;
 using Database_Manager.Views;
+using MongoDB.Bson;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,8 @@ namespace Database_Manager.Services
 
             foreach (DatabaseCard card in stackCards)
             {
+
+                Debug.WriteLine($"All Cards:: {card.ToJson()}");
                 if (card.Name == newCard.Name) hasCard = true;
             }
 

@@ -42,11 +42,12 @@ namespace Database_Manager.Views.Components.Managers.SQL
         {
 
 
-            var currentTable = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
+            var currentTable = new SQLLocalSettings().GetLocalSettings_Bson()["CurrentTable"].ToString();
 
 
             Value_TextBox.Document.GetText(TextGetOptions.None, out string query );
 
+            Debug.WriteLine("query:: " + query);
 
             await new SQL_Services().ExecQuery(query);
 
@@ -63,12 +64,12 @@ namespace Database_Manager.Views.Components.Managers.SQL
         {
 
 
-            var currentTable = new SQLLocalSettings().GetLocalSettings()["CurrentTable"].ToString();
+            var currentTable = new SQLLocalSettings().GetLocalSettings_Bson()["CurrentTable"].ToString();
 
 
 
             string query = $"UPDATE {currentTable} \n" +
-                $"SET  {GetValuesRow(isSet: true)} \n" +
+                $"SET  {GetValuesRow(isSet: true)} \n\n" +
                 $"WHERE {GetValuesRow( isSet: false)} ;";
 
             return query;
